@@ -13,7 +13,7 @@ _ORIGEN = "data/registros_climaticos.json"
 
 def ejecutar_pipeline(db=None) -> dict:
     # Punto de entrada del ETL. Llama a los 3 pasos en orden: extraer → transformar → cargar
-    # Si no se pasa una sesión de BD, crea una propia y la cierra al terminar
+    # Si no se pasa una sesión de db, crea una propia y la cierra al terminar
     close_db = False
     if db is None:
         db = SessionLocal()
@@ -27,11 +27,11 @@ def ejecutar_pipeline(db=None) -> dict:
         # PASO 2 — TRANSFORMAR: limpia los datos (quita nulos, duplicados y estaciones inválidas)
         df_limpio, stats_transform = transformar(df_raw, referencia)
 
-        # PASO 3 — CARGAR: guarda zonas y mediciones en la BD
+        # PASO 3 — CARGAR: guarda zonas y mediciones en el db
         mapa_zonas = sincronizar_zonas(db, referencia)
         insertadas, omitidas = cargar_mediciones(db, df_limpio, mapa_zonas)
 
-        # Suma los duplicados detectados en transform + los que ya existían en la BD
+        # Suma los duplicados detectados en transform + los que ya existían en el db
         total_duplicados = stats_transform["duplicados_eliminados"] + omitidas
         total_descartados = stats_transform["descartados_nulos"] + stats_transform["descartados_sin_zona"]
 
@@ -62,6 +62,6 @@ def ejecutar_pipeline(db=None) -> dict:
         raise
 
     finally:
-        # Cierra la sesión de BD solo si este pipeline la abrió (no la cierra si fue pasada externamente)
+        # Cierra la sesión de db solo si este pipeline la abrió (no la cierra si fue pasada externamente)
         if close_db:
             db.close()

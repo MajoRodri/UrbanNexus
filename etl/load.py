@@ -23,7 +23,7 @@ def _mapear_alertas(alertas: list) -> dict:
 
 
 def sincronizar_zonas(db: Session, referencia: list[dict]) -> dict[str, list[int]]:
-    # Recorre el catálogo de estaciones y crea en la BD las Zonas que aún no existen
+    # Recorre el catálogo de estaciones y crea en la db las Zonas que aún no existen
     # Devuelve un mapa {id_estacion → [id_zona, ...]} que se usará al insertar mediciones
     mapa: dict[str, list[int]] = {}
     for entrada in referencia:
@@ -45,7 +45,7 @@ def sincronizar_zonas(db: Session, referencia: list[dict]) -> dict[str, list[int
 
 
 def cargar_mediciones(db: Session, df: pd.DataFrame, mapa_zonas: dict) -> tuple[int, int]:
-    # Recorre cada fila del DataFrame limpio e inserta una Medicion en la BD
+    # Recorre cada fila del DataFrame limpio e inserta una Medicion en la db
     # Antes de insertar, calcula si esa medición genera alguna alerta climática
     insertadas = 0
     omitidas = 0
