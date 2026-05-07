@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git checkout *)",
-      "Bash(python -c \"from controllers.auth_controller import auth_controller; print\\('OK'\\)\")",
-      "Bash(python -m pytest tests/ -q --tb=short)"
-    ]
-  }
-}
