@@ -11,7 +11,7 @@ from services.alert_service import AlertService
 _alert_service = AlertService()
 
 
-def _mapear_alertas(alertas: list) -> dict:
+def _map_alerts(alertas: list) -> dict:
     # Convierte la lista de alertas activas en un diccionario con claves específicas
     # para guardarlas como columnas en la tabla Medicion
     return {
@@ -22,7 +22,7 @@ def _mapear_alertas(alertas: list) -> dict:
     }
 
 
-def sincronizar_zonas(db: Session, referencia: list[dict]) -> dict[str, list[int]]:
+def sync_zones(db: Session, referencia: list[dict]) -> dict[str, list[int]]:
     # Recorre el catálogo de estaciones y crea en la BD las Zonas que aún no existen
     # Devuelve un mapa {id_estacion → [id_zona, ...]} que se usará al insertar mediciones
     mapa: dict[str, list[int]] = {}
@@ -44,7 +44,7 @@ def sincronizar_zonas(db: Session, referencia: list[dict]) -> dict[str, list[int
     return mapa
 
 
-def cargar_mediciones(db: Session, df: pd.DataFrame, mapa_zonas: dict) -> tuple[int, int]:
+def load_measurements(db: Session, df: pd.DataFrame, mapa_zonas: dict) -> tuple[int, int]:
     # Recorre cada fila del DataFrame limpio e inserta una Medicion en la BD
     # Antes de insertar, calcula si esa medición genera alguna alerta climática
     insertadas = 0
@@ -60,7 +60,7 @@ def cargar_mediciones(db: Session, df: pd.DataFrame, mapa_zonas: dict) -> tuple[
             "viento": fila["viento"],
             "lluvia": fila["lluvia"],
         })
-        campos_alerta = _mapear_alertas(alertas)
+        campos_alerta = _map_alerts(alertas)
 
         # Una misma estación puede cubrir varias zonas, por eso se itera
         for id_zona in ids_zona:
@@ -84,7 +84,7 @@ def cargar_mediciones(db: Session, df: pd.DataFrame, mapa_zonas: dict) -> tuple[
     return insertadas, omitidas
 
 
-def registrar_log(
+def log_execution(
     db: Session,
     origen: str,
     stats: dict,
