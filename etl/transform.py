@@ -9,7 +9,7 @@ _COLUMNAS_REQUERIDAS = ["estacion_id", "fecha", "temperatura", "humedad", "vient
 _FORMATOS_FECHA = ("%d-%m-%Y %H:%M", "%Y-%m-%dT%H:%M")
 
 
-def _parsear_fecha(valor: str) -> datetime | None:
+def _parse_date(valor: str) -> datetime | None:
     # Intenta convertir el texto de fecha a un objeto datetime real
     # Si no encaja con ningún formato conocido devuelve None (fecha inválida)
     for fmt in _FORMATOS_FECHA:
@@ -20,7 +20,7 @@ def _parsear_fecha(valor: str) -> datetime | None:
     return None
 
 
-def transformar(df: pd.DataFrame, referencia: list[dict]) -> tuple[pd.DataFrame, dict]:
+def transform(df: pd.DataFrame, referencia: list[dict]) -> tuple[pd.DataFrame, dict]:
     # Recibe los datos crudos y el catálogo de estaciones
     # Devuelve los datos limpios + un resumen de cuánto se descartó y por qué
     filas_originales = len(df)
@@ -32,7 +32,7 @@ def transformar(df: pd.DataFrame, referencia: list[dict]) -> tuple[pd.DataFrame,
             df[col] = None
 
     # Convierte la fecha de texto a datetime para poder compararla y guardarla correctamente
-    df["fecha_dt"] = df["fecha"].apply(_parsear_fecha)
+    df["fecha_dt"] = df["fecha"].apply(_parse_date)
 
     # Paso 1: descarta filas que tengan algún campo clave vacío o fecha inválida
     df_limpio = df.dropna(subset=["estacion_id", "fecha_dt", "temperatura", "humedad", "viento", "lluvia"])
