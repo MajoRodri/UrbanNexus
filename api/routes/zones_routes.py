@@ -4,7 +4,7 @@ from sqlalchemy import select
 from typing import List
 from api.dependencies import get_db
 from schemas.zones_schema import ZoneCreate, ZoneUpdate, ZoneOut
-from db.models import Zone
+from db.models import Zona as Zone
 
 router = APIRouter()
 

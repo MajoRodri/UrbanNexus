@@ -14,11 +14,11 @@ class RecordBase(BaseModel):
 
 # Esquema para la ingesta de datos (POST)
 class RecordCreate(RecordBase):
-    zone_id: int #Relación con la tabla de zonas
+    id_zona: int  #Relación con la tabla de zonas
 
 # Esquema para modificar registros existentes (PUT)
 class RecordUpdate(BaseModel):
-    fechas: Optional[datetime] = None
+    fecha: Optional[datetime] = None
     temperatura: Optional[float] = None
     humedad: Optional[float] = None
     viento: Optional[float] = None
@@ -27,7 +27,7 @@ class RecordUpdate(BaseModel):
 # Esquema de salida que expone las alertas calculadas por el sistema
 class RecordOut(RecordBase):
     id: int
-    zone_id: int
+    id_zona: int
 
     # Campos opcionales para mostrar alertas adecuadas (Calor, Humedad, etc)
     alerta_calor: Optional[str] = None
@@ -36,4 +36,4 @@ class RecordOut(RecordBase):
     alerta_lluvia: Optional[str] = None
 
     class Config:
-        from_attributes: True #Mapea datos directamente desde el modelo 'Medicion' (alias Record) 
+        from_attributes = True  #Mapea datos directamente desde el modelo 'Medicion' (alias Record)

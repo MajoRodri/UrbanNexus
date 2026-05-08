@@ -8,7 +8,7 @@ class JSONRepository:
         else:
             self.file_path = file_path
         
-        self.stations_path = os.path.join("static", "estacion_por_municipio.json")
+        self.stations_path = os.path.join("static", "js", "estacion_por_municipio.json")
         self._ensure_file_exists()
 
     def _ensure_file_exists(self):
