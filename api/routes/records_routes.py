@@ -4,7 +4,7 @@ from sqlalchemy import select
 from typing import List
 from api.dependencies import get_db
 from schemas.records_schema import RecordCreate, RecordUpdate, RecordOut
-from db.models import Record, Zone
+from db.models import Medicion as Record,Zona as Zone
 
 router = APIRouter()
 
