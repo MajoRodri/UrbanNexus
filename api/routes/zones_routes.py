@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from typing import List
@@ -9,8 +9,13 @@ from db.models import Zone
 router = APIRouter()
 
 @router.get("/", response_model=List[ZoneOut])
-def list_zones(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    result = db.execute(select(Zone).offset(skip).limit(limit))
+def list_zones(
+    skip: int = Query(0, ge=0), 
+    limit: int = Query(100, ge=1, le=1000),
+    db: Session = Depends(get_db)
+):
+    stmt = select(Zone).offset(skip).limit(limit)
+    result = db.execute(stmt)
     return result.scalars().all()
 
 @router.get("/{zone_id}", response_model=ZoneOut)
@@ -33,11 +38,9 @@ def update_zone(zone_id: int, zone_in: ZoneUpdate, db: Session = Depends(get_db)
     zone = db.get(Zone, zone_id)
     if not zone:
         raise HTTPException(status_code=404, detail="Zona no encontrada")
-
-    data = zone_in.model_dump(exclude_unset=True)
-    for key, value in data.items():
+    update_data = zone_in.model_dump(exclude_unset=True)
+    for key, value in update_data.items():
         setattr(zone, key, value)
-
     db.commit()
     db.refresh(zone)
     return zone
@@ -47,6 +50,5 @@ def delete_zone(zone_id: int, db: Session = Depends(get_db)):
     zone = db.get(Zone, zone_id)
     if not zone:
         raise HTTPException(status_code=404, detail="Zona no encontrada")
-
     db.delete(zone)
     db.commit()
