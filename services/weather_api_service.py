@@ -73,11 +73,6 @@ class WeatherAPIService:
         
         return estacion_cercana
 
-    # 3. MANTENEMOS: Los métodos originales que ellas ya tuvieran (ej: por ID)
-    def obtener_clima_por_id(self, station_id: str):
-        # Aquí iría el código que ellas ya escribieron (puedes completarlo si es necesario)
-        pass
-
 # --- FUNCIÓN PUENTE PARA COMPATIBILIDAD CON APP.PY ---
 def obtener_clima_por_coordenadas(lat, lon):
     """

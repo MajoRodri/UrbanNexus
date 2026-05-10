@@ -4,7 +4,7 @@ from sqlalchemy import select
 from typing import List
 from api.dependencies import get_db
 from schemas.records_schema import RecordCreate, RecordUpdate, RecordOut
-from db.models import Record, Zone
+from db.models import Medicion as Record, Zona as Zone
 
 router = APIRouter()
 
@@ -33,7 +33,7 @@ def records_by_zone(zone_id: int, db: Session = Depends(get_db)):
 
 @router.post("/", response_model=RecordOut, status_code=status.HTTP_201_CREATED)
 def create_record(record_in: RecordCreate, db: Session = Depends(get_db)):
-    zone = db.get(Zone, record_in.zone_id)
+    zone = db.get(Zone, record_in.id_zona)
     if not zone:
         raise HTTPException(status_code=404, detail="Zona no encontrada")
     record = Record(**record_in.model_dump())

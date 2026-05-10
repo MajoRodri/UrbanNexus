@@ -1,6 +1,11 @@
 # Servidor y Web
+fastapi
+uvicorn
 flask
 gunicorn
+
+#validación y esquemas
+pydantic
 
 # Variables de entorno
 python-dotenv
@@ -17,7 +22,7 @@ openpyxl
 
 # Tests y calidad
 pytest
+httpx
 
 #Base de datos
 sqlalchemy
-

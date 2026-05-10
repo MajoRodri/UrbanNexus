@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api.routes.zones_router import router as zones_router
-from api.routes.records_router import router as records_router
+from api.routes.zones_routes import router as zones_router
+from api.routes.records_routes import router as records_router
+from db.database import create_tables
+
+create_tables()
 
 app = FastAPI(
     title="UrbanNexus",
