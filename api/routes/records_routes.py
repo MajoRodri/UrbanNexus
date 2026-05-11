@@ -26,9 +26,9 @@ def get_record(record_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Registro no encontrado")
     return record
 
-@router.get("/zone/{zone_id}", response_model=List[RecordOut])
-def records_by_zone(zone_id: int, db: Session = Depends(get_db)):
-    stmt = select(Record).where(Record.id_zona == zone_id)
+@router.get("/zone/{id_zona}", response_model=List[RecordOut])
+def records_by_zone(id_zona: int, db: Session = Depends(get_db)):
+    stmt = select(Record).where(Record.id_zona == id_zona)
     result = db.execute(stmt)
     return result.scalars().all()
 
