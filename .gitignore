@@ -18,6 +18,8 @@ logs/
 
 # Test cache
 .pytest_cache/
+.coverage
+htmlcov/
 
 # IDEs / editores
 .vscode/
