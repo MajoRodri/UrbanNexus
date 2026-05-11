@@ -12,7 +12,7 @@ from controllers.api_controller import api_bp
 from controllers.scheduler_controller import init_scheduler
 
 # Cargar variables de entorno (.env)
-load_dotenv()
+load_dotenv(override=True)
 
 app = Flask(__name__)
 

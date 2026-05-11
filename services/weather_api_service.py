@@ -1,83 +1,98 @@
 import os
-import logging
+import time
 from typing import Dict, Any, Optional
 from services.retry_service import get_retry_session
+from services.logging_service import log_info, log_error
 from utils.helpers import calcular_distancia
+
+_cache_observaciones = {"datos": [], "timestamp": 0}
+_CACHE_TTL = 300  # 5 minutos
+
+_BASE = "https://opendata.aemet.es/opendata/api"
+
 
 class WeatherAPIService:
     def __init__(self):
-        # 1. MANTENEMOS: La configuración de Adriana e Isabela
         self.api_key = os.getenv("AEMET_API_KEY")
         if not self.api_key:
             raise ValueError("AEMET_API_KEY no encontrada en .env")
-        
         self.session = get_retry_session()
-        self.logger = logging.getLogger(__name__)
-        self.base_url = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
 
-    def _obtener_datos_crudos(self) -> list:
-        """Método interno para bajar todas las observaciones de AEMET."""
-        headers = {"api_key": self.api_key, "cache-control": "no-cache"}
-        try:
-            # Usamos la sesión con reintentos de la arquitectura original
-            res_meta = self.session.get(self.base_url, headers=headers, timeout=20)
-            res_meta.raise_for_status()
-            
-            datos_url = res_meta.json().get("datos")
-            if not datos_url:
-                return []
-
-            res_datos = self.session.get(datos_url, timeout=20)
-            res_datos.raise_for_status()
-            return res_datos.json()
-        except Exception as e:
-            self.logger.error(f"Error al conectar con AEMET: {e}")
+    def _get_datos(self, url: str) -> list:
+        res_meta = self.session.get(url, params={"api_key": self.api_key}, timeout=20)
+        res_meta.raise_for_status()
+        datos_url = res_meta.json().get("datos")
+        if not datos_url:
             return []
+        res_datos = self.session.get(datos_url, timeout=20)
+        res_datos.raise_for_status()
+        return res_datos.json()
 
-    # 2. TU MEJORA: Búsqueda por coordenadas integrada
+    def obtener_clima_por_estacion(self, id_estacion: str) -> Optional[Dict[str, Any]]:
+        observaciones = self._obtener_todas()
+        if observaciones:
+            for obs in observaciones:
+                if obs.get("idema") == id_estacion:
+                    log_info(f"Estación {id_estacion} encontrada en caché: {obs.get('ubi')}")
+                    return obs
+
+        url = f"{_BASE}/observacion/convencional/datos/estacion/{id_estacion}"
+        try:
+            datos = self._get_datos(url)
+            if datos:
+                return datos[-1]
+        except Exception as e:
+            log_error(f"Error al obtener estación {id_estacion}: {e}")
+
+        return None
+
+    def _obtener_todas(self) -> list:
+        ahora = time.time()
+        if _cache_observaciones["datos"] and ahora - _cache_observaciones["timestamp"] < _CACHE_TTL:
+            log_info("Usando observaciones AEMET en caché")
+            return _cache_observaciones["datos"]
+        try:
+            observaciones = self._get_datos(f"{_BASE}/observacion/convencional/todas")
+            if observaciones:
+                _cache_observaciones["datos"] = observaciones
+                _cache_observaciones["timestamp"] = ahora
+                return observaciones
+        except Exception as e:
+            log_error(f"Error al conectar con AEMET: {e}")
+        return _cache_observaciones["datos"]
+
     def obtener_clima_por_coordenadas(self, user_lat: float, user_lon: float) -> Optional[Dict[str, Any]]:
-        """
-        Lógica de Juan: Localiza la estación más cercana y devuelve sus datos RAW.
-        """
-        observaciones = self._obtener_datos_crudos()
-        
+        """Fallback: descarga todas las observaciones y devuelve la estación más cercana."""
+        observaciones = self._obtener_todas()
+
         if not observaciones:
-            self.logger.warning("No se recibieron observaciones de AEMET.")
+            log_error("AEMET devolvió lista de observaciones vacía")
             return None
 
         estacion_cercana = None
         distancia_minima = float('inf')
-
         for obs in observaciones:
             try:
-                # Extraemos y validamos coordenadas de la estación
-                obs_lat = float(obs['lat'])
-                obs_lon = float(obs['lon'])
-
                 dist = calcular_distancia(
-                    float(user_lat), 
-                    float(user_lon), 
-                    obs_lat, 
-                    obs_lon
+                    float(user_lat), float(user_lon),
+                    float(obs['lat']), float(obs['lon'])
                 )
-
                 if dist < distancia_minima:
                     distancia_minima = dist
                     estacion_cercana = obs
-
             except (KeyError, ValueError, TypeError):
-                continue # Saltamos estaciones con datos corruptos
+                continue
 
         if estacion_cercana:
-            self.logger.info(f"Estación más cercana hallada: {estacion_cercana.get('ubi')} a {distancia_minima:.2f}km")
-        
+            log_info(f"Estación más cercana: {estacion_cercana.get('ubi')} a {distancia_minima:.2f}km")
+        else:
+            log_error(f"No se encontró estación válida para lat={user_lat}, lon={user_lon}")
         return estacion_cercana
 
-# --- FUNCIÓN PUENTE PARA COMPATIBILIDAD CON APP.PY ---
+
 def obtener_clima_por_coordenadas(lat, lon):
-    """
-    Permite que app.py siga llamando a esta función directamente 
-    mientras nosotros usamos la lógica de la clase por debajo.
-    """
-    service = WeatherAPIService()
-    return service.obtener_clima_por_coordenadas(lat, lon)
+    return WeatherAPIService().obtener_clima_por_coordenadas(lat, lon)
+
+
+def obtener_clima_por_estacion(id_estacion):
+    return WeatherAPIService().obtener_clima_por_estacion(id_estacion)
