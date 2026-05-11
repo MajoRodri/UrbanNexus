@@ -9,7 +9,7 @@ from db.models import Medicion as Record, Zona as Zone
 router = APIRouter()
 
 @router.get("/", response_model=List[RecordOut])
-def list_records(
+async def list_records(
     skip: int = Query(0, ge=0), 
     limit: int = Query(100, ge=1, le=1000),
     db: Session = Depends(get_db)
@@ -19,20 +19,20 @@ def list_records(
     return result.scalars().all()
 
 @router.get("/{record_id}", response_model=RecordOut)
-def get_record(record_id: int, db: Session = Depends(get_db)):
+async def get_record(record_id: int, db: Session = Depends(get_db)):
     record = db.get(Record, record_id)
     if not record:
         raise HTTPException(status_code=404, detail="Registro no encontrado")
     return record
 
 @router.get("/zone/{zone_id}", response_model=List[RecordOut])
-def records_by_zone(zone_id: int, db: Session = Depends(get_db)):
+async def records_by_zone(zone_id: int, db: Session = Depends(get_db)):
     stmt = select(Record).where(Record.zone_id == zone_id)
     result = db.execute(stmt)
     return result.scalars().all()
 
 @router.post("/", response_model=RecordOut, status_code=status.HTTP_201_CREATED)
-def create_record(record_in: RecordCreate, db: Session = Depends(get_db)):
+async def create_record(record_in: RecordCreate, db: Session = Depends(get_db)):
     zone = db.get(Zone, record_in.id_zona)
     if not zone:
         raise HTTPException(status_code=404, detail="Zona no encontrada")
@@ -43,7 +43,7 @@ def create_record(record_in: RecordCreate, db: Session = Depends(get_db)):
     return record
 
 @router.put("/{record_id}", response_model=RecordOut)
-def update_record(record_id: int, record_in: RecordUpdate, db: Session = Depends(get_db)):
+async def update_record(record_id: int, record_in: RecordUpdate, db: Session = Depends(get_db)):
     record = db.get(Record, record_id)
     if not record:
         raise HTTPException(status_code=404, detail="Registro no encontrado")
@@ -55,7 +55,7 @@ def update_record(record_id: int, record_in: RecordUpdate, db: Session = Depends
     return record
 
 @router.delete("/{record_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_record(record_id: int, db: Session = Depends(get_db)):
+async def delete_record(record_id: int, db: Session = Depends(get_db)):
     record = db.get(Record, record_id)
     if not record:
         raise HTTPException(status_code=404, detail="Registro no encontrado")
