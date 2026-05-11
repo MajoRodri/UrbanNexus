@@ -326,5 +326,61 @@
             "VERDE"
         ],
         "fuente": "aemet"
+    },
+    {
+        "error": "No hay datos disponibles",
+        "ciudad": "Ubicación Detectada",
+        "fuente": "aemet"
+    },
+    {
+        "error": "No hay datos disponibles",
+        "ciudad": "Ubicación Detectada",
+        "fuente": "aemet"
+    },
+    {
+        "error": "No hay datos disponibles",
+        "fuente": "automatico"
+    },
+    {
+        "ciudad": "MADRID RETIRO",
+        "estacion": "MADRID RETIRO",
+        "fecha": "2026-05-11T01:00:00+0000",
+        "temperatura": 10.9,
+        "humedad": 85.0,
+        "viento": 1.4,
+        "presion": 936.0,
+        "lluvia": 0.0,
+        "alertas": [
+            "VERDE"
+        ],
+        "fuente": "aemet"
+    },
+    {
+        "ciudad": "Villaverde",
+        "estacion": "MADRID RETIRO",
+        "fecha": "2026-05-11T01:00:00+0000",
+        "temperatura": 10.9,
+        "humedad": 85.0,
+        "viento": 1.4,
+        "presion": 936.0,
+        "lluvia": 0.0,
+        "alertas": [
+            "VERDE"
+        ],
+        "fuente": "aemet"
+    },
+    {
+        "ciudad": "Villaverde",
+        "estacion": "MADRID RETIRO",
+        "fecha": "2026-05-11T01:00:00+0000",
+        "temperatura": 10.9,
+        "humedad": 85.0,
+        "viento": 1.4,
+        "presion": 936.0,
+        "lluvia": 0.0,
+        "alertas": [
+            "VERDE"
+        ],
+        "fuente": "aemet"
     }
 ]

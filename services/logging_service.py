@@ -52,14 +52,6 @@ def log_info(message: str) -> None:
     logger.info(message)
 
 
-def log_warning(message: str) -> None:
-    """
-    Guarda un mensaje de advertencia.
-    """
-    logger = setup_logger()
-    logger.warning(message)
-
-
 def log_error(message: str) -> None:
     """
     Guarda un mensaje de error.
@@ -68,9 +60,3 @@ def log_error(message: str) -> None:
     logger.error(message)
 
 
-def log_critical(message: str) -> None:
-    """
-    Guarda un mensaje crítico.
-    """
-    logger = setup_logger()
-    logger.critical(message)

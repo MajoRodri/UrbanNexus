@@ -17,14 +17,6 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 #Es la plantilla sobre la que construiremos todos nuestros modelos de base de datos.
 Base = declarative_base()
 
-#Función que crea una sesión de base de datos y la cierra después de su uso
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
 #Función que crea todas las tablas en la base de datos
 def create_tables():
     Base.metadata.create_all(bind=engine)
