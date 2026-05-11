@@ -1,6 +1,8 @@
 [
     {
-        "email": "adriaranguez89@gmail.com",
-        "password": "eed7343cef5c1efbba333a0597c44f956c47888d52e18b3c7415eaf091c2714f"
+        "num_empleado": "100375",
+        "nombre": "Majo",
+        "apellidos": "Rodri",
+        "password_hash": "scrypt:32768:8:1$6vZM4lpF96RzXMy3$17eded31afb2aa70e63d8b580a1dcc7332ea4e77baedf338e6402de93df1c5827fbfb9ed2ed4b2c3652ca7a554d99c6a3ed67aa0cb9c4b894a87e4d50e8c9e10"
     }
 ]
