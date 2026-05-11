@@ -29,7 +29,7 @@ def login():
 
 @view_bp.route("/api")
 def api_view():
-    return render_template("api.html")
+    return render_template("index.html")
 
 
 @view_bp.route("/consulta", methods=["GET", "POST"])

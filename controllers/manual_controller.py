@@ -2,7 +2,6 @@ from flask import Blueprint, request, jsonify
 from models.registro_climatico import RegistroClimatico
 from repositories.json_repository import JSONRepository
 from services.alert_service import AlertService  # Importación desde tu carpeta 'service'
-import json
 
 manual_bp = Blueprint('manual', __name__)
 

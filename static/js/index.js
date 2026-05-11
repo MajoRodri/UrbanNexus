@@ -87,7 +87,11 @@ async function actualizarClima() {
             const response = await fetch(`/api/clima?lat=${latitude}&lon=${longitude}`);
             const data = await response.json();
 
-            if (!response.ok) throw new Error(data.error);
+            if (!response.ok) throw new Error(data.error || "Error al obtener datos");
+
+            if (data.temperatura === undefined || data.temperatura === null) {
+                throw new Error("Datos incompletos de la API");
+            }
 
             // Rellenar datos
             temperature.textContent = `${Math.round(data.temperatura)}°`;
@@ -106,6 +110,11 @@ async function actualizarClima() {
 
             updatedAt.textContent = `Hora de última actualización: ${horaActual}`;
 
+            // Barras de progreso
+            document.getElementById("humidity-bar").style.width = `${Math.min(data.humedad, 100)}%`;
+            document.getElementById("wind-bar").style.width = `${Math.min((data.viento / 120) * 100, 100)}%`;
+            document.getElementById("rain-bar").style.width = `${Math.min((data.lluvia / 50) * 100, 100)}%`;
+
             // Icono
             actualizarIconoVisual(data);
 
@@ -115,14 +124,45 @@ async function actualizarClima() {
 
         } catch (error) {
             console.error(error);
-            updatedAt.textContent = "Error de conexión";
+            updatedAt.textContent = `Error: ${error.message}`;
             statusDot.style.background = "#ef4444";
+            statusDot.style.boxShadow = "0 0 12px rgba(239, 68, 68, 0.45)";
         }
 
     }, () => {
         updatedAt.textContent = "Permiso de ubicación denegado";
     });
 }
+
+// --- CURSOR RADAR ---
+(function () {
+    const dot  = document.getElementById("cursor-dot");
+    const ring = document.getElementById("cursor-ring");
+    if (!dot || !ring) return;
+
+    let ringX = 0, ringY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+        dot.style.left  = e.clientX + "px";
+        dot.style.top   = e.clientY + "px";
+        ringX += (e.clientX - ringX) * 0.12;
+        ringY += (e.clientY - ringY) * 0.12;
+        ring.style.left = ringX + "px";
+        ring.style.top  = ringY + "px";
+    });
+
+    document.addEventListener("mousedown", () => ring.classList.add("clicking"));
+    document.addEventListener("mouseup",   () => ring.classList.remove("clicking"));
+
+    document.addEventListener("click", (e) => {
+        const ping = document.createElement("div");
+        ping.className = "cursor-ping";
+        ping.style.left = e.clientX + "px";
+        ping.style.top  = e.clientY + "px";
+        document.body.appendChild(ping);
+        ping.addEventListener("animationend", () => ping.remove());
+    });
+})();
 
 // Inicio
 document.addEventListener("DOMContentLoaded", () => {
