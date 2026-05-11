@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
 from sqlalchemy import select
+from sqlalchemy.exc import IntegrityError
 from typing import List
 from api.dependencies import get_db
 from schemas.zones_schema import ZoneCreate, ZoneUpdate, ZoneOut
@@ -29,8 +30,12 @@ def get_zone(zone_id: int, db: Session = Depends(get_db)):
 def create_zone(zone_in: ZoneCreate, db: Session = Depends(get_db)):
     zone = Zone(**zone_in.model_dump())
     db.add(zone)
-    db.commit()
-    db.refresh(zone)
+    try:
+        db.commit()
+        db.refresh(zone)
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Ya existe una zona con ese municipio o código INE")
     return zone
 
 @router.put("/{zone_id}", response_model=ZoneOut)
