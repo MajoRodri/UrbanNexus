@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>UrbanNexus | Registro de usuario</title>
@@ -15,78 +16,57 @@
             <a href="{{ url_for('view.index') }}" class="back-link">← Volver al inicio</a>
 
             <h1>Registro de usuario</h1>
-            <p class="subtitle">Crea tu cuenta con tu número de empleado</p>
+            <p class="subtitle">Crea tu cuenta con tu código de invitación</p>
 
             {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    <div class="flashes">
-                        {% for category, message in messages %}
-                            <div class="alert alert-{{ category }}">{{ message }}</div>
-                        {% endfor %}
-                    </div>
-                {% endif %}
+            {% if messages %}
+            <div class="flashes">
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
             {% endwith %}
 
             <form id="registroForm" action="{{ url_for('auth.registrar_usuario') }}" method="POST">
 
                 <div class="form-group">
-                    <label for="num_empleado">Número de empleado</label>
-                    <input
-                        type="text"
-                        id="num_empleado"
-                        name="num_empleado"
-                        placeholder="Ej: 100375"
-                        required
-                    >
-                    <small id="numEmpleadoError"></small>
-                </div>
-
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Tu nombre"
-                        required
-                    >
-                    <small id="nombreError"></small>
+                    <label for="nombres">Nombre</label>
+                    <input type="text" id="nombres" name="nombres" placeholder="Tu nombre" required>
+                    <small id="nombresError"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="apellidos">Apellidos</label>
-                    <input
-                        type="text"
-                        id="apellidos"
-                        name="apellidos"
-                        placeholder="Tus apellidos"
-                        required
-                    >
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
                     <small id="apellidosError"></small>
                 </div>
 
                 <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tuemail@urbannexus.com" required>
+                    <small id="emailError"></small>
+                </div>
+
+                <div class="form-group">
                     <label for="password">Contraseña</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Mínimo 8 caracteres, 1 mayúscula y 1 número"
-                        required
-                    >
+                    <input type="password" id="password" name="password"
+                        placeholder="Mínimo 8 caracteres, 1 mayúscula y 1 número" required>
                     <small id="passwordError"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="confirm_password">Repetir contraseña</label>
-                    <input
-                        type="password"
-                        id="confirm_password"
-                        name="confirm_password"
-                        placeholder="Repite tu contraseña"
-                        required
-                    >
+                    <input type="password" id="confirm_password" name="confirm_password"
+                        placeholder="Repite tu contraseña" required>
                     <small id="confirmPasswordError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="codigo_invitacion">Código de invitación</label>
+                    <input type="text" id="codigo_invitacion" name="codigo_invitacion" placeholder="Ej: TEC-8F2K9A"
+                        required>
+                    <small id="codigoInvitacionError"></small>
                 </div>
 
                 <button type="submit" class="primary-btn">Crear cuenta</button>
@@ -104,4 +84,5 @@
 
     <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
 </body>
+
 </html>

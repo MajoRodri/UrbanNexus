@@ -26,3 +26,9 @@ httpx
 
 #Base de datos
 sqlalchemy
+
+##Seguridad
+passlib[bcrypt]
+python-jose[cryptography]
+email-validator
+mailtrap

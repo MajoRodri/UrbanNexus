@@ -50,3 +50,30 @@ class ETLLog(Base):
 
     estado = Column(String, default="OK")
     mensaje = Column(String, nullable=True)
+
+##Creamos tabla usuarios
+class Usuario(Base):
+    __tablename__ = "usuarios"
+
+    id = Column(Integer, primary_key=True, index=True)
+    id_empleado = Column(String, unique=True, nullable=False)
+    nombres = Column(String, nullable=False)
+    apellidos = Column(String, nullable=False)
+    email = Column(String, unique=True, nullable=False)
+    password_hash = Column(String, nullable=False)
+    rol = Column(String, nullable=False)
+    activo = Column(Boolean, default=True)
+    creado_en = Column(DateTime, default=datetime.utcnow)
+
+## Creamos tabla para guardar las invitaciones de nuevos usuarios
+class Invitacion(Base):
+    __tablename__ = "invitaciones"
+
+    id = Column(Integer, primary_key=True)
+    email = Column(String, nullable=False)
+    codigo = Column(String, unique=True, nullable=False)
+    rol = Column(String, nullable=False)
+    usado = Column(Boolean, default=False)
+    expira_en = Column(DateTime, nullable=False)
+    creado_por = Column(String, nullable=True)
+    creado_en = Column(DateTime, default=datetime.utcnow)
