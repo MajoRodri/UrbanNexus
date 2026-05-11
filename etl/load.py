@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, UTC
 
 import pandas as pd
 from sqlalchemy.exc import IntegrityError
@@ -94,7 +94,7 @@ def log_execution(
     # Guarda en la tabla ETL_logs un registro de lo que pasó en esta ejecución
     # Sirve como historial: cuándo corrió, cuántas filas procesó, si hubo errores
     log = ETLLog(
-        fecha_ejecucion=datetime.utcnow(),
+        fecha_ejecucion=datetime.now(UTC),
         origen=origen,
         filas_leidas=stats.get("filas_leidas", 0),
         filas_insertadas=stats.get("filas_insertadas", 0),
