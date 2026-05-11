@@ -33,3 +33,83 @@
 2026-05-01 21:02:30 [ERROR] Error en comparativa: Error simulado de API
 2026-05-01 21:38:32 [INFO] Iniciando comparativa: madrid para el día 22/06/2024
 2026-05-01 21:38:33 [INFO] Iniciando comparativa: madrid para el día 22/06/2024
+2026-05-07 16:23:25 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:23:25 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:23:25 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:23:25 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:23:25 [ERROR] Error en comparativa: Error simulado de API
+2026-05-09 19:28:52 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:28:52 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:28:52 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:28:52 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:28:52 [ERROR] Error en comparativa: Error simulado de API
+2026-05-09 19:43:28 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:43:28 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:43:28 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:43:28 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:43:28 [ERROR] Error en comparativa: Error simulado de API
+2026-05-11 11:45:40 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:45:40 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:45:40 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:45:40 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:45:40 [ERROR] Error en comparativa: Error simulado de API
+2026-05-11 11:46:11 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:46:11 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:46:11 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:46:12 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:46:12 [ERROR] Error en comparativa: Error simulado de API
+2026-05-11 12:01:29 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 12:01:29 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 12:01:29 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 12:01:29 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 12:01:29 [ERROR] Error en comparativa: Error simulado de API
+2026-05-07 16:06:16 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:06:16 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:06:16 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:06:16 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:06:16 [ERROR] Error en comparativa: Error simulado de API
+2026-05-07 16:10:05 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:10:05 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:10:05 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:10:05 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:10:05 [ERROR] Error en comparativa: Error simulado de API
+2026-05-11 15:17:44 [INFO] Petición /api/clima recibida: lat=40.35216046927487, lon=-3.686566640166989
+2026-05-11 15:17:45 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas
+2026-05-11 15:17:45 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:17:45 [ERROR] AEMET no devolvió datos para lat=40.35216046927487, lon=-3.686566640166989
+2026-05-11 15:20:18 [INFO] Petición /api/clima recibida: lat=40.352170367273196, lon=-3.686600464923568
+2026-05-11 15:20:18 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas
+2026-05-11 15:20:18 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:20:18 [ERROR] AEMET no devolvió datos para lat=40.352170367273196, lon=-3.686600464923568
+2026-05-11 15:22:31 [INFO] Petición /api/clima recibida: lat=40.35213071019921, lon=-3.68657377665124
+2026-05-11 15:22:31 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas
+2026-05-11 15:22:31 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:22:31 [ERROR] AEMET no devolvió datos para lat=40.35213071019921, lon=-3.68657377665124
+2026-05-11 15:25:24 [INFO] Petición /api/clima recibida: lat=40.35212759718384, lon=-3.6865626480818956
+2026-05-11 15:25:25 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=aqui_tu_api_key
+2026-05-11 15:25:25 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:25:25 [ERROR] AEMET no devolvió datos para lat=40.35212759718384, lon=-3.6865626480818956
+2026-05-11 15:27:27 [INFO] Petición /api/clima recibida: lat=40.35212149653177, lon=-3.686560206612673
+2026-05-11 15:27:28 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=aqui_tu_api_key
+2026-05-11 15:27:28 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:27:28 [ERROR] AEMET no devolvió datos para lat=40.35212149653177, lon=-3.686560206612673
+2026-05-11 15:29:26 [INFO] Petición /api/clima recibida: lat=40.352165539340994, lon=-3.6866199326978943
+2026-05-11 15:29:33 [INFO] Estación más cercana: MADRID RETIRO a 6.67km
+2026-05-11 15:29:33 [INFO] Clima devuelto: MADRID RETIRO 10.9°C
+2026-05-11 15:32:27 [INFO] Petición /api/clima recibida: lat=40.35213256527202, lon=-3.68655608357247
+2026-05-11 15:32:37 [ERROR] Error al conectar con AEMET: HTTPSConnectionPool(host='opendata.aemet.es', port=443): Max retries exceeded with url: /opendata/api/observacion/convencional/todas?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWpvMTAwMzc1QGdtYWlsLmNvbSIsImp0aSI6ImI0ZDUwZDRkLWEyNTctNGNlMy04MmUzLTZiMjBkMjUyZDI5YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTA1NTY5LCJ1c2VySWQiOiJiNGQ1MGQ0ZC1hMjU3LTRjZTMtODJlMy02YjIwZDI1MmQyOWEiLCJyb2xlIjoiIn0.H9JWLqZXGigLv91wPZQ9ta78026iYXkis9QazdxpErg (Caused by ResponseError('too many 429 error responses'))
+2026-05-11 15:32:37 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:32:37 [ERROR] AEMET no devolvió datos para lat=40.35213256527202, lon=-3.68655608357247
+2026-05-11 15:36:06 [INFO] Petición /api/clima recibida: lat=40.35218301946575, lon=-3.686639582091515
+2026-05-11 15:36:08 [INFO] Estación más cercana: MADRID RETIRO a 6.67km
+2026-05-11 15:36:09 [INFO] Clima devuelto: Villaverde 10.9°C
+2026-05-11 15:42:56 [INFO] Petición /api/clima recibida: lat=40.352100145333225, lon=-3.6865157700415914
+2026-05-11 15:42:56 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-11 15:42:56 [INFO] Usando estación del JSON: Madrid, Retiro (3195)
+2026-05-11 15:42:57 [ERROR] Error al obtener estación 3195: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3195?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWpvMTAwMzc1QGdtYWlsLmNvbSIsImp0aSI6ImI0ZDUwZDRkLWEyNTctNGNlMy04MmUzLTZiMjBkMjUyZDI5YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTA1NTY5LCJ1c2VySWQiOiJiNGQ1MGQ0ZC1hMjU3LTRjZTMtODJlMy02YjIwZDI1MmQyOWEiLCJyb2xlIjoiIn0.H9JWLqZXGigLv91wPZQ9ta78026iYXkis9QazdxpErg
+2026-05-11 15:42:57 [ERROR] AEMET no devolvió datos para lat=40.352100145333225, lon=-3.6865157700415914
+2026-05-11 15:45:00 [INFO] Petición /api/clima recibida: lat=40.352169588503706, lon=-3.6865954753976444
+2026-05-11 15:45:01 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-11 15:45:01 [INFO] Usando estación del JSON: Madrid, Retiro (3195)
+2026-05-11 15:45:05 [INFO] Estación 3195 encontrada en caché: MADRID RETIRO
+2026-05-11 15:45:05 [INFO] Clima devuelto: Villaverde 10.9°C

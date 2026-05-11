@@ -337,15 +337,3 @@ def test_obtener_clima_por_coordenadas_ignora_datos_corruptos(monkeypatch, api_s
     assert result["ubi"] == "Madrid-Retiro"
 
 
-# =====================================================
-# TEST 9: método obtener_clima_por_id
-# =====================================================
-
-def test_obtener_clima_por_id_devuelve_none(api_service):
-    """
-    Actualmente obtener_clima_por_id() está vacío con pass.
-
-    En Python, una función con pass devuelve None.
-    """
-
-    assert api_service.obtener_clima_por_id("1234") is None

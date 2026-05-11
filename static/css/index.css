@@ -1,12 +1,13 @@
 :root {
-  --bg: #0f172a;
-  --card-bg: #1e293b;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
+  --bg: #071C20;
+  --card-bg: #0C2830;
+  --text-main: #E8F5F2;
+  --text-muted: #7EC8C0;
   --sun: #f59e0b;
-  --blue-light: #38bdf8;
+  --blue-light: #4ABFCC;
   --red-hot: #ef4444;
-  --accent: #3b82f6;
+  --accent: #3D9BAA;
+  --accent-hover: #2D7888;
 }
 
 * {
@@ -17,6 +18,10 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M 60 0 L 0 0 0 60' fill='none' stroke='%233D9BAA' stroke-width='0.5' stroke-opacity='0.2'/%3E%3Ccircle cx='0' cy='0' r='1.5' fill='%233D9BAA' fill-opacity='0.25'/%3E%3C/svg%3E") top left / 60px 60px repeat,
+    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(61, 155, 170, 0.15) 0%, transparent 65%),
+    linear-gradient(180deg, #0C2830 0%, var(--bg) 50%);
   background-color: var(--bg);
   color: var(--text-main);
   min-height: 100vh;
@@ -33,12 +38,33 @@ body {
   margin-bottom: 2rem;
 }
 
+.topbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: linear-gradient(135deg, rgba(61, 155, 170, 0.12), rgba(45, 106, 120, 0.08));
+  border: 1px solid rgba(61, 155, 170, 0.25);
+  border-radius: 1.5rem;
+  padding: 1rem 2rem 1rem 1rem;
+  box-shadow: 0 0 40px rgba(61, 155, 170, 0.1), inset 0 0 20px rgba(61, 155, 170, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+.brand-logo {
+  height: 160px;
+  width: auto;
+  object-fit: contain;
+  background: rgba(232, 245, 242, 0.92);
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 0 24px rgba(61, 155, 170, 0.3);
+}
+
 .eyebrow {
   color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 h1 {
@@ -56,10 +82,18 @@ h1 {
 }
 
 .card {
-  background: var(--card-bg);
+  background: rgba(12, 40, 48, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 1.5rem;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(61, 155, 170, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(61, 155, 170, 0.15);
 }
 
 /* --- HERO CARD (SOL E ICONOS) --- */
@@ -70,6 +104,8 @@ h1 {
   align-items: center;
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(61, 155, 170, 0.3);
+  box-shadow: 0 0 30px rgba(61, 155, 170, 0.08), inset 0 0 30px rgba(61, 155, 170, 0.03);
 }
 
 .hero-left .label {
@@ -99,8 +135,8 @@ h1 {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 12px rgba(34, 197, 94, 0.45);
+  background: #3D9BAA;
+  box-shadow: 0 0 12px rgba(61, 155, 170, 0.5);
 }
 
 .updated {
@@ -220,13 +256,30 @@ h1 {
 }
 
 .metric-box {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(61, 155, 170, 0.05);
   padding: 1.25rem;
   border-radius: 1rem;
+  border: 1px solid rgba(61, 155, 170, 0.08);
 }
 
 .metric-label { color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.5rem; }
 .metric-value { font-size: 1.25rem; font-weight: 600; }
+
+.metric-bar {
+  height: 4px;
+  background: rgba(61, 155, 170, 0.12);
+  border-radius: 2px;
+  margin-top: 0.75rem;
+  overflow: hidden;
+}
+
+.metric-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), #2D6A78);
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
 
 /* --- NAVEGACIÓN --- */
 .summary-card {
@@ -246,16 +299,17 @@ h1 {
 .mini-btn {
   text-decoration: none;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(61, 155, 170, 0.06);
   color: var(--text-main);
   border-radius: 0.75rem;
   text-align: center;
   font-weight: 500;
   transition: all 0.2s;
+  border: 1px solid rgba(61, 155, 170, 0.1);
 }
 
-.mini-btn:hover { background: rgba(255, 255, 255, 0.1); }
-.mini-btn.active { background: var(--accent); color: white; }
+.mini-btn:hover { background: rgba(61, 155, 170, 0.14); border-color: rgba(61, 155, 170, 0.25); }
+.mini-btn.active { background: linear-gradient(135deg, var(--accent), #2D6A78); color: white; border-color: transparent; }
 
 .primary-btn {
   margin-top: auto;
@@ -293,3 +347,53 @@ h1 {
 }
 
 /* --- A la espera de integrar con isabela --- */
+
+/* --- CURSOR RADAR --- */
+* { cursor: none; }
+
+#cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: var(--blue-light);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: background 0.2s;
+  box-shadow: 0 0 6px var(--blue-light);
+}
+
+#cursor-ring {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(74, 191, 204, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+
+#cursor-ring.clicking {
+  width: 20px;
+  height: 20px;
+  border-color: var(--blue-light);
+}
+
+@keyframes ping-out {
+  0%   { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(2.8); opacity: 0; }
+}
+
+.cursor-ping {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--blue-light);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  animation: ping-out 0.6s ease-out forwards;
+}

@@ -1,13 +1,13 @@
 :root {
-  --bg: #0f172a;
-  --card-bg: #1e293b;
-  --card-soft: #243247;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border: rgba(255, 255, 255, 0.08);
-  --accent: #3b82f6;
-  --accent-hover: #1d4ed8;
-  --success: #22c55e;
+  --bg: #071C20;
+  --card-bg: #0C2830;
+  --card-soft: #0F3040;
+  --text-main: #E8F5F2;
+  --text-muted: #7EC8C0;
+  --border: rgba(61, 155, 170, 0.12);
+  --accent: #3D9BAA;
+  --accent-hover: #2D7888;
+  --success: #10b981;
 }
 
 * {
@@ -19,8 +19,9 @@
 body {
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 25%),
-    linear-gradient(180deg, #1e293b 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, rgba(61, 155, 170, 0.15), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(45, 120, 136, 0.1), transparent 30%),
+    linear-gradient(180deg, #0C2830 0%, var(--bg) 100%);
   color: var(--text-main);
   min-height: 100vh;
   padding: 1.5rem;
@@ -76,13 +77,13 @@ h2 {
 }
 
 .card {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 42, 42, 0.8);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(61, 155, 170, 0.06);
 }
 
 form.card {
@@ -114,27 +115,29 @@ input {
 
 input:focus {
   border-color: var(--accent);
-  background: #2a3b52;
+  background: #102838;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 0 3px rgba(61, 155, 170, 0.18);
 }
 
 button {
   width: 100%;
   margin-top: 0.3rem;
   padding: 0.75rem;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), #2D6A78);
   color: white;
   border: none;
   border-radius: 10px;
   font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: opacity 0.2s, transform 0.15s;
+  letter-spacing: 0.02em;
 }
 
 button:hover {
-  background: var(--accent-hover);
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 table {
@@ -147,7 +150,7 @@ table {
 }
 
 thead {
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(61, 155, 170, 0.15);
 }
 
 th {
@@ -174,13 +177,13 @@ tbody tr:hover {
 
 .badge {
   display: inline-block;
-  background: rgba(59, 130, 246, 0.15);
-  color: #93c5fd;
+  background: rgba(61, 155, 170, 0.15);
+  color: #7EC8C0;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 700;
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(61, 155, 170, 0.3);
 }
 
 .no-results {

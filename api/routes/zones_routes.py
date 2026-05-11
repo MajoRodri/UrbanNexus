@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
 from sqlalchemy import select
+from sqlalchemy.exc import IntegrityError
 from typing import List
 from api.dependencies import get_db
 from schemas.zones_schema import ZoneCreate, ZoneUpdate, ZoneOut
@@ -18,9 +19,9 @@ async def list_zones(
     result = db.execute(stmt)
     return result.scalars().all()
 
-@router.get("/{zone_id}", response_model=ZoneOut)
-async def get_zone(zone_id: int, db: Session = Depends(get_db)):
-    zone = db.get(Zone, zone_id)
+@router.get("/{id_zona}", response_model=ZoneOut)
+def get_zone(id_zona: int, db: Session = Depends(get_db)):
+    zone = db.get(Zone, id_zona)
     if not zone:
         raise HTTPException(status_code=404, detail="Zona no encontrada")
     return zone
@@ -29,13 +30,17 @@ async def get_zone(zone_id: int, db: Session = Depends(get_db)):
 async def create_zone(zone_in: ZoneCreate, db: Session = Depends(get_db)):
     zone = Zone(**zone_in.model_dump())
     db.add(zone)
-    db.commit()
-    db.refresh(zone)
+    try:
+        db.commit()
+        db.refresh(zone)
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Ya existe una zona con ese municipio o código INE")
     return zone
 
-@router.put("/{zone_id}", response_model=ZoneOut)
-async def update_zone(zone_id: int, zone_in: ZoneUpdate, db: Session = Depends(get_db)):
-    zone = db.get(Zone, zone_id)
+@router.put("/{id_zona}", response_model=ZoneOut)
+def update_zone(id_zona: int, zone_in: ZoneUpdate, db: Session = Depends(get_db)):
+    zone = db.get(Zone, id_zona)
     if not zone:
         raise HTTPException(status_code=404, detail="Zona no encontrada")
     update_data = zone_in.model_dump(exclude_unset=True)
@@ -45,9 +50,9 @@ async def update_zone(zone_id: int, zone_in: ZoneUpdate, db: Session = Depends(g
     db.refresh(zone)
     return zone
 
-@router.delete("/{zone_id}", status_code=status.HTTP_204_NO_CONTENT)
-async def delete_zone(zone_id: int, db: Session = Depends(get_db)):
-    zone = db.get(Zone, zone_id)
+@router.delete("/{id_zona}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_zone(id_zona: int, db: Session = Depends(get_db)):
+    zone = db.get(Zone, id_zona)
     if not zone:
         raise HTTPException(status_code=404, detail="Zona no encontrada")
     db.delete(zone)

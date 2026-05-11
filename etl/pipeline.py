@@ -31,7 +31,7 @@ def run_pipeline(db=None) -> dict:
         mapa_zonas = sync_zones(db, referencia)
         insertadas, omitidas = load_measurements(db, df_limpio, mapa_zonas)
 
-        # Suma los duplicados detectados en transform + los que ya existían en la BD
+        # Suma los duplicados detectados en transform + los que ya existían en el db
         total_duplicados = stats_transform["duplicados_eliminados"] + omitidas
         total_descartados = stats_transform["descartados_nulos"] + stats_transform["descartados_sin_zona"]
 

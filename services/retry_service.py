@@ -18,7 +18,7 @@ def get_retry_session(retries: int = 3, backoff_factor: float = 1.5) -> Session:
     retry_strategy = Retry(
         total=retries,
         backoff_factor=backoff_factor,
-        status_forcelist=[429, 500, 502, 503, 504],
+        status_forcelist=[500, 502, 503, 504],
         allowed_methods=["GET"]
     )
     adapter = HTTPAdapter(max_retries=retry_strategy)

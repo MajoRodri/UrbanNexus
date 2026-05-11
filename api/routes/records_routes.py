@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
 from sqlalchemy import select
+from sqlalchemy.exc import IntegrityError
 from typing import List
 from api.dependencies import get_db
 from schemas.records_schema import RecordCreate, RecordUpdate, RecordOut
@@ -25,9 +26,9 @@ async def get_record(record_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Registro no encontrado")
     return record
 
-@router.get("/zone/{zone_id}", response_model=List[RecordOut])
-async def records_by_zone(zone_id: int, db: Session = Depends(get_db)):
-    stmt = select(Record).where(Record.zone_id == zone_id)
+@router.get("/zone/{id_zona}", response_model=List[RecordOut])
+async def records_by_zone(id_zona: int, db: Session = Depends(get_db)):
+    stmt = select(Record).where(Record.id_zona == id_zona)
     result = db.execute(stmt)
     return result.scalars().all()
 
@@ -38,8 +39,12 @@ async def create_record(record_in: RecordCreate, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Zona no encontrada")
     record = Record(**record_in.model_dump())
     db.add(record)
-    db.commit()
-    db.refresh(record)
+    try:
+        db.commit()
+        db.refresh(record)
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Ya existe un registro para esta zona y fecha")
     return record
 
 @router.put("/{record_id}", response_model=RecordOut)

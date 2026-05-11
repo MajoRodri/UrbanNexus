@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>ClimApp | Registro de usuario</title>
+    <title>UrbanNexus | Registro de usuario</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
 </head>
 
@@ -15,7 +15,7 @@
             <a href="{{ url_for('view.index') }}" class="back-link">← Volver al inicio</a>
 
             <h1>Registro de usuario</h1>
-            <p class="subtitle">Crea tu cuenta para acceder a ClimApp</p>
+            <p class="subtitle">Crea tu cuenta con tu número de empleado</p>
 
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
@@ -27,27 +27,51 @@
                 {% endif %}
             {% endwith %}
 
-            <form id="registroForm" action="{{ url_for('view.registro_usuario') }}" method="POST">
+            <form id="registroForm" action="{{ url_for('auth.registrar_usuario') }}" method="POST">
 
                 <div class="form-group">
-                    <label for="email">Correo electrónico</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="ejemplo@email.com" 
+                    <label for="num_empleado">Número de empleado</label>
+                    <input
+                        type="text"
+                        id="num_empleado"
+                        name="num_empleado"
+                        placeholder="Ej: 100375"
                         required
                     >
-                    <small id="emailError"></small>
+                    <small id="numEmpleadoError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+                    <small id="nombreError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input
+                        type="text"
+                        id="apellidos"
+                        name="apellidos"
+                        placeholder="Tus apellidos"
+                        required
+                    >
+                    <small id="apellidosError"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="password">Contraseña</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password" 
-                        placeholder="Mínimo 6 caracteres" 
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Mínimo 8 caracteres, 1 mayúscula y 1 número"
                         required
                     >
                     <small id="passwordError"></small>
@@ -55,11 +79,11 @@
 
                 <div class="form-group">
                     <label for="confirm_password">Repetir contraseña</label>
-                    <input 
-                        type="password" 
-                        id="confirm_password" 
-                        name="confirm_password" 
-                        placeholder="Repite tu contraseña" 
+                    <input
+                        type="password"
+                        id="confirm_password"
+                        name="confirm_password"
+                        placeholder="Repite tu contraseña"
                         required
                     >
                     <small id="confirmPasswordError"></small>

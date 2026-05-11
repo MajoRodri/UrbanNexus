@@ -22,15 +22,20 @@ def normalizar_datos_aemet(data):
         nombre_lugar = latest.get("ubi", "Ubicación Desconocida")
 
         # 2. Creamos el diccionario base
+        def parse_float(val, default=0.0):
+            if not val:
+                return default
+            return float(str(val).replace(",", "."))
+
         datos_normalizados = {
-            "ciudad": nombre_lugar,  # <--- CLAVE MAESTRA: Ahora el JS sí lo encontrará
-            "estacion": nombre_lugar, 
+            "ciudad": nombre_lugar,
+            "estacion": nombre_lugar,
             "fecha": latest.get("fint", "N/A"),
-            "temperatura": float(latest.get("ta", 0)) if latest.get("ta") else 0,
-            "humedad": float(latest.get("hr", 0)) if latest.get("hr") else 0,
-            "viento": float(latest.get("vv", 0)) if latest.get("vv") else 0,
-            "presion": float(latest.get("pres", 0)) if latest.get("pres") else 0,
-            "lluvia": 0.0 if str(latest.get("prec", "")).strip().lower() == "ip" else float(str(latest.get("prec", 0) or 0).replace(",", "."))
+            "temperatura": parse_float(latest.get("ta")),
+            "humedad": parse_float(latest.get("hr")),
+            "viento": parse_float(latest.get("vv")),
+            "presion": parse_float(latest.get("pres")),
+            "lluvia": 0.0 if str(latest.get("prec", "")).strip().lower() == "ip" else parse_float(latest.get("prec")),
         }
 
         # 3. LLAMADA MÁGICA: Alertas
