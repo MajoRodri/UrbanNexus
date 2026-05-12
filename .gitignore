@@ -12,9 +12,6 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Logs
-logs/
-*.log
 
 # Test cache
 .pytest_cache/
@@ -31,3 +28,9 @@ Thumbs.db
 
 # Base de datos local
 *.db
+
+logs/
+__pycache__/
+*.pyc
+.env
+.vscode/
