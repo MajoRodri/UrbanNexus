@@ -64,8 +64,14 @@ class WeatherAPIService:
         datos = self._get_datos(url)
 
         if datos:
+            datos_ordenados = sorted(
+                datos,
+                key=lambda obs: obs.get("fint", ""),
+                reverse=True
+            )   
+
             log_info(f"Datos obtenidos para estación {id_estacion}")
-            return datos[-1]
+            return datos_ordenados[0]
 
         return None
 

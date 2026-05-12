@@ -58,7 +58,7 @@ def register(
     rol = invitacion.rol
 
     # Generar ID único
-    id_empleado = generate_unique_employee_id(
+    id_empleado = generate_unique_id(
         rol,
         db,
         Usuario

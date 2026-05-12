@@ -46,7 +46,14 @@ def registrar_usuario():
         flash("Registro completado correctamente. Ya puedes iniciar sesión.", "success")
         return redirect(url_for("view.login"))
 
-    detalle = respuesta.json().get("detail", "Error al registrar usuario.")
+    try:
+        detalle = respuesta.json().get(
+            "detail",
+            "Error al registrar usuario."
+        )
+    except Exception:
+        detalle = respuesta.text or "Error interno de la API."
+
     flash(detalle, "error")
     return redirect(url_for("view.registro_usuario"))
 

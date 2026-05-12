@@ -13,7 +13,7 @@ class LoginRequest(BaseModel):
 
 class UserResponse(BaseModel):
     id: int
-    employee_id: str
+    id_empleado: str
     nombres: str
     apellidos: str
     email: EmailStr
