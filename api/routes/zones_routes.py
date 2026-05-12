@@ -10,7 +10,7 @@ from db.models import Zona as Zone
 router = APIRouter()
 
 @router.get("/", response_model=List[ZoneOut])
-def list_zones(
+async def list_zones(
     skip: int = Query(0, ge=0), 
     limit: int = Query(100, ge=1, le=1000),
     db: Session = Depends(get_db)
@@ -27,7 +27,7 @@ def get_zone(id_zona: int, db: Session = Depends(get_db)):
     return zone
 
 @router.post("/", response_model=ZoneOut, status_code=status.HTTP_201_CREATED)
-def create_zone(zone_in: ZoneCreate, db: Session = Depends(get_db)):
+async def create_zone(zone_in: ZoneCreate, db: Session = Depends(get_db)):
     zone = Zone(**zone_in.model_dump())
     db.add(zone)
     try:
