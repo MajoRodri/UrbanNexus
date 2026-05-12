@@ -382,5 +382,15 @@
             "VERDE"
         ],
         "fuente": "aemet"
+    },
+    {
+        "estacion_id": "3298",
+        "fecha": "11/05/2026",
+        "temperatura": 23.0,
+        "humedad": 2.0,
+        "viento": 24.0,
+        "lluvia": 0.0,
+        "municipio": "Parla",
+        "fuente": "manual"
     }
 ]

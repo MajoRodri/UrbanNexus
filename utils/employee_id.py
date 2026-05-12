@@ -1,0 +1,28 @@
+import random
+
+
+LETRAS_ROL = {
+    "admin": "P",
+    "tecnico": "T",
+    "visualizador": "V"
+}
+
+#Genera un identificador interno de empleado, con el formato Role-N
+def generate_employee_id(rol: str) -> str:
+
+    if rol not in LETRAS_ROL:
+        raise ValueError("Rol no válido para generar ID")
+
+    letra_rol = LETRAS_ROL[rol]
+    numero = random.randint(1000, 9999)
+
+    return f"E{numero}{letra_rol}"
+
+def generate_unique_id(rol: str, db, Usuario) -> str:
+    while True:
+        id_empleado = generate_employee_id(rol)
+
+        existing_user = db.query(Usuario).filter(Usuario.id_empleado == id_empleado).first()
+
+        if not existing_user:
+            return id_empleado

@@ -1,12 +1,13 @@
 from flask import Blueprint, request, jsonify
 from models.registro_climatico import RegistroClimatico
-from repositories.json_repository import JSONRepository
+from repositories.sqlite_repository import SQLiteRepository
+from db.database import SessionLocal
 from services.alert_service import AlertService  # Importación desde tu carpeta 'service'
 
 manual_bp = Blueprint('manual', __name__)
 
 # Instancias globales
-repo = JSONRepository('data/registros_climaticos.json')
+repo = SQLiteRepository(SessionLocal())
 alert_service = AlertService()
 
 @manual_bp.route('/api/registrar', methods=['POST'])
@@ -38,18 +39,41 @@ def registrar_datos_manuales():
         # El controlador envía el registro al motor de alertas antes de confirmar
         lista_alertas = alert_service.evaluar_alertas(registro_dict)
 
-        # 4. Guardar en el JSON de datos
-        exito = repo.guardar(registro_dict)
+        try:
+            zona = repo.get_zone_by_municipality(
+                registro_dict["municipio"]
+            )
 
-        if exito:
-            return jsonify({
-                "status": "success",
-                "message": "Registro guardado con éxito",
-                "alertas": lista_alertas, # Enviamos la lista de strings: ['ROJA', 'VIENTO_FUERTE'...]
-                "municipio": registro_dict["municipio"]
-            }), 201
-        
-        return jsonify({"status": "error", "message": "Error al escribir en el repositorio"}), 500
+            if not zona:
+                zona = repo.create_zone(
+                    municipio=registro_dict["municipio"],
+                    cod_ine=f"MANUAL-{registro_dict['municipio']}-{registro_dict['estacion_id']}",
+                id_estacion=registro_dict["estacion_id"],
+                estacion_referencia=registro_dict["municipio"]
+            )
+
+            medicion = repo.create_measurement(
+                id_zona=zona.id,
+                fecha=registro_dict["fecha"],
+                temperatura=registro_dict["temperatura"],
+                humedad=registro_dict["humedad"],
+                viento=registro_dict["viento"],
+                lluvia=registro_dict["lluvia"]
+            )
+
+        finally:
+            db.close()
+
+        return jsonify({
+            "status": "success",
+            "message": "Registro guardado con éxito en la base de datos",
+            "alertas": lista_alertas,
+            "municipio": registro_dict["municipio"],
+            "id_medicion": medicion.id
+        }), 201
 
     except Exception as e:
-        return jsonify({"status": "error", "message": f"Error interno: {str(e)}"}), 500
+        return jsonify({
+            "status": "error",
+            "message": f"Error interno: {str(e)}"
+        }), 500

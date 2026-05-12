@@ -113,3 +113,626 @@
 2026-05-11 15:45:01 [INFO] Usando estación del JSON: Madrid, Retiro (3195)
 2026-05-11 15:45:05 [INFO] Estación 3195 encontrada en caché: MADRID RETIRO
 2026-05-11 15:45:05 [INFO] Clima devuelto: Villaverde 10.9°C
+2026-05-11 16:51:52 [INFO] Petición /api/clima recibida: lat=40.229178902533796, lon=-3.7664368437053692
+2026-05-11 16:51:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:51:53 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:51:53 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 16:54:53 [INFO] Petición /api/clima recibida: lat=40.22920379436412, lon=-3.766547932571476
+2026-05-11 16:54:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:54:53 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:54:53 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 16:54:56 [INFO] Petición /api/clima recibida: lat=40.22919425404546, lon=-3.7664933605182274
+2026-05-11 16:54:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:54:56 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:54:56 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 16:55:56 [INFO] Petición /api/clima recibida: lat=40.22919422507347, lon=-3.7664932765441757
+2026-05-11 16:55:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:55:56 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:55:56 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 16:56:00 [INFO] Petición /api/clima recibida: lat=40.22918021988399, lon=-3.766526200675918
+2026-05-11 16:56:00 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:56:00 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:56:00 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 17:00:19 [INFO] Petición /api/clima recibida: lat=40.22918017128492, lon=-3.7665263349766036
+2026-05-11 17:00:19 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 17:00:19 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 17:00:20 [ERROR] AEMET no devolvió datos para lat=40.22918017128492, lon=-3.7665263349766036
+2026-05-11 17:00:27 [INFO] Petición /api/clima recibida: lat=40.22919163655146, lon=-3.766582407243018
+2026-05-11 17:00:28 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 17:00:28 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 17:00:28 [INFO] Usando observaciones AEMET en caché
+2026-05-11 17:00:28 [ERROR] AEMET no devolvió datos para lat=40.22919163655146, lon=-3.766582407243018
+2026-05-11 23:54:52 [INFO] Petición /api/clima recibida: lat=40.2291963797337, lon=-3.766760613914814
+2026-05-11 23:54:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 23:54:53 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 23:54:53 [ERROR] Error al conectar con AEMET: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-11 23:54:53 [ERROR] Error al obtener estación 3298: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3298?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-11 23:54:53 [ERROR] AEMET no devolvió datos para lat=40.2291963797337, lon=-3.766760613914814
+2026-05-12 00:17:47 [INFO] Petición /api/clima recibida: lat=40.22924072245028, lon=-3.7668578491738254
+2026-05-12 00:17:48 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:17:48 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:17:48 [ERROR] Error al conectar con AEMET: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 00:17:48 [ERROR] Error al obtener estación 3298: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3298?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 00:17:48 [ERROR] AEMET no devolvió datos para lat=40.22924072245028, lon=-3.7668578491738254
+2026-05-12 00:28:32 [INFO] Petición /api/clima recibida: lat=40.229221302420264, lon=-3.7668216669140318
+2026-05-12 00:28:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:28:33 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:28:34 [ERROR] AEMET no devolvió datos para lat=40.229221302420264, lon=-3.7668216669140318
+2026-05-12 00:33:34 [INFO] Petición /api/clima recibida: lat=40.22924767805832, lon=-3.766865914512507
+2026-05-12 00:33:35 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:33:35 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:33:36 [INFO] Petición /api/clima recibida: lat=40.22924591806061, lon=-3.766820543150786
+2026-05-12 00:33:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:33:36 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:33:36 [INFO] Usando observaciones AEMET en caché
+2026-05-12 00:33:36 [ERROR] AEMET no devolvió datos para lat=40.22924767805832, lon=-3.766865914512507
+2026-05-12 00:33:36 [ERROR] AEMET no devolvió datos para lat=40.22924591806061, lon=-3.766820543150786
+2026-05-12 00:47:13 [INFO] Petición /api/clima recibida: lat=40.22923956692466, lon=-3.766916640364496
+2026-05-12 00:47:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:47:13 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:47:14 [INFO] Petición /api/clima recibida: lat=40.22922714648954, lon=-3.7668340401738596
+2026-05-12 00:47:14 [ERROR] AEMET no devolvió datos para lat=40.22923956692466, lon=-3.766916640364496
+2026-05-12 00:47:15 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:47:15 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:47:15 [INFO] Usando observaciones AEMET en caché
+2026-05-12 00:47:15 [ERROR] AEMET no devolvió datos para lat=40.22922714648954, lon=-3.7668340401738596
+2026-05-12 00:47:26 [INFO] Petición /api/clima recibida: lat=40.229227139855745, lon=-3.7668339958956354
+2026-05-12 00:47:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:47:26 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:47:26 [INFO] Usando observaciones AEMET en caché
+2026-05-12 00:47:26 [ERROR] AEMET no devolvió datos para lat=40.229227139855745, lon=-3.7668339958956354
+2026-05-12 00:47:54 [INFO] Petición /api/clima recibida: lat=40.22922714462423, lon=-3.766834027729154
+2026-05-12 00:47:54 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:47:54 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:47:54 [INFO] Usando observaciones AEMET en caché
+2026-05-12 00:47:54 [ERROR] Error al obtener estación 3298: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3298?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 00:47:54 [ERROR] AEMET no devolvió datos para lat=40.22922714462423, lon=-3.766834027729154
+2026-05-12 01:05:33 [INFO] Petición /api/clima recibida: lat=40.22922714609194, lon=-3.7668340375139775
+2026-05-12 01:05:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:05:33 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:05:35 [ERROR] AEMET no devolvió datos para lat=40.22922714609194, lon=-3.7668340375139775
+2026-05-12 01:24:12 [INFO] Petición /api/clima recibida: lat=40.229233262569394, lon=-3.766760701268522
+2026-05-12 01:24:12 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:24:12 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:24:22 [INFO] Petición /api/clima recibida: lat=40.22919499749935, lon=-3.7667836108288544
+2026-05-12 01:24:22 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:24:22 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:24:34 [ERROR] AEMET no devolvió datos para lat=40.229233262569394, lon=-3.766760701268522
+2026-05-12 01:24:34 [ERROR] AEMET no devolvió datos para lat=40.22919499749935, lon=-3.7667836108288544
+2026-05-12 01:25:17 [INFO] Petición /api/clima recibida: lat=40.22919496197761, lon=-3.766783633556287
+2026-05-12 01:25:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:25:18 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:25:18 [INFO] Usando observaciones AEMET en caché
+2026-05-12 01:25:18 [ERROR] AEMET no devolvió datos para lat=40.22919496197761, lon=-3.766783633556287
+2026-05-12 01:25:55 [INFO] Petición /api/clima recibida: lat=40.22925648698491, lon=-3.7668240622230265
+2026-05-12 01:25:55 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:25:55 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:25:55 [INFO] Usando observaciones AEMET en caché
+2026-05-12 01:25:57 [ERROR] AEMET no devolvió datos para lat=40.22925648698491, lon=-3.7668240622230265
+2026-05-12 01:26:12 [INFO] Petición /api/clima recibida: lat=40.22925654980325, lon=-3.7668241042929975
+2026-05-12 01:26:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:26:13 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:26:13 [INFO] Usando observaciones AEMET en caché
+2026-05-12 01:26:13 [ERROR] AEMET no devolvió datos para lat=40.22925654980325, lon=-3.7668241042929975
+2026-05-12 01:36:55 [INFO] Petición /api/clima recibida: lat=40.22923323964887, lon=-3.7667828846603943
+2026-05-12 01:36:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:36:56 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:36:56 [ERROR] Error al conectar con AEMET: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 01:36:56 [ERROR] Error al obtener estación 3298: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3298?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 01:36:56 [ERROR] AEMET no devolvió datos para lat=40.22923323964887, lon=-3.7667828846603943
+2026-05-12 01:47:24 [INFO] Petición /api/clima recibida: lat=40.229208906666116, lon=-3.766782653705007
+2026-05-12 01:47:24 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:47:24 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:47:25 [ERROR] AEMET no devolvió datos para lat=40.229208906666116, lon=-3.766782653705007
+2026-05-12 01:50:45 [INFO] Petición /api/clima recibida: lat=40.229233756589544, lon=-3.766830476907827
+2026-05-12 01:50:46 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:50:46 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:50:47 [ERROR] AEMET no devolvió datos para lat=40.229233756589544, lon=-3.766830476907827
+2026-05-12 01:54:15 [INFO] Petición /api/clima recibida: lat=40.22915126746914, lon=-3.7667399993588044
+2026-05-12 01:54:16 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:54:16 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:54:16 [INFO] Usando observaciones AEMET en caché
+2026-05-12 01:54:17 [ERROR] AEMET no devolvió datos para lat=40.22915126746914, lon=-3.7667399993588044
+2026-05-12 09:15:59 [INFO] Petición /api/clima recibida: lat=40.22920005948311, lon=-3.7667073750678526
+2026-05-12 09:16:01 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 09:16:01 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 09:16:02 [ERROR] AEMET no devolvió datos para lat=40.22920005948311, lon=-3.7667073750678526
+2026-05-12 11:05:17 [INFO] Petición /api/clima recibida: lat=40.229177200400464, lon=-3.7665601872489622
+2026-05-12 11:05:17 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:05:17 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:05:20 [ERROR] AEMET no devolvió datos para lat=40.229177200400464, lon=-3.7665601872489622
+2026-05-12 11:05:39 [INFO] Petición /api/clima recibida: lat=40.22911408632037, lon=-3.7664738205810813
+2026-05-12 11:05:40 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:05:40 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:05:40 [ERROR] AEMET no devolvió datos para lat=40.22911408632037, lon=-3.7664738205810813
+2026-05-12 11:06:25 [INFO] Petición /api/clima recibida: lat=40.229114084645296, lon=-3.7664738192044016
+2026-05-12 11:06:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:06:25 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:06:26 [ERROR] AEMET no devolvió datos para lat=40.229114084645296, lon=-3.7664738192044016
+2026-05-12 11:06:36 [INFO] Petición /api/clima recibida: lat=40.22919150776433, lon=-3.7666374945670764
+2026-05-12 11:06:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:06:37 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:06:38 [ERROR] AEMET no devolvió datos para lat=40.22919150776433, lon=-3.7666374945670764
+2026-05-12 11:06:56 [INFO] Petición /api/clima recibida: lat=40.22919173706515, lon=-3.766637979707551
+2026-05-12 11:06:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:06:56 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:06:56 [ERROR] Error al obtener estación 3298: HTTPError
+2026-05-12 11:06:56 [ERROR] AEMET no devolvió datos para lat=40.22919173706515, lon=-3.766637979707551
+2026-05-12 11:14:18 [INFO] Petición /api/clima recibida: lat=40.22919156851379, lon=-3.7666376231901677
+2026-05-12 11:14:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:14:18 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:14:58 [INFO] Petición /api/clima recibida: lat=40.229108125268304, lon=-3.7665575465968315
+2026-05-12 11:14:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:14:58 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:15:07 [ERROR] Error al obtener estación 3298: ConnectionError
+2026-05-12 11:15:07 [ERROR] AEMET no devolvió datos para lat=40.22919156851379, lon=-3.7666376231901677
+2026-05-12 11:15:07 [INFO] Petición /api/clima recibida: lat=40.22910812263276, lon=-3.7665575439843857
+2026-05-12 11:15:08 [ERROR] Error al obtener estación 3298: ConnectionError
+2026-05-12 11:15:08 [ERROR] AEMET no devolvió datos para lat=40.229108125268304, lon=-3.7665575465968315
+2026-05-12 11:15:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:15:08 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:15:57 [ERROR] Error al obtener estación 3298: ConnectionError
+2026-05-12 11:15:57 [ERROR] AEMET no devolvió datos para lat=40.22910812263276, lon=-3.7665575439843857
+2026-05-12 11:33:24 [INFO] Petición /api/clima recibida: lat=40.2291653558309, lon=-3.766621935756591
+2026-05-12 11:33:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:33:25 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:34:35 [INFO] Petición /api/clima recibida: lat=40.229163283148175, lon=-3.76662493070483
+2026-05-12 11:34:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:34:36 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:34:54 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 11:34:54 [ERROR] AEMET no devolvió datos para lat=40.2291653558309, lon=-3.766621935756591
+2026-05-12 11:34:58 [INFO] Petición /api/clima recibida: lat=40.22919405017161, lon=-3.7665411807964717
+2026-05-12 11:34:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:34:58 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:35:25 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 11:35:25 [ERROR] AEMET no devolvió datos para lat=40.229163283148175, lon=-3.76662493070483
+2026-05-12 11:35:28 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 11:35:28 [ERROR] AEMET no devolvió datos para lat=40.22919405017161, lon=-3.7665411807964717
+2026-05-12 11:41:16 [INFO] Petición /api/clima recibida: lat=40.4168, lon=-3.7038
+2026-05-12 11:41:17 [INFO] Nominatim: display='Centro', municipio='Madrid'
+2026-05-12 11:41:17 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 11:41:36 [INFO] Datos obtenidos para estación 3195
+2026-05-12 11:41:36 [ERROR] Error en api_controller: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO mediciones (id_zona, fecha, temperatura, humedad, viento, lluvia, alerta_calor, alerta_helada, alerta_viento, alerta_lluvia) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'id_zona': 1, 'humedad': 87.0, 'fecha': '2026-05-12T06:00:00+0000', 'lluvia': 0.0, 'viento': 1.0, 'temperatura': 10.6, 'alerta_calor': None, 'alerta_helada': None, 'alerta_viento': None, 'alerta_lluvia': None}]]
+2026-05-12 11:46:49 [INFO] Petición /api/clima recibida: lat=40.22921757852813, lon=-3.7666269385348237
+2026-05-12 11:46:50 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:46:50 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:46:50 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 11:46:50 [ERROR] AEMET no devolvió datos para lat=40.22921757852813, lon=-3.7666269385348237
+2026-05-12 11:47:23 [INFO] Petición /api/clima recibida: lat=40.22919451064379, lon=-3.766674252425904
+2026-05-12 11:47:24 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:47:24 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:47:28 [INFO] Petición /api/clima recibida: lat=40.229194503513476, lon=-3.7666742610986943
+2026-05-12 11:47:29 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:47:29 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:47:34 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 11:47:34 [ERROR] AEMET no devolvió datos para lat=40.22919451064379, lon=-3.766674252425904
+2026-05-12 11:47:38 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 11:47:38 [ERROR] AEMET no devolvió datos para lat=40.229194503513476, lon=-3.7666742610986943
+2026-05-12 11:47:41 [INFO] Petición /api/clima recibida: lat=40.22919451431179, lon=-3.766674245552043
+2026-05-12 11:47:42 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:47:42 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:47:42 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 11:47:42 [ERROR] AEMET no devolvió datos para lat=40.22919451431179, lon=-3.766674245552043
+2026-05-12 11:48:06 [INFO] Petición /api/clima recibida: lat=40.4168, lon=-3.7038
+2026-05-12 11:48:06 [INFO] Nominatim: display='Centro', municipio='Madrid'
+2026-05-12 11:48:06 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 11:48:06 [INFO] Datos obtenidos para estación 3195
+2026-05-12 11:48:06 [INFO] Clima guardado en BD y devuelto: Centro 10.6°C
+2026-05-12 11:58:48 [INFO] Petición /api/clima recibida: lat=40.22922038666268, lon=-3.7665309595110497
+2026-05-12 11:58:48 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:58:48 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:58:48 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 11:58:48 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 11:58:49 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 11:58:49 [ERROR] Error en api_controller: (sqlite3.IntegrityError) UNIQUE constraint failed: zonas.cod_ine
+[SQL: INSERT INTO zonas (municipio, cod_ine, id_estacion, estacion_referencia) VALUES (?, ?, ?, ?)]
+[parameters: ('Las Américas', '00000', '3298', 'Getafe')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-05-12 12:04:21 [INFO] Petición /api/clima recibida: lat=40.22915299456591, lon=-3.7666036032760934
+2026-05-12 12:04:21 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:04:21 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:04:21 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:04:21 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:04:22 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:04:22 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:04:39 [INFO] Petición /api/clima recibida: lat=40.22912823516434, lon=-3.766534710396535
+2026-05-12 12:04:39 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:04:39 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:04:39 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:04:39 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:04:39 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:04:39 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:04:39 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:04:52 [INFO] Petición /api/clima recibida: lat=40.22912825223385, lon=-3.7665346895553444
+2026-05-12 12:04:52 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:04:52 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:04:52 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:04:52 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:04:52 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:04:52 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:04:52 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:05:01 [INFO] Petición /api/clima recibida: lat=40.22912823766089, lon=-3.7665347075138973
+2026-05-12 12:05:01 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:05:01 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:05:01 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:05:01 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:05:01 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:05:01 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:05:01 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:14:44 [INFO] Petición /api/clima recibida: lat=40.22917148380399, lon=-3.7664976078762584
+2026-05-12 12:14:45 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:14:45 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:14:57 [INFO] Petición /api/clima recibida: lat=40.22917148474243, lon=-3.766497607071927
+2026-05-12 12:14:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:14:58 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:15:05 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:15:05 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:15:07 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 12:15:07 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:15:08 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:15:08 [INFO] Petición /api/clima recibida: lat=40.22916771845027, lon=-3.7665980198733964
+2026-05-12 12:15:08 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:15:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:15:08 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:15:08 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:15:08 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:15:08 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:15:08 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:15:08 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:15:08 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:15:08 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:15:13 [INFO] Petición /api/clima recibida: lat=40.22916763613994, lon=-3.766600243243102
+2026-05-12 12:15:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:15:13 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:15:13 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:15:13 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:15:13 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:15:13 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:15:13 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:16:07 [INFO] Petición /api/clima recibida: lat=40.22916769239041, lon=-3.7665987398329035
+2026-05-12 12:16:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:16:08 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:16:08 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:16:08 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:16:08 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:16:08 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:16:08 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:16:16 [INFO] Petición /api/clima recibida: lat=40.22918503094955, lon=-3.766587026967417
+2026-05-12 12:16:16 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:16:16 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:16:16 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:16:16 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:16:16 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:16:16 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:16:16 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:16:19 [INFO] Petición /api/clima recibida: lat=40.22918507279842, lon=-3.766587017341607
+2026-05-12 12:16:20 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:16:20 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:16:20 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:16:20 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:16:20 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:16:20 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:16:20 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 13:07:53 [INFO] Petición /api/clima recibida: lat=40.22920649561687, lon=-3.7665260790176522
+2026-05-12 13:07:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:07:53 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:07:54 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:07:54 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:07:55 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:07:55 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:09:54 [INFO] Petición /api/clima recibida: lat=40.22920649835508, lon=-3.7665260808044043
+2026-05-12 13:09:55 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:09:55 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:09:55 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 13:09:55 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:09:55 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:09:55 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:09:55 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:11:02 [INFO] Petición /api/clima recibida: lat=40.4168, lon=-3.7038
+2026-05-12 13:11:03 [INFO] Nominatim: display='Centro', municipio='Madrid'
+2026-05-12 13:11:03 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 13:11:03 [INFO] Datos obtenidos para estación 3195
+2026-05-12 13:11:03 [INFO] Clima guardado en BD y devuelto: Centro 10.6°C
+2026-05-12 13:11:26 [INFO] Petición /api/clima recibida: lat=40.229181972453496, lon=-3.766439747424932
+2026-05-12 13:11:27 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:11:27 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:11:27 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:11:27 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:11:27 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:11:27 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:11:27 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:19:06 [INFO] Petición /api/clima recibida: lat=40.229171077791065, lon=-3.766497810906807
+2026-05-12 13:19:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:19:07 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:19:10 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:19:10 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:19:18 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:19:18 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:19:35 [INFO] Petición /api/clima recibida: lat=40.22918130579094, lon=-3.766725169258629
+2026-05-12 13:19:35 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:19:35 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:19:35 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:19:35 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:19:35 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:19:35 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:19:35 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:19:43 [INFO] Petición /api/clima recibida: lat=40.22918130627535, lon=-3.7667251754463154
+2026-05-12 13:19:44 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:19:44 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:19:44 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:19:44 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:19:44 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:19:44 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:19:44 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:21:44 [INFO] Petición /api/clima recibida: lat=40.22919426981016, lon=-3.7665904040134603
+2026-05-12 13:21:44 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:21:44 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:21:44 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:21:44 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:21:44 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:21:44 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:21:44 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:21:47 [INFO] Petición /api/clima recibida: lat=40.22917221103736, lon=-3.7666157560473073
+2026-05-12 13:21:47 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:21:47 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:21:47 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:21:47 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:21:47 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:21:47 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:21:47 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:41:42 [INFO] Petición /api/clima recibida: lat=40.2291636827574, lon=-3.766520050917736
+2026-05-12 13:41:43 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:41:43 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:41:43 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:41:43 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:41:43 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:41:43 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:47:39 [INFO] Petición /api/clima recibida: lat=40.22914469386903, lon=-3.7664318178703486
+2026-05-12 13:47:39 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:47:39 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:47:39 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:47:39 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:47:40 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:47:40 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:49:25 [INFO] Petición /api/clima recibida: lat=40.22921828904029, lon=-3.7664924644995215
+2026-05-12 13:49:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:49:26 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:49:26 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:49:26 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:49:27 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:49:27 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:49:32 [INFO] Petición /api/clima recibida: lat=40.22922476091171, lon=-3.766373417479562
+2026-05-12 13:49:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:49:33 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:49:33 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 13:49:33 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:49:33 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:49:33 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:49:33 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:50:11 [INFO] Petición /api/clima recibida: lat=40.22922476208041, lon=-3.766373316317247
+2026-05-12 13:50:12 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:50:12 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:50:12 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:50:12 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:50:12 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:50:12 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:50:12 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:50:19 [INFO] Petición /api/clima recibida: lat=40.229224760677326, lon=-3.766373401717846
+2026-05-12 13:50:20 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:50:20 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:50:20 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:50:20 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:50:20 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:50:20 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:50:20 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:50:34 [INFO] Petición /api/clima recibida: lat=40.22922476066348, lon=-3.7663734028019147
+2026-05-12 13:50:35 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:50:35 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:50:35 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:50:35 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:50:35 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:50:35 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:50:35 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:50:37 [INFO] Petición /api/clima recibida: lat=40.229140663570924, lon=-3.7665500253404915
+2026-05-12 13:50:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:50:37 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:50:37 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:50:37 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:50:37 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:50:37 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:50:37 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 14:29:41 [INFO] Petición /api/clima recibida: lat=40.22922664263056, lon=-3.7665561271383274
+2026-05-12 14:29:42 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:29:42 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:29:42 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 14:29:42 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:29:42 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 14:29:42 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 14:29:42 [ERROR] AEMET no devolvió datos para lat=40.22922664263056, lon=-3.7665561271383274
+2026-05-12 14:30:07 [INFO] Petición /api/clima recibida: lat=40.229200392782865, lon=-3.7665984081140484
+2026-05-12 14:30:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:30:08 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:30:11 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:30:11 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:30:27 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:30:27 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:31:37 [INFO] Petición /api/clima recibida: lat=40.229200385742104, lon=-3.766598419498728
+2026-05-12 14:31:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:31:37 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:31:38 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:31:38 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:31:38 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:31:38 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:31:38 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:32:24 [INFO] Petición /api/clima recibida: lat=40.22912355796818, lon=-3.7666957839693747
+2026-05-12 14:32:24 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:32:24 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:32:24 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:32:24 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:32:24 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:32:24 [INFO] Estación más cercana: MADRID RETIRO a 21.66 km
+2026-05-12 14:32:24 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:45:33 [INFO] Petición /api/clima recibida: lat=40.229111276211235, lon=-3.7665620046979624
+2026-05-12 14:45:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:45:33 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:45:33 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:45:33 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:45:34 [INFO] Estación más cercana: MADRID RETIRO a 21.66 km
+2026-05-12 14:45:34 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:46:03 [INFO] Petición /api/clima recibida: lat=40.22921970919827, lon=-3.766680011511492
+2026-05-12 14:46:03 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:46:03 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:46:03 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:46:03 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:46:03 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:46:03 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:46:03 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:46:07 [INFO] Petición /api/clima recibida: lat=40.22921972143124, lon=-3.766680018051253
+2026-05-12 14:46:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:46:07 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:46:07 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:46:07 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:46:07 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:46:07 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:46:07 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:55:59 [INFO] Petición /api/clima recibida: lat=40.229188237963896, lon=-3.7665904370999606
+2026-05-12 14:55:59 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:55:59 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:55:59 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:55:59 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:56:00 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:56:00 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:56:57 [INFO] Petición /api/clima recibida: lat=40.22917791649048, lon=-3.7666576598728105
+2026-05-12 14:56:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:56:58 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:56:58 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 14:56:58 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:56:58 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:56:58 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:56:58 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:57:10 [INFO] Petición /api/clima recibida: lat=40.229191777718775, lon=-3.766677174532819
+2026-05-12 14:57:10 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:57:10 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:57:10 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:57:10 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:57:10 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:57:10 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:57:10 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:58:25 [INFO] Petición /api/clima recibida: lat=40.22919271723086, lon=-3.7666785410211965
+2026-05-12 14:58:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:58:25 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:58:25 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:58:25 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:58:25 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:58:25 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:58:25 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C

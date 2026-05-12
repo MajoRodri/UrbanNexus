@@ -1,6 +1,7 @@
 from flask import Flask, request
 from dotenv import load_dotenv
 import os
+from services.startup_service import create_default_superadmin
 
 # 1. IMPORTACIÓN DE BLUEPRINTS
 from controllers.view_controller import view_bp
@@ -49,8 +50,11 @@ try:
 except Exception as e:
     print(f"⚠️ No se pudo iniciar el scheduler: {e}")
 
+
+create_default_superadmin()
+
 # --- EJECUCIÓN DEL SERVIDOR ---
 if __name__ == "__main__":
     # debug=True: el servidor se reinicia solo al detectar cambios en el código
     # host="0.0.0.0": permite que otros dispositivos en tu red vean la web
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, port=5000)

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UrbanNexus | Invitaciones</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+
+<body>
+
+    <main class="auth-container">
+
+        <section class="auth-card">
+
+            <a href="{{ url_for('view.index') }}" class="back-link">
+                ← Volver al inicio
+            </a>
+
+            <h1>Crear invitación</h1>
+
+            <p class="subtitle">
+                Envía invitaciones a nuevos empleados
+            </p>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flashes">
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <form action="{{ url_for('auth.crear_invitacion') }}" method="POST">
+
+                <div class="form-group">
+                    <label for="nombres">Nombre</label>
+
+                    <input type="text" id="nombres" name="nombres" placeholder="Nombre del empleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos del empleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+
+                    <input type="email" id="email" name="email" placeholder="correo@empresa.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rol">Rol</label>
+
+                    <select id="rol" name="rol" required>
+                        <option value="">Selecciona un rol</option>
+
+                        <option value="admin">
+                            Administrador
+                        </option>
+
+                        <option value="tecnico">
+                            Técnico
+                        </option>
+
+                        <option value="visualizador">
+                            Visualizador
+                        </option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Enviar invitación
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
