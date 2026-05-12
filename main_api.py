@@ -5,6 +5,8 @@ from api.routes.records_routes import router as records_router
 from controllers.auth_fast_controller import router as auth_router
 from db.database import create_tables
 from controllers.invitation_fast_controller import router as invitation_router
+from controllers.auth_fast_controller import router as auth_router
+
 
 create_tables()
 

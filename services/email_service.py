@@ -13,7 +13,9 @@ EMAIL_FROM = os.getenv("EMAIL_FROM")
 def send_invitation_email(
     email_destino: str,
     codigo: str,
-    rol: str
+    rol: str,
+    nombres: str,
+    apellidos: str
 ):
 
     mail = mt.Mail(
@@ -29,16 +31,21 @@ def send_invitation_email(
         subject="Invitación UrbanNexus",
 
         text=f"""
-Hola.
+Hola {nombres} {apellidos}.
 
-Has recibido una invitación para UrbanNexus.
+Has recibido una invitación para registrarte en UrbanNexus.
 
 Rol asignado: {rol}
 
 Código de invitación:
 {codigo}
 
-Utiliza este código durante el registro.
+Utiliza este código en el formulario de registro para completar tu alta.
+
+Este código es personal, de un solo uso y tiene fecha de caducidad.
+
+Un saludo,
+Equipo UrbanNexus
 """
     )
 

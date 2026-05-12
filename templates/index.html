@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +22,12 @@
         <div>
           <p class="eyebrow">UrbanNexus</p>
           <h1 id="mainTitle">Cargando ubicación...</h1>
+
+          {% if session.get("id_empleado") %}
+          <p class="muted">
+            Sesión iniciada como {{ session.get("id_empleado") }} · {{ session.get("rol") }}
+          </p>
+          {% endif %}
         </div>
       </div>
     </section>
@@ -63,19 +70,25 @@
           <div class="metric-box">
             <p class="metric-label">Humedad</p>
             <p class="metric-value" id="humidity">--%</p>
-            <div class="metric-bar"><div class="metric-bar-fill" id="humidity-bar"></div></div>
+            <div class="metric-bar">
+              <div class="metric-bar-fill" id="humidity-bar"></div>
+            </div>
           </div>
 
           <div class="metric-box">
             <p class="metric-label">Viento</p>
             <p class="metric-value" id="wind">-- km/h</p>
-            <div class="metric-bar"><div class="metric-bar-fill" id="wind-bar"></div></div>
+            <div class="metric-bar">
+              <div class="metric-bar-fill" id="wind-bar"></div>
+            </div>
           </div>
 
           <div class="metric-box">
             <p class="metric-label">Lluvia</p>
             <p class="metric-value" id="rain">-- mm</p>
-            <div class="metric-bar"><div class="metric-bar-fill" id="rain-bar"></div></div>
+            <div class="metric-bar">
+              <div class="metric-bar-fill" id="rain-bar"></div>
+            </div>
           </div>
 
           <div class="metric-box">
@@ -90,18 +103,23 @@
 
         <div class="topbar-actions">
 
-          {% if session.get("usuario") %}
+          {% if session.get("id_empleado") %}
 
-            <a href="{{ url_for('view.registro') }}" class="mini-btn">Registro</a>
-            <a href="{{ url_for('view.api_view') }}" class="mini-btn active">API</a>
-            <a href="{{ url_for('view.consulta') }}" class="mini-btn">Histórico</a>
-            <a href="{{ url_for('view.comparar') }}" class="mini-btn">Comparar</a>
-            <a href="{{ url_for('auth.logout') }}" class="mini-btn logout-btn">Cerrar sesión</a>
+          <a href="{{ url_for('view.registro') }}" class="mini-btn">Registro</a>
+          <a href="{{ url_for('view.api_view') }}" class="mini-btn">API</a>
+          <a href="{{ url_for('view.consulta') }}" class="mini-btn">Histórico</a>
+          <a href="{{ url_for('view.comparar') }}" class="mini-btn">Comparar</a>
+
+          {% if session.get("rol") == "admin" %}
+          <a href="{{ url_for('view.admin_invitaciones') }}" class="mini-btn active">Crear invitación</a>
+          {% endif %}
+
+          <a href="{{ url_for('auth.logout') }}" class="mini-btn logout-btn">Cerrar sesión</a>
 
           {% else %}
 
-            <a href="{{ url_for('view.registro_usuario') }}" class="mini-btn">Registro de usuario</a>
-            <a href="{{ url_for('view.login') }}" class="mini-btn active">Iniciar sesión</a>
+          <a href="{{ url_for('view.registro_usuario') }}" class="mini-btn">Registro de usuario</a>
+          <a href="{{ url_for('view.login') }}" class="mini-btn active">Iniciar sesión</a>
 
           {% endif %}
 
@@ -118,4 +136,5 @@
 
   <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
+
 </html>

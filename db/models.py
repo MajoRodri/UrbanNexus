@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlalchemy import (Column, Integer, String, Float, DateTime, UniqueConstraint, ForeignKey)
+from sqlalchemy import (Column, Integer, String, Float, DateTime, UniqueConstraint, ForeignKey, Boolean)
 from sqlalchemy.orm import relationship
 from .database import Base
 
@@ -59,7 +59,7 @@ class Usuario(Base):
     id_empleado = Column(String, unique=True, nullable=False)
     nombres = Column(String, nullable=False)
     apellidos = Column(String, nullable=False)
-    email = Column(String, unique=True, nullable=False)
+    email = Column(String, nullable=False)
     password_hash = Column(String, nullable=False)
     rol = Column(String, nullable=False)
     activo = Column(Boolean, default=True)
@@ -70,6 +70,8 @@ class Invitacion(Base):
     __tablename__ = "invitaciones"
 
     id = Column(Integer, primary_key=True)
+    nombres = Column(String, nullable=False)
+    apellidos = Column(String, nullable=False)
     email = Column(String, nullable=False)
     codigo = Column(String, unique=True, nullable=False)
     rol = Column(String, nullable=False)

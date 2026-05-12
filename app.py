@@ -1,6 +1,7 @@
 from flask import Flask, request
 from dotenv import load_dotenv
 import os
+from services.startup_service import create_default_superadmin
 
 # 1. IMPORTACIÓN DE BLUEPRINTS
 from controllers.view_controller import view_bp
@@ -48,6 +49,9 @@ try:
     init_scheduler(app)
 except Exception as e:
     print(f"⚠️ No se pudo iniciar el scheduler: {e}")
+
+
+create_default_superadmin()
 
 # --- EJECUCIÓN DEL SERVIDOR ---
 if __name__ == "__main__":

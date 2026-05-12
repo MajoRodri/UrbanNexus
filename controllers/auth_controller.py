@@ -5,7 +5,7 @@ from flask import Blueprint, request, redirect, url_for, session, flash
 
 auth_bp = Blueprint("auth", __name__)
 
-FASTAPI_BASE_URL = "http://127.0.0.1:8000"
+FASTAPI_BASE_URL = "http://127.0.0.1:8000/api/v1"
 
 
 @auth_bp.route("/registro_usuario", methods=["POST"])
@@ -87,6 +87,49 @@ def login():
     detalle = respuesta.json().get("detail", "Credenciales incorrectas.")
     flash(detalle, "error")
     return redirect(url_for("view.login"))
+
+@auth_bp.route("/crear_invitacion", methods=["POST"])
+def crear_invitacion():
+    if not session.get("id_empleado"):
+        flash("Debes iniciar sesión para crear invitaciones.", "error")
+        return redirect(url_for("view.login"))
+
+    if session.get("rol") != "admin":
+        flash("No tienes permisos para crear invitaciones.", "error")
+        return redirect(url_for("view.index"))
+
+    nombres = request.form.get("nombres", "").strip()
+    apellidos = request.form.get("apellidos", "").strip()
+    email = request.form.get("email", "").strip()
+    rol = request.form.get("rol", "").strip()
+
+    if not nombres or not apellidos or not email or not rol:
+        flash("Todos los campos son obligatorios.", "error")
+        return redirect(url_for("view.admin_invitaciones"))
+
+    try:
+        respuesta = requests.post(
+            f"{FASTAPI_BASE_URL}/invitations/create",
+            json={
+                "nombres": nombres,
+                "apellidos": apellidos,
+                "email": email,
+                "rol": rol
+            },
+            timeout=8
+        )
+
+    except requests.exceptions.RequestException:
+        flash("No se pudo conectar con la API. Revisa que FastAPI esté arrancado.", "error")
+        return redirect(url_for("view.admin_invitaciones"))
+
+    if respuesta.status_code == 200:
+        flash("Invitación enviada correctamente.", "success")
+        return redirect(url_for("view.admin_invitaciones"))
+
+    detalle = respuesta.json().get("detail", "Error al crear la invitación.")
+    flash(detalle, "error")
+    return redirect(url_for("view.admin_invitaciones"))
 
 
 @auth_bp.route("/logout")

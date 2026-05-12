@@ -29,6 +29,8 @@ def create_invitation_endpoint(
     try:
         invitacion = generate_invitation(
             db=db,
+            nombres=request.nombres,
+            apellidos=request.apellidos,
             email=request.email,
             rol=request.rol
         )
@@ -36,7 +38,9 @@ def create_invitation_endpoint(
         send_invitation_email(
             email_destino=request.email,
             codigo=invitacion.codigo,
-            rol=invitacion.rol
+            rol=invitacion.rol,
+            nombres=request.nombres,
+            apellidos=request.apellidos
         )
 
         return invitacion
