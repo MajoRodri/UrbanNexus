@@ -53,12 +53,10 @@
                         <tr>
                             <th>Fecha</th>
                             <th>Municipio</th>
-                            <th>Código</th>
                             <th>Temperatura</th>
                             <th>Humedad</th>
                             <th>Viento</th>
                             <th>Lluvia</th>
-                            <th>Fuente</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,16 +64,10 @@
                         <tr>
                             <td>{{ registro.fecha }}</td>
                             <td>{{ registro.municipio }}</td>
-                            <td>{{ registro.codigo_municipio }}</td>
                             <td>{{ registro.temperatura }}ºC</td>
                             <td>{{ registro.humedad }}%</td>
                             <td>{{ registro.viento }} km/h</td>
                             <td>{{ registro.lluvia }} mm</td>
-                            <td>
-                                <span class="badge">
-                                    {{ registro.fuente }}
-                                </span>
-                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>

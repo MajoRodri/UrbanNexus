@@ -129,9 +129,17 @@ async function actualizarClima() {
             statusDot.style.boxShadow = "0 0 12px rgba(239, 68, 68, 0.45)";
         }
 
-    }, () => {
-        updatedAt.textContent = "Permiso de ubicación denegado";
-    });
+    }, (err) => {
+        const mensajes = {
+            1: "Permiso de ubicación denegado",
+            2: "Ubicación no disponible (señal GPS débil o bloqueada)",
+            3: "Tiempo de espera agotado al obtener ubicación"
+        };
+        updatedAt.textContent = mensajes[err.code] || `Error de geolocalización: ${err.message}`;
+        statusDot.style.background = "#ef4444";
+        statusDot.style.boxShadow = "0 0 12px rgba(239, 68, 68, 0.45)";
+        console.error("Geolocation error:", err.code, err.message);
+    }, { timeout: 10000, enableHighAccuracy: true });
 }
 
 // --- CURSOR RADAR ---
@@ -164,12 +172,97 @@ async function actualizarClima() {
     });
 })();
 
+let modoZona = false;
+
+async function consultarPorZona(municipio, coords) {
+    const temperature = document.getElementById("temperature");
+    const humidity = document.getElementById("humidity");
+    const wind = document.getElementById("wind");
+    const rain = document.getElementById("rain");
+    const stationName = document.getElementById("stationName");
+    const cityName = document.getElementById("cityName");
+    const mainTitle = document.getElementById("mainTitle");
+    const updatedAt = document.getElementById("updatedAt");
+    const statusDot = document.getElementById("statusDot");
+
+    updatedAt.textContent = `Buscando datos de ${municipio}...`;
+
+    try {
+        let url = `/api/clima/municipio?nombre=${encodeURIComponent(municipio)}`;
+        if (coords) {
+            url += `&lat=${encodeURIComponent(coords.lat)}&lon=${encodeURIComponent(coords.lon)}`;
+        }
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || "Error al obtener datos");
+
+        temperature.textContent = `${Math.round(data.temperatura)}°`;
+        humidity.textContent = `${data.humedad}%`;
+        wind.textContent = `${data.viento} km/h`;
+        rain.textContent = `${data.lluvia} mm`;
+        cityName.textContent = data.ciudad || municipio;
+        stationName.textContent = data.estacion || data.ciudad || municipio;
+        mainTitle.textContent = `${data.ciudad || municipio} · Zona Seleccionada`;
+
+        const horaActual = new Date().toLocaleTimeString("es-ES", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+        updatedAt.textContent = `Hora de última actualización: ${horaActual}`;
+
+        document.getElementById("humidity-bar").style.width = `${Math.min(data.humedad, 100)}%`;
+        document.getElementById("wind-bar").style.width = `${Math.min((data.viento / 120) * 100, 100)}%`;
+        document.getElementById("rain-bar").style.width = `${Math.min((data.lluvia / 50) * 100, 100)}%`;
+
+        actualizarIconoVisual(data);
+
+        statusDot.style.background = "#22c55e";
+        statusDot.style.boxShadow = "0 0 12px rgba(34, 197, 94, 0.45)";
+
+        modoZona = true;
+
+    } catch (error) {
+        console.error(error);
+        updatedAt.textContent = `Error: ${error.message}`;
+        statusDot.style.background = "#ef4444";
+        statusDot.style.boxShadow = "0 0 12px rgba(239, 68, 68, 0.45)";
+    }
+}
+
 // Inicio
 document.addEventListener("DOMContentLoaded", () => {
     actualizarClima();
 
-    const refreshBtn = document.getElementById("refreshBtn");
-    if (refreshBtn) {
-        refreshBtn.addEventListener("click", actualizarClima);
+    const zonaSelect = document.getElementById("zonaSelect");
+    const zonaBtn = document.getElementById("zonaBtn");
+
+    let catalogoDistritos = [];
+
+    if (zonaSelect) {
+        fetch("/api/distritos")
+            .then(r => r.json())
+            .then(distritos => {
+                catalogoDistritos = distritos;
+                distritos.forEach(item => {
+                    const opt = document.createElement("option");
+                    opt.value = item.municipio;
+                    opt.textContent = item.municipio;
+                    zonaSelect.appendChild(opt);
+                });
+            })
+            .catch(() => {});
+    }
+
+    if (zonaBtn && zonaSelect) {
+        zonaBtn.addEventListener("click", () => {
+            const municipio = zonaSelect.value;
+            if (!municipio) return;
+            const entry = catalogoDistritos.find(d => d.municipio === municipio);
+            const coords = (entry && entry.lat && entry.lon)
+                ? { lat: entry.lat, lon: entry.lon }
+                : null;
+            consultarPorZona(municipio, coords);
+        });
     }
 });

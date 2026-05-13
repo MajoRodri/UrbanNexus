@@ -10,11 +10,17 @@ from etl.load import sync_zones, load_measurements, log_execution
 # TEST 1: EXTRACT records
 # =====================================================
 
-def test_extract_records():
+def test_extract_records(monkeypatch, tmp_path):
+    fake_json = tmp_path / "registros.json"
+    fake_json.write_text('[{"estacion_id": "Retiro", "fecha": "2026-05-10T10:00", "temperatura": 22, "humedad": 55, "viento": 10, "lluvia": 0}]', encoding="utf-8")
+
+    import etl.extract as extract_module
+    monkeypatch.setattr(extract_module, "_DATOS_PATH", str(fake_json))
+
     df = extract_records()
 
     assert isinstance(df, pd.DataFrame)
-    assert len(df) > 0
+    assert "estacion_id" in df.columns
 
 
 # =====================================================
@@ -129,10 +135,24 @@ def test_log_execution(db_session):
 # TEST 7: PIPELINE COMPLETO
 # =====================================================
 
-def test_run_pipeline(db_session):
+def test_run_pipeline(db_session, monkeypatch, tmp_path):
+    fake_json = tmp_path / "registros.json"
+    fake_json.write_text(
+        '[{"estacion_id": "Retiro", "fecha": "2026-05-10T10:00", "temperatura": 22.0, "humedad": 55.0, "viento": 10.0, "lluvia": 0.0}]',
+        encoding="utf-8"
+    )
+
+    import etl.extract as extract_module
+    monkeypatch.setattr(extract_module, "_DATOS_PATH", str(fake_json))
+    monkeypatch.setattr(
+        extract_module,
+        "extract_station_reference",
+        lambda: [{"municipio": "Retiro", "cod_ine": "Retiro", "id_estacion": "Retiro", "estacion_referencia": "Retiro"}]
+    )
 
     result = run_pipeline(db_session)
 
-    assert isinstance(result, dict)
-    assert "estado" in result
-    assert result["estado"] in ["OK", "ERROR"]
+    assert result["estado"] == "OK"
+    assert result["filas_leidas"] == 1
+    assert result["insertadas"] == 1
+    assert result["duplicados"] == 0

@@ -91,7 +91,10 @@ def login():
         flash("Bienvenido.", "success")
         return redirect(url_for("view.index"))
 
-    detalle = respuesta.json().get("detail", "Credenciales incorrectas.")
+    try:
+        detalle = respuesta.json().get("detail", "Credenciales incorrectas.")
+    except Exception:
+        detalle = respuesta.text or "Credenciales incorrectas."
     flash(detalle, "error")
     return redirect(url_for("view.login"))
 
@@ -134,7 +137,10 @@ def crear_invitacion():
         flash("Invitación enviada correctamente.", "success")
         return redirect(url_for("view.admin_invitaciones"))
 
-    detalle = respuesta.json().get("detail", "Error al crear la invitación.")
+    try:
+        detalle = respuesta.json().get("detail", "Error al crear la invitación.")
+    except Exception:
+        detalle = respuesta.text or "Error al crear la invitación."
     flash(detalle, "error")
     return redirect(url_for("view.admin_invitaciones"))
 

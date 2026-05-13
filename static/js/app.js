@@ -6,17 +6,20 @@ document.addEventListener("DOMContentLoaded", async function () {
     const datalist = document.getElementById("estaciones_list");
     const mensajeDiv = document.getElementById("mensaje");
     const fechaInput = document.getElementById("fecha");
+    const apiFuente = document.getElementById("api-fuente");
+
+    const camposNumericos = ["temperatura", "humedad", "viento", "lluvia"];
 
     let listaMunicipios = [];
+    let municipioActivo = "";
+    let coordsActivas = null;
 
     const hoy = new Date().toISOString().split("T")[0];
     fechaInput.setAttribute("max", hoy);
 
     try {
-        const respuesta = await fetch("/static/js/estacion_por_municipio.json");
-        const datos = await respuesta.json();
-
-        listaMunicipios = datos.estacion_por_municipio || [];
+        const respuesta = await fetch("/api/distritos");
+        listaMunicipios = await respuesta.json();
 
         listaMunicipios.forEach(function (item) {
             const option = document.createElement("option");
@@ -29,6 +32,74 @@ document.addEventListener("DOMContentLoaded", async function () {
         mostrarMensaje("Error cargando la lista de municipios", "error");
     }
 
+    function setBadge(tipo, texto) {
+        apiFuente.className = "api-badge " + tipo;
+        apiFuente.textContent = texto;
+    }
+
+    function clearBadge() {
+        apiFuente.className = "api-badge";
+        apiFuente.textContent = "";
+    }
+
+    function setCamposReadonly(readonly) {
+        camposNumericos.forEach(function (id) {
+            const el = document.getElementById(id);
+            el.readOnly = readonly;
+        });
+    }
+
+    function limpiarCamposNumericos() {
+        camposNumericos.forEach(function (id) {
+            const el = document.getElementById(id);
+            el.value = "";
+            el.classList.remove("api-filled");
+        });
+    }
+
+    async function autocompletarClima(nombre, coords, fecha) {
+        municipioActivo = nombre;
+        setBadge("badge-cargando", "Consultando WeatherAPI...");
+        setCamposReadonly(true);
+
+        try {
+            let url = "/api/clima/municipio?nombre=" + encodeURIComponent(nombre);
+            if (coords) {
+                url += "&lat=" + encodeURIComponent(coords.lat) + "&lon=" + encodeURIComponent(coords.lon);
+            }
+            if (fecha) {
+                url += "&fecha=" + encodeURIComponent(fecha);
+            }
+            const res = await fetch(url);
+
+            if (nombre !== municipioActivo) return;
+
+            if (!res.ok) {
+                throw new Error("API no disponible");
+            }
+
+            const datos = await res.json();
+
+            document.getElementById("temperatura").value = datos.temperatura ?? "";
+            document.getElementById("humedad").value = datos.humedad ?? "";
+            document.getElementById("viento").value = datos.viento ?? "";
+            document.getElementById("lluvia").value = datos.lluvia ?? "";
+
+            camposNumericos.forEach(function (id) {
+                document.getElementById(id).classList.add("api-filled");
+            });
+
+            setBadge("badge-api", "Datos de WeatherAPI");
+
+        } catch (_) {
+            if (nombre !== municipioActivo) return;
+
+            limpiarCamposNumericos();
+            setCamposReadonly(false);
+            setBadge("badge-manual", "API no disponible · Introduce los datos manualmente");
+        }
+    }
+
     municipioInput.addEventListener("input", function () {
         const valorEscrito = municipioInput.value.trim().toLowerCase();
 
@@ -38,10 +109,25 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         if (seleccion) {
             hiddenInput.value = seleccion.id_estacion;
+            coordsActivas = (seleccion.lat && seleccion.lon)
+                ? { lat: seleccion.lat, lon: seleccion.lon }
+                : null;
             municipioInput.style.borderLeft = "4px solid #22c55e";
+            autocompletarClima(seleccion.ciudad_api || seleccion.municipio, coordsActivas, fechaInput.value || null);
         } else {
             hiddenInput.value = "";
+            coordsActivas = null;
             municipioInput.style.borderLeft = "3px solid var(--accent)";
+            municipioActivo = "";
+            limpiarCamposNumericos();
+            clearBadge();
+            setCamposReadonly(false);
+        }
+    });
+
+    fechaInput.addEventListener("change", function () {
+        if (municipioActivo && coordsActivas) {
+            autocompletarClima(municipioActivo, coordsActivas, fechaInput.value || null);
         }
     });
 
@@ -139,8 +225,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
                 formulario.reset();
                 hiddenInput.value = "";
+                municipioActivo = "";
                 municipioInput.style.borderLeft = "3px solid var(--accent)";
                 fechaInput.setAttribute("max", hoy);
+                limpiarCamposNumericos();
+                clearBadge();
+                setCamposReadonly(false);
 
             } else {
                 mostrarMensaje(resultado.error || resultado.message || "Error al guardar el registro", "error");

@@ -8,7 +8,6 @@ class JSONRepository:
         else:
             self.file_path = file_path
         
-        self.stations_path = os.path.join("static", "js", "estacion_por_municipio.json")
         self._ensure_file_exists()
 
     def _ensure_file_exists(self):
@@ -35,8 +34,7 @@ class JSONRepository:
 
     def filtrar_registros(self, municipio=None, fuente=None, fecha=None):
         """
-        FILTRADO CORREGIDO: 
-        Ahora busca directamente por el texto del municipio en el JSON.
+        Busca directamente por el texto del municipio en el JSON.
         """
         try:
             if not os.path.exists(self.file_path):
@@ -54,7 +52,7 @@ class JSONRepository:
             if fecha:
                 datos = [r for r in datos if str(r.get('fecha')) == str(fecha)]
 
-            # 3. Filtro por Fuente (manual/aemet)
+            # 3. Filtro por Fuente (manual/weatherapi)
             if fuente:
                 datos = [r for r in datos if r.get('fuente') == fuente]
                 
@@ -64,7 +62,7 @@ class JSONRepository:
             return []
 
     def obtener_ultimo_registro(self, municipio, fuente):
-        """Para la comparativa: busca el último registro de un municipio."""
+        """Busca el último registro de un municipio y fuente dados."""
         try:
             with open(self.file_path, 'r', encoding='utf-8') as f:
                 datos = json.load(f)

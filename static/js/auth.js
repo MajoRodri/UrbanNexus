@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ids.forEach(id => showError(id, ""));
     }
 
-    function validarNumEmpleado(num) {
-        return /^\d{6}$/.test(num);
+    function validarIdEmpleado(id) {
+        return /^[A-Za-z0-9]{3,}$/.test(id);
     }
 
     function validarPassword(password) {
@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
         loginForm.addEventListener("submit", function (e) {
             let valid = true;
 
-            const numEmpleado = document.getElementById("num_empleado").value.trim();
+            const idEmpleado = document.getElementById("id_empleado").value.trim();
             const password = document.getElementById("password").value.trim();
 
-            clearErrors("numEmpleadoError", "passwordError");
+            clearErrors("idEmpleadoError", "passwordError");
 
-            if (!validarNumEmpleado(numEmpleado)) {
-                showError("numEmpleadoError", "Introduce un número de empleado válido (6 dígitos).");
+            if (!validarIdEmpleado(idEmpleado)) {
+                showError("idEmpleadoError", "Introduce un ID de empleado válido (Ej: E4821T).");
                 valid = false;
             }
 
@@ -54,21 +54,15 @@ document.addEventListener("DOMContentLoaded", function () {
         registroForm.addEventListener("submit", function (e) {
             let valid = true;
 
-            const numEmpleado = document.getElementById("num_empleado").value.trim();
-            const nombre = document.getElementById("nombre").value.trim();
+            const nombres = document.getElementById("nombres").value.trim();
             const apellidos = document.getElementById("apellidos").value.trim();
             const password = document.getElementById("password").value.trim();
             const confirmPassword = document.getElementById("confirm_password").value.trim();
 
-            clearErrors("numEmpleadoError", "nombreError", "apellidosError", "passwordError", "confirmPasswordError");
+            clearErrors("nombresError", "apellidosError", "passwordError", "confirmPasswordError");
 
-            if (!validarNumEmpleado(numEmpleado)) {
-                showError("numEmpleadoError", "El número de empleado debe tener 6 dígitos.");
-                valid = false;
-            }
-
-            if (nombre.length === 0) {
-                showError("nombreError", "El nombre es obligatorio.");
+            if (nombres.length === 0) {
+                showError("nombresError", "El nombre es obligatorio.");
                 valid = false;
             }
 

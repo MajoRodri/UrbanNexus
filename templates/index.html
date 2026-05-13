@@ -93,7 +93,7 @@
 
           <div class="metric-box">
             <p class="metric-label">Fuente</p>
-            <p class="metric-value small" id="source">AEMET</p>
+            <p class="metric-value small" id="source">WeatherAPI</p>
           </div>
         </div>
       </article>
@@ -105,10 +105,15 @@
 
           {% if session.get("id_empleado") %}
 
+          {% if session.get("rol") in ("admin", "tecnico") %}
           <a href="{{ url_for('view.registro') }}" class="mini-btn">Registro</a>
-          <a href="{{ url_for('view.api_view') }}" class="mini-btn">API</a>
+          {% endif %}
+
           <a href="{{ url_for('view.consulta') }}" class="mini-btn">Histórico</a>
-          <a href="{{ url_for('view.comparar') }}" class="mini-btn">Comparar</a>
+
+          {% if session.get("rol") in ("admin", "tecnico") %}
+          <a href="{{ url_for('view.admin_scheduler') }}" class="mini-btn active">Scheduler</a>
+          {% endif %}
 
           {% if session.get("rol") == "admin" %}
           <a href="{{ url_for('view.admin_invitaciones') }}" class="mini-btn active">Crear invitación</a>
@@ -125,7 +130,13 @@
 
         </div>
 
-        <button id="refreshBtn" class="primary-btn">Actualizar Datos</button>
+        <div class="zona-selector">
+          <span class="zona-label">Consultar datos por zona</span>
+          <select id="zonaSelect">
+            <option value="" disabled selected>Selecciona un municipio...</option>
+          </select>
+          <button id="zonaBtn" class="primary-btn">Buscar zona</button>
+        </div>
       </article>
 
     </section>

@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+# Mailtrap: plataforma de envío de emails transaccionales. Las credenciales se leen
+# desde .env para no exponerlas en el código.
 MAILTRAP_TOKEN = os.getenv("MAILTRAP_TOKEN")
 EMAIL_FROM = os.getenv("EMAIL_FROM")
 
@@ -17,6 +19,8 @@ def send_invitation_email(
     nombres: str,
     apellidos: str
 ):
+    # Envía al destinatario su código de invitación de un solo uso.
+    # El cuerpo incluye: saludo con nombre, rol asignado, el código y advertencia de caducidad.
 
     mail = mt.Mail(
         sender=mt.Address(

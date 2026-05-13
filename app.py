@@ -1,7 +1,8 @@
 from flask import Flask, request
 from dotenv import load_dotenv
 import os
-from services.startup_service import create_default_superadmin
+from db.database import create_tables
+from services.startup_service import create_default_superadmin, seed_zones_from_catalog
 
 # 1. IMPORTACIÓN DE BLUEPRINTS
 from controllers.view_controller import view_bp
@@ -16,6 +17,10 @@ from controllers.scheduler_controller import init_scheduler
 load_dotenv(override=True)
 
 app = Flask(__name__)
+
+# Crear tablas en SQLite si no existen (garantiza que Flask puede arrancar solo)
+create_tables()
+seed_zones_from_catalog()
 
 # Configuración básica
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "clave_secreta")
@@ -41,10 +46,10 @@ def inject_vars():
 app.register_blueprint(view_bp)    # Páginas HTML (index, consulta...)
 app.register_blueprint(manual_bp)  # Registro manual de datos
 app.register_blueprint(auth_bp)    # Login y registro de usuarios
-app.register_blueprint(api_bp)     # API de clima (GPS / AEMET)
+app.register_blueprint(api_bp)     # API de clima (GPS / WeatherAPI)
 
 # --- INICIALIZAR TAREAS AUTOMÁTICAS ---
-# Esto hará que el servidor pida datos a AEMET por su cuenta cada X tiempo
+# Esto hará que el servidor pida datos a WeatherAPI por su cuenta cada X tiempo
 try:
     init_scheduler(app)
 except Exception as e:
