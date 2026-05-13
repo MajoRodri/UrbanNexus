@@ -19,6 +19,9 @@ def generate_employee_id(rol: str) -> str:
     return f"E{numero}{letra_rol}"
 
 def generate_unique_id(rol: str, db, Usuario) -> str:
+    # Genera IDs hasta encontrar uno que no exista en la BD.
+    # El espacio es de 9000 números posibles (1000-9999), así que en la práctica
+    # el bucle termina en el primer intento salvo que haya cientos de usuarios del mismo rol.
     while True:
         id_empleado = generate_employee_id(rol)
 

@@ -193,3 +193,44 @@ datalist {
   color: #86efac;
   border: 1px solid rgba(34, 197, 94, 0.45);
 }
+
+/* Badge de fuente de datos (API / manual / cargando) */
+.api-badge {
+  display: none;
+  margin-top: 0.45rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.api-badge.badge-api {
+  display: block;
+  background: rgba(61, 155, 170, 0.15);
+  color: #7EC8C0;
+  border: 1px solid rgba(61, 155, 170, 0.3);
+}
+
+.api-badge.badge-manual {
+  display: block;
+  background: rgba(249, 115, 22, 0.12);
+  color: #fdba74;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.api-badge.badge-cargando {
+  display: block;
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Inputs rellenados automáticamente por la API (no editables) */
+input.api-filled {
+  border-left: 3px solid var(--accent);
+  background: rgba(61, 155, 170, 0.07);
+  cursor: not-allowed;
+  opacity: 0.85;
+}

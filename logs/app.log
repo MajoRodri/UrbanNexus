@@ -736,3 +736,414 @@
 2026-05-12 14:58:25 [INFO] Usando observaciones AEMET en caché
 2026-05-12 14:58:25 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
 2026-05-12 14:58:25 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 15:19:47 [INFO] Petición /api/clima recibida: lat=40.3520982643703, lon=-3.6865647856960515
+2026-05-12 15:19:48 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:19:48 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:19:49 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 15:19:49 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:19:49 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 15:19:49 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:19:49 [ERROR] AEMET no devolvió datos para lat=40.3520982643703, lon=-3.6865647856960515
+2026-05-12 15:22:46 [INFO] Petición /api/clima recibida: lat=40.352142437200676, lon=-3.6865639973618696
+2026-05-12 15:22:46 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:22:46 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:22:47 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:22:47 [INFO] Clima guardado en BD y devuelto: Villaverde 16.6°C
+2026-05-12 15:23:34 [INFO] Petición /api/clima recibida: lat=40.352198659269284, lon=-3.6865868276644904
+2026-05-12 15:23:35 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:23:35 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:23:36 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:23:36 [INFO] Clima guardado en BD y devuelto: Villaverde 16.6°C
+2026-05-12 15:24:26 [INFO] Petición /api/clima recibida: lat=40.352149945412094, lon=-3.6865696970883293
+2026-05-12 15:24:27 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:24:27 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:24:28 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:24:28 [INFO] Clima guardado en BD y devuelto: Villaverde 16.6°C
+2026-05-12 15:26:44 [INFO] Petición /api/clima recibida: lat=40.35218532997587, lon=-3.686588176349986
+2026-05-12 15:26:45 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:26:45 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:26:45 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 15:26:45 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:26:46 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 15:26:46 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:26:46 [ERROR] AEMET no devolvió datos para lat=40.35218532997587, lon=-3.686588176349986
+2026-05-12 15:27:14 [INFO] Petición /api/clima recibida: lat=40.35216644115259, lon=-3.686557594847651
+2026-05-12 15:27:15 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:27:15 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:27:15 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:27:15 [INFO] Clima guardado en BD y devuelto: Villaverde 16.6°C
+2026-05-12 15:33:02 [INFO] Petición /api/clima recibida: lat=40.352169058720975, lon=-3.6865859790245663
+2026-05-12 15:33:03 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:33:03 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:33:04 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:33:04 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:35:41 [INFO] Petición /api/clima recibida: lat=40.35217900346238, lon=-3.686577212519091
+2026-05-12 15:35:43 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:35:43 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:35:44 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:35:44 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:44:59 [INFO] Petición /api/clima recibida: lat=40.3521826740357, lon=-3.6866075318319016
+2026-05-12 15:45:00 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:45:00 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:45:01 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:45:01 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:49:40 [INFO] Petición /api/clima recibida: lat=40.35220488270718, lon=-3.686635417160611
+2026-05-12 15:49:40 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:49:40 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:49:46 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:49:47 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:52:04 [INFO] Petición /api/clima recibida: lat=40.35216538636943, lon=-3.6865789996201324
+2026-05-12 15:52:05 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:52:05 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:52:06 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:52:06 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:53:27 [INFO] Petición /api/clima recibida: lat=40.35217172660092, lon=-3.6865819088574496
+2026-05-12 15:53:29 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:53:29 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:53:30 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:53:30 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:53:30 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:53:30 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:53:30 [ERROR] AEMET no devolvió datos para lat=40.35217172660092, lon=-3.6865819088574496
+2026-05-12 15:54:25 [INFO] Petición /api/clima recibida: lat=40.352186465804294, lon=-3.686590599968113
+2026-05-12 15:54:26 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:54:26 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:54:26 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:54:26 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:54:26 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:54:26 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:54:26 [ERROR] AEMET no devolvió datos para lat=40.352186465804294, lon=-3.686590599968113
+2026-05-12 15:54:31 [INFO] Petición /api/clima recibida: lat=40.352186465804294, lon=-3.686590599968113
+2026-05-12 15:54:31 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:54:31 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:54:32 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:54:32 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:54:32 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:54:32 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:54:32 [ERROR] AEMET no devolvió datos para lat=40.352186465804294, lon=-3.686590599968113
+2026-05-12 15:55:55 [INFO] Petición /api/clima recibida: lat=40.352142833436034, lon=-3.6865680908785547
+2026-05-12 15:55:56 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:55:56 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:55:57 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:55:57 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:55:57 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:55:57 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:55:57 [ERROR] AEMET no devolvió datos para lat=40.352142833436034, lon=-3.6865680908785547
+2026-05-12 15:56:05 [INFO] Petición /api/clima recibida: lat=40.352142833436034, lon=-3.6865680908785547
+2026-05-12 15:56:06 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:56:06 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:56:06 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:56:06 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:56:07 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:56:07 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:56:07 [ERROR] AEMET no devolvió datos para lat=40.352142833436034, lon=-3.6865680908785547
+2026-05-12 15:56:45 [INFO] Petición /api/clima recibida: lat=40.35213211875079, lon=-3.6865528590360794
+2026-05-12 15:56:46 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:56:46 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:56:46 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:56:46 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:56:47 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:56:47 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:56:47 [ERROR] AEMET no devolvió datos para lat=40.35213211875079, lon=-3.6865528590360794
+2026-05-12 15:58:02 [INFO] Petición /api/clima recibida: lat=40.35215671144306, lon=-3.6866135804286406
+2026-05-12 15:58:03 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:58:03 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:58:03 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:58:03 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:58:04 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:58:04 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:58:04 [ERROR] AEMET no devolvió datos para lat=40.35215671144306, lon=-3.6866135804286406
+2026-05-12 15:58:31 [INFO] Petición /api/clima recibida: lat=40.35206696670726, lon=-3.686534912248606
+2026-05-12 15:58:32 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:58:32 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:58:32 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:58:32 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:58:32 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:58:32 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:58:32 [ERROR] AEMET no devolvió datos para lat=40.35206696670726, lon=-3.686534912248606
+2026-05-12 16:19:24 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-12 16:19:24 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 16:19:24 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 16:19:24 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 16:19:24 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:24 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:24 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:24 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:24 [ERROR] Error en comparativa: Error simulado de API
+2026-05-12 16:19:54 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-12 16:19:54 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 16:19:54 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 16:19:54 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 16:19:54 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:54 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:54 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:54 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:54 [ERROR] Error en comparativa: Error simulado de API
+2026-05-12 16:33:16 [INFO] Petición /api/clima recibida: lat=40.35215612516882, lon=-3.6865835479422375
+2026-05-12 16:33:17 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:33:17 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-12 16:33:17 [ERROR] WeatherAPI no devolvió datos para lat=40.35215612516882, lon=-3.6865835479422375
+2026-05-12 16:36:01 [INFO] Petición /api/clima recibida: lat=40.35213240272711, lon=-3.6865728750385616
+2026-05-12 16:36:02 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:36:03 [INFO] Datos obtenidos para lat=40.35213240272711, lon=-3.6865728750385616
+2026-05-12 16:36:03 [INFO] Clima guardado en BD y devuelto: Villaverde 18.8°C
+2026-05-12 16:36:38 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 16:40:03 [INFO] Datos obtenidos para municipio=Anchuelo
+2026-05-12 16:45:01 [INFO] Datos obtenidos para municipio=Alcorcón
+2026-05-12 16:52:52 [INFO] Petición /api/clima recibida: lat=40.35222060733179, lon=-3.686620131741822
+2026-05-12 16:52:53 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:52:53 [INFO] Datos obtenidos para lat=40.35222060733179, lon=-3.686620131741822
+2026-05-12 16:52:53 [INFO] Clima guardado en BD y devuelto: Villaverde 16.1°C
+2026-05-12 16:52:59 [INFO] Datos obtenidos para municipio=Anchuelo
+2026-05-12 16:53:19 [INFO] Petición /api/clima recibida: lat=40.3521404073071, lon=-3.686585264626817
+2026-05-12 16:53:19 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:53:20 [INFO] Datos obtenidos para lat=40.3521404073071, lon=-3.686585264626817
+2026-05-12 16:53:20 [INFO] Clima guardado en BD y devuelto: Villaverde 16.1°C
+2026-05-12 16:53:27 [INFO] Petición /api/clima recibida: lat=40.3521404073071, lon=-3.686585264626817
+2026-05-12 16:53:27 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:53:28 [INFO] Datos obtenidos para lat=40.3521404073071, lon=-3.686585264626817
+2026-05-12 16:53:28 [INFO] Clima guardado en BD y devuelto: Villaverde 16.1°C
+2026-05-12 17:00:08 [INFO] Petición /api/clima recibida: lat=40.3521534059283, lon=-3.6865534483178672
+2026-05-12 17:00:09 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:00:10 [INFO] Datos obtenidos para lat=40.3521534059283, lon=-3.6865534483178672
+2026-05-12 17:00:10 [INFO] Clima guardado en BD y devuelto: Villaverde 16.2°C
+2026-05-12 17:00:37 [INFO] Petición /api/clima recibida: lat=40.35212984089096, lon=-3.686569551171587
+2026-05-12 17:00:39 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:00:39 [INFO] Datos obtenidos para lat=40.35212984089096, lon=-3.686569551171587
+2026-05-12 17:00:39 [INFO] Clima guardado en BD y devuelto: Villaverde 16.2°C
+2026-05-12 17:03:26 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-12 17:03:26 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 17:03:26 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 17:03:26 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 17:17:18 [INFO] Petición /api/clima recibida: lat=40.35215481271765, lon=-3.6865945465349985
+2026-05-12 17:17:19 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:17:19 [INFO] Datos obtenidos para lat=40.35215481271765, lon=-3.6865945465349985
+2026-05-12 17:17:19 [INFO] Clima guardado en BD y devuelto: Villaverde 18.1°C
+2026-05-12 17:18:47 [INFO] Petición /api/clima recibida: lat=40.35212798975297, lon=-3.686540105005617
+2026-05-12 17:18:48 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:18:48 [INFO] Datos obtenidos para lat=40.35212798975297, lon=-3.686540105005617
+2026-05-12 17:18:48 [INFO] Clima guardado en BD y devuelto: Villaverde 18.1°C
+2026-05-12 17:36:33 [INFO] Petición /api/clima recibida: lat=40.3521038454705, lon=-3.686527846470145
+2026-05-12 17:36:34 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:36:34 [INFO] Datos obtenidos para lat=40.3521038454705, lon=-3.686527846470145
+2026-05-12 17:36:34 [INFO] Clima guardado en BD y devuelto: Villaverde 18.3°C
+2026-05-12 17:51:13 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-12 17:51:13 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 17:51:13 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 17:51:13 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 08:56:32 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 08:56:32 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 08:56:32 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 08:56:32 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 09:03:43 [INFO] Petición /api/clima recibida: lat=40.352076527369135, lon=-3.6865343565814404
+2026-05-13 09:03:45 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 09:03:45 [INFO] Datos obtenidos para lat=40.352076527369135, lon=-3.6865343565814404
+2026-05-13 09:03:45 [INFO] Clima guardado en BD y devuelto: Villaverde 12.4°C
+2026-05-13 09:04:00 [INFO] Petición /api/clima recibida: lat=40.352076150693925, lon=-3.6865216273169534
+2026-05-13 09:04:01 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 09:04:01 [INFO] Datos obtenidos para lat=40.352076150693925, lon=-3.6865216273169534
+2026-05-13 09:04:01 [INFO] Clima guardado en BD y devuelto: Villaverde 12.4°C
+2026-05-13 10:50:04 [INFO] Petición /api/clima recibida: lat=40.35211424953298, lon=-3.68653833619042
+2026-05-13 10:50:05 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 10:50:05 [INFO] Datos obtenidos para lat=40.35211424953298, lon=-3.68653833619042
+2026-05-13 10:50:05 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 10:51:08 [INFO] Datos obtenidos para municipio=Algete
+2026-05-13 10:51:35 [INFO] Petición /api/clima recibida: lat=40.35214655661835, lon=-3.686548498506423
+2026-05-13 10:51:36 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 10:51:36 [INFO] Datos obtenidos para lat=40.35214655661835, lon=-3.686548498506423
+2026-05-13 10:51:36 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 10:53:00 [INFO] Datos obtenidos para lat=40.4167, lon=-3.7033
+2026-05-13 10:54:53 [INFO] Petición /api/clima recibida: lat=40.3520580141743, lon=-3.686498068793986
+2026-05-13 10:54:54 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 10:54:55 [INFO] Datos obtenidos para lat=40.3520580141743, lon=-3.686498068793986
+2026-05-13 10:54:55 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 11:00:09 [INFO] Petición /api/clima recibida: lat=40.35203094005727, lon=-3.686484437134537
+2026-05-13 11:00:10 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:00:11 [INFO] Datos obtenidos para lat=40.35203094005727, lon=-3.686484437134537
+2026-05-13 11:00:11 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 11:01:38 [INFO] Petición /api/clima recibida: lat=40.35205631133966, lon=-3.6865160386940796
+2026-05-13 11:01:39 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:01:40 [INFO] Datos obtenidos para lat=40.35205631133966, lon=-3.6865160386940796
+2026-05-13 11:01:40 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 11:02:53 [INFO] Petición /api/clima recibida: lat=40.352073758979316, lon=-3.6865291271804037
+2026-05-13 11:02:53 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:02:54 [INFO] Datos obtenidos para lat=40.352073758979316, lon=-3.6865291271804037
+2026-05-13 11:02:54 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 11:41:02 [INFO] Petición /api/clima recibida: lat=40.3521011197686, lon=-3.686520917240981
+2026-05-13 11:41:03 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:41:04 [INFO] Datos obtenidos para lat=40.3521011197686, lon=-3.686520917240981
+2026-05-13 11:41:04 [INFO] Clima por coordenadas devuelto: Villaverde 16.1°C
+2026-05-13 11:41:10 [INFO] Datos obtenidos para municipio=Griñón
+2026-05-13 11:41:10 [INFO] Consulta clima por municipio: Griñón 16.1°C
+2026-05-13 11:41:15 [INFO] Datos obtenidos para municipio=Getafe
+2026-05-13 11:41:15 [INFO] Consulta clima por municipio: Getafe 16.1°C
+2026-05-13 11:41:21 [INFO] Datos obtenidos para municipio=Tres Cantos
+2026-05-13 11:41:21 [INFO] Consulta clima por municipio: Los Cantos 12.5°C
+2026-05-13 11:41:28 [INFO] Datos obtenidos para municipio=Anchuelo
+2026-05-13 11:41:28 [INFO] Consulta clima por municipio: Anchuelo 14.3°C
+2026-05-13 11:45:52 [INFO] Petición /api/clima recibida: lat=40.3520685590076, lon=-3.6865222600891134
+2026-05-13 11:45:53 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:45:54 [INFO] Datos obtenidos para lat=40.3520685590076, lon=-3.6865222600891134
+2026-05-13 11:45:54 [INFO] Clima por coordenadas devuelto: Villaverde 16.1°C
+2026-05-13 11:45:59 [INFO] Datos obtenidos para municipio=Becerril de la Sierra
+2026-05-13 11:45:59 [INFO] Consulta clima por municipio: Becerril De La Sierra 8.3°C
+2026-05-13 11:55:10 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 11:55:10 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:55:10 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 11:55:10 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:55:40 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 11:55:40 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:55:40 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 11:55:40 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:59:48 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 11:59:48 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:59:48 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 11:59:48 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 12:08:39 [INFO] Petición /api/clima recibida: lat=40.352105782873124, lon=-3.6865829481806034
+2026-05-13 12:08:39 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:08:40 [INFO] Datos obtenidos para lat=40.352105782873124, lon=-3.6865829481806034
+2026-05-13 12:08:40 [INFO] Clima por coordenadas devuelto: Villaverde 17.4°C
+2026-05-13 12:09:13 [INFO] Petición /api/clima recibida: lat=40.35216385205314, lon=-3.686582346284601
+2026-05-13 12:09:14 [INFO] Datos obtenidos para municipio=Aranjuez
+2026-05-13 12:09:14 [INFO] Consulta clima por municipio: Aranjuez 17.4°C
+2026-05-13 12:09:14 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:09:15 [INFO] Datos obtenidos para lat=40.35216385205314, lon=-3.686582346284601
+2026-05-13 12:09:15 [INFO] Clima por coordenadas devuelto: Villaverde 17.4°C
+2026-05-13 12:09:20 [INFO] Datos obtenidos para municipio=Aranjuez
+2026-05-13 12:09:20 [INFO] Consulta clima por municipio: Aranjuez 17.4°C
+2026-05-13 12:09:26 [INFO] Datos obtenidos para municipio=Batres
+2026-05-13 12:09:26 [INFO] Consulta clima por municipio: Batres 17.4°C
+2026-05-13 12:09:32 [INFO] Datos obtenidos para municipio=Fuente el Saz de Jarama
+2026-05-13 12:09:32 [INFO] Consulta clima por municipio: Fuente El Saz 16.4°C
+2026-05-13 12:09:40 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:09:40 [ERROR] WeatherAPI no devolvió datos para municipio=Móstoles
+2026-05-13 12:09:48 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:09:48 [ERROR] WeatherAPI no devolvió datos para municipio=Móstoles
+2026-05-13 12:09:54 [INFO] Datos obtenidos para municipio=Anchuelo
+2026-05-13 12:09:54 [INFO] Consulta clima por municipio: Anchuelo 16.4°C
+2026-05-13 12:10:44 [INFO] Petición /api/clima recibida: lat=40.352071296578934, lon=-3.686498922621598
+2026-05-13 12:10:45 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:10:46 [INFO] Datos obtenidos para lat=40.352071296578934, lon=-3.686498922621598
+2026-05-13 12:10:46 [INFO] Clima por coordenadas devuelto: Villaverde 17.4°C
+2026-05-13 12:11:00 [INFO] Datos obtenidos para lat=40.4167, lon=-3.7033
+2026-05-13 12:40:15 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 12:40:15 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 12:40:15 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 12:40:15 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 12:40:43 [INFO] Petición /api/clima recibida: lat=40.35216187864505, lon=-3.686555636390534
+2026-05-13 12:40:44 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:40:44 [INFO] Datos obtenidos para lat=40.35216187864505, lon=-3.686555636390534
+2026-05-13 12:40:44 [INFO] Clima por coordenadas devuelto: Villaverde 17.3°C
+2026-05-13 12:40:52 [INFO] Datos obtenidos para municipio=Moncloa-Aravaca
+2026-05-13 12:40:52 [INFO] Consulta clima por municipio: Aravaca 15.0°C
+2026-05-13 12:41:02 [INFO] Datos obtenidos para municipio=Ciudad Lineal
+2026-05-13 12:41:02 [INFO] Consulta clima por municipio: Ciudad Lineal 16.3°C
+2026-05-13 12:41:10 [INFO] Petición /api/clima recibida: lat=40.3521268219781, lon=-3.6865559995091255
+2026-05-13 12:41:11 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:41:12 [INFO] Datos obtenidos para lat=40.3521268219781, lon=-3.6865559995091255
+2026-05-13 12:41:12 [INFO] Clima por coordenadas devuelto: Villaverde 17.3°C
+2026-05-13 12:41:40 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:41:40 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:41:44 [INFO] Datos obtenidos para municipio=Usera
+2026-05-13 12:41:44 [INFO] Consulta clima por municipio: Usera 25.1°C
+2026-05-13 12:41:48 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:41:48 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:41:56 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:41:56 [ERROR] WeatherAPI no devolvió datos para municipio=Arganzuela
+2026-05-13 12:42:00 [INFO] Datos obtenidos para municipio=Barajas
+2026-05-13 12:42:00 [INFO] Consulta clima por municipio: Barajas De Madrid 16.3°C
+2026-05-13 12:42:07 [INFO] Datos obtenidos para municipio=Usera
+2026-05-13 12:42:07 [INFO] Consulta clima por municipio: Usera 25.1°C
+2026-05-13 12:42:18 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:42:18 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:42:39 [INFO] Petición /api/clima recibida: lat=40.35211582987305, lon=-3.6865810391602785
+2026-05-13 12:42:40 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:42:41 [INFO] Datos obtenidos para lat=40.35211582987305, lon=-3.6865810391602785
+2026-05-13 12:42:41 [INFO] Clima por coordenadas devuelto: Villaverde 17.3°C
+2026-05-13 12:42:45 [INFO] Datos obtenidos para municipio=Usera
+2026-05-13 12:42:45 [INFO] Consulta clima por municipio: Usera 25.1°C
+2026-05-13 12:43:25 [INFO] Datos obtenidos para municipio=Tetuán
+2026-05-13 12:43:25 [INFO] Consulta clima por municipio: Tetuán 21.1°C
+2026-05-13 12:43:29 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:43:29 [ERROR] WeatherAPI no devolvió datos para municipio=Arganzuela
+2026-05-13 12:43:34 [INFO] Datos obtenidos para municipio=Chamartín
+2026-05-13 12:43:34 [INFO] Consulta clima por municipio: Chamartín 15.0°C
+2026-05-13 12:43:38 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:43:38 [ERROR] WeatherAPI no devolvió datos para municipio=Chamberí
+2026-05-13 12:43:55 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:43:55 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:44:03 [INFO] Datos obtenidos para municipio=Ciudad Lineal
+2026-05-13 12:44:03 [INFO] Consulta clima por municipio: Ciudad Lineal 16.3°C
+2026-05-13 12:44:06 [INFO] Datos obtenidos para municipio=Fuencarral-El Pardo
+2026-05-13 12:44:06 [INFO] Consulta clima por municipio: Fuencarral 16.3°C
+2026-05-13 12:44:12 [INFO] Datos obtenidos para municipio=Hortaleza
+2026-05-13 12:44:12 [INFO] Consulta clima por municipio: Hortaleza 16.3°C
+2026-05-13 12:44:16 [INFO] Datos obtenidos para municipio=Fuencarral-El Pardo
+2026-05-13 12:44:16 [INFO] Consulta clima por municipio: Fuencarral 16.3°C
+2026-05-13 12:44:19 [INFO] Datos obtenidos para municipio=Fuencarral-El Pardo
+2026-05-13 12:44:19 [INFO] Consulta clima por municipio: Fuencarral 16.3°C
+2026-05-13 12:44:21 [INFO] Datos obtenidos para municipio=Fuencarral-El Pardo
+2026-05-13 12:44:21 [INFO] Consulta clima por municipio: Fuencarral 16.3°C
+2026-05-13 12:44:25 [INFO] Datos obtenidos para municipio=Retiro
+2026-05-13 12:44:25 [INFO] Consulta clima por municipio: Retiro 15.3°C
+2026-05-13 12:44:56 [INFO] Petición /api/clima recibida: lat=40.35213480985032, lon=-3.686537930323245
+2026-05-13 12:44:57 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:44:57 [INFO] Datos obtenidos para lat=40.35213480985032, lon=-3.686537930323245
+2026-05-13 12:44:57 [INFO] Clima por coordenadas devuelto: Villaverde 17.3°C
+2026-05-13 12:53:31 [INFO] Petición /api/clima recibida: lat=40.35218302455661, lon=-3.686570437249589
+2026-05-13 12:53:32 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:53:33 [INFO] Datos obtenidos para lat=40.35218302455661, lon=-3.686570437249589
+2026-05-13 12:53:33 [INFO] Clima por coordenadas devuelto: Villaverde 17.1°C
+2026-05-13 12:54:19 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:54:19 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:54:46 [INFO] Datos obtenidos para municipio=Usera
+2026-05-13 12:54:46 [INFO] Consulta clima por municipio: Usera 25.1°C
+2026-05-13 12:54:54 [INFO] Datos obtenidos para municipio=Salamanca
+2026-05-13 12:54:54 [INFO] Consulta clima por municipio: Salamanca 11.3°C
+2026-05-13 12:54:59 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:54:59 [ERROR] WeatherAPI no devolvió datos para municipio=Arganzuela
+2026-05-13 12:57:37 [INFO] Petición /api/clima recibida: lat=40.352174715727465, lon=-3.6865652312294723
+2026-05-13 12:57:38 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:57:38 [INFO] Datos obtenidos para lat=40.352174715727465, lon=-3.6865652312294723
+2026-05-13 12:57:38 [INFO] Clima por coordenadas devuelto: Villaverde 17.1°C
+2026-05-13 12:57:41 [ERROR] WeatherAPI error 400 para 'Vicálvaro': No matching location found.
+2026-05-13 12:57:41 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:57:45 [ERROR] WeatherAPI error 400 para 'Vicálvaro': No matching location found.
+2026-05-13 12:57:45 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:57:51 [INFO] Datos obtenidos para lat=40.405, lon=-3.607
+2026-05-13 12:57:51 [INFO] Consulta clima por municipio: Vicalvaro 16.4°C
+2026-05-13 12:58:17 [INFO] Datos obtenidos para lat=40.394, lon=-3.699
+2026-05-13 12:58:17 [INFO] Consulta clima por municipio: Madrid 17.1°C
+2026-05-13 12:58:21 [INFO] Datos obtenidos para lat=40.394, lon=-3.699
+2026-05-13 12:58:21 [INFO] Consulta clima por municipio: Madrid 14.3°C
+2026-05-13 12:58:28 [INFO] Petición /api/clima recibida: lat=40.35213179281514, lon=-3.686607642490045
+2026-05-13 12:58:28 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:58:29 [INFO] Datos obtenidos para lat=40.35213179281514, lon=-3.686607642490045
+2026-05-13 12:58:29 [INFO] Clima por coordenadas devuelto: Villaverde 17.1°C
+2026-05-13 13:00:31 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:31 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:00:31 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:31 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:00:47 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:53 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:54 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:00:54 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:54 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:23 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 13:01:23 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:23 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 13:01:23 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:34 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 13:01:34 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:34 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 13:01:34 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:49 [INFO] Petición /api/clima recibida: lat=40.35212887462427, lon=-3.6865577657562927
+2026-05-13 13:01:49 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 13:01:50 [INFO] Datos obtenidos para lat=40.35212887462427, lon=-3.6865577657562927
+2026-05-13 13:01:50 [INFO] Clima por coordenadas devuelto: Villaverde 17.1°C
+2026-05-13 13:01:54 [INFO] Datos obtenidos para lat=40.405, lon=-3.607
+2026-05-13 13:01:54 [INFO] Consulta clima por municipio: Vicalvaro 16.4°C
+2026-05-13 13:02:35 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 13:02:35 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:02:35 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 13:02:35 [ERROR] Error al obtener datos de WeatherAPI: Exception

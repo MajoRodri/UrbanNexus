@@ -186,6 +186,25 @@ tbody tr:hover {
   border: 1px solid rgba(61, 155, 170, 0.3);
 }
 
+.csv-btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.1rem;
+  background: rgba(61, 155, 170, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(61, 155, 170, 0.35);
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.csv-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 .no-results {
   text-align: center;
   color: var(--text-muted);

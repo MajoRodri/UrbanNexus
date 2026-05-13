@@ -1,8 +1,9 @@
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-#Usaremos una base de datos SQLite para guardar los datos, 
-DATABASE_URL = "sqlite:///./clima.db"
+_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATABASE_URL = f"sqlite:///{os.path.join(_BASE_DIR, 'clima.db')}"
 
 #motor de base de datos de sqlalchemy
 #Estamos diciendo que la base de datos se llama clima.db y que se encuentra en el mismo directorio que el archivo 

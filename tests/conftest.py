@@ -33,13 +33,11 @@ def db_session():
     """
     Proporciona una sesión de base de datos aislada para tests.
 
-    - Crea todas las tablas necesarias antes del test
+    - Recrea las tablas antes de cada test (drop + create) para garantizar aislamiento
     - Proporciona una sesión activa de SQLAlchemy
     - Cierra la sesión al finalizar el test
-
-    Garantiza que cada test tenga un entorno limpio y reproducible.
     """
-
+    Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
 
     db = TestingSessionLocal()
