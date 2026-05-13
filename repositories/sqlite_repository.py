@@ -81,6 +81,14 @@ class SQLiteRepository:
     def list_all_measurements(self, skip=0, limit=100):
         return self.db.query(Medicion).offset(skip).limit(limit).all()
     
+    def get_all_measurements_ordered(self):
+        return (
+        self.db.query(Medicion)
+        .order_by(Medicion.fecha.asc())
+        .all()
+    )
+    
+    
     def list_all_logs_ETL(self):
         return self.db.query(ETLLog).all()
     
