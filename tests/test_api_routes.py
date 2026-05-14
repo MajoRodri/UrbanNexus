@@ -23,7 +23,6 @@ from main_api import app
 from db.database import Base, engine, SessionLocal
 
 from db.models import Usuario
-from utils.security import hash_password
 from utils.jwt import create_access_token
 
 client = TestClient(app)
@@ -41,7 +40,7 @@ def create_test_admin(db):
         nombres="Test",
         apellidos="Admin",
         email="admin@test.com",
-        password_hash=hash_password("test123"),
+        password_hash="test_hash",
         rol="admin",
         activo=True
     )
