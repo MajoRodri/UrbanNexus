@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv(override=True)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes.zones_routes import router as zones_router
@@ -6,9 +9,11 @@ from api.routes.users_routes import router as users_router
 from controllers.auth_fast_controller import router as auth_router
 from controllers.invitation_fast_controller import router as invitation_router
 from db.database import create_tables
+from services.startup_service import create_default_superadmin
 
 
 create_tables()
+create_default_superadmin()
 
 app = FastAPI(
     title="UrbanNexus",

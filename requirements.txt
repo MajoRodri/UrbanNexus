@@ -40,7 +40,6 @@ python-jose==3.5.0
 cryptography==48.0.0
 
 # Email
-mailtrap==2.5.0
 dnspython==2.8.0
 
 # Tests y calidad

@@ -261,6 +261,54 @@ def eliminar_usuario(id_empleado):
 
     return redirect(url_for("auth.admin_usuarios"))
 
+@auth_bp.route("/cambiar_password", methods=["POST"])
+def cambiar_password():
+    if not session.get("id_empleado"):
+        flash("Debes iniciar sesion para acceder.", "error")
+        return redirect(url_for("view.login"))
+
+    password_actual = request.form.get("password_actual", "").strip()
+    password_nueva = request.form.get("password_nueva", "").strip()
+    password_confirmar = request.form.get("password_confirmar", "").strip()
+
+    if not password_actual or not password_nueva or not password_confirmar:
+        flash("Todos los campos son obligatorios.", "error")
+        return redirect(url_for("view.perfil"))
+
+    if password_nueva != password_confirmar:
+        flash("La nueva contrasena y su confirmacion no coinciden.", "error")
+        return redirect(url_for("view.perfil"))
+
+    if len(password_nueva) < 6:
+        flash("La nueva contrasena debe tener al menos 6 caracteres.", "error")
+        return redirect(url_for("view.perfil"))
+
+    try:
+        respuesta = requests.put(
+            f"{FASTAPI_BASE_URL}/auth/change-password",
+            json={
+                "id_empleado": session.get("id_empleado"),
+                "password_actual": password_actual,
+                "password_nueva": password_nueva
+            },
+            timeout=8
+        )
+    except requests.exceptions.RequestException:
+        flash("No se pudo conectar con la API.", "error")
+        return redirect(url_for("view.perfil"))
+
+    if respuesta.status_code == 200:
+        flash("Contrasena actualizada correctamente.", "success")
+        return redirect(url_for("view.perfil"))
+
+    try:
+        detalle = respuesta.json().get("detail", "Error al cambiar la contrasena.")
+    except Exception:
+        detalle = "Error al cambiar la contrasena."
+    flash(detalle, "error")
+    return redirect(url_for("view.perfil"))
+
+
 @auth_bp.route("/logout")
 def logout():
     session.clear()

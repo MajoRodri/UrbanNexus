@@ -2,81 +2,85 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>UrbanNexus Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadísticas · UrbanNexus</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
 
-<body class="bg-dark text-light">
+<body>
 
-<div class="container mt-5">
+<div class="page">
 
-    <h1 class="mb-4">Dashboard Climático</h1>
-
-    <!-- 🚀 BOTÓN -->
-    <button class="btn btn-primary mb-4" onclick="mostrarGraficas()">
-        Cargar gráficas
-    </button>
-
-    <!-- ⚠️ MENSAJE SI NO HAY DATOS -->
-    {% if empty %}
-        <div class="alert alert-warning text-dark">
-            No hay datos disponibles en este momento.
-        </div>
-    {% endif %}
-
-    <!-- 📊 GRÁFICAS -->
-    <div id="graficas" style="display:none;">
-
-        <!-- 🌡️ TEMPERATURA -->
-        <div class="card bg-secondary p-3 mb-4">
-
-            <h3>Temperatura</h3>
-
-            <img
-                src="{{ temp_img }}"
-                class="img-fluid rounded"
-                alt="Gráfica temperatura"
-            >
-
-        </div>
-
-        <!-- 💧 HUMEDAD -->
-        <div class="card bg-secondary p-3 mb-4">
-
-            <h3>Humedad</h3>
-
-            <img
-                src="{{ humidity_img }}"
-                class="img-fluid rounded"
-                alt="Gráfica humedad"
-            >
-
-        </div>
-
-        <!-- 🌬️ VIENTO -->
-        <div class="card bg-secondary p-3 mb-4">
-
-            <h3>Viento</h3>
-
-            <img
-                src="{{ wind_img }}"
-                class="img-fluid rounded"
-                alt="Gráfica viento"
-            >
-
-        </div>
-
+  <header class="page-header">
+    <a href="{{ url_for('view.index') }}" class="back-btn">← Volver</a>
+    <div class="page-title">
+      <span class="eyebrow">UrbanNexus</span>
+      <h1>Estadísticas climáticas</h1>
     </div>
+  </header>
+
+  {% if empty %}
+  <div class="alert-empty">
+    No hay datos disponibles en este momento.
+  </div>
+  {% endif %}
+
+  <div class="graphs-grid">
+
+    <div class="graph-card">
+      <h3>Temperatura · °C</h3>
+      <img src="{{ temp_img }}" alt="Gráfica de temperatura">
+    </div>
+
+    <div class="graph-card">
+      <h3>Humedad · %</h3>
+      <img src="{{ humidity_img }}" alt="Gráfica de humedad">
+    </div>
+
+    <div class="graph-card full-width">
+      <h3>Viento · km/h</h3>
+      <img src="{{ wind_img }}" alt="Gráfica de viento">
+    </div>
+
+  </div>
 
 </div>
 
-<!-- 🧠 JS PARA MOSTRAR GRÁFICAS -->
+<!-- Modal lightbox -->
+<div class="modal-overlay" id="modal" onclick="cerrarModal(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="cerrarModal()">✕</button>
+    <img id="modal-img" src="" alt="">
+  </div>
+</div>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 <script>
-function mostrarGraficas() {
-    document.getElementById("graficas").style.display = "block";
-}
+  document.querySelectorAll(".graph-card img").forEach(img => {
+    img.addEventListener("click", () => {
+      document.getElementById("modal-img").src = img.src;
+      document.getElementById("modal").classList.add("open");
+    });
+  });
+
+  function cerrarModal(e) {
+    if (!e || e.target === document.getElementById("modal") || e.currentTarget.classList.contains("modal-close")) {
+      document.getElementById("modal").classList.remove("open");
+    }
+  }
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") cerrarModal();
+  });
 </script>
 
 </body>

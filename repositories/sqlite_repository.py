@@ -1,3 +1,4 @@
+from sqlalchemy.orm import joinedload
 from db.models import Zona, Medicion, ETLLog, Usuario
 from services.alert_service import AlertService
 from utils.employee_id import generate_unique_id
@@ -124,6 +125,14 @@ class SQLiteRepository:
         .order_by(Medicion.fecha.asc())
         .all()
     )
+
+    def list_all_measurements_with_zones(self):
+        return (
+            self.db.query(Medicion)
+            .options(joinedload(Medicion.zona))
+            .order_by(Medicion.fecha.asc())
+            .all()
+        )
     
     
     def list_all_logs_ETL(self):

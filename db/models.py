@@ -32,8 +32,8 @@ class Medicion(Base):
     alerta_humedad = Column(String, nullable=True)
 
     zona = relationship("Zona", back_populates="mediciones")
-    
-    #Restricción de unicidad para evitar duplicados, asegurando que no haya dos mediciones para la misma zona y fecha   
+
+    #Restricción de unicidad para evitar duplicados, asegurando que no haya dos mediciones para la misma zona y fecha
     __table_args__ = (UniqueConstraint('id_zona', 'fecha', name='uq_zona_fecha'),)
 
 ##Creamos una tabla para guardar los logs del ETL, lo que nos da trazabilidad sobre la ingesta de datos

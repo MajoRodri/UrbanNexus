@@ -9,13 +9,15 @@ from db.models import Usuario
 from schemas.auth_schema import (
     RegisterRequest,
     LoginRequest,
-    UserResponse
+    UserResponse,
+    ChangePasswordRequest
 )
 
 from services.invitation_service import (
     validate_invitation,
     mark_invitation_as_used
 )
+from services.email_service import send_welcome_email
 
 from utils.employee_id import generate_employee_id, generate_unique_id
 from utils.security import hash_password, verify_password
@@ -83,6 +85,14 @@ def register(
     db.commit()
     db.refresh(usuario)
 
+    send_welcome_email(
+        email_destino=usuario.email,
+        nombres=usuario.nombres,
+        apellidos=usuario.apellidos,
+        id_empleado=usuario.id_empleado,
+        rol=usuario.rol
+    )
+
     return usuario
 
 
@@ -137,3 +147,24 @@ def login(
         "id_empleado": usuario.id_empleado,
         "rol": usuario.rol
     }
+
+
+@router.put("/change-password")
+def change_password(
+    request: ChangePasswordRequest,
+    db: Session = Depends(get_db)
+):
+    usuario = db.query(Usuario).filter(
+        Usuario.id_empleado == request.id_empleado
+    ).first()
+
+    if not usuario:
+        raise HTTPException(status_code=404, detail="Usuario no encontrado.")
+
+    if not verify_password(request.password_actual, usuario.password_hash):
+        raise HTTPException(status_code=400, detail="La contrasena actual es incorrecta.")
+
+    usuario.password_hash = hash_password(request.password_nueva)
+    db.commit()
+
+    return {"message": "Contrasena actualizada correctamente."}

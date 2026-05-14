@@ -11,6 +11,11 @@ class LoginRequest(BaseModel):
     id_empleado: str = Field(..., description="ID interno del empleado")
     password: str = Field(..., min_length=6, description="Contraseña del usuario")
 
+class ChangePasswordRequest(BaseModel):
+    id_empleado: str
+    password_actual: str = Field(..., min_length=6)
+    password_nueva: str = Field(..., min_length=6)
+
 class UserResponse(BaseModel):
     id: int
     id_empleado: str
