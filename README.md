@@ -83,7 +83,7 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 </details>
 
 <details>
-<summary>👁️ &nbsp;<strong>Visualizer</strong></summary>
+<summary>👁️ &nbsp;<strong>Visualizador</strong></summary>
 <br>
 
 | Paso | 🔄 Acción |
@@ -232,7 +232,7 @@ python main_api.py
 <summary>6️⃣ &nbsp;<strong>Ejecutar los Tests</strong></summary>
 <br>
 
-El proyecto incluye una suite de **11 archivos de test** con Pytest. Con el entorno activo, ejecútalos desde la raíz:
+El proyecto incluye una suite de **10 archivos de test** con Pytest. Con el entorno activo, ejecútalos desde la raíz:
 
 **Ejecutar todos los tests a la vez:**
 
@@ -293,7 +293,7 @@ Sistema completo de gestión de usuarios con control de acceso por roles.
 |:---:|:---|
 | **admin** | Acceso total: usuarios, invitaciones, configuración del sistema. |
 | **tecnico** | Carga de datos, gestión de registros y ejecución del ETL. |
-| **consultor** | Solo lectura: consulta de datos y visualización de alertas. |
+| **visualizador** | Solo lectura: consulta de datos y visualización de alertas. |
 
 - Autenticación por JWT (python-jose) con expiración configurable.
 - Contraseñas cifradas con bcrypt sin almacenamiento en texto plano.
@@ -352,10 +352,14 @@ Monitoreo automático de umbrales en cada registro persistido:
 | :--- | :--- |
 | **🔴 ROJA — Calor extremo** | Temperatura ≥ 40 °C |
 | **🟠 NARANJA — Calor intenso** | Temperatura ≥ 35 °C |
-| **❄️ HELADA** | Temperatura ≤ 0 °C |
-| **💨 Viento fuerte** | Viento > 70 km/h |
-| **🌧️ Lluvia intensa** | Lluvia > 30 mm |
-| **💧 Humedad alta** | Humedad ≥ 90 % |
+| **🔴 ROJA — Frío extremo** | Temperatura ≤ −5 °C |
+| **🟠 NARANJA — Helada** | Temperatura ≤ 0 °C |
+| **🔴 ROJA — Viento extremo** | Viento > 70 km/h |
+| **🟠 NARANJA — Viento fuerte** | Viento > 40 km/h |
+| **🔴 ROJA — Lluvia torrencial** | Lluvia > 30 mm |
+| **🟠 NARANJA — Lluvia intensa** | Lluvia > 10 mm |
+| **🟠 NARANJA — Humedad alta** | Humedad ≥ 90 % |
+| **🟢 VERDE** | Sin alertas activas |
 
 </details>
 
@@ -415,15 +419,19 @@ Restricciones de integridad: clave única compuesta `(zona_id, fecha)` para evit
 | Método | Ruta | Servidor | Descripción |
 | :--- | :--- | :---: | :--- |
 | `GET` | `/` | Flask | Dashboard principal con resumen climatológico. |
+| `GET` | `/dashboard` | Flask | Dashboard analítico con gráficos de tendencias. |
 | `GET/POST` | `/login` | Flask | Formulario de acceso y gestión de sesión. |
 | `GET/POST` | `/registro` | Flask | Entrada manual de mediciones climáticas. |
 | `GET/POST` | `/consulta` | Flask | Visualización y filtrado del histórico de registros. |
+| `GET` | `/perfil` | Flask | Perfil del usuario autenticado. |
+| `GET/POST` | `/admin/usuarios` | Flask | Gestión de usuarios del sistema. |
 | `GET` | `/admin/scheduler` | Flask | Panel de administración del scheduler. |
 | `GET` | `/admin/invitaciones` | Flask | Gestión de invitaciones de nuevos usuarios. |
 | `POST` | `/api/v1/login` | FastAPI | Autenticación y emisión de JWT. |
 | `GET/POST` | `/api/v1/zones` | FastAPI | CRUD de zonas geográficas. |
 | `GET/POST` | `/api/v1/records` | FastAPI | CRUD de registros de mediciones. |
 | `GET` | `/api/v1/records/zone/{id}` | FastAPI | Registros filtrados por zona. |
+| `GET/POST` | `/api/v1/users` | FastAPI | CRUD de usuarios. |
 | `POST` | `/api/v1/invitations` | FastAPI | Creación y gestión de invitaciones. |
 | `GET` | `/docs` | FastAPI | Documentación interactiva OpenAPI / Swagger. |
 

@@ -72,6 +72,8 @@ def _buscar_registros_bd(municipio=None, fecha_raw=None):
 
 @view_bp.route("/")
 def index():
+    if not _logueado():
+        return redirect(url_for("view.login"))
     return render_template("index.html")
 
 @view_bp.route("/registro_usuario")

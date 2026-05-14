@@ -314,4 +314,4 @@ def logout():
     session.clear()
 
     flash("Sesión cerrada correctamente.", "success")
-    return redirect(url_for("view.index"))
+    return redirect(url_for("view.login"))
