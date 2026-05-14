@@ -9,6 +9,7 @@ from controllers.view_controller import view_bp
 from controllers.manual_controller import manual_bp
 from controllers.auth_controller import auth_bp
 from controllers.api_controller import api_bp
+from controllers.dashboard_controller import dashboard_bp
 
 # 2. IMPORTACIÓN DEL SCHEDULER (Tareas automáticas)
 from controllers.scheduler_controller import init_scheduler
@@ -47,6 +48,7 @@ app.register_blueprint(view_bp)    # Páginas HTML (index, consulta...)
 app.register_blueprint(manual_bp)  # Registro manual de datos
 app.register_blueprint(auth_bp)    # Login y registro de usuarios
 app.register_blueprint(api_bp)     # API de clima (GPS / WeatherAPI)
+app.register_blueprint(dashboard_bp)  # Dashboard climático
 
 # --- INICIALIZAR TAREAS AUTOMÁTICAS ---
 # Esto hará que el servidor pida datos a WeatherAPI por su cuenta cada X tiempo
