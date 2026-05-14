@@ -124,8 +124,8 @@ def login(
     access_token = create_access_token(
         data={
             "sub": usuario.id_empleado,
-"id_empleado": usuario.id_empleado,
-"rol": usuario.rol
+            "id_empleado": usuario.id_empleado,
+            "rol": usuario.rol
         }
     )
 

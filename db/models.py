@@ -29,6 +29,7 @@ class Medicion(Base):
     alerta_helada = Column(String, nullable=True)
     alerta_viento = Column(String, nullable=True)
     alerta_lluvia = Column(String, nullable=True)
+    alerta_humedad = Column(String, nullable=True)
 
     zona = relationship("Zona", back_populates="mediciones")
     

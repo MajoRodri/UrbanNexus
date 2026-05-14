@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UrbanNexus | Usuarios</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/historico.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <ol>
+                <li><a href="/">Inicio</a></li>
+                <li class="separator">/</li>
+                <li class="active">Usuarios</li>
+            </ol>
+        </nav>
+
+        <h1>Gestión de usuarios</h1>
+
+        <div class="card">
+            <h2>Usuarios registrados</h2>
+
+            {% if usuarios and usuarios|length > 0 %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID empleado</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{ usuario.id_empleado }}</td>
+                        <td>{{ usuario.nombres }} {{ usuario.apellidos }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>
+                            <span class="badge">{{ usuario.rol }}</span>
+                        </td>
+                        <td>
+                            {% if usuario.activo %}
+                            <span class="badge">Activo</span>
+                            {% else %}
+                            <span class="badge">Inactivo</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <form method="POST"
+                                action="{{ url_for('auth.cambiar_rol_usuario', id_empleado=usuario.id_empleado) }}">
+                                <select name="rol">
+                                    <option value="admin" {% if usuario.rol=="admin" %}selected{% endif %}>Admin
+                                    </option>
+                                    <option value="tecnico" {% if usuario.rol=="tecnico" %}selected{% endif %}>Técnico
+                                    </option>
+                                    <option value="visualizador" {% if usuario.rol=="visualizador" %}selected{% endif
+                                        %}>Visualizador</option>
+                                </select>
+                                <button type="submit">Cambiar rol</button>
+                            </form>
+
+                            <form method="POST"
+                                action="{{ url_for('auth.cambiar_estado_usuario', id_empleado=usuario.id_empleado) }}">
+                                <input type="hidden" name="activo" value="{{ 'false' if usuario.activo else 'true' }}">
+                                <button type="submit">
+                                    {{ "Desactivar" if usuario.activo else "Activar" }}
+                                </button>
+                            </form>
+
+                            <form method="POST"
+                                action="{{ url_for('auth.eliminar_usuario', id_empleado=usuario.id_empleado) }}"
+                                class="delete-user-form">
+                                <button type="submit">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p class="no-results">No hay usuarios registrados.</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/admin_usuarios.js') }}"></script>
+</body>
+
+</html>
