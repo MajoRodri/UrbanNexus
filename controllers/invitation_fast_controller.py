@@ -1,5 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
+from api.security import require_roles
+from db.models import Usuario
 
 from db.database import get_db
 from schemas.invitation_schema import (
@@ -23,7 +25,8 @@ router = APIRouter(
 )
 def create_invitation_endpoint(
     request: InvitationCreateRequest,
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    usuario_actual: Usuario = Depends(require_roles("admin"))
 ):
 
     try:
