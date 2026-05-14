@@ -17,6 +17,7 @@ from services.invitation_service import (
     validate_invitation,
     mark_invitation_as_used
 )
+from services.email_service import send_welcome_email
 
 from utils.employee_id import generate_employee_id, generate_unique_id
 from utils.security import hash_password, verify_password
@@ -83,6 +84,14 @@ def register(
 
     db.commit()
     db.refresh(usuario)
+
+    send_welcome_email(
+        email_destino=usuario.email,
+        nombres=usuario.nombres,
+        apellidos=usuario.apellidos,
+        id_empleado=usuario.id_empleado,
+        rol=usuario.rol
+    )
 
     return usuario
 
