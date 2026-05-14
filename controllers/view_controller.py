@@ -144,6 +144,16 @@ def scheduler_status():
     return jsonify(get_status())
 
 
+# --- Perfil de usuario ---
+
+@view_bp.route("/perfil")
+def perfil():
+    if not _logueado():
+        flash("Debes iniciar sesion para acceder.", "error")
+        return redirect(url_for("view.login"))
+    return render_template("perfil.html")
+
+
 # --- Rutas solo admin ---
 
 @view_bp.route("/admin/invitaciones")

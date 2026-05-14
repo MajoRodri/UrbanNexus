@@ -36,7 +36,7 @@ def create_invitation_endpoint(
         )
 
         send_invitation_email(
-            email_destino="adminurbannexus@gmail.com",
+            email_destino=request.email,
             codigo=invitacion.codigo,
             rol=invitacion.rol,
             nombres=request.nombres,

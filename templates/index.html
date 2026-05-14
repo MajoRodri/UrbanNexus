@@ -26,6 +26,8 @@
           {% if session.get("id_empleado") %}
           <p class="muted">
             Sesión iniciada como {{ session.get("id_empleado") }} · {{ session.get("rol") }}
+            &nbsp;·&nbsp;
+            <a href="{{ url_for('view.perfil') }}" style="color:inherit;text-decoration:underline;">Mi perfil</a>
           </p>
           {% endif %}
         </div>
