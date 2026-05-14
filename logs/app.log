@@ -1759,3 +1759,35 @@
 2026-05-14 12:32:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
 2026-05-14 12:32:13 [INFO] Datos obtenidos para lat=40.229091623899905, lon=-3.7665766357591375
 2026-05-14 12:32:13 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 15:26:16 [INFO] Petición /api/clima recibida: lat=40.35212740556486, lon=-3.6865463594796646
+2026-05-14 15:26:17 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:26:18 [INFO] Datos obtenidos para lat=40.35212740556486, lon=-3.6865463594796646
+2026-05-14 15:26:18 [INFO] Clima por coordenadas devuelto: Villaverde 21.3°C
+2026-05-14 15:26:40 [INFO] Petición /api/clima recibida: lat=40.35210738114556, lon=-3.6865507637045605
+2026-05-14 15:26:41 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:26:41 [INFO] Datos obtenidos para lat=40.35210738114556, lon=-3.6865507637045605
+2026-05-14 15:26:41 [INFO] Clima por coordenadas devuelto: Villaverde 21.3°C
+2026-05-14 15:34:39 [INFO] Petición /api/clima recibida: lat=40.35210068237363, lon=-3.6865287183340314
+2026-05-14 15:34:40 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:34:40 [INFO] Datos obtenidos para lat=40.35210068237363, lon=-3.6865287183340314
+2026-05-14 15:34:40 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
+2026-05-14 15:34:48 [INFO] Petición /api/clima recibida: lat=40.35210068237363, lon=-3.6865287183340314
+2026-05-14 15:34:48 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:34:48 [INFO] Datos obtenidos para lat=40.35210068237363, lon=-3.6865287183340314
+2026-05-14 15:34:48 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
+2026-05-14 15:35:07 [INFO] Petición /api/clima recibida: lat=40.35216503828241, lon=-3.6865867014702305
+2026-05-14 15:35:08 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:35:08 [INFO] Datos obtenidos para lat=40.35216503828241, lon=-3.6865867014702305
+2026-05-14 15:35:08 [INFO] Clima por coordenadas devuelto: Villaverde 21.3°C
+2026-05-14 15:35:45 [INFO] Petición /api/clima recibida: lat=40.35208342388981, lon=-3.6865322456515335
+2026-05-14 15:35:46 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:35:46 [INFO] Datos obtenidos para lat=40.35208342388981, lon=-3.6865322456515335
+2026-05-14 15:35:46 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
+2026-05-14 15:36:18 [INFO] Petición /api/clima recibida: lat=40.352157388258846, lon=-3.68658498764541
+2026-05-14 15:36:19 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:36:19 [INFO] Datos obtenidos para lat=40.352157388258846, lon=-3.68658498764541
+2026-05-14 15:36:19 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
+2026-05-14 15:38:36 [INFO] Petición /api/clima recibida: lat=40.35217200514724, lon=-3.686569889729266
+2026-05-14 15:38:37 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:38:38 [INFO] Datos obtenidos para lat=40.35217200514724, lon=-3.686569889729266
+2026-05-14 15:38:38 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C

@@ -112,6 +112,7 @@
           {% endif %}
 
           <a href="{{ url_for('view.consulta') }}" class="mini-btn">Histórico</a>
+          <a href="{{ url_for('dashboard.dashboard') }}" class="mini-btn">Estadísticas</a>
 
           {% if session.get("rol") in ("admin", "tecnico") %}
           <a href="{{ url_for('view.admin_scheduler') }}" class="mini-btn active">Scheduler</a>
