@@ -1,4 +1,6 @@
-from db.models import Zona, Medicion, ETLLog
+from db.models import Zona, Medicion, ETLLog, Usuario
+from services.alert_service import AlertService
+from utils.employee_id import generate_unique_id
 
 ##Cuando no se encuentra registro##
 class RecordNotFoundError(Exception):
@@ -35,6 +37,40 @@ class SQLiteRepository:
             raise RecordNotFoundError(f"Error: No se ha encontrado el registro con id {id_record} en {model_class.__name__}")
         return obj
 
+    ##FUNCIÓN AUXILIAR PARA CALCULAR ALERTAS##
+    def _calcular_alertas_medicion(self, temperatura, humedad, viento, lluvia):
+        alert_service = AlertService()
+
+        alertas = alert_service.evaluar_alertas({
+            "fecha": "2026-05-08T12:20:00",
+            "temperatura": temperatura,
+            "humedad": humedad,
+            "viento": viento,
+            "lluvia": lluvia
+        })
+
+        resultado = {
+            "alerta_calor": None,
+            "alerta_helada": None,
+            "alerta_viento": None,
+            "alerta_lluvia": None,
+            "alerta_humedad": None
+        }
+
+        for alerta in alertas:
+            if "CALOR" in alerta:
+                resultado["alerta_calor"] = alerta
+            elif "FRIO" in alerta:
+                resultado["alerta_helada"] = alerta
+            elif "VIENTO" in alerta:
+                resultado["alerta_viento"] = alerta
+            elif "LLUVIA" in alerta:
+                resultado["alerta_lluvia"] = alerta
+            elif "HUMEDAD" in alerta:
+                resultado["alerta_humedad"] = alerta
+
+        return resultado
+
     ##CREATE##
     
     #Método que nos permite crear zonas en la base de datos
@@ -44,7 +80,8 @@ class SQLiteRepository:
     
     #Método que nos permite crear mediciones en la base de datos
     def create_measurement(self, id_zona, fecha, temperatura, humedad, viento, lluvia):
-        medicion = Medicion(id_zona=id_zona, fecha=fecha, temperatura=temperatura, humedad=humedad, viento=viento, lluvia=lluvia)
+        alertas = self._calcular_alertas_medicion(temperatura, humedad, viento, lluvia)
+        medicion = Medicion(id_zona=id_zona, fecha=fecha, temperatura=temperatura, humedad=humedad, viento=viento, lluvia=lluvia, **alertas)
         return self._save(medicion)
     
     #Método que nos permite crear logs del ETL en la base de datos
@@ -98,12 +135,21 @@ class SQLiteRepository:
     #Método que nos permite actualizar mediciones en la base de datos
     def update_measurement(self, id_measurement, id_zona, fecha, temperatura, humedad, viento, lluvia):
         medicion = self.get_measurement_by_id(id_measurement)
+        alertas = self._calcular_alertas_medicion(temperatura, humedad, viento, lluvia)
+
         medicion.id_zona = id_zona
         medicion.fecha = fecha
         medicion.temperatura = temperatura
         medicion.humedad = humedad
         medicion.viento = viento
         medicion.lluvia = lluvia
+
+        medicion.alerta_calor = alertas["alerta_calor"]
+        medicion.alerta_helada = alertas["alerta_helada"]
+        medicion.alerta_viento = alertas["alerta_viento"]
+        medicion.alerta_lluvia = alertas["alerta_lluvia"]
+        medicion.alerta_humedad = alertas["alerta_humedad"]
+
         return self._save(medicion)
 
     ##UPSERT (UPDATE + INSERT)
@@ -132,3 +178,44 @@ class SQLiteRepository:
         medicion = self.get_measurement_by_id(id_measurement)
         self._delete(medicion)
         return medicion
+
+
+    ###USERS###
+    
+    ## Investigando encontré otra función que permite hacer la query del objeto, con el id_empleado incluido, y si no existe lanzar la excepción
+    def get_user_by_employee_id(self, id_empleado):
+        user = self.db.query(Usuario).filter(
+            Usuario.id_empleado == id_empleado
+        ).first()
+
+        if user is None:
+            raise RecordNotFoundError(
+            f"Usuario con id_empleado {id_empleado} no encontrado"
+        )
+        return user
+
+    #Método que nos permite obtener todos los usuarios
+    def list_all_users(self):
+        return self.db.query(Usuario).all()
+    
+    #Método que nos permite actualizar usuarios en la base de datos
+    def update_user_role(self, id_empleado, rol):
+        user = self.get_user_by_employee_id(id_empleado)
+        if user.rol == rol:
+            return user
+        nuevo_id = generate_unique_id(rol, self.db, Usuario)
+        user.rol = rol
+        user.id_empleado = nuevo_id
+        return self._save(user)
+
+    #Método que nos permite actualizar el estado del usuario
+    def update_user_state(self, id_empleado, activo):
+        user = self.get_user_by_employee_id(id_empleado)
+        user.activo = activo
+        return self._save(user)
+    
+    #Método que nos permite eliminar usuarios en la base de datos
+    def delete_user(self, id_empleado):
+        user = self.get_user_by_employee_id(id_empleado)
+        self._delete(user)
+        return user 

@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import os
 from db.database import create_tables
 from services.startup_service import create_default_superadmin, seed_zones_from_catalog
+from datetime import timedelta
 
 # 1. IMPORTACIÓN DE BLUEPRINTS
 from controllers.view_controller import view_bp
@@ -24,6 +25,9 @@ seed_zones_from_catalog()
 
 # Configuración básica
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "clave_secreta")
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+app.config["SESSION_COOKIE_SECURE"] = True
 
 # --- CONTEXT PROCESSOR (Migas de pan) ---
 # Esto permite usar la variable 'breadcrumbs' en cualquier archivo HTML
@@ -40,6 +44,14 @@ def inject_vars():
                 "url": acumulado
             })
     return dict(breadcrumbs=migas)
+
+#Evita que el navegador guarde en caché las páginas
+@app.after_request
+def no_cache(response):
+    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+    return response
 
 # --- REGISTRO DE BLUEPRINTS ---
 # Conectamos todos los archivos de la carpeta controllers
