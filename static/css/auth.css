@@ -160,6 +160,17 @@ small {
     display: block;
     margin-top: 0.3rem;
 }
+.notice {
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    color: #fde68a;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 0.83rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
 .logout-btn {
   background: rgba(239, 68, 68, 0.15);
   color: #fca5a5;
