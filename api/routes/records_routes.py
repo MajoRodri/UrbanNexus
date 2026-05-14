@@ -6,6 +6,8 @@ from typing import List
 from api.dependencies import get_db
 from schemas.records_schema import RecordCreate, RecordUpdate, RecordOut
 from db.models import Medicion as Record, Zona as Zone
+from api.security import require_roles
+from db.models import Usuario
 
 router = APIRouter()
 
@@ -13,7 +15,8 @@ router = APIRouter()
 async def list_records(
     skip: int = Query(0, ge=0), 
     limit: int = Query(100, ge=1, le=1000),
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    usuario_actual: Usuario = Depends(require_roles("admin", "tecnico", "visualizador"))
 ):
     stmt = select(Record).offset(skip).limit(limit)
     result = db.execute(stmt)
@@ -33,7 +36,7 @@ async def records_by_zone(id_zona: int, db: Session = Depends(get_db)):
     return result.scalars().all()
 
 @router.post("/", response_model=RecordOut, status_code=status.HTTP_201_CREATED)
-async def create_record(record_in: RecordCreate, db: Session = Depends(get_db)):
+async def create_record(record_in: RecordCreate, db: Session = Depends(get_db), usuario_actual: Usuario = Depends(require_roles("admin", "tecnico"))):
     zone = db.get(Zone, record_in.id_zona)
     if not zone:
         raise HTTPException(status_code=404, detail="Zona no encontrada")
@@ -48,7 +51,7 @@ async def create_record(record_in: RecordCreate, db: Session = Depends(get_db)):
     return record
 
 @router.put("/{record_id}", response_model=RecordOut)
-async def update_record(record_id: int, record_in: RecordUpdate, db: Session = Depends(get_db)):
+async def update_record(record_id: int, record_in: RecordUpdate, db: Session = Depends(get_db), usuario_actual: Usuario = Depends(require_roles("admin", "tecnico"))):
     record = db.get(Record, record_id)
     if not record:
         raise HTTPException(status_code=404, detail="Registro no encontrado")
@@ -60,7 +63,7 @@ async def update_record(record_id: int, record_in: RecordUpdate, db: Session = D
     return record
 
 @router.delete("/{record_id}", status_code=status.HTTP_204_NO_CONTENT)
-async def delete_record(record_id: int, db: Session = Depends(get_db)):
+async def delete_record(record_id: int, db: Session = Depends(get_db), usuario_actual: Usuario = Depends(require_roles("admin", "tecnico"))):
     record = db.get(Record, record_id)
     if not record:
         raise HTTPException(status_code=404, detail="Registro no encontrado")

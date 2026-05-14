@@ -1,6 +1,6 @@
 import requests
 
-from flask import Blueprint, request, redirect, url_for, session, flash
+from flask import Blueprint, request, redirect, url_for, session, flash, render_template
 
 
 auth_bp = Blueprint("auth", __name__)
@@ -84,6 +84,8 @@ def login():
     if respuesta.status_code == 200:
         datos = respuesta.json()
 
+        session.clear()
+        session.permanent = False
         session["access_token"] = datos["access_token"]
         session["id_empleado"] = datos["id_empleado"]
         session["rol"] = datos["rol"]
@@ -126,6 +128,9 @@ def crear_invitacion():
                 "email": email,
                 "rol": rol
             },
+            headers={
+                "Authorization": f"Bearer {session.get('access_token')}"
+            },
             timeout=8
         )
 
@@ -144,13 +149,121 @@ def crear_invitacion():
     flash(detalle, "error")
     return redirect(url_for("view.admin_invitaciones"))
 
+@auth_bp.route("/admin/usuarios")
+def admin_usuarios():
+    if session.get("rol") != "admin":
+        flash("No tienes permisos para gestionar usuarios.", "error")
+        return redirect(url_for("view.index"))
+
+    try:
+        respuesta = requests.get(
+            f"{FASTAPI_BASE_URL}/users",
+            headers={
+                "Authorization": f"Bearer {session.get('access_token')}"
+            },
+            timeout=8
+        )
+
+        if respuesta.status_code != 200:
+            flash("No se pudieron cargar los usuarios.", "error")
+            return redirect(url_for("view.index"))
+
+        return render_template(
+            "admin_usuarios.html",
+            usuarios=respuesta.json()
+        )
+
+    except requests.exceptions.RequestException:
+        flash("No se pudo conectar con la API.", "error")
+        return redirect(url_for("view.index"))
+
+
+@auth_bp.route("/admin/usuarios/<id_empleado>/rol", methods=["POST"])
+def cambiar_rol_usuario(id_empleado):
+    if session.get("rol") != "admin":
+        flash("No tienes permisos para cambiar roles.", "error")
+        return redirect(url_for("view.index"))
+
+    nuevo_rol = request.form.get("rol")
+
+    try:
+        respuesta = requests.put(
+            f"{FASTAPI_BASE_URL}/users/{id_empleado}/role",
+            params={"rol": nuevo_rol},
+            headers={
+                "Authorization": f"Bearer {session.get('access_token')}"
+            },
+            timeout=8
+        )
+
+        if respuesta.status_code == 200:
+            flash("Rol actualizado correctamente.", "success")
+        else:
+            flash("No se pudo actualizar el rol.", "error")
+
+    except requests.exceptions.RequestException:
+        flash("No se pudo conectar con la API.", "error")
+
+    return redirect(url_for("auth.admin_usuarios"))
+
+
+@auth_bp.route("/admin/usuarios/<id_empleado>/estado", methods=["POST"])
+def cambiar_estado_usuario(id_empleado):
+    if session.get("rol") != "admin":
+        flash("No tienes permisos para cambiar estados.", "error")
+        return redirect(url_for("view.index"))
+
+    activo = request.form.get("activo") == "true"
+
+    try:
+        respuesta = requests.put(
+            f"{FASTAPI_BASE_URL}/users/{id_empleado}/state",
+            params={"activo": activo},
+            headers={
+                "Authorization": f"Bearer {session.get('access_token')}"
+            },
+            timeout=8
+        )
+
+        if respuesta.status_code == 200:
+            flash("Estado actualizado correctamente.", "success")
+        else:
+            flash("No se pudo actualizar el estado.", "error")
+
+    except requests.exceptions.RequestException:
+        flash("No se pudo conectar con la API.", "error")
+
+    return redirect(url_for("auth.admin_usuarios"))
+
+
+@auth_bp.route("/admin/usuarios/<id_empleado>/delete", methods=["POST"])
+def eliminar_usuario(id_empleado):
+    if session.get("rol") != "admin":
+        flash("No tienes permisos para eliminar usuarios.", "error")
+        return redirect(url_for("view.index"))
+
+    try:
+        respuesta = requests.delete(
+            f"{FASTAPI_BASE_URL}/users/{id_empleado}",
+            headers={
+                "Authorization": f"Bearer {session.get('access_token')}"
+            },
+            timeout=8
+        )
+
+        if respuesta.status_code == 200:
+            flash("Usuario eliminado correctamente.", "success")
+        else:
+            flash("No se pudo eliminar el usuario.", "error")
+
+    except requests.exceptions.RequestException:
+        flash("No se pudo conectar con la API.", "error")
+
+    return redirect(url_for("auth.admin_usuarios"))
 
 @auth_bp.route("/logout")
 def logout():
-    session.pop("access_token", None)
-    session.pop("id_empleado", None)
-    session.pop("rol", None)
-    session.pop("email", None)
+    session.clear()
 
     flash("Sesión cerrada correctamente.", "success")
     return redirect(url_for("view.index"))
