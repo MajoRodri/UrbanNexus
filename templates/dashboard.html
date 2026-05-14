@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UrbanNexus Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+
+<div class="container mt-5">
+
+    <h1 class="mb-4">Dashboard Climático</h1>
+
+    <!-- 🚀 BOTÓN -->
+    <button class="btn btn-primary mb-4" onclick="mostrarGraficas()">
+        Cargar gráficas
+    </button>
+
+    <!-- ⚠️ MENSAJE SI NO HAY DATOS -->
+    {% if empty %}
+        <div class="alert alert-warning text-dark">
+            No hay datos disponibles en este momento.
+        </div>
+    {% endif %}
+
+    <!-- 📊 GRÁFICAS -->
+    <div id="graficas" style="display:none;">
+
+        <!-- 🌡️ TEMPERATURA -->
+        <div class="card bg-secondary p-3 mb-4">
+
+            <h3>Temperatura</h3>
+
+            <img
+                src="{{ temp_img }}"
+                class="img-fluid rounded"
+                alt="Gráfica temperatura"
+            >
+
+        </div>
+
+        <!-- 💧 HUMEDAD -->
+        <div class="card bg-secondary p-3 mb-4">
+
+            <h3>Humedad</h3>
+
+            <img
+                src="{{ humidity_img }}"
+                class="img-fluid rounded"
+                alt="Gráfica humedad"
+            >
+
+        </div>
+
+        <!-- 🌬️ VIENTO -->
+        <div class="card bg-secondary p-3 mb-4">
+
+            <h3>Viento</h3>
+
+            <img
+                src="{{ wind_img }}"
+                class="img-fluid rounded"
+                alt="Gráfica viento"
+            >
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 🧠 JS PARA MOSTRAR GRÁFICAS -->
+<script>
+function mostrarGraficas() {
+    document.getElementById("graficas").style.display = "block";
+}
+</script>
+
+</body>
+</html>
