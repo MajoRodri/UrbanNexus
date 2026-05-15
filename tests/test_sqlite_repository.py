@@ -1,6 +1,3 @@
-# =====================================================================
-# TU CÓDIGO ORIGINAL (MANTENIDO EXACTAMENTE IGUAL, SIN BORRAR NADA)
-# =====================================================================
 import pytest
 from unittest.mock import MagicMock
 from repositories.sqlite_repository import SQLiteRepository, RecordNotFoundError
@@ -52,7 +49,7 @@ def test_delete_zone(repo):
 
 
 # =====================================================================
-# LO NUEVO: TEST PARA VALIDAR QUE EL CLIMA SE ACTUALIZA Y EVITA EL NaN
+# TEST PARA VALIDAR QUE EL CLIMA SE ACTUALIZA Y EVITA EL NaN
 # =====================================================================
 def test_update_zone_climate(repo):
     """
