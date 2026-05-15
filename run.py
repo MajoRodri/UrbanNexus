@@ -12,7 +12,7 @@ flask = subprocess.Popen([sys.executable, "app.py"])
 api = subprocess.Popen([
     sys.executable, "-m", "uvicorn",
     "main_api:app",
-    "--reload",
+    "--host", "0.0.0.0",
     "--port", "8000"
 ])
 

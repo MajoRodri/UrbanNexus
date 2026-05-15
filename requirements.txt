@@ -5,11 +5,23 @@ uvicorn==0.46.0
 gunicorn==26.0.0
 Werkzeug==3.1.8
 starlette==1.0.0
+blinker==1.9.0
+click==8.3.3
+colorama==0.4.6
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+watchfiles==1.1.1
+websockets==16.0
+httptools==0.7.1
 
 # Validación y esquemas
 pydantic==2.13.4
 pydantic_core==2.46.4
 email-validator==2.3.0
+annotated-types==0.7.0
+typing-inspection==0.4.2
+typing_extensions==4.15.0
 
 # Variables de entorno
 python-dotenv==1.2.2
@@ -17,17 +29,32 @@ python-dotenv==1.2.2
 # Comunicación y API
 requests==2.33.1
 httpx==0.28.1
+httpcore==1.0.9
+h11==0.16.0
+anyio==4.13.0
+certifi==2026.4.22
+charset-normalizer==3.4.7
+idna==3.13
+urllib3==2.6.3
+
+# Email
+mailtrap==2.5.0
+dnspython==2.8.0
 
 # Tareas automáticas (Scheduler)
 Flask-APScheduler==1.13.1
 APScheduler==3.11.2
 tzlocal==5.3.1
 tzdata==2026.2
+PyYAML==6.0.3
 
 # Análisis de datos (ETL)
 pandas==3.0.2
 numpy==2.4.4
 openpyxl==3.1.5
+et_xmlfile==2.0.0
+python-dateutil==2.9.0.post0
+six==1.17.0
 
 # Base de datos
 SQLAlchemy==2.0.49
@@ -35,12 +62,21 @@ greenlet==3.5.0
 
 # Seguridad y autenticación
 passlib==1.7.4
-bcrypt==4.0.1
+bcrypt==5.0.0
 python-jose==3.5.0
 cryptography==48.0.0
-
-# Email
-dnspython==2.8.0
+cffi==2.0.0
+pycparser==3.0
+pyasn1==0.6.3
+ecdsa==0.19.2
+rsa==4.9.1
 
 # Tests y calidad
 pytest==9.0.3
+pluggy==1.6.0
+iniconfig==2.3.0
+packaging==26.2
+Pygments==2.20.0
+
+# Internos (requeridos por dependencias)
+annotated-doc==0.0.4
