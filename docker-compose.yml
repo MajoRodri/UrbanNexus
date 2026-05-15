@@ -1,0 +1,15 @@
+services:
+  urbannexus:
+    build: .
+    ports:
+      - "5000:5000"
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - db_data:/app
+    restart: unless-stopped
+
+volumes:
+  db_data:
