@@ -51,6 +51,7 @@ PyYAML==6.0.3
 # Análisis de datos (ETL)
 pandas==3.0.2
 numpy==2.4.4
+matplotlib==3.10.3
 openpyxl==3.1.5
 et_xmlfile==2.0.0
 python-dateutil==2.9.0.post0

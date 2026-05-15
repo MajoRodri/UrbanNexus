@@ -13,6 +13,7 @@
 ![APScheduler](https://img.shields.io/badge/APScheduler-Scheduler-FF6B35?style=for-the-badge&logo=clockify&logoColor=white)
 ![WeatherAPI](https://img.shields.io/badge/WeatherAPI-F5A623?style=for-the-badge&logo=icloud&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-Testing-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 <br>
 
@@ -146,6 +147,13 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 | Herramienta | Versión mínima | Descarga |
 |:---:|:---:|:---:|
 | **Python** | 3.11+ | [python.org](https://www.python.org/downloads/) |
+| **Docker Desktop** | 24+ *(opcional, solo si usas Docker)* | [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/) |
+
+> **Instalar Docker Desktop:**
+> 1. Descarga el instalador desde el enlace de arriba según tu sistema operativo (Windows / macOS / Linux).
+> 2. Ejecuta el instalador y sigue los pasos (en Windows requiere WSL 2 — el propio instalador lo configura).
+> 3. Una vez instalado, abre **Docker Desktop** y espera a que el icono de la ballena en la barra de tareas quede en verde (Engine running).
+> 4. Verifica la instalación en tu terminal: `docker --version`
 
 </details>
 
@@ -246,6 +254,32 @@ python main_api.py
 |:---:|:---:|:---|
 | **Flask** | `http://localhost:5000` | Interfaz web con dashboards y formularios |
 | **FastAPI** | `http://localhost:8000` | API REST — docs en `/docs` |
+
+</details>
+
+<details>
+<summary>🐳 &nbsp;<strong>Alternativa: Ejecutar con Docker</strong></summary>
+<br>
+
+Si tienes Docker instalado, puedes levantar la aplicación sin necesidad de crear entorno virtual ni instalar dependencias manualmente.
+
+Asegúrate de tener el archivo `.env` en la raíz del proyecto, luego ejecuta:
+
+```bash
+docker compose up --build
+```
+
+La aplicación estará disponible en `http://localhost:5000`.
+
+La base de datos (`clima.db`) se guarda en un volumen Docker llamado `db_data`, por lo que **los datos persisten** aunque reinicies o elimines el contenedor.
+
+Para detener:
+
+```bash
+docker compose down
+```
+
+> Para borrar también los datos persistidos: `docker compose down -v`
 
 </details>
 
