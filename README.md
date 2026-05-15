@@ -66,6 +66,11 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 > Gestión de cambio de contraseña en el apartado "Mi perfil"
 
 
+https://github.com/user-attachments/assets/d4008fb3-d3f5-49b5-94cb-be82d5a89153
+
+
+
+
 </details>
 
 <details>
@@ -84,6 +89,13 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 
 
 
+https://github.com/user-attachments/assets/997c3893-c772-4140-8bc8-136218044d71
+
+
+
+
+
+
 </details>
 
 <details>
@@ -97,6 +109,10 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 | 3️⃣ | 📊 **Estadísticas**: Visualización de media por registro de distrito en: Temperatura, Viento y Humedad. |
 
 > Gestión de cambio de contraseña en el apartado "Mi perfil"
+
+
+https://github.com/user-attachments/assets/67432767-fa18-4269-9976-85b5f2ada627
+
 
 
 </details>
@@ -572,6 +588,10 @@ GMAIL_APP_PASSWORD=abcdefghijklmnop
 > La App Password no es tu contraseña de Gmail — es una clave separada y revocable en cualquier momento.
 
 > Límite gratuito: ~500 correos/día, más que suficiente para uso académico o de equipo.
+
+
+https://github.com/user-attachments/assets/a9ef38b6-c734-4201-b8bf-51c49840ef14
+
 
 
 </details>
