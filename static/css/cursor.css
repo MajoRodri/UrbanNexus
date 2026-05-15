@@ -1,0 +1,48 @@
+* { cursor: none; }
+
+#cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: #4ABFCC;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: background 0.2s;
+  box-shadow: 0 0 6px #4ABFCC;
+}
+
+#cursor-ring {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(74, 191, 204, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+
+#cursor-ring.clicking {
+  width: 20px;
+  height: 20px;
+  border-color: #4ABFCC;
+}
+
+@keyframes ping-out {
+  0%   { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(2.8); opacity: 0; }
+}
+
+.cursor-ping {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #4ABFCC;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  animation: ping-out 0.6s ease-out forwards;
+}

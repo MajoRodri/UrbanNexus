@@ -10,6 +10,7 @@
     <title>UrbanNexus | Scheduler</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/historico.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cursor.css') }}">
     <style>
         .toggle-row { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.5rem; }
 
@@ -219,5 +220,8 @@
     body.innerHTML = runs.map(r => `<tr><td>${r.time}</td><td>${r.next}</td></tr>`).join('');
   }
 </script>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
 </body>
 </html>

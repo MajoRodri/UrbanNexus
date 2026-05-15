@@ -8,6 +8,7 @@
     <title>UrbanNexus | Invitaciones</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cursor.css') }}">
 </head>
 
 <body>
@@ -88,6 +89,9 @@
 
     </main>
 
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
 </body>
 
 </html>

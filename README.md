@@ -8,7 +8,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-3.1.3-000000?style=for-the-badge&logo=flask&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.136-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-FF5733?style=for-the-badge&logo=databricks&logoColor=white)
 ![APScheduler](https://img.shields.io/badge/APScheduler-Scheduler-FF6B35?style=for-the-badge&logo=clockify&logoColor=white)
 ![WeatherAPI](https://img.shields.io/badge/WeatherAPI-F5A623?style=for-the-badge&logo=icloud&logoColor=white)
@@ -36,6 +36,7 @@
 - [🏗️ Arquitectura del Sistema](#️-arquitectura-del-sistema-capas)
 - [📐 Reglas de Negocio](#-reglas-de-negocio-golden-rules)
 - [📡 Rutas Principales](#-rutas-principales-api--web)
+- [🐳 Docker](#-docker)
 - [🔧 Solución de Problemas](#-solución-de-problemas)
 - [👩‍💻 Autores](#-autores)
 
@@ -81,9 +82,9 @@ https://github.com/user-attachments/assets/d4008fb3-d3f5-49b5-94cb-be82d5a89153
 | Paso | 🔄 Acción |
 |:---:|:---|
 | 1️⃣ | 🔐 **Autenticación**: Inicia sesión con email y contraseña. Recibe un email con credenciales necesarias para registrarse en el sistema. |
-| 2️⃣ | 📥 **Carga de Datos**: Activa el scheduler automático, registra mediciones manualmente o ejecuta el pipeline ETL. |
+| 2️⃣ | 📥 **Carga de Datos**: Activa el scheduler automático, dispara la captura de datos desde la API de forma puntual o ejecuta el pipeline ETL. |
 | 3️⃣ | 🔍 **Consulta y Edición**: Busca el histórico por zona y fecha. Visualiza y edita registros existentes. |
-| 4️⃣ | 📊 **Estadísticas**: Visualizacióny descarga de media por registro de distrito en: Temperatura, Viento y Humedad. |
+| 4️⃣ | 📊 **Estadísticas**: Visualización y descarga de media por registro de distrito en: Temperatura, Viento y Humedad. |
 | 5️⃣ | ⏱️ **Scheduler**: Configura y activa la captura automática de datos. |
 
 > Gestión de cambio de contraseña en el apartado "Mi perfil"
@@ -107,7 +108,7 @@ https://github.com/user-attachments/assets/997c3893-c772-4140-8bc8-136218044d71
 |:---:|:---|
 | 1️⃣ | 🔐 **Autenticación**: Inicia sesión con email y contraseña. Recibe un email con credenciales necesarias para registrarse en el sistema.
 | 2️⃣ | 🔍 **Consulta**: Busca el histórico climático por zona y fecha. Visualiza parámetros meteorológicos. |
-| 3️⃣ | 📊 **Estadísticas**: Visualización de media por registro de distrito en: Temperatura, Viento y Humedad. |
+| 3️⃣ | 📊 **Estadísticas**: Visualización y descarga de media por registro de distrito en: Temperatura, Viento y Humedad. |
 
 > Gestión de cambio de contraseña en el apartado "Mi perfil"
 
@@ -257,31 +258,6 @@ python main_api.py
 
 </details>
 
-<details>
-<summary>🐳 &nbsp;<strong>Alternativa: Ejecutar con Docker</strong></summary>
-<br>
-
-Si tienes Docker instalado, puedes levantar la aplicación sin necesidad de crear entorno virtual ni instalar dependencias manualmente.
-
-Asegúrate de tener el archivo `.env` en la raíz del proyecto, luego ejecuta:
-
-```bash
-docker compose up --build
-```
-
-La aplicación estará disponible en `http://localhost:5000`.
-
-La base de datos (`clima.db`) se guarda en un volumen Docker llamado `db_data`, por lo que **los datos persisten** aunque reinicies o elimines el contenedor.
-
-Para detener:
-
-```bash
-docker compose down
-```
-
-> Para borrar también los datos persistidos: `docker compose down -v`
-
-</details>
 
 <details>
 <summary>6️⃣ &nbsp;<strong>Ejecutar los Tests</strong></summary>
@@ -336,6 +312,49 @@ pytest tests/test_json_repository.py -v
 
 ---
 
+## 🐳 Docker
+
+El proyecto incluye configuración Docker para levantar **Flask y FastAPI simultáneamente** en un entorno aislado, sin necesidad de instalar Python ni dependencias en tu máquina.
+
+### Requisitos
+
+Tener [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado y corriendo (icono de la ballena en verde en la barra de tareas).
+
+### Levantar la aplicación
+
+```bash
+docker-compose up --build
+```
+
+Ambos servidores arrancan dentro del mismo contenedor via `run.py`:
+
+| Servidor | URL | Descripción |
+|:---:|:---:|:---|
+| **Flask** | `http://localhost:5000` | Interfaz web |
+| **FastAPI** | `http://localhost:8000/docs` | API REST |
+
+### Comandos útiles
+
+```bash
+# Levantar en segundo plano (sin bloquear la terminal)
+docker-compose up -d
+
+# Ver logs en tiempo real
+docker-compose logs -f
+
+# Detener el contenedor
+docker-compose down
+
+# Detener y borrar los datos persistidos
+docker-compose down -v
+```
+
+### Persistencia de datos
+
+La base de datos (`clima.db`) se almacena en un volumen Docker llamado `db_data`, montado en `/app/data`. Los datos **persisten** aunque detengas o elimines el contenedor — solo se borran con `docker-compose down -v`.
+
+---
+
 ## ✨ Características Principales
 
 <details>
@@ -350,7 +369,7 @@ Sistema completo de gestión de usuarios con control de acceso por roles.
 |:---|:---|
 | Dashboard | Estadísticas generales ✅ |
 | Consulta | Ver, editar y eliminar registros históricos ✅ |
-| Registro | Ingresar datos manualmente ✅ |
+| Registro | Capturar datos desde la API manualmente ✅ |
 | Scheduler | Activar/desactivar y configurar la ingesta automática ✅ |
 | Usuarios | Ver, cambiar rol, activar/desactivar y eliminar usuarios ✅ |
 | Invitaciones | Crear y enviar invitaciones por email ✅ |
@@ -362,7 +381,7 @@ Sistema completo de gestión de usuarios con control de acceso por roles.
 |:---|:---|
 | Dashboard | Estadísticas generales ✅ |
 | Consulta | Ver, editar y eliminar registros históricos ✅ |
-| Registro | Ingresar datos manualmente ✅ |
+| Registro | Capturar datos desde la API manualmente ✅ |
 | Scheduler | Activar/desactivar y configurar la ingesta automática ✅ |
 | Usuarios | ❌ Sin acceso |
 | Invitaciones | ❌ Sin acceso |
@@ -394,7 +413,7 @@ Sistema completo de gestión de usuarios con control de acceso por roles.
 | Modo | 📋 Descripción |
 | :---: | :--- |
 | 🤖 **Automática** | Un programador (`APScheduler`) captura datos en tiempo real en horarios configurables desde el panel de administración. |
-| 🖱️ **Manual** | Formulario web para registrar mediciones propias por zona y fecha con validación científica estricta. |
+| 🖱️ **Manual** | Dispara la captura de datos desde WeatherAPI de forma puntual, sin esperar al scheduler. |
 
 </details>
 
@@ -433,7 +452,7 @@ registros_climaticos.json → extract() → transform() → load_measurements() 
 
 - Filtrado del histórico por zona y fecha desde `/consulta`.
 - Presentación en tabla dinámica con parámetros meteorológicos y alertas activadas.
-- Comparación de mediciones manuales frente a datos oficiales.
+- Comparación de registros capturados automáticamente frente a capturas puntuales.
 - Documentación interactiva de la API REST en `http://localhost:8000/docs`.
 
 </details>
@@ -502,7 +521,7 @@ Restricciones de integridad: clave única compuesta `(zona_id, fecha)` para evit
 | # | 📏 Regla | 📋 Descripción |
 |:---:|:---|:---|
 | 1️⃣ | **Validación Científica** | Todos los datos pasan por `validators.py` antes de persistir: temperatura entre -50 °C y 60 °C, humedad 0–100 %, viento y lluvia ≥ 0. |
-| 2️⃣ | **Control de Acceso por Rol** | Cada operación valida el rol del usuario autenticado (admin / tecnico / consultor) antes de ejecutarse. |
+| 2️⃣ | **Control de Acceso por Rol** | Cada operación valida el rol del usuario autenticado (admin / tecnico / visualizador) antes de ejecutarse. |
 | 3️⃣ | **Escritura en Lote** | El pipeline ETL realiza una sola operación de escritura por ciclo de ejecución, registrando métricas en `ETL_logs`. |
 | 4️⃣ | **Resiliencia de Red** | El `RetryService` gestiona automáticamente los reintentos ante errores HTTP (429, 500, timeout) al consumir WeatherAPI. |
 
@@ -526,7 +545,7 @@ Restricciones de integridad: clave única compuesta `(zona_id, fecha)` para evit
 | `GET` | `/perfil` | cualquiera | Perfil del usuario autenticado. |
 | `POST` | `/cambiar_password` | cualquiera | Cambio de contraseña desde el perfil. |
 | `GET/POST` | `/consulta` | cualquiera | Visualización y filtrado del histórico de registros. |
-| `GET` | `/registro` | admin / tecnico | Formulario de entrada manual de mediciones. |
+| `GET` | `/registro` | admin / tecnico | Dispara la captura de datos desde WeatherAPI de forma puntual. |
 | `POST` | `/registro/<id>/actualizar` | admin / tecnico | Actualizar una medición existente. |
 | `POST` | `/registro/<id>/eliminar` | admin / tecnico | Eliminar una medición. |
 | `GET` | `/admin/scheduler` | admin / tecnico | Panel de control del scheduler automático. |
