@@ -1,39 +1,43 @@
 import logging
-# 1. Importamos tu servicio de alertas
 from services.alert_service import AlertService
 
-# Instanciamos el servicio para tenerlo listo
 alert_service = AlertService()
 
-def normalizar_datos_aemet(data):
-    """
-    Transforma los datos crudos de AEMET en un formato estándar 
-    e integra el sistema de alertas.
-    """
+
+def normalizar_datos_clima(data):
     try:
-        if not data:
+        if data is None:
             return {"error": "No hay datos disponibles"}
 
-        # Si es una lista, tomamos el último registro (el más reciente)
-        latest = data[-1] if isinstance(data, list) else data
-        
-        # --- SOLUCIÓN AL NOMBRE ---
-        # AEMET guarda el nombre en 'ubi'. Lo asignamos a 'ciudad' para el JS.
-        nombre_lugar = latest.get("ubi", "Ubicación Desconocida")
+        location = data.get("location", {})
+        nombre_lugar = location.get("name", "Ubicación Desconocida")
 
-        # 2. Creamos el diccionario base
-        datos_normalizados = {
-            "ciudad": nombre_lugar,  # <--- CLAVE MAESTRA: Ahora el JS sí lo encontrará
-            "estacion": nombre_lugar, 
-            "fecha": latest.get("fint", "N/A"),
-            "temperatura": float(latest.get("ta", 0)) if latest.get("ta") else 0,
-            "humedad": float(latest.get("hr", 0)) if latest.get("hr") else 0,
-            "viento": float(latest.get("vv", 0)) if latest.get("vv") else 0,
-            "presion": float(latest.get("pres", 0)) if latest.get("pres") else 0,
-            "lluvia": 0.0 if str(latest.get("prec", "")).strip().lower() == "ip" else float(str(latest.get("prec", 0) or 0).replace(",", "."))
-        }
+        forecastday = data.get("forecast", {}).get("forecastday", [])
+        if forecastday:
+            day = forecastday[0].get("day", {})
+            datos_normalizados = {
+                "ciudad": nombre_lugar,
+                "estacion": nombre_lugar,
+                "fecha": forecastday[0].get("date", "N/A"),
+                "temperatura": float(day.get("avgtemp_c", 0.0)),
+                "humedad": float(day.get("avghumidity", 0.0)),
+                "viento": float(day.get("maxwind_kph", 0.0)),
+                "presion": 0.0,
+                "lluvia": float(day.get("totalprecip_mm", 0.0)),
+            }
+        else:
+            current = data.get("current", {})
+            datos_normalizados = {
+                "ciudad": nombre_lugar,
+                "estacion": nombre_lugar,
+                "fecha": current.get("last_updated", "N/A"),
+                "temperatura": float(current.get("temp_c", 0.0)),
+                "humedad": float(current.get("humidity", 0.0)),
+                "viento": float(current.get("wind_kph", 0.0)),
+                "presion": float(current.get("pressure_mb", 0.0)),
+                "lluvia": float(current.get("precip_mm", 0.0)),
+            }
 
-        # 3. LLAMADA MÁGICA: Alertas
         datos_normalizados["alertas"] = alert_service.evaluar_alertas(datos_normalizados)
 
         return datos_normalizados
@@ -42,6 +46,6 @@ def normalizar_datos_aemet(data):
         logging.error(f"Error en normalización: {e}")
         return {
             "error": "Error al procesar los datos",
-            "ciudad": "Error", # Evitamos el undefined incluso en error
+            "ciudad": "Error",
             "temperatura": 0
         }

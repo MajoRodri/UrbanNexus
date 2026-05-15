@@ -1,88 +1,92 @@
 import os
-import logging
 from typing import Dict, Any, Optional
+
 from services.retry_service import get_retry_session
-from utils.helpers import calcular_distancia
+from services.logging_service import log_info, log_error
+
+
+_BASE = "https://api.weatherapi.com/v1"
+
 
 class WeatherAPIService:
     def __init__(self):
-        # 1. MANTENEMOS: La configuración de Adriana e Isabela
-        self.api_key = os.getenv("AEMET_API_KEY")
+        self.api_key = os.getenv("WEATHERAPI_KEY")
+
         if not self.api_key:
-            raise ValueError("AEMET_API_KEY no encontrada en .env")
-        
+            raise ValueError("WEATHERAPI_KEY no encontrada en .env")
+
         self.session = get_retry_session()
-        self.logger = logging.getLogger(__name__)
-        self.base_url = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
 
-    def _obtener_datos_crudos(self) -> list:
-        """Método interno para bajar todas las observaciones de AEMET."""
-        headers = {"api_key": self.api_key, "cache-control": "no-cache"}
+    def _get(self, query: str) -> Optional[Dict[str, Any]]:
         try:
-            # Usamos la sesión con reintentos de la arquitectura original
-            res_meta = self.session.get(self.base_url, headers=headers, timeout=20)
-            res_meta.raise_for_status()
-            
-            datos_url = res_meta.json().get("datos")
-            if not datos_url:
-                return []
+            resp = self.session.get(
+                f"{_BASE}/current.json",
+                params={"key": self.api_key, "q": query, "lang": "es"},
+                timeout=10
+            )
 
-            res_datos = self.session.get(datos_url, timeout=20)
-            res_datos.raise_for_status()
-            return res_datos.json()
-        except Exception as e:
-            self.logger.error(f"Error al conectar con AEMET: {e}")
-            return []
+            if resp.status_code == 429:
+                log_error("WeatherAPI ha bloqueado temporalmente por demasiadas peticiones.")
+                return None
 
-    # 2. TU MEJORA: Búsqueda por coordenadas integrada
-    def obtener_clima_por_coordenadas(self, user_lat: float, user_lon: float) -> Optional[Dict[str, Any]]:
-        """
-        Lógica de Juan: Localiza la estación más cercana y devuelve sus datos RAW.
-        """
-        observaciones = self._obtener_datos_crudos()
-        
-        if not observaciones:
-            self.logger.warning("No se recibieron observaciones de AEMET.")
+            if resp.status_code >= 400:
+                try:
+                    msg = resp.json().get("error", {}).get("message", resp.text[:200])
+                except Exception:
+                    msg = resp.text[:200]
+                log_error(f"WeatherAPI error {resp.status_code} para '{query}': {msg}")
+                return None
+
+            return resp.json()
+
+        except Exception as error:
+            log_error(f"Error al obtener datos de WeatherAPI: {type(error).__name__}")
             return None
 
-        estacion_cercana = None
-        distancia_minima = float('inf')
+    def _get_historical(self, query: str, fecha: str) -> Optional[Dict[str, Any]]:
+        try:
+            resp = self.session.get(
+                f"{_BASE}/history.json",
+                params={"key": self.api_key, "q": query, "dt": fecha, "lang": "es"},
+                timeout=10
+            )
 
-        for obs in observaciones:
-            try:
-                # Extraemos y validamos coordenadas de la estación
-                obs_lat = float(obs['lat'])
-                obs_lon = float(obs['lon'])
+            if resp.status_code == 429:
+                log_error("WeatherAPI ha bloqueado temporalmente por demasiadas peticiones.")
+                return None
 
-                dist = calcular_distancia(
-                    float(user_lat), 
-                    float(user_lon), 
-                    obs_lat, 
-                    obs_lon
-                )
+            if resp.status_code >= 400:
+                try:
+                    msg = resp.json().get("error", {}).get("message", resp.text[:200])
+                except Exception:
+                    msg = resp.text[:200]
+                log_error(f"WeatherAPI historical error {resp.status_code} para '{query}': {msg}")
+                return None
 
-                if dist < distancia_minima:
-                    distancia_minima = dist
-                    estacion_cercana = obs
+            return resp.json()
 
-            except (KeyError, ValueError, TypeError):
-                continue # Saltamos estaciones con datos corruptos
+        except Exception as error:
+            log_error(f"Error al obtener datos históricos de WeatherAPI: {type(error).__name__}")
+            return None
 
-        if estacion_cercana:
-            self.logger.info(f"Estación más cercana hallada: {estacion_cercana.get('ubi')} a {distancia_minima:.2f}km")
-        
-        return estacion_cercana
+    def obtener_clima_por_coordenadas(
+        self,
+        lat: float,
+        lon: float,
+        fecha: Optional[str] = None
+    ) -> Optional[Dict[str, Any]]:
+        query = f"{lat},{lon}"
+        data = self._get_historical(query, fecha) if fecha else self._get(query)
+        if data:
+            log_info(f"Datos obtenidos para lat={lat}, lon={lon}")
+        return data
 
-    # 3. MANTENEMOS: Los métodos originales que ellas ya tuvieran (ej: por ID)
-    def obtener_clima_por_id(self, station_id: str):
-        # Aquí iría el código que ellas ya escribieron (puedes completarlo si es necesario)
-        pass
+    def obtener_clima_por_municipio(self, nombre: str, fecha: Optional[str] = None) -> Optional[Dict[str, Any]]:
+        data = self._get_historical(nombre, fecha) if fecha else self._get(nombre)
+        if data:
+            log_info(f"Datos obtenidos para municipio={nombre}")
+        return data
 
-# --- FUNCIÓN PUENTE PARA COMPATIBILIDAD CON APP.PY ---
+
 def obtener_clima_por_coordenadas(lat, lon):
-    """
-    Permite que app.py siga llamando a esta función directamente 
-    mientras nosotros usamos la lógica de la clase por debajo.
-    """
-    service = WeatherAPIService()
-    return service.obtener_clima_por_coordenadas(lat, lon)
+    return WeatherAPIService().obtener_clima_por_coordenadas(lat, lon)

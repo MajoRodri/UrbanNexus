@@ -33,3 +33,1761 @@
 2026-05-01 21:02:30 [ERROR] Error en comparativa: Error simulado de API
 2026-05-01 21:38:32 [INFO] Iniciando comparativa: madrid para el día 22/06/2024
 2026-05-01 21:38:33 [INFO] Iniciando comparativa: madrid para el día 22/06/2024
+2026-05-07 16:23:25 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:23:25 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:23:25 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:23:25 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:23:25 [ERROR] Error en comparativa: Error simulado de API
+2026-05-09 19:28:52 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:28:52 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:28:52 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:28:52 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:28:52 [ERROR] Error en comparativa: Error simulado de API
+2026-05-09 19:43:28 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:43:28 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:43:28 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:43:28 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-09 19:43:28 [ERROR] Error en comparativa: Error simulado de API
+2026-05-11 11:45:40 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:45:40 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:45:40 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:45:40 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:45:40 [ERROR] Error en comparativa: Error simulado de API
+2026-05-11 11:46:11 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:46:11 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:46:11 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:46:12 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 11:46:12 [ERROR] Error en comparativa: Error simulado de API
+2026-05-11 12:01:29 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 12:01:29 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 12:01:29 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 12:01:29 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-11 12:01:29 [ERROR] Error en comparativa: Error simulado de API
+2026-05-07 16:06:16 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:06:16 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:06:16 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:06:16 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:06:16 [ERROR] Error en comparativa: Error simulado de API
+2026-05-07 16:10:05 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:10:05 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:10:05 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:10:05 [INFO] Iniciando comparativa: Madrid para el día 22/04/2026
+2026-05-07 16:10:05 [ERROR] Error en comparativa: Error simulado de API
+2026-05-11 15:17:44 [INFO] Petición /api/clima recibida: lat=40.35216046927487, lon=-3.686566640166989
+2026-05-11 15:17:45 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas
+2026-05-11 15:17:45 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:17:45 [ERROR] AEMET no devolvió datos para lat=40.35216046927487, lon=-3.686566640166989
+2026-05-11 15:20:18 [INFO] Petición /api/clima recibida: lat=40.352170367273196, lon=-3.686600464923568
+2026-05-11 15:20:18 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas
+2026-05-11 15:20:18 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:20:18 [ERROR] AEMET no devolvió datos para lat=40.352170367273196, lon=-3.686600464923568
+2026-05-11 15:22:31 [INFO] Petición /api/clima recibida: lat=40.35213071019921, lon=-3.68657377665124
+2026-05-11 15:22:31 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas
+2026-05-11 15:22:31 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:22:31 [ERROR] AEMET no devolvió datos para lat=40.35213071019921, lon=-3.68657377665124
+2026-05-11 15:25:24 [INFO] Petición /api/clima recibida: lat=40.35212759718384, lon=-3.6865626480818956
+2026-05-11 15:25:25 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=aqui_tu_api_key
+2026-05-11 15:25:25 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:25:25 [ERROR] AEMET no devolvió datos para lat=40.35212759718384, lon=-3.6865626480818956
+2026-05-11 15:27:27 [INFO] Petición /api/clima recibida: lat=40.35212149653177, lon=-3.686560206612673
+2026-05-11 15:27:28 [ERROR] Error al conectar con AEMET: 401 Client Error: Unauthorized for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=aqui_tu_api_key
+2026-05-11 15:27:28 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:27:28 [ERROR] AEMET no devolvió datos para lat=40.35212149653177, lon=-3.686560206612673
+2026-05-11 15:29:26 [INFO] Petición /api/clima recibida: lat=40.352165539340994, lon=-3.6866199326978943
+2026-05-11 15:29:33 [INFO] Estación más cercana: MADRID RETIRO a 6.67km
+2026-05-11 15:29:33 [INFO] Clima devuelto: MADRID RETIRO 10.9°C
+2026-05-11 15:32:27 [INFO] Petición /api/clima recibida: lat=40.35213256527202, lon=-3.68655608357247
+2026-05-11 15:32:37 [ERROR] Error al conectar con AEMET: HTTPSConnectionPool(host='opendata.aemet.es', port=443): Max retries exceeded with url: /opendata/api/observacion/convencional/todas?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWpvMTAwMzc1QGdtYWlsLmNvbSIsImp0aSI6ImI0ZDUwZDRkLWEyNTctNGNlMy04MmUzLTZiMjBkMjUyZDI5YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTA1NTY5LCJ1c2VySWQiOiJiNGQ1MGQ0ZC1hMjU3LTRjZTMtODJlMy02YjIwZDI1MmQyOWEiLCJyb2xlIjoiIn0.H9JWLqZXGigLv91wPZQ9ta78026iYXkis9QazdxpErg (Caused by ResponseError('too many 429 error responses'))
+2026-05-11 15:32:37 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-11 15:32:37 [ERROR] AEMET no devolvió datos para lat=40.35213256527202, lon=-3.68655608357247
+2026-05-11 15:36:06 [INFO] Petición /api/clima recibida: lat=40.35218301946575, lon=-3.686639582091515
+2026-05-11 15:36:08 [INFO] Estación más cercana: MADRID RETIRO a 6.67km
+2026-05-11 15:36:09 [INFO] Clima devuelto: Villaverde 10.9°C
+2026-05-11 15:42:56 [INFO] Petición /api/clima recibida: lat=40.352100145333225, lon=-3.6865157700415914
+2026-05-11 15:42:56 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-11 15:42:56 [INFO] Usando estación del JSON: Madrid, Retiro (3195)
+2026-05-11 15:42:57 [ERROR] Error al obtener estación 3195: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3195?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWpvMTAwMzc1QGdtYWlsLmNvbSIsImp0aSI6ImI0ZDUwZDRkLWEyNTctNGNlMy04MmUzLTZiMjBkMjUyZDI5YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTA1NTY5LCJ1c2VySWQiOiJiNGQ1MGQ0ZC1hMjU3LTRjZTMtODJlMy02YjIwZDI1MmQyOWEiLCJyb2xlIjoiIn0.H9JWLqZXGigLv91wPZQ9ta78026iYXkis9QazdxpErg
+2026-05-11 15:42:57 [ERROR] AEMET no devolvió datos para lat=40.352100145333225, lon=-3.6865157700415914
+2026-05-11 15:45:00 [INFO] Petición /api/clima recibida: lat=40.352169588503706, lon=-3.6865954753976444
+2026-05-11 15:45:01 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-11 15:45:01 [INFO] Usando estación del JSON: Madrid, Retiro (3195)
+2026-05-11 15:45:05 [INFO] Estación 3195 encontrada en caché: MADRID RETIRO
+2026-05-11 15:45:05 [INFO] Clima devuelto: Villaverde 10.9°C
+2026-05-11 16:51:52 [INFO] Petición /api/clima recibida: lat=40.229178902533796, lon=-3.7664368437053692
+2026-05-11 16:51:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:51:53 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:51:53 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 16:54:53 [INFO] Petición /api/clima recibida: lat=40.22920379436412, lon=-3.766547932571476
+2026-05-11 16:54:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:54:53 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:54:53 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 16:54:56 [INFO] Petición /api/clima recibida: lat=40.22919425404546, lon=-3.7664933605182274
+2026-05-11 16:54:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:54:56 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:54:56 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 16:55:56 [INFO] Petición /api/clima recibida: lat=40.22919422507347, lon=-3.7664932765441757
+2026-05-11 16:55:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:55:56 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:55:56 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 16:56:00 [INFO] Petición /api/clima recibida: lat=40.22918021988399, lon=-3.766526200675918
+2026-05-11 16:56:00 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 16:56:00 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 16:56:00 [ERROR] Error en api_controller: AEMET_API_KEY no encontrada en .env
+2026-05-11 17:00:19 [INFO] Petición /api/clima recibida: lat=40.22918017128492, lon=-3.7665263349766036
+2026-05-11 17:00:19 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 17:00:19 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 17:00:20 [ERROR] AEMET no devolvió datos para lat=40.22918017128492, lon=-3.7665263349766036
+2026-05-11 17:00:27 [INFO] Petición /api/clima recibida: lat=40.22919163655146, lon=-3.766582407243018
+2026-05-11 17:00:28 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 17:00:28 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 17:00:28 [INFO] Usando observaciones AEMET en caché
+2026-05-11 17:00:28 [ERROR] AEMET no devolvió datos para lat=40.22919163655146, lon=-3.766582407243018
+2026-05-11 23:54:52 [INFO] Petición /api/clima recibida: lat=40.2291963797337, lon=-3.766760613914814
+2026-05-11 23:54:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-11 23:54:53 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-11 23:54:53 [ERROR] Error al conectar con AEMET: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-11 23:54:53 [ERROR] Error al obtener estación 3298: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3298?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-11 23:54:53 [ERROR] AEMET no devolvió datos para lat=40.2291963797337, lon=-3.766760613914814
+2026-05-12 00:17:47 [INFO] Petición /api/clima recibida: lat=40.22924072245028, lon=-3.7668578491738254
+2026-05-12 00:17:48 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:17:48 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:17:48 [ERROR] Error al conectar con AEMET: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 00:17:48 [ERROR] Error al obtener estación 3298: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3298?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 00:17:48 [ERROR] AEMET no devolvió datos para lat=40.22924072245028, lon=-3.7668578491738254
+2026-05-12 00:28:32 [INFO] Petición /api/clima recibida: lat=40.229221302420264, lon=-3.7668216669140318
+2026-05-12 00:28:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:28:33 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:28:34 [ERROR] AEMET no devolvió datos para lat=40.229221302420264, lon=-3.7668216669140318
+2026-05-12 00:33:34 [INFO] Petición /api/clima recibida: lat=40.22924767805832, lon=-3.766865914512507
+2026-05-12 00:33:35 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:33:35 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:33:36 [INFO] Petición /api/clima recibida: lat=40.22924591806061, lon=-3.766820543150786
+2026-05-12 00:33:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:33:36 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:33:36 [INFO] Usando observaciones AEMET en caché
+2026-05-12 00:33:36 [ERROR] AEMET no devolvió datos para lat=40.22924767805832, lon=-3.766865914512507
+2026-05-12 00:33:36 [ERROR] AEMET no devolvió datos para lat=40.22924591806061, lon=-3.766820543150786
+2026-05-12 00:47:13 [INFO] Petición /api/clima recibida: lat=40.22923956692466, lon=-3.766916640364496
+2026-05-12 00:47:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:47:13 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:47:14 [INFO] Petición /api/clima recibida: lat=40.22922714648954, lon=-3.7668340401738596
+2026-05-12 00:47:14 [ERROR] AEMET no devolvió datos para lat=40.22923956692466, lon=-3.766916640364496
+2026-05-12 00:47:15 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:47:15 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:47:15 [INFO] Usando observaciones AEMET en caché
+2026-05-12 00:47:15 [ERROR] AEMET no devolvió datos para lat=40.22922714648954, lon=-3.7668340401738596
+2026-05-12 00:47:26 [INFO] Petición /api/clima recibida: lat=40.229227139855745, lon=-3.7668339958956354
+2026-05-12 00:47:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:47:26 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:47:26 [INFO] Usando observaciones AEMET en caché
+2026-05-12 00:47:26 [ERROR] AEMET no devolvió datos para lat=40.229227139855745, lon=-3.7668339958956354
+2026-05-12 00:47:54 [INFO] Petición /api/clima recibida: lat=40.22922714462423, lon=-3.766834027729154
+2026-05-12 00:47:54 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 00:47:54 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 00:47:54 [INFO] Usando observaciones AEMET en caché
+2026-05-12 00:47:54 [ERROR] Error al obtener estación 3298: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3298?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 00:47:54 [ERROR] AEMET no devolvió datos para lat=40.22922714462423, lon=-3.766834027729154
+2026-05-12 01:05:33 [INFO] Petición /api/clima recibida: lat=40.22922714609194, lon=-3.7668340375139775
+2026-05-12 01:05:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:05:33 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:05:35 [ERROR] AEMET no devolvió datos para lat=40.22922714609194, lon=-3.7668340375139775
+2026-05-12 01:24:12 [INFO] Petición /api/clima recibida: lat=40.229233262569394, lon=-3.766760701268522
+2026-05-12 01:24:12 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:24:12 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:24:22 [INFO] Petición /api/clima recibida: lat=40.22919499749935, lon=-3.7667836108288544
+2026-05-12 01:24:22 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:24:22 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:24:34 [ERROR] AEMET no devolvió datos para lat=40.229233262569394, lon=-3.766760701268522
+2026-05-12 01:24:34 [ERROR] AEMET no devolvió datos para lat=40.22919499749935, lon=-3.7667836108288544
+2026-05-12 01:25:17 [INFO] Petición /api/clima recibida: lat=40.22919496197761, lon=-3.766783633556287
+2026-05-12 01:25:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:25:18 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:25:18 [INFO] Usando observaciones AEMET en caché
+2026-05-12 01:25:18 [ERROR] AEMET no devolvió datos para lat=40.22919496197761, lon=-3.766783633556287
+2026-05-12 01:25:55 [INFO] Petición /api/clima recibida: lat=40.22925648698491, lon=-3.7668240622230265
+2026-05-12 01:25:55 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:25:55 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:25:55 [INFO] Usando observaciones AEMET en caché
+2026-05-12 01:25:57 [ERROR] AEMET no devolvió datos para lat=40.22925648698491, lon=-3.7668240622230265
+2026-05-12 01:26:12 [INFO] Petición /api/clima recibida: lat=40.22925654980325, lon=-3.7668241042929975
+2026-05-12 01:26:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:26:13 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:26:13 [INFO] Usando observaciones AEMET en caché
+2026-05-12 01:26:13 [ERROR] AEMET no devolvió datos para lat=40.22925654980325, lon=-3.7668241042929975
+2026-05-12 01:36:55 [INFO] Petición /api/clima recibida: lat=40.22923323964887, lon=-3.7667828846603943
+2026-05-12 01:36:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:36:56 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:36:56 [ERROR] Error al conectar con AEMET: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/todas?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 01:36:56 [ERROR] Error al obtener estación 3298: 429 Client Error: Too Many Requests for url: https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/3298?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3dlbGxvb3IyNzAxQGdtYWlsLmNvbSIsImp0aSI6IjJjYTY2OThjLWNhMzItNDY4Yy05NTZlLTk4ZTA0NjEzYzNhMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzc4NTExMjUyLCJ1c2VySWQiOiIyY2E2Njk4Yy1jYTMyLTQ2OGMtOTU2ZS05OGUwNDYxM2MzYTMiLCJyb2xlIjoiIn0.xWn6IJJoXzGlBaWTJCW5qoI0nnSfDOzGdK30-bmFEnc
+2026-05-12 01:36:56 [ERROR] AEMET no devolvió datos para lat=40.22923323964887, lon=-3.7667828846603943
+2026-05-12 01:47:24 [INFO] Petición /api/clima recibida: lat=40.229208906666116, lon=-3.766782653705007
+2026-05-12 01:47:24 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:47:24 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:47:25 [ERROR] AEMET no devolvió datos para lat=40.229208906666116, lon=-3.766782653705007
+2026-05-12 01:50:45 [INFO] Petición /api/clima recibida: lat=40.229233756589544, lon=-3.766830476907827
+2026-05-12 01:50:46 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:50:46 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:50:47 [ERROR] AEMET no devolvió datos para lat=40.229233756589544, lon=-3.766830476907827
+2026-05-12 01:54:15 [INFO] Petición /api/clima recibida: lat=40.22915126746914, lon=-3.7667399993588044
+2026-05-12 01:54:16 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 01:54:16 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 01:54:16 [INFO] Usando observaciones AEMET en caché
+2026-05-12 01:54:17 [ERROR] AEMET no devolvió datos para lat=40.22915126746914, lon=-3.7667399993588044
+2026-05-12 09:15:59 [INFO] Petición /api/clima recibida: lat=40.22920005948311, lon=-3.7667073750678526
+2026-05-12 09:16:01 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 09:16:01 [INFO] Usando estación del JSON: Getafe (3298)
+2026-05-12 09:16:02 [ERROR] AEMET no devolvió datos para lat=40.22920005948311, lon=-3.7667073750678526
+2026-05-12 11:05:17 [INFO] Petición /api/clima recibida: lat=40.229177200400464, lon=-3.7665601872489622
+2026-05-12 11:05:17 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:05:17 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:05:20 [ERROR] AEMET no devolvió datos para lat=40.229177200400464, lon=-3.7665601872489622
+2026-05-12 11:05:39 [INFO] Petición /api/clima recibida: lat=40.22911408632037, lon=-3.7664738205810813
+2026-05-12 11:05:40 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:05:40 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:05:40 [ERROR] AEMET no devolvió datos para lat=40.22911408632037, lon=-3.7664738205810813
+2026-05-12 11:06:25 [INFO] Petición /api/clima recibida: lat=40.229114084645296, lon=-3.7664738192044016
+2026-05-12 11:06:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:06:25 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:06:26 [ERROR] AEMET no devolvió datos para lat=40.229114084645296, lon=-3.7664738192044016
+2026-05-12 11:06:36 [INFO] Petición /api/clima recibida: lat=40.22919150776433, lon=-3.7666374945670764
+2026-05-12 11:06:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:06:37 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:06:38 [ERROR] AEMET no devolvió datos para lat=40.22919150776433, lon=-3.7666374945670764
+2026-05-12 11:06:56 [INFO] Petición /api/clima recibida: lat=40.22919173706515, lon=-3.766637979707551
+2026-05-12 11:06:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:06:56 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:06:56 [ERROR] Error al obtener estación 3298: HTTPError
+2026-05-12 11:06:56 [ERROR] AEMET no devolvió datos para lat=40.22919173706515, lon=-3.766637979707551
+2026-05-12 11:14:18 [INFO] Petición /api/clima recibida: lat=40.22919156851379, lon=-3.7666376231901677
+2026-05-12 11:14:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:14:18 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:14:58 [INFO] Petición /api/clima recibida: lat=40.229108125268304, lon=-3.7665575465968315
+2026-05-12 11:14:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:14:58 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:15:07 [ERROR] Error al obtener estación 3298: ConnectionError
+2026-05-12 11:15:07 [ERROR] AEMET no devolvió datos para lat=40.22919156851379, lon=-3.7666376231901677
+2026-05-12 11:15:07 [INFO] Petición /api/clima recibida: lat=40.22910812263276, lon=-3.7665575439843857
+2026-05-12 11:15:08 [ERROR] Error al obtener estación 3298: ConnectionError
+2026-05-12 11:15:08 [ERROR] AEMET no devolvió datos para lat=40.229108125268304, lon=-3.7665575465968315
+2026-05-12 11:15:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:15:08 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:15:57 [ERROR] Error al obtener estación 3298: ConnectionError
+2026-05-12 11:15:57 [ERROR] AEMET no devolvió datos para lat=40.22910812263276, lon=-3.7665575439843857
+2026-05-12 11:33:24 [INFO] Petición /api/clima recibida: lat=40.2291653558309, lon=-3.766621935756591
+2026-05-12 11:33:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:33:25 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:34:35 [INFO] Petición /api/clima recibida: lat=40.229163283148175, lon=-3.76662493070483
+2026-05-12 11:34:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:34:36 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:34:54 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 11:34:54 [ERROR] AEMET no devolvió datos para lat=40.2291653558309, lon=-3.766621935756591
+2026-05-12 11:34:58 [INFO] Petición /api/clima recibida: lat=40.22919405017161, lon=-3.7665411807964717
+2026-05-12 11:34:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:34:58 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:35:25 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 11:35:25 [ERROR] AEMET no devolvió datos para lat=40.229163283148175, lon=-3.76662493070483
+2026-05-12 11:35:28 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 11:35:28 [ERROR] AEMET no devolvió datos para lat=40.22919405017161, lon=-3.7665411807964717
+2026-05-12 11:41:16 [INFO] Petición /api/clima recibida: lat=40.4168, lon=-3.7038
+2026-05-12 11:41:17 [INFO] Nominatim: display='Centro', municipio='Madrid'
+2026-05-12 11:41:17 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 11:41:36 [INFO] Datos obtenidos para estación 3195
+2026-05-12 11:41:36 [ERROR] Error en api_controller: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO mediciones (id_zona, fecha, temperatura, humedad, viento, lluvia, alerta_calor, alerta_helada, alerta_viento, alerta_lluvia) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'id_zona': 1, 'humedad': 87.0, 'fecha': '2026-05-12T06:00:00+0000', 'lluvia': 0.0, 'viento': 1.0, 'temperatura': 10.6, 'alerta_calor': None, 'alerta_helada': None, 'alerta_viento': None, 'alerta_lluvia': None}]]
+2026-05-12 11:46:49 [INFO] Petición /api/clima recibida: lat=40.22921757852813, lon=-3.7666269385348237
+2026-05-12 11:46:50 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:46:50 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:46:50 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 11:46:50 [ERROR] AEMET no devolvió datos para lat=40.22921757852813, lon=-3.7666269385348237
+2026-05-12 11:47:23 [INFO] Petición /api/clima recibida: lat=40.22919451064379, lon=-3.766674252425904
+2026-05-12 11:47:24 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:47:24 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:47:28 [INFO] Petición /api/clima recibida: lat=40.229194503513476, lon=-3.7666742610986943
+2026-05-12 11:47:29 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:47:29 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:47:34 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 11:47:34 [ERROR] AEMET no devolvió datos para lat=40.22919451064379, lon=-3.766674252425904
+2026-05-12 11:47:38 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 11:47:38 [ERROR] AEMET no devolvió datos para lat=40.229194503513476, lon=-3.7666742610986943
+2026-05-12 11:47:41 [INFO] Petición /api/clima recibida: lat=40.22919451431179, lon=-3.766674245552043
+2026-05-12 11:47:42 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:47:42 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:47:42 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 11:47:42 [ERROR] AEMET no devolvió datos para lat=40.22919451431179, lon=-3.766674245552043
+2026-05-12 11:48:06 [INFO] Petición /api/clima recibida: lat=40.4168, lon=-3.7038
+2026-05-12 11:48:06 [INFO] Nominatim: display='Centro', municipio='Madrid'
+2026-05-12 11:48:06 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 11:48:06 [INFO] Datos obtenidos para estación 3195
+2026-05-12 11:48:06 [INFO] Clima guardado en BD y devuelto: Centro 10.6°C
+2026-05-12 11:58:48 [INFO] Petición /api/clima recibida: lat=40.22922038666268, lon=-3.7665309595110497
+2026-05-12 11:58:48 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 11:58:48 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 11:58:48 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 11:58:48 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 11:58:49 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 11:58:49 [ERROR] Error en api_controller: (sqlite3.IntegrityError) UNIQUE constraint failed: zonas.cod_ine
+[SQL: INSERT INTO zonas (municipio, cod_ine, id_estacion, estacion_referencia) VALUES (?, ?, ?, ?)]
+[parameters: ('Las Américas', '00000', '3298', 'Getafe')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-05-12 12:04:21 [INFO] Petición /api/clima recibida: lat=40.22915299456591, lon=-3.7666036032760934
+2026-05-12 12:04:21 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:04:21 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:04:21 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:04:21 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:04:22 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:04:22 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:04:39 [INFO] Petición /api/clima recibida: lat=40.22912823516434, lon=-3.766534710396535
+2026-05-12 12:04:39 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:04:39 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:04:39 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:04:39 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:04:39 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:04:39 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:04:39 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:04:52 [INFO] Petición /api/clima recibida: lat=40.22912825223385, lon=-3.7665346895553444
+2026-05-12 12:04:52 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:04:52 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:04:52 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:04:52 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:04:52 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:04:52 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:04:52 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:05:01 [INFO] Petición /api/clima recibida: lat=40.22912823766089, lon=-3.7665347075138973
+2026-05-12 12:05:01 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:05:01 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:05:01 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:05:01 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:05:01 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:05:01 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:05:01 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:14:44 [INFO] Petición /api/clima recibida: lat=40.22917148380399, lon=-3.7664976078762584
+2026-05-12 12:14:45 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:14:45 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:14:57 [INFO] Petición /api/clima recibida: lat=40.22917148474243, lon=-3.766497607071927
+2026-05-12 12:14:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:14:58 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:15:05 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:15:05 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:15:07 [ERROR] Error al obtener datos de AEMET: ConnectionError
+2026-05-12 12:15:07 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:15:08 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:15:08 [INFO] Petición /api/clima recibida: lat=40.22916771845027, lon=-3.7665980198733964
+2026-05-12 12:15:08 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:15:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:15:08 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:15:08 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:15:08 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:15:08 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:15:08 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:15:08 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:15:08 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:15:08 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:15:13 [INFO] Petición /api/clima recibida: lat=40.22916763613994, lon=-3.766600243243102
+2026-05-12 12:15:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:15:13 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:15:13 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:15:13 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:15:13 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:15:13 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:15:13 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:16:07 [INFO] Petición /api/clima recibida: lat=40.22916769239041, lon=-3.7665987398329035
+2026-05-12 12:16:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:16:08 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:16:08 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:16:08 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:16:08 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:16:08 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:16:08 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:16:16 [INFO] Petición /api/clima recibida: lat=40.22918503094955, lon=-3.766587026967417
+2026-05-12 12:16:16 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:16:16 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:16:16 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:16:16 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:16:16 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:16:16 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:16:16 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 12:16:19 [INFO] Petición /api/clima recibida: lat=40.22918507279842, lon=-3.766587017341607
+2026-05-12 12:16:20 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 12:16:20 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 12:16:20 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 12:16:20 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 12:16:20 [INFO] Usando observaciones AEMET en caché
+2026-05-12 12:16:20 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 12:16:20 [INFO] Clima guardado en BD y devuelto: Las Américas 12.6°C
+2026-05-12 13:07:53 [INFO] Petición /api/clima recibida: lat=40.22920649561687, lon=-3.7665260790176522
+2026-05-12 13:07:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:07:53 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:07:54 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:07:54 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:07:55 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:07:55 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:09:54 [INFO] Petición /api/clima recibida: lat=40.22920649835508, lon=-3.7665260808044043
+2026-05-12 13:09:55 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:09:55 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:09:55 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 13:09:55 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:09:55 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:09:55 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:09:55 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:11:02 [INFO] Petición /api/clima recibida: lat=40.4168, lon=-3.7038
+2026-05-12 13:11:03 [INFO] Nominatim: display='Centro', municipio='Madrid'
+2026-05-12 13:11:03 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 13:11:03 [INFO] Datos obtenidos para estación 3195
+2026-05-12 13:11:03 [INFO] Clima guardado en BD y devuelto: Centro 10.6°C
+2026-05-12 13:11:26 [INFO] Petición /api/clima recibida: lat=40.229181972453496, lon=-3.766439747424932
+2026-05-12 13:11:27 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:11:27 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:11:27 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:11:27 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:11:27 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:11:27 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:11:27 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:19:06 [INFO] Petición /api/clima recibida: lat=40.229171077791065, lon=-3.766497810906807
+2026-05-12 13:19:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:19:07 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:19:10 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:19:10 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:19:18 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:19:18 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:19:35 [INFO] Petición /api/clima recibida: lat=40.22918130579094, lon=-3.766725169258629
+2026-05-12 13:19:35 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:19:35 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:19:35 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:19:35 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:19:35 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:19:35 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:19:35 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:19:43 [INFO] Petición /api/clima recibida: lat=40.22918130627535, lon=-3.7667251754463154
+2026-05-12 13:19:44 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:19:44 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:19:44 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:19:44 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:19:44 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:19:44 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:19:44 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:21:44 [INFO] Petición /api/clima recibida: lat=40.22919426981016, lon=-3.7665904040134603
+2026-05-12 13:21:44 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:21:44 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:21:44 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:21:44 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:21:44 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:21:44 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:21:44 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:21:47 [INFO] Petición /api/clima recibida: lat=40.22917221103736, lon=-3.7666157560473073
+2026-05-12 13:21:47 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:21:47 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:21:47 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:21:47 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:21:47 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:21:47 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:21:47 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:41:42 [INFO] Petición /api/clima recibida: lat=40.2291636827574, lon=-3.766520050917736
+2026-05-12 13:41:43 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:41:43 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:41:43 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:41:43 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:41:43 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:41:43 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:47:39 [INFO] Petición /api/clima recibida: lat=40.22914469386903, lon=-3.7664318178703486
+2026-05-12 13:47:39 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:47:39 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:47:39 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:47:39 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:47:40 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:47:40 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:49:25 [INFO] Petición /api/clima recibida: lat=40.22921828904029, lon=-3.7664924644995215
+2026-05-12 13:49:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:49:26 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:49:26 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:49:26 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:49:27 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:49:27 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:49:32 [INFO] Petición /api/clima recibida: lat=40.22922476091171, lon=-3.766373417479562
+2026-05-12 13:49:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:49:33 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:49:33 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 13:49:33 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:49:33 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:49:33 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:49:33 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:50:11 [INFO] Petición /api/clima recibida: lat=40.22922476208041, lon=-3.766373316317247
+2026-05-12 13:50:12 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:50:12 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:50:12 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:50:12 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:50:12 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:50:12 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:50:12 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:50:19 [INFO] Petición /api/clima recibida: lat=40.229224760677326, lon=-3.766373401717846
+2026-05-12 13:50:20 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:50:20 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:50:20 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:50:20 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:50:20 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:50:20 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:50:20 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:50:34 [INFO] Petición /api/clima recibida: lat=40.22922476066348, lon=-3.7663734028019147
+2026-05-12 13:50:35 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:50:35 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:50:35 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:50:35 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:50:35 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:50:35 [INFO] Estación más cercana: MADRID RETIRO a 21.64 km
+2026-05-12 13:50:35 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 13:50:37 [INFO] Petición /api/clima recibida: lat=40.229140663570924, lon=-3.7665500253404915
+2026-05-12 13:50:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 13:50:37 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 13:50:37 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 13:50:37 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 13:50:37 [INFO] Usando observaciones AEMET en caché
+2026-05-12 13:50:37 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 13:50:37 [INFO] Clima guardado en BD y devuelto: Las Américas 12.3°C
+2026-05-12 14:29:41 [INFO] Petición /api/clima recibida: lat=40.22922664263056, lon=-3.7665561271383274
+2026-05-12 14:29:42 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:29:42 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:29:42 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 14:29:42 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:29:42 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 14:29:42 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 14:29:42 [ERROR] AEMET no devolvió datos para lat=40.22922664263056, lon=-3.7665561271383274
+2026-05-12 14:30:07 [INFO] Petición /api/clima recibida: lat=40.229200392782865, lon=-3.7665984081140484
+2026-05-12 14:30:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:30:08 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:30:11 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:30:11 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:30:27 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:30:27 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:31:37 [INFO] Petición /api/clima recibida: lat=40.229200385742104, lon=-3.766598419498728
+2026-05-12 14:31:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:31:37 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:31:38 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:31:38 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:31:38 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:31:38 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:31:38 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:32:24 [INFO] Petición /api/clima recibida: lat=40.22912355796818, lon=-3.7666957839693747
+2026-05-12 14:32:24 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:32:24 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:32:24 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:32:24 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:32:24 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:32:24 [INFO] Estación más cercana: MADRID RETIRO a 21.66 km
+2026-05-12 14:32:24 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:45:33 [INFO] Petición /api/clima recibida: lat=40.229111276211235, lon=-3.7665620046979624
+2026-05-12 14:45:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:45:33 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:45:33 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:45:33 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:45:34 [INFO] Estación más cercana: MADRID RETIRO a 21.66 km
+2026-05-12 14:45:34 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:46:03 [INFO] Petición /api/clima recibida: lat=40.22921970919827, lon=-3.766680011511492
+2026-05-12 14:46:03 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:46:03 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:46:03 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:46:03 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:46:03 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:46:03 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:46:03 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:46:07 [INFO] Petición /api/clima recibida: lat=40.22921972143124, lon=-3.766680018051253
+2026-05-12 14:46:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:46:07 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:46:07 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:46:07 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:46:07 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:46:07 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:46:07 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:55:59 [INFO] Petición /api/clima recibida: lat=40.229188237963896, lon=-3.7665904370999606
+2026-05-12 14:55:59 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:55:59 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:55:59 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:55:59 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:56:00 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:56:00 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:56:57 [INFO] Petición /api/clima recibida: lat=40.22917791649048, lon=-3.7666576598728105
+2026-05-12 14:56:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:56:58 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:56:58 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 14:56:58 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:56:58 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:56:58 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:56:58 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:57:10 [INFO] Petición /api/clima recibida: lat=40.229191777718775, lon=-3.766677174532819
+2026-05-12 14:57:10 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:57:10 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:57:10 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:57:10 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:57:10 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:57:10 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:57:10 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 14:58:25 [INFO] Petición /api/clima recibida: lat=40.22919271723086, lon=-3.7666785410211965
+2026-05-12 14:58:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-12 14:58:25 [INFO] Usando estación del JSON local: Getafe (3298)
+2026-05-12 14:58:25 [ERROR] AEMET no devolvió URL de datos. Respuesta: {
+  "descripcion" : "No hay datos que satisfagan esos criterios",
+  "estado" : 404
+}
+2026-05-12 14:58:25 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 14:58:25 [INFO] Usando observaciones AEMET en caché
+2026-05-12 14:58:25 [INFO] Estación más cercana: MADRID RETIRO a 21.65 km
+2026-05-12 14:58:25 [INFO] Clima guardado en BD y devuelto: Las Américas 12.1°C
+2026-05-12 15:19:47 [INFO] Petición /api/clima recibida: lat=40.3520982643703, lon=-3.6865647856960515
+2026-05-12 15:19:48 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:19:48 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:19:49 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 15:19:49 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:19:49 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 15:19:49 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:19:49 [ERROR] AEMET no devolvió datos para lat=40.3520982643703, lon=-3.6865647856960515
+2026-05-12 15:22:46 [INFO] Petición /api/clima recibida: lat=40.352142437200676, lon=-3.6865639973618696
+2026-05-12 15:22:46 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:22:46 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:22:47 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:22:47 [INFO] Clima guardado en BD y devuelto: Villaverde 16.6°C
+2026-05-12 15:23:34 [INFO] Petición /api/clima recibida: lat=40.352198659269284, lon=-3.6865868276644904
+2026-05-12 15:23:35 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:23:35 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:23:36 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:23:36 [INFO] Clima guardado en BD y devuelto: Villaverde 16.6°C
+2026-05-12 15:24:26 [INFO] Petición /api/clima recibida: lat=40.352149945412094, lon=-3.6865696970883293
+2026-05-12 15:24:27 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:24:27 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:24:28 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:24:28 [INFO] Clima guardado en BD y devuelto: Villaverde 16.6°C
+2026-05-12 15:26:44 [INFO] Petición /api/clima recibida: lat=40.35218532997587, lon=-3.686588176349986
+2026-05-12 15:26:45 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:26:45 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:26:45 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 15:26:45 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:26:46 [ERROR] AEMET ha bloqueado temporalmente por demasiadas peticiones.
+2026-05-12 15:26:46 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:26:46 [ERROR] AEMET no devolvió datos para lat=40.35218532997587, lon=-3.686588176349986
+2026-05-12 15:27:14 [INFO] Petición /api/clima recibida: lat=40.35216644115259, lon=-3.686557594847651
+2026-05-12 15:27:15 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:27:15 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:27:15 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:27:15 [INFO] Clima guardado en BD y devuelto: Villaverde 16.6°C
+2026-05-12 15:33:02 [INFO] Petición /api/clima recibida: lat=40.352169058720975, lon=-3.6865859790245663
+2026-05-12 15:33:03 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:33:03 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:33:04 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:33:04 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:35:41 [INFO] Petición /api/clima recibida: lat=40.35217900346238, lon=-3.686577212519091
+2026-05-12 15:35:43 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:35:43 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:35:44 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:35:44 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:44:59 [INFO] Petición /api/clima recibida: lat=40.3521826740357, lon=-3.6866075318319016
+2026-05-12 15:45:00 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:45:00 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:45:01 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:45:01 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:49:40 [INFO] Petición /api/clima recibida: lat=40.35220488270718, lon=-3.686635417160611
+2026-05-12 15:49:40 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:49:40 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:49:46 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:49:47 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:52:04 [INFO] Petición /api/clima recibida: lat=40.35216538636943, lon=-3.6865789996201324
+2026-05-12 15:52:05 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:52:05 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:52:06 [INFO] Datos obtenidos para estación 3195
+2026-05-12 15:52:06 [INFO] Clima guardado en BD y devuelto: Villaverde 17.9°C
+2026-05-12 15:53:27 [INFO] Petición /api/clima recibida: lat=40.35217172660092, lon=-3.6865819088574496
+2026-05-12 15:53:29 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:53:29 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:53:30 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:53:30 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:53:30 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:53:30 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:53:30 [ERROR] AEMET no devolvió datos para lat=40.35217172660092, lon=-3.6865819088574496
+2026-05-12 15:54:25 [INFO] Petición /api/clima recibida: lat=40.352186465804294, lon=-3.686590599968113
+2026-05-12 15:54:26 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:54:26 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:54:26 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:54:26 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:54:26 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:54:26 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:54:26 [ERROR] AEMET no devolvió datos para lat=40.352186465804294, lon=-3.686590599968113
+2026-05-12 15:54:31 [INFO] Petición /api/clima recibida: lat=40.352186465804294, lon=-3.686590599968113
+2026-05-12 15:54:31 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:54:31 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:54:32 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:54:32 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:54:32 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:54:32 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:54:32 [ERROR] AEMET no devolvió datos para lat=40.352186465804294, lon=-3.686590599968113
+2026-05-12 15:55:55 [INFO] Petición /api/clima recibida: lat=40.352142833436034, lon=-3.6865680908785547
+2026-05-12 15:55:56 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:55:56 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:55:57 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:55:57 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:55:57 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:55:57 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:55:57 [ERROR] AEMET no devolvió datos para lat=40.352142833436034, lon=-3.6865680908785547
+2026-05-12 15:56:05 [INFO] Petición /api/clima recibida: lat=40.352142833436034, lon=-3.6865680908785547
+2026-05-12 15:56:06 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:56:06 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:56:06 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:56:06 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:56:07 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:56:07 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:56:07 [ERROR] AEMET no devolvió datos para lat=40.352142833436034, lon=-3.6865680908785547
+2026-05-12 15:56:45 [INFO] Petición /api/clima recibida: lat=40.35213211875079, lon=-3.6865528590360794
+2026-05-12 15:56:46 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:56:46 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:56:46 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:56:46 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:56:47 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:56:47 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:56:47 [ERROR] AEMET no devolvió datos para lat=40.35213211875079, lon=-3.6865528590360794
+2026-05-12 15:58:02 [INFO] Petición /api/clima recibida: lat=40.35215671144306, lon=-3.6866135804286406
+2026-05-12 15:58:03 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:58:03 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:58:03 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:58:03 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:58:04 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:58:04 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:58:04 [ERROR] AEMET no devolvió datos para lat=40.35215671144306, lon=-3.6866135804286406
+2026-05-12 15:58:31 [INFO] Petición /api/clima recibida: lat=40.35206696670726, lon=-3.686534912248606
+2026-05-12 15:58:32 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 15:58:32 [INFO] Usando estación del JSON local: Madrid, Retiro (3195)
+2026-05-12 15:58:32 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:58:32 [INFO] No hubo datos por estación. Usando coordenadas como fallback.
+2026-05-12 15:58:32 [ERROR] Error al obtener datos de AEMET: HTTPError
+2026-05-12 15:58:32 [ERROR] AEMET devolvió lista de observaciones vacía
+2026-05-12 15:58:32 [ERROR] AEMET no devolvió datos para lat=40.35206696670726, lon=-3.686534912248606
+2026-05-12 16:19:24 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-12 16:19:24 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 16:19:24 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 16:19:24 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 16:19:24 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:24 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:24 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:24 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:24 [ERROR] Error en comparativa: Error simulado de API
+2026-05-12 16:19:54 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-12 16:19:54 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 16:19:54 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 16:19:54 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 16:19:54 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:54 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:54 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:54 [INFO] Iniciando comparativa BD/API: Madrid para el día 22/04/2026
+2026-05-12 16:19:54 [ERROR] Error en comparativa: Error simulado de API
+2026-05-12 16:33:16 [INFO] Petición /api/clima recibida: lat=40.35215612516882, lon=-3.6865835479422375
+2026-05-12 16:33:17 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:33:17 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-12 16:33:17 [ERROR] WeatherAPI no devolvió datos para lat=40.35215612516882, lon=-3.6865835479422375
+2026-05-12 16:36:01 [INFO] Petición /api/clima recibida: lat=40.35213240272711, lon=-3.6865728750385616
+2026-05-12 16:36:02 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:36:03 [INFO] Datos obtenidos para lat=40.35213240272711, lon=-3.6865728750385616
+2026-05-12 16:36:03 [INFO] Clima guardado en BD y devuelto: Villaverde 18.8°C
+2026-05-12 16:36:38 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 16:40:03 [INFO] Datos obtenidos para municipio=Anchuelo
+2026-05-12 16:45:01 [INFO] Datos obtenidos para municipio=Alcorcón
+2026-05-12 16:52:52 [INFO] Petición /api/clima recibida: lat=40.35222060733179, lon=-3.686620131741822
+2026-05-12 16:52:53 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:52:53 [INFO] Datos obtenidos para lat=40.35222060733179, lon=-3.686620131741822
+2026-05-12 16:52:53 [INFO] Clima guardado en BD y devuelto: Villaverde 16.1°C
+2026-05-12 16:52:59 [INFO] Datos obtenidos para municipio=Anchuelo
+2026-05-12 16:53:19 [INFO] Petición /api/clima recibida: lat=40.3521404073071, lon=-3.686585264626817
+2026-05-12 16:53:19 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:53:20 [INFO] Datos obtenidos para lat=40.3521404073071, lon=-3.686585264626817
+2026-05-12 16:53:20 [INFO] Clima guardado en BD y devuelto: Villaverde 16.1°C
+2026-05-12 16:53:27 [INFO] Petición /api/clima recibida: lat=40.3521404073071, lon=-3.686585264626817
+2026-05-12 16:53:27 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 16:53:28 [INFO] Datos obtenidos para lat=40.3521404073071, lon=-3.686585264626817
+2026-05-12 16:53:28 [INFO] Clima guardado en BD y devuelto: Villaverde 16.1°C
+2026-05-12 17:00:08 [INFO] Petición /api/clima recibida: lat=40.3521534059283, lon=-3.6865534483178672
+2026-05-12 17:00:09 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:00:10 [INFO] Datos obtenidos para lat=40.3521534059283, lon=-3.6865534483178672
+2026-05-12 17:00:10 [INFO] Clima guardado en BD y devuelto: Villaverde 16.2°C
+2026-05-12 17:00:37 [INFO] Petición /api/clima recibida: lat=40.35212984089096, lon=-3.686569551171587
+2026-05-12 17:00:39 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:00:39 [INFO] Datos obtenidos para lat=40.35212984089096, lon=-3.686569551171587
+2026-05-12 17:00:39 [INFO] Clima guardado en BD y devuelto: Villaverde 16.2°C
+2026-05-12 17:03:26 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-12 17:03:26 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 17:03:26 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 17:03:26 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 17:17:18 [INFO] Petición /api/clima recibida: lat=40.35215481271765, lon=-3.6865945465349985
+2026-05-12 17:17:19 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:17:19 [INFO] Datos obtenidos para lat=40.35215481271765, lon=-3.6865945465349985
+2026-05-12 17:17:19 [INFO] Clima guardado en BD y devuelto: Villaverde 18.1°C
+2026-05-12 17:18:47 [INFO] Petición /api/clima recibida: lat=40.35212798975297, lon=-3.686540105005617
+2026-05-12 17:18:48 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:18:48 [INFO] Datos obtenidos para lat=40.35212798975297, lon=-3.686540105005617
+2026-05-12 17:18:48 [INFO] Clima guardado en BD y devuelto: Villaverde 18.1°C
+2026-05-12 17:36:33 [INFO] Petición /api/clima recibida: lat=40.3521038454705, lon=-3.686527846470145
+2026-05-12 17:36:34 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-12 17:36:34 [INFO] Datos obtenidos para lat=40.3521038454705, lon=-3.686527846470145
+2026-05-12 17:36:34 [INFO] Clima guardado en BD y devuelto: Villaverde 18.3°C
+2026-05-12 17:51:13 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-12 17:51:13 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-12 17:51:13 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-12 17:51:13 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 08:56:32 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 08:56:32 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 08:56:32 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 08:56:32 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 09:03:43 [INFO] Petición /api/clima recibida: lat=40.352076527369135, lon=-3.6865343565814404
+2026-05-13 09:03:45 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 09:03:45 [INFO] Datos obtenidos para lat=40.352076527369135, lon=-3.6865343565814404
+2026-05-13 09:03:45 [INFO] Clima guardado en BD y devuelto: Villaverde 12.4°C
+2026-05-13 09:04:00 [INFO] Petición /api/clima recibida: lat=40.352076150693925, lon=-3.6865216273169534
+2026-05-13 09:04:01 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 09:04:01 [INFO] Datos obtenidos para lat=40.352076150693925, lon=-3.6865216273169534
+2026-05-13 09:04:01 [INFO] Clima guardado en BD y devuelto: Villaverde 12.4°C
+2026-05-13 10:50:04 [INFO] Petición /api/clima recibida: lat=40.35211424953298, lon=-3.68653833619042
+2026-05-13 10:50:05 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 10:50:05 [INFO] Datos obtenidos para lat=40.35211424953298, lon=-3.68653833619042
+2026-05-13 10:50:05 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 10:51:08 [INFO] Datos obtenidos para municipio=Algete
+2026-05-13 10:51:35 [INFO] Petición /api/clima recibida: lat=40.35214655661835, lon=-3.686548498506423
+2026-05-13 10:51:36 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 10:51:36 [INFO] Datos obtenidos para lat=40.35214655661835, lon=-3.686548498506423
+2026-05-13 10:51:36 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 10:53:00 [INFO] Datos obtenidos para lat=40.4167, lon=-3.7033
+2026-05-13 10:54:53 [INFO] Petición /api/clima recibida: lat=40.3520580141743, lon=-3.686498068793986
+2026-05-13 10:54:54 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 10:54:55 [INFO] Datos obtenidos para lat=40.3520580141743, lon=-3.686498068793986
+2026-05-13 10:54:55 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 11:00:09 [INFO] Petición /api/clima recibida: lat=40.35203094005727, lon=-3.686484437134537
+2026-05-13 11:00:10 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:00:11 [INFO] Datos obtenidos para lat=40.35203094005727, lon=-3.686484437134537
+2026-05-13 11:00:11 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 11:01:38 [INFO] Petición /api/clima recibida: lat=40.35205631133966, lon=-3.6865160386940796
+2026-05-13 11:01:39 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:01:40 [INFO] Datos obtenidos para lat=40.35205631133966, lon=-3.6865160386940796
+2026-05-13 11:01:40 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 11:02:53 [INFO] Petición /api/clima recibida: lat=40.352073758979316, lon=-3.6865291271804037
+2026-05-13 11:02:53 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:02:54 [INFO] Datos obtenidos para lat=40.352073758979316, lon=-3.6865291271804037
+2026-05-13 11:02:54 [INFO] Clima guardado en BD y devuelto: Villaverde 15.3°C
+2026-05-13 11:41:02 [INFO] Petición /api/clima recibida: lat=40.3521011197686, lon=-3.686520917240981
+2026-05-13 11:41:03 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:41:04 [INFO] Datos obtenidos para lat=40.3521011197686, lon=-3.686520917240981
+2026-05-13 11:41:04 [INFO] Clima por coordenadas devuelto: Villaverde 16.1°C
+2026-05-13 11:41:10 [INFO] Datos obtenidos para municipio=Griñón
+2026-05-13 11:41:10 [INFO] Consulta clima por municipio: Griñón 16.1°C
+2026-05-13 11:41:15 [INFO] Datos obtenidos para municipio=Getafe
+2026-05-13 11:41:15 [INFO] Consulta clima por municipio: Getafe 16.1°C
+2026-05-13 11:41:21 [INFO] Datos obtenidos para municipio=Tres Cantos
+2026-05-13 11:41:21 [INFO] Consulta clima por municipio: Los Cantos 12.5°C
+2026-05-13 11:41:28 [INFO] Datos obtenidos para municipio=Anchuelo
+2026-05-13 11:41:28 [INFO] Consulta clima por municipio: Anchuelo 14.3°C
+2026-05-13 11:45:52 [INFO] Petición /api/clima recibida: lat=40.3520685590076, lon=-3.6865222600891134
+2026-05-13 11:45:53 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 11:45:54 [INFO] Datos obtenidos para lat=40.3520685590076, lon=-3.6865222600891134
+2026-05-13 11:45:54 [INFO] Clima por coordenadas devuelto: Villaverde 16.1°C
+2026-05-13 11:45:59 [INFO] Datos obtenidos para municipio=Becerril de la Sierra
+2026-05-13 11:45:59 [INFO] Consulta clima por municipio: Becerril De La Sierra 8.3°C
+2026-05-13 11:55:10 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 11:55:10 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:55:10 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 11:55:10 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:55:40 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 11:55:40 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:55:40 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 11:55:40 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:59:48 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 11:59:48 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 11:59:48 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 11:59:48 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 12:08:39 [INFO] Petición /api/clima recibida: lat=40.352105782873124, lon=-3.6865829481806034
+2026-05-13 12:08:39 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:08:40 [INFO] Datos obtenidos para lat=40.352105782873124, lon=-3.6865829481806034
+2026-05-13 12:08:40 [INFO] Clima por coordenadas devuelto: Villaverde 17.4°C
+2026-05-13 12:09:13 [INFO] Petición /api/clima recibida: lat=40.35216385205314, lon=-3.686582346284601
+2026-05-13 12:09:14 [INFO] Datos obtenidos para municipio=Aranjuez
+2026-05-13 12:09:14 [INFO] Consulta clima por municipio: Aranjuez 17.4°C
+2026-05-13 12:09:14 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:09:15 [INFO] Datos obtenidos para lat=40.35216385205314, lon=-3.686582346284601
+2026-05-13 12:09:15 [INFO] Clima por coordenadas devuelto: Villaverde 17.4°C
+2026-05-13 12:09:20 [INFO] Datos obtenidos para municipio=Aranjuez
+2026-05-13 12:09:20 [INFO] Consulta clima por municipio: Aranjuez 17.4°C
+2026-05-13 12:09:26 [INFO] Datos obtenidos para municipio=Batres
+2026-05-13 12:09:26 [INFO] Consulta clima por municipio: Batres 17.4°C
+2026-05-13 12:09:32 [INFO] Datos obtenidos para municipio=Fuente el Saz de Jarama
+2026-05-13 12:09:32 [INFO] Consulta clima por municipio: Fuente El Saz 16.4°C
+2026-05-13 12:09:40 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:09:40 [ERROR] WeatherAPI no devolvió datos para municipio=Móstoles
+2026-05-13 12:09:48 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:09:48 [ERROR] WeatherAPI no devolvió datos para municipio=Móstoles
+2026-05-13 12:09:54 [INFO] Datos obtenidos para municipio=Anchuelo
+2026-05-13 12:09:54 [INFO] Consulta clima por municipio: Anchuelo 16.4°C
+2026-05-13 12:10:44 [INFO] Petición /api/clima recibida: lat=40.352071296578934, lon=-3.686498922621598
+2026-05-13 12:10:45 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:10:46 [INFO] Datos obtenidos para lat=40.352071296578934, lon=-3.686498922621598
+2026-05-13 12:10:46 [INFO] Clima por coordenadas devuelto: Villaverde 17.4°C
+2026-05-13 12:11:00 [INFO] Datos obtenidos para lat=40.4167, lon=-3.7033
+2026-05-13 12:40:15 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 12:40:15 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 12:40:15 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 12:40:15 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 12:40:43 [INFO] Petición /api/clima recibida: lat=40.35216187864505, lon=-3.686555636390534
+2026-05-13 12:40:44 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:40:44 [INFO] Datos obtenidos para lat=40.35216187864505, lon=-3.686555636390534
+2026-05-13 12:40:44 [INFO] Clima por coordenadas devuelto: Villaverde 17.3°C
+2026-05-13 12:40:52 [INFO] Datos obtenidos para municipio=Moncloa-Aravaca
+2026-05-13 12:40:52 [INFO] Consulta clima por municipio: Aravaca 15.0°C
+2026-05-13 12:41:02 [INFO] Datos obtenidos para municipio=Ciudad Lineal
+2026-05-13 12:41:02 [INFO] Consulta clima por municipio: Ciudad Lineal 16.3°C
+2026-05-13 12:41:10 [INFO] Petición /api/clima recibida: lat=40.3521268219781, lon=-3.6865559995091255
+2026-05-13 12:41:11 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:41:12 [INFO] Datos obtenidos para lat=40.3521268219781, lon=-3.6865559995091255
+2026-05-13 12:41:12 [INFO] Clima por coordenadas devuelto: Villaverde 17.3°C
+2026-05-13 12:41:40 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:41:40 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:41:44 [INFO] Datos obtenidos para municipio=Usera
+2026-05-13 12:41:44 [INFO] Consulta clima por municipio: Usera 25.1°C
+2026-05-13 12:41:48 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:41:48 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:41:56 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:41:56 [ERROR] WeatherAPI no devolvió datos para municipio=Arganzuela
+2026-05-13 12:42:00 [INFO] Datos obtenidos para municipio=Barajas
+2026-05-13 12:42:00 [INFO] Consulta clima por municipio: Barajas De Madrid 16.3°C
+2026-05-13 12:42:07 [INFO] Datos obtenidos para municipio=Usera
+2026-05-13 12:42:07 [INFO] Consulta clima por municipio: Usera 25.1°C
+2026-05-13 12:42:18 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:42:18 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:42:39 [INFO] Petición /api/clima recibida: lat=40.35211582987305, lon=-3.6865810391602785
+2026-05-13 12:42:40 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:42:41 [INFO] Datos obtenidos para lat=40.35211582987305, lon=-3.6865810391602785
+2026-05-13 12:42:41 [INFO] Clima por coordenadas devuelto: Villaverde 17.3°C
+2026-05-13 12:42:45 [INFO] Datos obtenidos para municipio=Usera
+2026-05-13 12:42:45 [INFO] Consulta clima por municipio: Usera 25.1°C
+2026-05-13 12:43:25 [INFO] Datos obtenidos para municipio=Tetuán
+2026-05-13 12:43:25 [INFO] Consulta clima por municipio: Tetuán 21.1°C
+2026-05-13 12:43:29 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:43:29 [ERROR] WeatherAPI no devolvió datos para municipio=Arganzuela
+2026-05-13 12:43:34 [INFO] Datos obtenidos para municipio=Chamartín
+2026-05-13 12:43:34 [INFO] Consulta clima por municipio: Chamartín 15.0°C
+2026-05-13 12:43:38 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:43:38 [ERROR] WeatherAPI no devolvió datos para municipio=Chamberí
+2026-05-13 12:43:55 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:43:55 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:44:03 [INFO] Datos obtenidos para municipio=Ciudad Lineal
+2026-05-13 12:44:03 [INFO] Consulta clima por municipio: Ciudad Lineal 16.3°C
+2026-05-13 12:44:06 [INFO] Datos obtenidos para municipio=Fuencarral-El Pardo
+2026-05-13 12:44:06 [INFO] Consulta clima por municipio: Fuencarral 16.3°C
+2026-05-13 12:44:12 [INFO] Datos obtenidos para municipio=Hortaleza
+2026-05-13 12:44:12 [INFO] Consulta clima por municipio: Hortaleza 16.3°C
+2026-05-13 12:44:16 [INFO] Datos obtenidos para municipio=Fuencarral-El Pardo
+2026-05-13 12:44:16 [INFO] Consulta clima por municipio: Fuencarral 16.3°C
+2026-05-13 12:44:19 [INFO] Datos obtenidos para municipio=Fuencarral-El Pardo
+2026-05-13 12:44:19 [INFO] Consulta clima por municipio: Fuencarral 16.3°C
+2026-05-13 12:44:21 [INFO] Datos obtenidos para municipio=Fuencarral-El Pardo
+2026-05-13 12:44:21 [INFO] Consulta clima por municipio: Fuencarral 16.3°C
+2026-05-13 12:44:25 [INFO] Datos obtenidos para municipio=Retiro
+2026-05-13 12:44:25 [INFO] Consulta clima por municipio: Retiro 15.3°C
+2026-05-13 12:44:56 [INFO] Petición /api/clima recibida: lat=40.35213480985032, lon=-3.686537930323245
+2026-05-13 12:44:57 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:44:57 [INFO] Datos obtenidos para lat=40.35213480985032, lon=-3.686537930323245
+2026-05-13 12:44:57 [INFO] Clima por coordenadas devuelto: Villaverde 17.3°C
+2026-05-13 12:53:31 [INFO] Petición /api/clima recibida: lat=40.35218302455661, lon=-3.686570437249589
+2026-05-13 12:53:32 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:53:33 [INFO] Datos obtenidos para lat=40.35218302455661, lon=-3.686570437249589
+2026-05-13 12:53:33 [INFO] Clima por coordenadas devuelto: Villaverde 17.1°C
+2026-05-13 12:54:19 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:54:19 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:54:46 [INFO] Datos obtenidos para municipio=Usera
+2026-05-13 12:54:46 [INFO] Consulta clima por municipio: Usera 25.1°C
+2026-05-13 12:54:54 [INFO] Datos obtenidos para municipio=Salamanca
+2026-05-13 12:54:54 [INFO] Consulta clima por municipio: Salamanca 11.3°C
+2026-05-13 12:54:59 [ERROR] Error al obtener datos de WeatherAPI: HTTPError
+2026-05-13 12:54:59 [ERROR] WeatherAPI no devolvió datos para municipio=Arganzuela
+2026-05-13 12:57:37 [INFO] Petición /api/clima recibida: lat=40.352174715727465, lon=-3.6865652312294723
+2026-05-13 12:57:38 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:57:38 [INFO] Datos obtenidos para lat=40.352174715727465, lon=-3.6865652312294723
+2026-05-13 12:57:38 [INFO] Clima por coordenadas devuelto: Villaverde 17.1°C
+2026-05-13 12:57:41 [ERROR] WeatherAPI error 400 para 'Vicálvaro': No matching location found.
+2026-05-13 12:57:41 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:57:45 [ERROR] WeatherAPI error 400 para 'Vicálvaro': No matching location found.
+2026-05-13 12:57:45 [ERROR] WeatherAPI no devolvió datos para municipio=Vicálvaro
+2026-05-13 12:57:51 [INFO] Datos obtenidos para lat=40.405, lon=-3.607
+2026-05-13 12:57:51 [INFO] Consulta clima por municipio: Vicalvaro 16.4°C
+2026-05-13 12:58:17 [INFO] Datos obtenidos para lat=40.394, lon=-3.699
+2026-05-13 12:58:17 [INFO] Consulta clima por municipio: Madrid 17.1°C
+2026-05-13 12:58:21 [INFO] Datos obtenidos para lat=40.394, lon=-3.699
+2026-05-13 12:58:21 [INFO] Consulta clima por municipio: Madrid 14.3°C
+2026-05-13 12:58:28 [INFO] Petición /api/clima recibida: lat=40.35213179281514, lon=-3.686607642490045
+2026-05-13 12:58:28 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 12:58:29 [INFO] Datos obtenidos para lat=40.35213179281514, lon=-3.686607642490045
+2026-05-13 12:58:29 [INFO] Clima por coordenadas devuelto: Villaverde 17.1°C
+2026-05-13 13:00:31 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:31 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:00:31 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:31 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:00:47 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:53 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:54 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:00:54 [ERROR] Error al obtener datos de WeatherAPI: AttributeError
+2026-05-13 13:00:54 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:23 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 13:01:23 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:23 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 13:01:23 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:34 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 13:01:34 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:34 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 13:01:34 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:01:49 [INFO] Petición /api/clima recibida: lat=40.35212887462427, lon=-3.6865577657562927
+2026-05-13 13:01:49 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-13 13:01:50 [INFO] Datos obtenidos para lat=40.35212887462427, lon=-3.6865577657562927
+2026-05-13 13:01:50 [INFO] Clima por coordenadas devuelto: Villaverde 17.1°C
+2026-05-13 13:01:54 [INFO] Datos obtenidos para lat=40.405, lon=-3.607
+2026-05-13 13:01:54 [INFO] Consulta clima por municipio: Vicalvaro 16.4°C
+2026-05-13 13:02:35 [INFO] Datos obtenidos para lat=40.4168, lon=-3.7038
+2026-05-13 13:02:35 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:02:35 [INFO] Datos obtenidos para municipio=Madrid
+2026-05-13 13:02:35 [ERROR] Error al obtener datos de WeatherAPI: Exception
+2026-05-13 13:33:21 [INFO] Petición /api/clima recibida: lat=40.22908263527267, lon=-3.7663947499635
+2026-05-13 13:33:21 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 13:33:21 [INFO] Datos obtenidos para lat=40.22908263527267, lon=-3.7663947499635
+2026-05-13 13:33:21 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-13 13:33:30 [INFO] Petición /api/clima recibida: lat=40.229215268738386, lon=-3.766743792284552
+2026-05-13 13:33:30 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 13:33:30 [INFO] Datos obtenidos para lat=40.229215268738386, lon=-3.766743792284552
+2026-05-13 13:33:30 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-13 13:34:25 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 13:34:25 [INFO] Consulta clima por municipio: Villaverde 17.0°C
+2026-05-13 13:34:32 [INFO] Petición /api/clima recibida: lat=40.22921530540664, lon=-3.7667438954992964
+2026-05-13 13:34:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 13:34:33 [INFO] Datos obtenidos para lat=40.22921530540664, lon=-3.7667438954992964
+2026-05-13 13:34:33 [INFO] Clima por coordenadas devuelto: Las Américas 17.2°C
+2026-05-13 13:35:13 [INFO] Petición /api/clima recibida: lat=40.229174715892235, lon=-3.766606912249506
+2026-05-13 13:35:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 13:35:13 [INFO] Datos obtenidos para lat=40.229174715892235, lon=-3.766606912249506
+2026-05-13 13:35:13 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-13 13:35:19 [INFO] Petición /api/clima recibida: lat=40.22917468922562, lon=-3.766606821985176
+2026-05-13 13:35:19 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 13:35:19 [INFO] Datos obtenidos para lat=40.22917468922562, lon=-3.766606821985176
+2026-05-13 13:35:19 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-13 13:35:27 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 13:35:27 [INFO] Consulta clima por municipio: Villaverde 17.0°C
+2026-05-13 13:35:32 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 13:35:32 [INFO] Consulta clima por municipio: Villaverde 14.3°C
+2026-05-13 13:35:52 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 13:35:52 [INFO] Consulta clima por municipio: Villaverde 13.4°C
+2026-05-13 13:38:01 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 13:38:01 [INFO] Consulta clima por municipio: Villaverde 14.9°C
+2026-05-13 13:38:08 [INFO] Petición /api/clima recibida: lat=40.22917472485035, lon=-3.7666069423801067
+2026-05-13 13:38:09 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 13:38:09 [INFO] Datos obtenidos para lat=40.22917472485035, lon=-3.7666069423801067
+2026-05-13 13:38:09 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-13 13:38:39 [INFO] Petición /api/clima recibida: lat=40.22924149431692, lon=-3.7667012269934017
+2026-05-13 13:38:39 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 13:38:39 [INFO] Datos obtenidos para lat=40.22924149431692, lon=-3.7667012269934017
+2026-05-13 13:38:39 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-13 13:41:09 [INFO] Petición /api/clima recibida: lat=40.229241507031524, lon=-3.7667012446703314
+2026-05-13 13:41:09 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 13:41:09 [INFO] Datos obtenidos para lat=40.229241507031524, lon=-3.7667012446703314
+2026-05-13 13:41:09 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-13 14:49:27 [INFO] Petición /api/clima recibida: lat=40.22913838915226, lon=-3.7666292223957245
+2026-05-13 14:49:28 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 14:49:28 [INFO] Datos obtenidos para lat=40.22913838915226, lon=-3.7666292223957245
+2026-05-13 14:49:28 [INFO] Clima por coordenadas devuelto: Las Américas 17.1°C
+2026-05-13 16:34:30 [INFO] Petición /api/clima recibida: lat=40.228967873344956, lon=-3.766421324612207
+2026-05-13 16:34:30 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:34:30 [INFO] Datos obtenidos para lat=40.228967873344956, lon=-3.766421324612207
+2026-05-13 16:34:30 [INFO] Clima por coordenadas devuelto: Las Américas 19.1°C
+2026-05-13 16:36:03 [INFO] Petición /api/clima recibida: lat=40.22905824009963, lon=-3.766606773325026
+2026-05-13 16:36:04 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:36:04 [INFO] Datos obtenidos para lat=40.22905824009963, lon=-3.766606773325026
+2026-05-13 16:36:04 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:36:09 [INFO] Petición /api/clima recibida: lat=40.22925011367291, lon=-3.7665604849201744
+2026-05-13 16:36:09 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:36:09 [INFO] Datos obtenidos para lat=40.22925011367291, lon=-3.7665604849201744
+2026-05-13 16:36:09 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:36:23 [INFO] Petición /api/clima recibida: lat=40.229250209497295, lon=-3.7665604476260706
+2026-05-13 16:36:23 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:36:24 [INFO] Datos obtenidos para lat=40.229250209497295, lon=-3.7665604476260706
+2026-05-13 16:36:24 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:37:12 [INFO] Petición /api/clima recibida: lat=40.22925015197361, lon=-3.7665604674110504
+2026-05-13 16:37:12 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:37:12 [INFO] Datos obtenidos para lat=40.22925015197361, lon=-3.7665604674110504
+2026-05-13 16:37:12 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:37:36 [INFO] Petición /api/clima recibida: lat=40.22927629794924, lon=-3.766661792680402
+2026-05-13 16:37:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:37:36 [INFO] Datos obtenidos para lat=40.22927629794924, lon=-3.766661792680402
+2026-05-13 16:37:36 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:37:39 [INFO] Petición /api/clima recibida: lat=40.22927633335579, lon=-3.7666619245928112
+2026-05-13 16:37:40 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:37:40 [INFO] Datos obtenidos para lat=40.22927633335579, lon=-3.7666619245928112
+2026-05-13 16:37:40 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:39:06 [INFO] Petición /api/clima recibida: lat=40.22927631813477, lon=-3.7666618666366913
+2026-05-13 16:39:06 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:39:06 [INFO] Datos obtenidos para lat=40.22927631813477, lon=-3.7666618666366913
+2026-05-13 16:39:06 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:39:17 [INFO] Petición /api/clima recibida: lat=40.22904622576729, lon=-3.7665014876648923
+2026-05-13 16:39:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:39:18 [INFO] Datos obtenidos para lat=40.22904622576729, lon=-3.7665014876648923
+2026-05-13 16:39:18 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:39:30 [INFO] Datos obtenidos para lat=40.458, lon=-3.703
+2026-05-13 16:39:30 [INFO] Consulta clima por municipio: Chamartin 18.0°C
+2026-05-13 16:39:36 [INFO] Petición /api/clima recibida: lat=40.229046102736746, lon=-3.766501405226338
+2026-05-13 16:39:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:39:37 [INFO] Datos obtenidos para lat=40.229046102736746, lon=-3.766501405226338
+2026-05-13 16:39:37 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:39:46 [INFO] Petición /api/clima recibida: lat=40.22904615491594, lon=-3.766501440664212
+2026-05-13 16:39:46 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:39:46 [INFO] Datos obtenidos para lat=40.22904615491594, lon=-3.766501440664212
+2026-05-13 16:39:46 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:39:51 [INFO] Petición /api/clima recibida: lat=40.22904614935039, lon=-3.766501436882416
+2026-05-13 16:39:52 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:39:52 [INFO] Datos obtenidos para lat=40.22904614935039, lon=-3.766501436882416
+2026-05-13 16:39:52 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:40:07 [INFO] Petición /api/clima recibida: lat=40.22904615174126, lon=-3.7665014385064293
+2026-05-13 16:40:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:40:08 [INFO] Datos obtenidos para lat=40.22904615174126, lon=-3.7665014385064293
+2026-05-13 16:40:08 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:44:19 [INFO] Petición /api/clima recibida: lat=40.22912754543113, lon=-3.766492457977837
+2026-05-13 16:44:19 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:44:20 [INFO] Datos obtenidos para lat=40.22912754543113, lon=-3.766492457977837
+2026-05-13 16:44:20 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 16:47:40 [INFO] Petición /api/clima recibida: lat=40.229135080187206, lon=-3.7664669351805897
+2026-05-13 16:47:40 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:47:40 [INFO] Datos obtenidos para lat=40.229135080187206, lon=-3.7664669351805897
+2026-05-13 16:47:40 [INFO] Clima por coordenadas devuelto: Las Américas 20.3°C
+2026-05-13 16:50:40 [INFO] Petición /api/clima recibida: lat=40.22915575949766, lon=-3.7665497023854626
+2026-05-13 16:50:41 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 16:50:41 [INFO] Datos obtenidos para lat=40.22915575949766, lon=-3.7665497023854626
+2026-05-13 16:50:41 [INFO] Clima por coordenadas devuelto: Las Américas 20.3°C
+2026-05-13 17:03:13 [INFO] Petición /api/clima recibida: lat=40.22916630444742, lon=-3.7664765307050763
+2026-05-13 17:03:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 17:03:13 [INFO] Datos obtenidos para lat=40.22916630444742, lon=-3.7664765307050763
+2026-05-13 17:03:13 [INFO] Clima por coordenadas devuelto: Las Américas 20.3°C
+2026-05-13 17:03:21 [INFO] Petición /api/clima recibida: lat=40.22905525091466, lon=-3.766542210152986
+2026-05-13 17:03:22 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 17:03:22 [INFO] Datos obtenidos para lat=40.22905525091466, lon=-3.766542210152986
+2026-05-13 17:03:22 [INFO] Clima por coordenadas devuelto: Las Américas 20.3°C
+2026-05-13 17:03:28 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 17:03:28 [INFO] Consulta clima por municipio: Villaverde 20.3°C
+2026-05-13 17:03:31 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 17:03:31 [INFO] Consulta clima por municipio: Villaverde 14.9°C
+2026-05-13 17:03:37 [INFO] Petición /api/clima recibida: lat=40.22905520461579, lon=-3.7665422359934295
+2026-05-13 17:03:38 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 17:03:38 [INFO] Datos obtenidos para lat=40.22905520461579, lon=-3.7665422359934295
+2026-05-13 17:03:38 [INFO] Clima por coordenadas devuelto: Las Américas 20.3°C
+2026-05-13 20:10:35 [INFO] Petición /api/clima recibida: lat=40.229159454913415, lon=-3.766728225138214
+2026-05-13 20:10:35 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:10:36 [INFO] Datos obtenidos para lat=40.229159454913415, lon=-3.766728225138214
+2026-05-13 20:10:36 [INFO] Clima por coordenadas devuelto: Las Américas 20.1°C
+2026-05-13 20:10:47 [INFO] Petición /api/clima recibida: lat=40.229193429626534, lon=-3.766683011411241
+2026-05-13 20:10:47 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:10:48 [INFO] Datos obtenidos para lat=40.229193429626534, lon=-3.766683011411241
+2026-05-13 20:10:48 [INFO] Clima por coordenadas devuelto: Las Américas 20.1°C
+2026-05-13 20:21:08 [INFO] Petición /api/clima recibida: lat=40.22920516791796, lon=-3.766657761577627
+2026-05-13 20:21:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:21:08 [INFO] Datos obtenidos para lat=40.22920516791796, lon=-3.766657761577627
+2026-05-13 20:21:08 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:24:10 [INFO] Petición /api/clima recibida: lat=40.22915350529306, lon=-3.766653969269152
+2026-05-13 20:24:10 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:24:11 [INFO] Datos obtenidos para lat=40.22915350529306, lon=-3.766653969269152
+2026-05-13 20:24:11 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:24:17 [INFO] Datos obtenidos para lat=40.394, lon=-3.699
+2026-05-13 20:24:17 [INFO] Consulta clima por municipio: Madrid 19.2°C
+2026-05-13 20:24:26 [INFO] Datos obtenidos para lat=40.394, lon=-3.699
+2026-05-13 20:24:26 [INFO] Consulta clima por municipio: Madrid 13.4°C
+2026-05-13 20:24:45 [INFO] Petición /api/clima recibida: lat=40.22918312287476, lon=-3.7665055596139223
+2026-05-13 20:24:46 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:24:46 [INFO] Datos obtenidos para lat=40.22918312287476, lon=-3.7665055596139223
+2026-05-13 20:24:46 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:25:50 [INFO] Petición /api/clima recibida: lat=40.229183126613776, lon=-3.766505549635377
+2026-05-13 20:25:50 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:25:51 [INFO] Datos obtenidos para lat=40.229183126613776, lon=-3.766505549635377
+2026-05-13 20:25:51 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:26:07 [INFO] Datos obtenidos para lat=40.474, lon=-3.581
+2026-05-13 20:26:07 [INFO] Consulta clima por municipio: Barajas De Madrid 20.2°C
+2026-05-13 20:26:12 [INFO] Datos obtenidos para lat=40.474, lon=-3.581
+2026-05-13 20:26:12 [INFO] Consulta clima por municipio: Barajas De Madrid 14.2°C
+2026-05-13 20:26:25 [INFO] Petición /api/clima recibida: lat=40.22907328330398, lon=-3.766339620994514
+2026-05-13 20:26:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:26:25 [INFO] Datos obtenidos para lat=40.22907328330398, lon=-3.766339620994514
+2026-05-13 20:26:25 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:27:13 [INFO] Petición /api/clima recibida: lat=40.229073220875364, lon=-3.766339523550515
+2026-05-13 20:27:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:27:13 [INFO] Datos obtenidos para lat=40.229073220875364, lon=-3.766339523550515
+2026-05-13 20:27:13 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:27:16 [INFO] Petición /api/clima recibida: lat=40.22909731848344, lon=-3.76639946584041
+2026-05-13 20:27:17 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:27:17 [INFO] Datos obtenidos para lat=40.22909731848344, lon=-3.76639946584041
+2026-05-13 20:27:17 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:28:18 [INFO] Petición /api/clima recibida: lat=40.229097446970066, lon=-3.766399822859999
+2026-05-13 20:28:20 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:28:20 [INFO] Datos obtenidos para lat=40.229097446970066, lon=-3.766399822859999
+2026-05-13 20:28:20 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:28:22 [INFO] Petición /api/clima recibida: lat=40.22904232181347, lon=-3.7666537746113637
+2026-05-13 20:28:22 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:28:22 [INFO] Datos obtenidos para lat=40.22904232181347, lon=-3.7666537746113637
+2026-05-13 20:28:22 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:28:26 [INFO] Petición /api/clima recibida: lat=40.229042208720486, lon=-3.766654250861166
+2026-05-13 20:28:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:28:26 [INFO] Datos obtenidos para lat=40.229042208720486, lon=-3.766654250861166
+2026-05-13 20:28:26 [INFO] Clima por coordenadas devuelto: Las Américas 19.2°C
+2026-05-13 20:38:17 [INFO] Petición /api/clima recibida: lat=40.229117253852245, lon=-3.7664076608531234
+2026-05-13 20:38:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:38:18 [INFO] Datos obtenidos para lat=40.229117253852245, lon=-3.7664076608531234
+2026-05-13 20:38:18 [INFO] Clima por coordenadas devuelto: Las Américas 19.1°C
+2026-05-13 20:38:22 [INFO] Datos obtenidos para lat=40.435, lon=-3.726
+2026-05-13 20:38:22 [INFO] Consulta clima por municipio: Chamartin 17.4°C
+2026-05-13 20:38:26 [INFO] Datos obtenidos para lat=40.435, lon=-3.726
+2026-05-13 20:38:26 [INFO] Consulta clima por municipio: Chamartin 14.3°C
+2026-05-13 20:38:34 [INFO] Petición /api/clima recibida: lat=40.22904779977485, lon=-3.766661709862626
+2026-05-13 20:38:34 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:38:34 [INFO] Datos obtenidos para lat=40.22904779977485, lon=-3.766661709862626
+2026-05-13 20:38:34 [INFO] Clima por coordenadas devuelto: Las Américas 19.1°C
+2026-05-13 20:44:05 [INFO] Petición /api/clima recibida: lat=40.22904777194851, lon=-3.7666618112259314
+2026-05-13 20:44:05 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:44:05 [INFO] Datos obtenidos para lat=40.22904777194851, lon=-3.7666618112259314
+2026-05-13 20:44:05 [INFO] Clima por coordenadas devuelto: Las Américas 19.1°C
+2026-05-13 20:44:09 [INFO] Petición /api/clima recibida: lat=40.22899795197119, lon=-3.766549864156283
+2026-05-13 20:44:09 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:44:10 [INFO] Datos obtenidos para lat=40.22899795197119, lon=-3.766549864156283
+2026-05-13 20:44:10 [INFO] Clima por coordenadas devuelto: Las Américas 19.1°C
+2026-05-13 20:44:13 [INFO] Datos obtenidos para lat=40.395, lon=-3.740
+2026-05-13 20:44:13 [INFO] Consulta clima por municipio: Carabanchel Bajo 17.4°C
+2026-05-13 20:44:17 [INFO] Datos obtenidos para lat=40.395, lon=-3.740
+2026-05-13 20:44:17 [INFO] Consulta clima por municipio: Carabanchel Bajo 14.3°C
+2026-05-13 20:44:59 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 20:44:59 [INFO] Consulta clima por municipio: Villaverde 19.1°C
+2026-05-13 20:45:09 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 20:45:09 [INFO] Consulta clima por municipio: Villaverde 14.9°C
+2026-05-13 20:45:12 [INFO] Petición /api/clima recibida: lat=40.22899794582692, lon=-3.7665498538597815
+2026-05-13 20:45:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:45:13 [INFO] Datos obtenidos para lat=40.22899794582692, lon=-3.7665498538597815
+2026-05-13 20:45:13 [INFO] Clima por coordenadas devuelto: Las Américas 19.1°C
+2026-05-13 20:48:56 [INFO] Petición /api/clima recibida: lat=40.22916319625514, lon=-3.7664020631732287
+2026-05-13 20:48:57 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:48:57 [INFO] Datos obtenidos para lat=40.22916319625514, lon=-3.7664020631732287
+2026-05-13 20:48:57 [INFO] Clima por coordenadas devuelto: Las Américas 19.1°C
+2026-05-13 20:49:19 [INFO] Petición /api/clima recibida: lat=40.22915124852221, lon=-3.7666183962632607
+2026-05-13 20:49:19 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 20:49:20 [INFO] Datos obtenidos para lat=40.22915124852221, lon=-3.7666183962632607
+2026-05-13 20:49:20 [INFO] Clima por coordenadas devuelto: Las Américas 19.1°C
+2026-05-13 23:56:08 [INFO] Petición /api/clima recibida: lat=40.22927153786849, lon=-3.766728457577742
+2026-05-13 23:56:09 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 23:56:09 [INFO] Datos obtenidos para lat=40.22927153786849, lon=-3.766728457577742
+2026-05-13 23:56:09 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-13 23:56:22 [INFO] Petición /api/clima recibida: lat=40.22926656745261, lon=-3.766796590831116
+2026-05-13 23:56:22 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 23:56:22 [INFO] Datos obtenidos para lat=40.22926656745261, lon=-3.766796590831116
+2026-05-13 23:56:22 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-13 23:56:39 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 23:56:39 [INFO] Consulta clima por municipio: Villaverde 16.3°C
+2026-05-13 23:56:42 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-13 23:56:42 [INFO] Consulta clima por municipio: Villaverde 14.9°C
+2026-05-13 23:56:49 [INFO] Petición /api/clima recibida: lat=40.229266566734275, lon=-3.7667965943629715
+2026-05-13 23:56:49 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-13 23:56:49 [INFO] Datos obtenidos para lat=40.229266566734275, lon=-3.7667965943629715
+2026-05-13 23:56:49 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:00:05 [INFO] Petición /api/clima recibida: lat=40.229266566993935, lon=-3.766796593060332
+2026-05-14 00:00:05 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:00:05 [INFO] Datos obtenidos para lat=40.229266566993935, lon=-3.766796593060332
+2026-05-14 00:00:05 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:00:23 [INFO] Petición /api/clima recibida: lat=40.229264857186024, lon=-3.7666162589855454
+2026-05-14 00:00:23 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:00:23 [INFO] Datos obtenidos para lat=40.229264857186024, lon=-3.7666162589855454
+2026-05-14 00:00:23 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:00:46 [INFO] Petición /api/clima recibida: lat=40.22926485701438, lon=-3.766616240510086
+2026-05-14 00:00:46 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:00:46 [INFO] Datos obtenidos para lat=40.22926485701438, lon=-3.766616240510086
+2026-05-14 00:00:46 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:01:42 [INFO] Petición /api/clima recibida: lat=40.22926485707122, lon=-3.76661624691932
+2026-05-14 00:01:43 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:01:43 [INFO] Datos obtenidos para lat=40.22926485707122, lon=-3.76661624691932
+2026-05-14 00:01:43 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:03:00 [INFO] Petición /api/clima recibida: lat=40.229221239633304, lon=-3.766712117335941
+2026-05-14 00:03:00 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:03:00 [INFO] Datos obtenidos para lat=40.229221239633304, lon=-3.766712117335941
+2026-05-14 00:03:00 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:03:13 [INFO] Petición /api/clima recibida: lat=40.22926806588471, lon=-3.7665937835684242
+2026-05-14 00:03:14 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:03:14 [INFO] Datos obtenidos para lat=40.22926806588471, lon=-3.7665937835684242
+2026-05-14 00:03:14 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:03:57 [INFO] Petición /api/clima recibida: lat=40.2292681038449, lon=-3.766593687529575
+2026-05-14 00:03:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:03:58 [INFO] Datos obtenidos para lat=40.2292681038449, lon=-3.766593687529575
+2026-05-14 00:03:58 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:04:13 [INFO] Petición /api/clima recibida: lat=40.229268091368155, lon=-3.7665937190773984
+2026-05-14 00:04:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:04:13 [INFO] Datos obtenidos para lat=40.229268091368155, lon=-3.7665937190773984
+2026-05-14 00:04:13 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:04:38 [INFO] Petición /api/clima recibida: lat=40.229225291666005, lon=-3.7667693074090307
+2026-05-14 00:04:39 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:04:39 [INFO] Datos obtenidos para lat=40.229225291666005, lon=-3.7667693074090307
+2026-05-14 00:04:39 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:04:41 [INFO] Petición /api/clima recibida: lat=40.22922481310981, lon=-3.766771265446761
+2026-05-14 00:04:41 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:04:41 [INFO] Datos obtenidos para lat=40.22922481310981, lon=-3.766771265446761
+2026-05-14 00:04:41 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 00:05:10 [INFO] Petición /api/clima recibida: lat=40.229224917213244, lon=-3.766770838573253
+2026-05-14 00:05:10 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 00:05:11 [INFO] Datos obtenidos para lat=40.229224917213244, lon=-3.766770838573253
+2026-05-14 00:05:11 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 09:30:39 [INFO] Petición /api/clima recibida: lat=40.229060000862965, lon=-3.766565627183465
+2026-05-14 09:30:40 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:30:40 [INFO] Datos obtenidos para lat=40.229060000862965, lon=-3.766565627183465
+2026-05-14 09:30:40 [INFO] Clima por coordenadas devuelto: Las Américas 14.3°C
+2026-05-14 09:31:11 [INFO] Petición /api/clima recibida: lat=40.229202679761826, lon=-3.766521581181162
+2026-05-14 09:31:12 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:31:12 [INFO] Datos obtenidos para lat=40.229202679761826, lon=-3.766521581181162
+2026-05-14 09:31:12 [INFO] Clima por coordenadas devuelto: Las Américas 14.3°C
+2026-05-14 09:33:49 [INFO] Petición /api/clima recibida: lat=40.22920269552479, lon=-3.7665215782710284
+2026-05-14 09:33:49 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:33:50 [INFO] Datos obtenidos para lat=40.22920269552479, lon=-3.7665215782710284
+2026-05-14 09:33:50 [INFO] Clima por coordenadas devuelto: Las Américas 14.3°C
+2026-05-14 09:38:42 [INFO] Petición /api/clima recibida: lat=40.22920269552479, lon=-3.7665215782710284
+2026-05-14 09:38:42 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:38:43 [INFO] Datos obtenidos para lat=40.22920269552479, lon=-3.7665215782710284
+2026-05-14 09:38:43 [INFO] Clima por coordenadas devuelto: Las Américas 14.2°C
+2026-05-14 09:38:47 [INFO] Datos obtenidos para lat=40.388, lon=-3.664
+2026-05-14 09:38:47 [INFO] Consulta clima por municipio: Puente De Vallecas 13.1°C
+2026-05-14 09:38:50 [INFO] Datos obtenidos para lat=40.388, lon=-3.664
+2026-05-14 09:38:50 [INFO] Consulta clima por municipio: Madrid 16.4°C
+2026-05-14 09:38:52 [INFO] Petición /api/clima recibida: lat=40.229195906731476, lon=-3.7665499621639587
+2026-05-14 09:38:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:38:53 [INFO] Datos obtenidos para lat=40.229195906731476, lon=-3.7665499621639587
+2026-05-14 09:38:53 [INFO] Clima por coordenadas devuelto: Las Américas 14.2°C
+2026-05-14 09:47:18 [INFO] Petición /api/clima recibida: lat=40.22910496108767, lon=-3.766678782037796
+2026-05-14 09:47:19 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:47:19 [INFO] Datos obtenidos para lat=40.22910496108767, lon=-3.766678782037796
+2026-05-14 09:47:19 [INFO] Clima por coordenadas devuelto: Las Américas 14.2°C
+2026-05-14 09:50:51 [INFO] Petición /api/clima recibida: lat=40.22913060960817, lon=-3.7666914253068033
+2026-05-14 09:50:52 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:50:52 [INFO] Datos obtenidos para lat=40.22913060960817, lon=-3.7666914253068033
+2026-05-14 09:50:52 [INFO] Clima por coordenadas devuelto: Las Américas 15.4°C
+2026-05-14 09:57:28 [INFO] Petición /api/clima recibida: lat=40.229159565033214, lon=-3.7666701117233283
+2026-05-14 09:57:29 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:57:29 [INFO] Datos obtenidos para lat=40.229159565033214, lon=-3.7666701117233283
+2026-05-14 09:57:29 [INFO] Clima por coordenadas devuelto: Las Américas 15.4°C
+2026-05-14 09:58:43 [INFO] Petición /api/clima recibida: lat=40.22909925057665, lon=-3.766514058100681
+2026-05-14 09:58:44 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 09:58:44 [INFO] Datos obtenidos para lat=40.22909925057665, lon=-3.766514058100681
+2026-05-14 09:58:44 [INFO] Clima por coordenadas devuelto: Las Américas 15.4°C
+2026-05-14 10:00:47 [INFO] Petición /api/clima recibida: lat=40.229081060085086, lon=-3.766577750910736
+2026-05-14 10:00:47 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:00:47 [INFO] Datos obtenidos para lat=40.229081060085086, lon=-3.766577750910736
+2026-05-14 10:00:47 [INFO] Clima por coordenadas devuelto: Las Américas 15.4°C
+2026-05-14 10:06:27 [INFO] Petición /api/clima recibida: lat=40.22902027910184, lon=-3.7664841559044127
+2026-05-14 10:06:27 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:06:28 [INFO] Datos obtenidos para lat=40.22902027910184, lon=-3.7664841559044127
+2026-05-14 10:06:28 [INFO] Clima por coordenadas devuelto: Las Américas 15.1°C
+2026-05-14 10:06:30 [INFO] Petición /api/clima recibida: lat=40.22910495096203, lon=-3.766528103860831
+2026-05-14 10:06:30 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:06:30 [INFO] Datos obtenidos para lat=40.22910495096203, lon=-3.766528103860831
+2026-05-14 10:06:30 [INFO] Clima por coordenadas devuelto: Las Américas 15.1°C
+2026-05-14 10:06:45 [INFO] Petición /api/clima recibida: lat=40.22910499068656, lon=-3.7665281387858522
+2026-05-14 10:06:46 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:06:46 [INFO] Datos obtenidos para lat=40.22910499068656, lon=-3.7665281387858522
+2026-05-14 10:06:46 [INFO] Clima por coordenadas devuelto: Las Américas 15.1°C
+2026-05-14 10:31:07 [INFO] Petición /api/clima recibida: lat=40.22928657781781, lon=-3.7666721241556784
+2026-05-14 10:31:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:31:07 [INFO] Datos obtenidos para lat=40.22928657781781, lon=-3.7666721241556784
+2026-05-14 10:31:07 [INFO] Clima por coordenadas devuelto: Las Américas 15.4°C
+2026-05-14 10:31:14 [INFO] Petición /api/clima recibida: lat=40.229118956318615, lon=-3.7665246895183326
+2026-05-14 10:31:15 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:31:15 [INFO] Datos obtenidos para lat=40.229118956318615, lon=-3.7665246895183326
+2026-05-14 10:31:15 [INFO] Clima por coordenadas devuelto: Las Américas 15.4°C
+2026-05-14 10:31:53 [INFO] Petición /api/clima recibida: lat=40.22911893663866, lon=-3.7665246641070755
+2026-05-14 10:31:53 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:31:53 [INFO] Datos obtenidos para lat=40.22911893663866, lon=-3.7665246641070755
+2026-05-14 10:31:53 [INFO] Clima por coordenadas devuelto: Las Américas 15.4°C
+2026-05-14 10:36:32 [INFO] Petición /api/clima recibida: lat=40.22911894739734, lon=-3.7665246779359522
+2026-05-14 10:36:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:36:33 [INFO] Datos obtenidos para lat=40.22911894739734, lon=-3.7665246779359522
+2026-05-14 10:36:33 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:37:03 [INFO] Petición /api/clima recibida: lat=40.229131300473526, lon=-3.7664482550813077
+2026-05-14 10:37:03 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:37:03 [INFO] Datos obtenidos para lat=40.229131300473526, lon=-3.7664482550813077
+2026-05-14 10:37:03 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:37:06 [INFO] Petición /api/clima recibida: lat=40.229131300473526, lon=-3.7664482550813077
+2026-05-14 10:37:06 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:37:06 [INFO] Datos obtenidos para lat=40.229131300473526, lon=-3.7664482550813077
+2026-05-14 10:37:06 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:39:44 [INFO] Petición /api/clima recibida: lat=40.22913130063379, lon=-3.766448254052225
+2026-05-14 10:39:44 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:39:44 [INFO] Datos obtenidos para lat=40.22913130063379, lon=-3.766448254052225
+2026-05-14 10:39:44 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:39:54 [INFO] Petición /api/clima recibida: lat=40.22913274832922, lon=-3.766653313953691
+2026-05-14 10:39:54 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:39:55 [INFO] Datos obtenidos para lat=40.22913274832922, lon=-3.766653313953691
+2026-05-14 10:39:55 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:40:08 [INFO] Petición /api/clima recibida: lat=40.2291327486278, lon=-3.7666533540569502
+2026-05-14 10:40:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:40:08 [INFO] Datos obtenidos para lat=40.2291327486278, lon=-3.7666533540569502
+2026-05-14 10:40:08 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:40:35 [INFO] Petición /api/clima recibida: lat=40.22913274848189, lon=-3.7666533338519708
+2026-05-14 10:40:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:40:36 [INFO] Datos obtenidos para lat=40.22913274848189, lon=-3.7666533338519708
+2026-05-14 10:40:36 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:40:37 [INFO] Petición /api/clima recibida: lat=40.229132748487594, lon=-3.7666533351461218
+2026-05-14 10:40:38 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:40:38 [INFO] Datos obtenidos para lat=40.229132748487594, lon=-3.7666533351461218
+2026-05-14 10:40:38 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:40:55 [INFO] Petición /api/clima recibida: lat=40.22913274848626, lon=-3.766653334921617
+2026-05-14 10:40:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:40:56 [INFO] Datos obtenidos para lat=40.22913274848626, lon=-3.766653334921617
+2026-05-14 10:40:56 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:41:26 [INFO] Petición /api/clima recibida: lat=40.22915956727245, lon=-3.7666740667763317
+2026-05-14 10:41:27 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:41:27 [INFO] Datos obtenidos para lat=40.22915956727245, lon=-3.7666740667763317
+2026-05-14 10:41:27 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:41:46 [INFO] Petición /api/clima recibida: lat=40.22915987793919, lon=-3.766674307107579
+2026-05-14 10:41:46 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:41:46 [INFO] Datos obtenidos para lat=40.22915987793919, lon=-3.766674307107579
+2026-05-14 10:41:46 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 10:42:32 [INFO] Datos obtenidos para lat=40.478, lon=-3.634
+2026-05-14 10:42:32 [INFO] Consulta clima por municipio: Hortaleza 15.3°C
+2026-05-14 10:42:44 [INFO] Datos obtenidos para lat=40.478, lon=-3.634
+2026-05-14 10:42:44 [INFO] Consulta clima por municipio: Fuencarral 3.9°C
+2026-05-14 10:42:55 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:42:55 [INFO] Consulta clima por municipio: Barrio Rosales 16.3°C
+2026-05-14 10:43:03 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:03 [INFO] Consulta clima por municipio: Barrio Rosales 8.0°C
+2026-05-14 10:43:12 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:12 [INFO] Consulta clima por municipio: Barrio Rosales 7.8°C
+2026-05-14 10:43:19 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:19 [INFO] Consulta clima por municipio: Barrio Rosales 5.5°C
+2026-05-14 10:43:22 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:22 [INFO] Consulta clima por municipio: Barrio Rosales 8.8°C
+2026-05-14 10:43:25 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:25 [INFO] Consulta clima por municipio: Barrio Rosales 3.9°C
+2026-05-14 10:43:28 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:28 [INFO] Consulta clima por municipio: Barrio Rosales 2.3°C
+2026-05-14 10:43:31 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:31 [INFO] Consulta clima por municipio: Barrio Rosales 7.6°C
+2026-05-14 10:43:33 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:33 [INFO] Consulta clima por municipio: Barrio Rosales 4.7°C
+2026-05-14 10:43:39 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:39 [INFO] Consulta clima por municipio: Barrio Rosales 7.2°C
+2026-05-14 10:43:43 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:43 [INFO] Consulta clima por municipio: Barrio Rosales 7.8°C
+2026-05-14 10:43:48 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:48 [INFO] Consulta clima por municipio: Barrio Rosales 4.8°C
+2026-05-14 10:43:50 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:50 [INFO] Consulta clima por municipio: Barrio Rosales 4.8°C
+2026-05-14 10:43:54 [INFO] Datos obtenidos para lat=40.363, lon=-3.647
+2026-05-14 10:43:54 [INFO] Consulta clima por municipio: Barrio Rosales 7.3°C
+2026-05-14 10:44:01 [INFO] Petición /api/clima recibida: lat=40.2291598342089, lon=-3.7666742732976557
+2026-05-14 10:44:02 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 10:44:02 [INFO] Datos obtenidos para lat=40.2291598342089, lon=-3.7666742732976557
+2026-05-14 10:44:02 [INFO] Clima por coordenadas devuelto: Las Américas 16.3°C
+2026-05-14 11:59:20 [INFO] Petición /api/clima recibida: lat=40.2291392374045, lon=-3.7665865637822744
+2026-05-14 11:59:21 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 11:59:21 [INFO] Datos obtenidos para lat=40.2291392374045, lon=-3.7665865637822744
+2026-05-14 11:59:21 [INFO] Clima por coordenadas devuelto: Las Américas 18.2°C
+2026-05-14 12:19:18 [INFO] Petición /api/clima recibida: lat=40.22914483419726, lon=-3.766511753040078
+2026-05-14 12:19:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:19:19 [INFO] Datos obtenidos para lat=40.22914483419726, lon=-3.766511753040078
+2026-05-14 12:19:19 [INFO] Clima por coordenadas devuelto: Las Américas 18.0°C
+2026-05-14 12:19:29 [INFO] Petición /api/clima recibida: lat=40.22912725593742, lon=-3.7663797740233442
+2026-05-14 12:19:29 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:19:30 [INFO] Datos obtenidos para lat=40.22912725593742, lon=-3.7663797740233442
+2026-05-14 12:19:30 [INFO] Clima por coordenadas devuelto: Las Américas 18.0°C
+2026-05-14 12:19:33 [INFO] Petición /api/clima recibida: lat=40.22912725428207, lon=-3.766379759050549
+2026-05-14 12:19:33 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:19:33 [INFO] Datos obtenidos para lat=40.22912725428207, lon=-3.766379759050549
+2026-05-14 12:19:33 [INFO] Clima por coordenadas devuelto: Las Américas 18.0°C
+2026-05-14 12:19:36 [INFO] Petición /api/clima recibida: lat=40.22912725527872, lon=-3.7663797678069946
+2026-05-14 12:19:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:19:37 [INFO] Datos obtenidos para lat=40.22912725527872, lon=-3.7663797678069946
+2026-05-14 12:19:37 [INFO] Clima por coordenadas devuelto: Las Américas 18.0°C
+2026-05-14 12:20:22 [INFO] Petición /api/clima recibida: lat=40.22912725516085, lon=-3.766379766787105
+2026-05-14 12:20:22 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:20:22 [INFO] Datos obtenidos para lat=40.22912725516085, lon=-3.766379766787105
+2026-05-14 12:20:22 [INFO] Clima por coordenadas devuelto: Las Américas 18.0°C
+2026-05-14 12:20:25 [INFO] Petición /api/clima recibida: lat=40.22906604753124, lon=-3.76638780760692
+2026-05-14 12:20:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:20:25 [INFO] Datos obtenidos para lat=40.22906604753124, lon=-3.76638780760692
+2026-05-14 12:20:25 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:20:27 [INFO] Petición /api/clima recibida: lat=40.22906583494255, lon=-3.7663878352620643
+2026-05-14 12:20:28 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:20:28 [INFO] Datos obtenidos para lat=40.22906583494255, lon=-3.7663878352620643
+2026-05-14 12:20:28 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:21:59 [INFO] Petición /api/clima recibida: lat=40.2290658973956, lon=-3.76638782710421
+2026-05-14 12:21:59 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:21:59 [INFO] Datos obtenidos para lat=40.2290658973956, lon=-3.76638782710421
+2026-05-14 12:21:59 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:22:18 [INFO] Petición /api/clima recibida: lat=40.22913618482558, lon=-3.766493246838688
+2026-05-14 12:22:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:22:18 [INFO] Datos obtenidos para lat=40.22913618482558, lon=-3.766493246838688
+2026-05-14 12:22:18 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:22:42 [INFO] Petición /api/clima recibida: lat=40.22913621902973, lon=-3.7664932866390908
+2026-05-14 12:22:43 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:22:43 [INFO] Datos obtenidos para lat=40.22913621902973, lon=-3.7664932866390908
+2026-05-14 12:22:43 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:22:57 [INFO] Petición /api/clima recibida: lat=40.229136209444114, lon=-3.7664932744657857
+2026-05-14 12:22:58 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:22:58 [INFO] Datos obtenidos para lat=40.229136209444114, lon=-3.7664932744657857
+2026-05-14 12:22:58 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:24:00 [INFO] Petición /api/clima recibida: lat=40.22913621127312, lon=-3.7664932767920742
+2026-05-14 12:24:01 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:24:01 [INFO] Datos obtenidos para lat=40.22913621127312, lon=-3.7664932767920742
+2026-05-14 12:24:01 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:24:03 [INFO] Petición /api/clima recibida: lat=40.22918101785254, lon=-3.7665610495812287
+2026-05-14 12:24:03 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:24:03 [INFO] Datos obtenidos para lat=40.22918101785254, lon=-3.7665610495812287
+2026-05-14 12:24:03 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:24:48 [INFO] Petición /api/clima recibida: lat=40.2291811036188, lon=-3.7665611792459224
+2026-05-14 12:24:48 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:24:48 [INFO] Datos obtenidos para lat=40.2291811036188, lon=-3.7665611792459224
+2026-05-14 12:24:48 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:24:56 [INFO] Petición /api/clima recibida: lat=40.22918104767259, lon=-3.7665610946566206
+2026-05-14 12:24:56 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:24:57 [INFO] Datos obtenidos para lat=40.22918104767259, lon=-3.7665610946566206
+2026-05-14 12:24:57 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:25:05 [INFO] Petición /api/clima recibida: lat=40.22918104314125, lon=-3.766561087802127
+2026-05-14 12:25:05 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:25:05 [INFO] Datos obtenidos para lat=40.22918104314125, lon=-3.766561087802127
+2026-05-14 12:25:05 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:25:09 [INFO] Petición /api/clima recibida: lat=40.229120893282584, lon=-3.7665416877877513
+2026-05-14 12:25:09 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:25:09 [INFO] Datos obtenidos para lat=40.229120893282584, lon=-3.7665416877877513
+2026-05-14 12:25:09 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:25:15 [INFO] Petición /api/clima recibida: lat=40.229115965713994, lon=-3.7665400957199426
+2026-05-14 12:25:15 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:25:15 [INFO] Datos obtenidos para lat=40.229115965713994, lon=-3.7665400957199426
+2026-05-14 12:25:15 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:18 [INFO] Petición /api/clima recibida: lat=40.22924883265711, lon=-3.7664392760735654
+2026-05-14 12:26:18 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:18 [INFO] Datos obtenidos para lat=40.22924883265711, lon=-3.7664392760735654
+2026-05-14 12:26:18 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:20 [INFO] Petición /api/clima recibida: lat=40.22922565595563, lon=-3.766490011534139
+2026-05-14 12:26:20 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:20 [INFO] Datos obtenidos para lat=40.22922565595563, lon=-3.766490011534139
+2026-05-14 12:26:20 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:21 [INFO] Petición /api/clima recibida: lat=40.22922544386568, lon=-3.7664902625300636
+2026-05-14 12:26:21 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:21 [INFO] Datos obtenidos para lat=40.22922544386568, lon=-3.7664902625300636
+2026-05-14 12:26:21 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:27 [INFO] Petición /api/clima recibida: lat=40.2292255404925, lon=-3.7664901409576728
+2026-05-14 12:26:28 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:28 [INFO] Datos obtenidos para lat=40.2292255404925, lon=-3.7664901409576728
+2026-05-14 12:26:28 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:30 [INFO] Petición /api/clima recibida: lat=40.22922555581932, lon=-3.7664901217574944
+2026-05-14 12:26:30 [INFO] Petición /api/clima recibida: lat=40.22922562535602, lon=-3.7664900349223496
+2026-05-14 12:26:30 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:30 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:30 [INFO] Datos obtenidos para lat=40.22922562535602, lon=-3.7664900349223496
+2026-05-14 12:26:30 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:30 [INFO] Datos obtenidos para lat=40.22922555581932, lon=-3.7664901217574944
+2026-05-14 12:26:30 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:31 [INFO] Petición /api/clima recibida: lat=40.22922563789258, lon=-3.7664900192705906
+2026-05-14 12:26:31 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:31 [INFO] Datos obtenidos para lat=40.22922563789258, lon=-3.7664900192705906
+2026-05-14 12:26:31 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:31 [INFO] Petición /api/clima recibida: lat=40.229225637782626, lon=-3.766490019407423
+2026-05-14 12:26:32 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:32 [INFO] Datos obtenidos para lat=40.229225637782626, lon=-3.766490019407423
+2026-05-14 12:26:32 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:32 [INFO] Petición /api/clima recibida: lat=40.22922563754301, lon=-3.766490019706405
+2026-05-14 12:26:32 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:32 [INFO] Datos obtenidos para lat=40.22922563754301, lon=-3.766490019706405
+2026-05-14 12:26:32 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:34 [INFO] Petición /api/clima recibida: lat=40.22922563804712, lon=-3.766490019074313
+2026-05-14 12:26:34 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:34 [INFO] Datos obtenidos para lat=40.22922563804712, lon=-3.766490019074313
+2026-05-14 12:26:34 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:35 [INFO] Petición /api/clima recibida: lat=40.22922563608992, lon=-3.7664900215213324
+2026-05-14 12:26:35 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:36 [INFO] Datos obtenidos para lat=40.22922563608992, lon=-3.7664900215213324
+2026-05-14 12:26:36 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:36 [INFO] Petición /api/clima recibida: lat=40.22922563808266, lon=-3.766490019032494
+2026-05-14 12:26:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:36 [INFO] Datos obtenidos para lat=40.22922563808266, lon=-3.766490019032494
+2026-05-14 12:26:36 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:37 [INFO] Petición /api/clima recibida: lat=40.22922563902428, lon=-3.76649001785643
+2026-05-14 12:26:38 [INFO] Petición /api/clima recibida: lat=40.22922563829884, lon=-3.76649001876158
+2026-05-14 12:26:38 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:38 [INFO] Datos obtenidos para lat=40.22922563902428, lon=-3.76649001785643
+2026-05-14 12:26:38 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:38 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:38 [INFO] Datos obtenidos para lat=40.22922563829884, lon=-3.76649001876158
+2026-05-14 12:26:38 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:26:39 [INFO] Petición /api/clima recibida: lat=40.22922563941746, lon=-3.7664900173631244
+2026-05-14 12:26:39 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:26:39 [INFO] Datos obtenidos para lat=40.22922563941746, lon=-3.7664900173631244
+2026-05-14 12:26:39 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:27:11 [INFO] Petición /api/clima recibida: lat=40.22922563952645, lon=-3.7664900172233335
+2026-05-14 12:27:12 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:27:12 [INFO] Datos obtenidos para lat=40.22922563952645, lon=-3.7664900172233335
+2026-05-14 12:27:12 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:28:01 [INFO] Petición /api/clima recibida: lat=40.22912442693765, lon=-3.76661875110612
+2026-05-14 12:28:02 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:28:02 [INFO] Datos obtenidos para lat=40.22912442693765, lon=-3.76661875110612
+2026-05-14 12:28:02 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:28:06 [INFO] Petición /api/clima recibida: lat=40.22912417164641, lon=-3.766619075839721
+2026-05-14 12:28:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:28:07 [INFO] Datos obtenidos para lat=40.22912417164641, lon=-3.766619075839721
+2026-05-14 12:28:07 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:28:08 [INFO] Petición /api/clima recibida: lat=40.22912421716766, lon=-3.766619017942784
+2026-05-14 12:28:09 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:28:09 [INFO] Datos obtenidos para lat=40.22912421716766, lon=-3.766619017942784
+2026-05-14 12:28:09 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:28:10 [INFO] Petición /api/clima recibida: lat=40.229124176312745, lon=-3.76661906990241
+2026-05-14 12:28:11 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:28:11 [INFO] Datos obtenidos para lat=40.229124176312745, lon=-3.76661906990241
+2026-05-14 12:28:11 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:31:54 [INFO] Petición /api/clima recibida: lat=40.2291241727989, lon=-3.7666190743752264
+2026-05-14 12:31:54 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:31:54 [INFO] Datos obtenidos para lat=40.2291241727989, lon=-3.7666190743752264
+2026-05-14 12:31:54 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:32:01 [INFO] Petición /api/clima recibida: lat=40.2290916260373, lon=-3.7665766381226815
+2026-05-14 12:32:01 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:32:02 [INFO] Datos obtenidos para lat=40.2290916260373, lon=-3.7665766381226815
+2026-05-14 12:32:02 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:32:04 [INFO] Petición /api/clima recibida: lat=40.22909162110915, lon=-3.7665766325946524
+2026-05-14 12:32:04 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:32:04 [INFO] Datos obtenidos para lat=40.22909162110915, lon=-3.7665766325946524
+2026-05-14 12:32:04 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:32:06 [INFO] Petición /api/clima recibida: lat=40.229091623544896, lon=-3.766576635354756
+2026-05-14 12:32:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:32:07 [INFO] Datos obtenidos para lat=40.229091623544896, lon=-3.766576635354756
+2026-05-14 12:32:07 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:32:10 [INFO] Petición /api/clima recibida: lat=40.22909162384896, lon=-3.766576635702212
+2026-05-14 12:32:10 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:32:10 [INFO] Datos obtenidos para lat=40.22909162384896, lon=-3.766576635702212
+2026-05-14 12:32:10 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 12:32:13 [INFO] Petición /api/clima recibida: lat=40.229091623899905, lon=-3.7665766357591375
+2026-05-14 12:32:13 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-14 12:32:13 [INFO] Datos obtenidos para lat=40.229091623899905, lon=-3.7665766357591375
+2026-05-14 12:32:13 [INFO] Clima por coordenadas devuelto: Las Américas 18.1°C
+2026-05-14 15:26:16 [INFO] Petición /api/clima recibida: lat=40.35212740556486, lon=-3.6865463594796646
+2026-05-14 15:26:17 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:26:18 [INFO] Datos obtenidos para lat=40.35212740556486, lon=-3.6865463594796646
+2026-05-14 15:26:18 [INFO] Clima por coordenadas devuelto: Villaverde 21.3°C
+2026-05-14 15:26:40 [INFO] Petición /api/clima recibida: lat=40.35210738114556, lon=-3.6865507637045605
+2026-05-14 15:26:41 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:26:41 [INFO] Datos obtenidos para lat=40.35210738114556, lon=-3.6865507637045605
+2026-05-14 15:26:41 [INFO] Clima por coordenadas devuelto: Villaverde 21.3°C
+2026-05-14 15:34:39 [INFO] Petición /api/clima recibida: lat=40.35210068237363, lon=-3.6865287183340314
+2026-05-14 15:34:40 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:34:40 [INFO] Datos obtenidos para lat=40.35210068237363, lon=-3.6865287183340314
+2026-05-14 15:34:40 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
+2026-05-14 15:34:48 [INFO] Petición /api/clima recibida: lat=40.35210068237363, lon=-3.6865287183340314
+2026-05-14 15:34:48 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:34:48 [INFO] Datos obtenidos para lat=40.35210068237363, lon=-3.6865287183340314
+2026-05-14 15:34:48 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
+2026-05-14 15:35:07 [INFO] Petición /api/clima recibida: lat=40.35216503828241, lon=-3.6865867014702305
+2026-05-14 15:35:08 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:35:08 [INFO] Datos obtenidos para lat=40.35216503828241, lon=-3.6865867014702305
+2026-05-14 15:35:08 [INFO] Clima por coordenadas devuelto: Villaverde 21.3°C
+2026-05-14 15:35:45 [INFO] Petición /api/clima recibida: lat=40.35208342388981, lon=-3.6865322456515335
+2026-05-14 15:35:46 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:35:46 [INFO] Datos obtenidos para lat=40.35208342388981, lon=-3.6865322456515335
+2026-05-14 15:35:46 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
+2026-05-14 15:36:18 [INFO] Petición /api/clima recibida: lat=40.352157388258846, lon=-3.68658498764541
+2026-05-14 15:36:19 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:36:19 [INFO] Datos obtenidos para lat=40.352157388258846, lon=-3.68658498764541
+2026-05-14 15:36:19 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
+2026-05-14 15:38:36 [INFO] Petición /api/clima recibida: lat=40.35217200514724, lon=-3.686569889729266
+2026-05-14 15:38:37 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
+2026-05-14 15:38:38 [INFO] Datos obtenidos para lat=40.35217200514724, lon=-3.686569889729266
+2026-05-14 15:38:38 [INFO] Clima por coordenadas devuelto: Villaverde 21.1°C
