@@ -81,7 +81,7 @@ class GraphService:
         margen = (vmax - vmin) * 0.15 or 1
         ax.set_ylim(vmin - margen, vmax + margen)
 
-        media_global = float(df_pivot.values.mean())
+        media_global = float(df_pivot.stack().mean())
         ax.text(
             0.99, 0.97,
             f"Media general: {media_global:.1f} {unidad}",

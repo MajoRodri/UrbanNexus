@@ -41,7 +41,7 @@
         <div class="hero-left">
           <p class="label">Municipio</p>
           <h2 id="cityName">Detectando...</h2>
-          <p class="muted" id="stationName">Buscando estación cercana...</p>
+          <p class="muted" id="stationName">Buscando distrito...</p>
 
           <div class="temp-row">
             <span class="temp" id="temperature">--°</span>
@@ -106,7 +106,6 @@
 
         <div class="topbar-actions">
           {% if session.get("id_empleado") %}
-<<<<<<< Updated upstream
 
           {% if session.get("rol") in ("admin", "tecnico") %}
           <a href="{{ url_for('view.registro') }}" class="mini-btn">Registro</a>
@@ -125,32 +124,12 @@
           {% endif %}
 
           <a href="{{ url_for('auth.logout') }}" class="mini-btn logout-btn">Cerrar sesión</a>
-
-=======
-            {% if session.get("rol") in ("admin", "tecnico") %}
-            <a href="{{ url_for('view.registro') }}" class="mini-btn">Registro</a>
-            {% endif %}
-            <a href="{{ url_for('view.consulta') }}" class="mini-btn">Histórico</a>
-            {% if session.get("rol") in ("admin", "tecnico") %}
-            <a href="{{ url_for('view.admin_scheduler') }}" class="mini-btn active">Scheduler</a>
-            {% endif %}
-            {% if session.get("rol") == "admin" %}
-            <a href="{{ url_for('view.admin_invitaciones') }}" class="mini-btn active">Crear invitación</a>
-            {% endif %}
-            <a href="{{ url_for('auth.logout') }}" class="mini-btn logout-btn">Cerrar sesión</a>
->>>>>>> Stashed changes
           {% else %}
             <a href="{{ url_for('view.registro_usuario') }}" class="mini-btn">Registro de usuario</a>
             <a href="{{ url_for('view.login') }}" class="mini-btn active">Iniciar sesión</a>
           {% endif %}
         </div>
 
-        <div class="zona-selector" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
-          <span class="zona-label" style="color: #22c55e;">SISTEMA OPERATIVO</span>
-          <button id="launch-demo" class="primary-btn" style="background: rgba(34, 197, 94, 0.1); border: 1px solid #22c55e; color: #22c55e; width: 100%; margin-top: 10px;">
-            $ python run.py --execute
-          </button>
-        </div>
 
         <div class="zona-selector" style="margin-top: 15px;">
           <span class="zona-label">Consultar datos por zona</span>

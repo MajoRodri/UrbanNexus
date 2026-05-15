@@ -2,6 +2,7 @@ from sqlalchemy.orm import joinedload
 from db.models import Zona, Medicion, ETLLog, Usuario
 from services.alert_service import AlertService
 from utils.employee_id import generate_unique_id
+from datetime import datetime
 
 ##Cuando no se encuentra registro##
 class RecordNotFoundError(Exception):
@@ -43,7 +44,7 @@ class SQLiteRepository:
         alert_service = AlertService()
 
         alertas = alert_service.evaluar_alertas({
-            "fecha": "2026-05-08T12:20:00",
+            "fecha": datetime.now().isoformat(),
             "temperatura": temperatura,
             "humedad": humedad,
             "viento": viento,
@@ -181,9 +182,7 @@ class SQLiteRepository:
         user = self.get_user_by_employee_id(id_empleado)
         if user.rol == rol:
             return user
-        nuevo_id = generate_unique_id(rol, self.db, Usuario)
         user.rol = rol
-        user.id_empleado = nuevo_id
         return self._save(user)
 
     def update_user_state(self, id_empleado, activo):

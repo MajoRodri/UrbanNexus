@@ -8,7 +8,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-3.1.3-000000?style=for-the-badge&logo=flask&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.136.1-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-FF5733?style=for-the-badge&logo=databricks&logoColor=white)
 ![APScheduler](https://img.shields.io/badge/APScheduler-Scheduler-FF6B35?style=for-the-badge&logo=clockify&logoColor=white)
 ![WeatherAPI](https://img.shields.io/badge/WeatherAPI-F5A623?style=for-the-badge&logo=icloud&logoColor=white)
@@ -51,6 +51,22 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 ---
 
 ## 🎬 Demos
+
+<details>
+<summary>🌐 &nbsp;<strong>Showcase</strong></summary>
+<br>
+
+| Paso | 🔄 Acción |
+|:---:|:---|
+| 1️⃣ | 🚀 **Entrada**: Accede a `http://127.0.0.1:8000` — se muestra la pantalla de carga con el sistema inicializándose. |
+| 2️⃣ | 🌍 **Landing**: Explora la página principal con datos climáticos en tiempo real, arquitectura del sistema y métricas. |
+| 3️⃣ | 🔗 **Navegación**: Accede a las secciones 01_ROOT, 02_REGISTROS, 03_ZONAS y 04_SWAGGER_DOCS desde la barra superior. |
+| 4️⃣ | 👥 **Equipo**: Consulta la sección del Squad con los miembros del proyecto. |
+| 5️⃣ | ▶️ **Demo App**: Pulsa el botón DEMOAPP para acceder a la aplicación Flask en el puerto 5000. |
+
+> ⬅️ **Punto de entrada principal:** ejecuta `python run.py` y abre **`http://127.0.0.1:8000`** en el navegador. Desde ahí arranca el Showcase y se accede a toda la plataforma.
+
+</details>
 
 <details>
 <summary>🔧 &nbsp;<strong>Admin</strong></summary>
@@ -241,6 +257,8 @@ Lanza ambos servidores simultáneamente con:
 python run.py
 ```
 
+> **Punto de entrada principal:** abre **`http://127.0.0.1:8000`** en el navegador. Desde ahí accedes a la showcase del proyecto y al resto de la aplicación.
+
 O individualmente:
 
 ```bash
@@ -253,8 +271,9 @@ python main_api.py
 
 | Servidor | URL | Descripción |
 |:---:|:---:|:---|
-| **Flask** | `http://localhost:5000` | Interfaz web con dashboards y formularios |
-| **FastAPI** | `http://localhost:8000` | API REST — docs en `/docs` |
+| **Showcase** | `http://127.0.0.1:8000` | ⬅️ Entrada principal del proyecto |
+| **Flask** | `http://127.0.0.1:5000` | Interfaz web con dashboards y formularios |
+| **FastAPI Docs** | `http://127.0.0.1:8000/docs` | Documentación interactiva de la API REST |
 
 </details>
 
@@ -330,8 +349,9 @@ Ambos servidores arrancan dentro del mismo contenedor via `run.py`:
 
 | Servidor | URL | Descripción |
 |:---:|:---:|:---|
-| **Flask** | `http://localhost:5000` | Interfaz web |
-| **FastAPI** | `http://localhost:8000/docs` | API REST |
+| **Showcase** | `http://localhost:8000` | ⬅️ Entrada principal del proyecto |
+| **Flask** | `http://localhost:5000` | Interfaz web con dashboards y formularios |
+| **FastAPI Docs** | `http://localhost:8000/docs` | Documentación interactiva de la API REST |
 
 ### Comandos útiles
 
@@ -640,7 +660,6 @@ GMAIL_APP_PASSWORD=abcdefghijklmnop
 
 > La App Password no es tu contraseña de Gmail — es una clave separada y revocable en cualquier momento.
 
-> Límite gratuito: ~500 correos/día, más que suficiente para uso académico o de equipo.
 
 
 https://github.com/user-attachments/assets/a9ef38b6-c734-4201-b8bf-51c49840ef14

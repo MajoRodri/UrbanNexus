@@ -9,11 +9,11 @@ from db.models import Medicion as Record, Zona as Zone
 from api.security import require_roles
 from db.models import Usuario
 
-router = APIRouter()
+router = APIRouter(tags=["Records"])
 
-@router.get("/", response_model=List[RecordOut])
+@router.get("/", response_model=List[RecordOut], summary="Listar registros de mediciones")
 async def list_records(
-    skip: int = Query(0, ge=0), 
+    skip: int = Query(0, ge=0),
     limit: int = Query(100, ge=1, le=1000),
     db: Session = Depends(get_db),
     usuario_actual: Usuario = Depends(require_roles("admin", "tecnico", "visualizador"))
@@ -22,20 +22,20 @@ async def list_records(
     result = db.execute(stmt)
     return result.scalars().all()
 
-@router.get("/{record_id}", response_model=RecordOut)
+@router.get("/{record_id}", response_model=RecordOut, summary="Obtener registro por ID")
 async def get_record(record_id: int, db: Session = Depends(get_db)):
     record = db.get(Record, record_id)
     if not record:
         raise HTTPException(status_code=404, detail="Registro no encontrado")
     return record
 
-@router.get("/zone/{id_zona}", response_model=List[RecordOut])
+@router.get("/zone/{id_zona}", response_model=List[RecordOut], summary="Listar registros por zona")
 async def records_by_zone(id_zona: int, db: Session = Depends(get_db)):
     stmt = select(Record).where(Record.id_zona == id_zona)
     result = db.execute(stmt)
     return result.scalars().all()
 
-@router.post("/", response_model=RecordOut, status_code=status.HTTP_201_CREATED)
+@router.post("/", response_model=RecordOut, status_code=status.HTTP_201_CREATED, summary="Crear nuevo registro de medición")
 async def create_record(record_in: RecordCreate, db: Session = Depends(get_db), usuario_actual: Usuario = Depends(require_roles("admin", "tecnico"))):
     zone = db.get(Zone, record_in.id_zona)
     if not zone:
@@ -50,7 +50,7 @@ async def create_record(record_in: RecordCreate, db: Session = Depends(get_db), 
         raise HTTPException(status_code=409, detail="Ya existe un registro para esta zona y fecha")
     return record
 
-@router.put("/{record_id}", response_model=RecordOut)
+@router.put("/{record_id}", response_model=RecordOut, summary="Actualizar un registro existente")
 async def update_record(record_id: int, record_in: RecordUpdate, db: Session = Depends(get_db), usuario_actual: Usuario = Depends(require_roles("admin", "tecnico"))):
     record = db.get(Record, record_id)
     if not record:
@@ -62,7 +62,7 @@ async def update_record(record_id: int, record_in: RecordUpdate, db: Session = D
     db.refresh(record)
     return record
 
-@router.delete("/{record_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{record_id}", status_code=status.HTTP_204_NO_CONTENT, summary="Eliminar un registro")
 async def delete_record(record_id: int, db: Session = Depends(get_db), usuario_actual: Usuario = Depends(require_roles("admin", "tecnico"))):
     record = db.get(Record, record_id)
     if not record:

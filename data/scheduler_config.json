@@ -1,7 +1,7 @@
 {
-  "enabled": false,
+  "enabled": true,
   "times": [
-    "12:11",
+    "00:10",
     "18:33",
     "20:00"
   ]

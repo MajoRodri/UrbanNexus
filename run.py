@@ -8,8 +8,10 @@ env_actual["PYTHONPATH"] = os.getcwd()
 
 print(">>> [SISTEMA] Iniciando Orquestador UrbanNexus...")
 
-# Lanzamos ÚNICAMENTE la Showcase (FastAPI) en el puerto 8000
-# El archivo app.py se lanzará cuando presiones el botón en la web
+flask_app = subprocess.Popen([
+    sys.executable, "app.py"
+], env=env_actual)
+
 api = subprocess.Popen([
     sys.executable, "-m", "uvicorn",
     "main_api:app",
@@ -17,13 +19,14 @@ api = subprocess.Popen([
     "--port", "8000"
 ], env=env_actual)
 
-print(">>> [SISTEMA] Showcase activa en http://127.0.0.1:8000")
-print(">>> [SISTEMA] Presiona Ctrl+C para detener el servicio.")
+print(">>> [SISTEMA] Flask activo en http://127.0.0.1:5000")
+print(">>> [SISTEMA] FastAPI activo en http://127.0.0.1:8000")
+print(">>> [SISTEMA] Presiona Ctrl+C para detener ambos servicios.")
 
 try:
-    # Mantenemos el proceso vivo
     api.wait()
 except KeyboardInterrupt:
     print("\n[!] Deteniendo servidores por interrupción de usuario...")
+    flask_app.terminate()
     api.terminate()
     sys.exit(0)
