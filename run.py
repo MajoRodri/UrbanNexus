@@ -1,29 +1,29 @@
 import subprocess
 import sys
+import os
 
-# sys.executable apunta al intérprete de Python del entorno virtual activo,
-# así no hay que escribir la ruta completa a mano.
+# Sincronización de Entorno para que los subprocesos vean las librerías instaladas
+env_actual = os.environ.copy()
+env_actual["PYTHONPATH"] = os.getcwd()
 
-# Levanta la app Flask (app.py) — interfaz web principal
-flask = subprocess.Popen([sys.executable, "app.py"])
+print(">>> [SISTEMA] Iniciando Orquestador UrbanNexus...")
 
-# Levanta la API FastAPI (main_api.py) con uvicorn en el puerto 8000.
-# --reload hace que se reinicie automáticamente al detectar cambios en el código.
+# Lanzamos ÚNICAMENTE la Showcase (FastAPI) en el puerto 8000
+# El archivo app.py se lanzará cuando presiones el botón en la web
 api = subprocess.Popen([
     sys.executable, "-m", "uvicorn",
     "main_api:app",
     "--host", "0.0.0.0",
     "--port", "8000"
-])
+], env=env_actual)
 
-print("Servidores iniciados. Presiona Ctrl+C para detener ambos.")
+print(">>> [SISTEMA] Showcase activa en http://127.0.0.1:8000")
+print(">>> [SISTEMA] Presiona Ctrl+C para detener el servicio.")
 
 try:
-    # Espera a que ambos procesos terminen (corren indefinidamente hasta que se interrumpan con Ctrl + C)
-    flask.wait()
+    # Mantenemos el proceso vivo
     api.wait()
 except KeyboardInterrupt:
-    # Ctrl+C llega aquí: termina ambos procesos de forma ordenada
-    print("\nDeteniendo servidores...")
-    flask.terminate()
+    print("\n[!] Deteniendo servidores por interrupción de usuario...")
     api.terminate()
+    sys.exit(0)

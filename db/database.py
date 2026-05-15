@@ -1,27 +1,35 @@
 import os
+import sqlite3
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 _BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{os.path.join(_BASE_DIR, 'clima.db')}")
 
-#motor de base de datos de sqlalchemy
-#Estamos diciendo que la base de datos se llama clima.db y que se encuentra en el mismo directorio que el archivo 
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+# Motor con timeout de 30 segundos para evitar choques entre FastAPI y Flask
+engine = create_engine(
+    DATABASE_URL, 
+    connect_args={
+        "check_same_thread": False,
+        "timeout": 30
+    }
+)
 
-#Session Local nos ayuda a crear conexiones a la base de datos, 
-#Cada vez que necesitemos guardar o consultar algo, crearemos una SessionLocal y la cerraremos al terminar
+# Sesión para SQLAlchemy
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-
-#Base es el declarativo base de SQLAlchemy.
-#Es la plantilla sobre la que construiremos todos nuestros modelos de base de datos.
+# Base declarativa
 Base = declarative_base()
 
-#Función que crea todas las tablas en la base de datos
+# Función para crear tablas
 def create_tables():
-    Base.metadata.create_all(bind=engine)
+    try:
+        Base.metadata.create_all(bind=engine)
+        print(">>> [DB] Tablas verificadas/creadas en clima.db")
+    except Exception as e:
+        print(f">>> [DB] Error al crear tablas: {e}")
 
+# Generador de sesión
 def get_db():
     db = SessionLocal()
     try:
