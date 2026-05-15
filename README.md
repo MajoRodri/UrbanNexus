@@ -66,6 +66,11 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 
 > ⬅️ **Punto de entrada principal:** ejecuta `python run.py` y abre **`http://127.0.0.1:8000`** en el navegador. Desde ahí arranca el Showcase y se accede a toda la plataforma.
 
+
+https://github.com/user-attachments/assets/f3095749-b498-4833-833b-5ba2216bbd05
+
+
+
 </details>
 
 <details>
