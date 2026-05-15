@@ -73,43 +73,32 @@ class SQLiteRepository:
         return resultado
 
     ##CREATE##
-    
-    #Método que nos permite crear zonas en la base de datos
     def create_zone(self, municipio, cod_ine, id_estacion, estacion_referencia):
         zona = Zona(municipio=municipio, cod_ine=cod_ine, id_estacion=id_estacion, estacion_referencia=estacion_referencia)
         return self._save(zona)
     
-    #Método que nos permite crear mediciones en la base de datos
     def create_measurement(self, id_zona, fecha, temperatura, humedad, viento, lluvia):
         alertas = self._calcular_alertas_medicion(temperatura, humedad, viento, lluvia)
         medicion = Medicion(id_zona=id_zona, fecha=fecha, temperatura=temperatura, humedad=humedad, viento=viento, lluvia=lluvia, **alertas)
         return self._save(medicion)
     
-    #Método que nos permite crear logs del ETL en la base de datos
     def create_log_ETL(self, fecha_ejecucion, origen, filas_leidas, filas_insertadas, filas_modificadas, filas_descartadas, duplicados_eliminados, estado, mensaje):
         log = ETLLog(fecha_ejecucion=fecha_ejecucion, origen=origen, filas_leidas=filas_leidas, filas_insertadas=filas_insertadas, filas_modificadas=filas_modificadas, filas_descartadas=filas_descartadas, duplicados_eliminados=duplicados_eliminados, estado=estado, mensaje=mensaje)
         return self._save(log)
     
     ##READ##
-    
-    #Método que nos permite obtener todas las zonas por id
     def get_zone_by_id(self, id_zona):
         return self._fetch(Zona, id_zona)
     
-    #Método que nos permite obtener todas las mediciones por id
     def get_measurement_by_id(self, id_measurement):
         return self._fetch(Medicion, id_measurement)
     
-    #Método que nos permite obtener todas las zonas por municipio
     def get_zone_by_municipality(self, municipio):
         return self.db.query(Zona).filter(Zona.municipio == municipio).first()
     
-    #Método que nos permite obtener todas las zonas por cod_ine
     def get_zone_by_cod_ine(self, cod_ine):
         return self.db.query(Zona).filter(Zona.cod_ine == cod_ine).first()
 
-    #Método que nos permite obtener todas las mediciones por zona y fecha
-    #Sirve para evitar duplicados en el ETL al identificar registros ya existentes
     def get_measurement_by_zone_date(self, id_zona, fecha):
         return self.db.query(Medicion).filter(Medicion.id_zona == id_zona, Medicion.fecha == fecha).first()
 
@@ -120,27 +109,15 @@ class SQLiteRepository:
         return self.db.query(Medicion).offset(skip).limit(limit).all()
     
     def get_all_measurements_ordered(self):
-        return (
-        self.db.query(Medicion)
-        .order_by(Medicion.fecha.asc())
-        .all()
-    )
+        return self.db.query(Medicion).order_by(Medicion.fecha.asc()).all()
 
     def list_all_measurements_with_zones(self):
-        return (
-            self.db.query(Medicion)
-            .options(joinedload(Medicion.zona))
-            .order_by(Medicion.fecha.asc())
-            .all()
-        )
-    
+        return self.db.query(Medicion).options(joinedload(Medicion.zona)).order_by(Medicion.fecha.asc()).all()
     
     def list_all_logs_ETL(self):
         return self.db.query(ETLLog).all()
     
     ##UPDATE##
-    
-    #Método que nos permite actualizar zonas en la base de datos
     def update_zone(self, id_zona, municipio, cod_ine, id_estacion, estacion_referencia):
         zona = self.get_zone_by_id(id_zona)
         zona.municipio = municipio
@@ -149,7 +126,6 @@ class SQLiteRepository:
         zona.estacion_referencia = estacion_referencia
         return self._save(zona)
     
-    #Método que nos permite actualizar mediciones en la base de datos
     def update_measurement(self, id_measurement, id_zona, fecha, temperatura, humedad, viento, lluvia):
         medicion = self.get_measurement_by_id(id_measurement)
         alertas = self._calcular_alertas_medicion(temperatura, humedad, viento, lluvia)
@@ -170,8 +146,6 @@ class SQLiteRepository:
         return self._save(medicion)
 
     ##UPSERT (UPDATE + INSERT)
-    
-    #Método que nos permite insertar o actualizar mediciones en la base de datos
     def upsert_measurement(self, id_zona, fecha, temperatura, humedad, viento, lluvia):
         medicion = self.get_measurement_by_zone_date(id_zona, fecha)
         if medicion:
@@ -183,39 +157,26 @@ class SQLiteRepository:
         return self.create_measurement(id_zona, fecha, temperatura, humedad, viento, lluvia)
     
     ##DELETE##
-    
-    #Método que nos permite eliminar zonas en la base de datos
     def delete_zone(self, id_zona):
         zona = self.get_zone_by_id(id_zona)
         self._delete(zona)
         return zona
     
-    #Método que nos permite eliminar mediciones en la base de datos
     def delete_measurement(self, id_measurement):
         medicion = self.get_measurement_by_id(id_measurement)
         self._delete(medicion)
         return medicion
 
-
     ###USERS###
-    
-    ## Investigando encontré otra función que permite hacer la query del objeto, con el id_empleado incluido, y si no existe lanzar la excepción
     def get_user_by_employee_id(self, id_empleado):
-        user = self.db.query(Usuario).filter(
-            Usuario.id_empleado == id_empleado
-        ).first()
-
+        user = self.db.query(Usuario).filter(Usuario.id_empleado == id_empleado).first()
         if user is None:
-            raise RecordNotFoundError(
-            f"Usuario con id_empleado {id_empleado} no encontrado"
-        )
+            raise RecordNotFoundError(f"Usuario con id_empleado {id_empleado} no encontrado")
         return user
 
-    #Método que nos permite obtener todos los usuarios
     def list_all_users(self):
         return self.db.query(Usuario).all()
     
-    #Método que nos permite actualizar usuarios en la base de datos
     def update_user_role(self, id_empleado, rol):
         user = self.get_user_by_employee_id(id_empleado)
         if user.rol == rol:
@@ -225,14 +186,21 @@ class SQLiteRepository:
         user.id_empleado = nuevo_id
         return self._save(user)
 
-    #Método que nos permite actualizar el estado del usuario
     def update_user_state(self, id_empleado, activo):
         user = self.get_user_by_employee_id(id_empleado)
         user.activo = activo
         return self._save(user)
     
-    #Método que nos permite eliminar usuarios en la base de datos
     def delete_user(self, id_empleado):
         user = self.get_user_by_employee_id(id_empleado)
         self._delete(user)
         return user 
+
+    def update_zone_climate(self, zona_id, temperatura, humedad, viento, lluvia):
+        """Actualiza los datos climáticos y evita valores nulos en la zona"""
+        zona = self.get_zone_by_id(zona_id)
+        zona.temperatura = temperatura
+        zona.humedad = humedad
+        zona.viento = viento
+        zona.lluvia = lluvia
+        return self._save(zona)
