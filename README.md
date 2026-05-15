@@ -59,8 +59,8 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 | Paso | 🔄 Acción |
 |:---:|:---|
 | 1️⃣ | 🚀 **Entrada**: Accede a `http://127.0.0.1:8000` — se muestra la pantalla de carga con el sistema inicializándose. |
-| 2️⃣ | 🌍 **Landing**: Explora la página principal con datos climáticos en tiempo real, arquitectura del sistema y métricas. |
-| 3️⃣ | 🔗 **Navegación**: Accede a las secciones 01_ROOT, 02_REGISTROS, 03_ZONAS y 04_SWAGGER_DOCS desde la barra superior. |
+| 2️⃣ | 🌍 **Landing**: Explora la página principal con información del programa. |
+| 3️⃣ | 🔗 **Navegación**: Acceso a servicio de log in y sing up (con credenciales). |
 | 4️⃣ | 👥 **Equipo**: Consulta la sección del Squad con los miembros del proyecto. |
 | 5️⃣ | ▶️ **Demo App**: Pulsa el botón DEMOAPP para acceder a la aplicación Flask en el puerto 5000. |
 
