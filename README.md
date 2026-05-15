@@ -58,12 +58,13 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 |:---:|:---|
 | 1️⃣ | 🔐 **Autenticación**: Inicia sesión con email y contraseña. |
 | 2️⃣ | 👥 **Gestión de Usuarios**: Crea, edita y desactiva cuentas. Envía invitaciones por email con códigos de un solo uso. |
-| 3️⃣ | ⏱️ **Scheduler**: Configura y activa la captura automática de datos desde el panel `/admin/scheduler`. |
+| 3️⃣ | ⏱️ **Scheduler**: Configura y activa la captura automática de datos. |
 | 4️⃣ | 🔍 **Consulta**: Busca el histórico por zona y fecha. Visualiza parámetros y alertas activadas. |
 | 5️⃣ | 👀 **CRUD**: Disponible CRUD visual a la hora de revisar registros. |
 | 6️⃣ | 📊 **Estadísticas**: Visualización y descarga de media por registro de distrito en: Temperatura, Viento y Humedad. |
 
-> 🚧 Demo próximamente.
+> Gestión de cambio de contraseña en el apartado "Mi perfil"
+
 
 </details>
 
@@ -76,10 +77,12 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 | 1️⃣ | 🔐 **Autenticación**: Inicia sesión con email y contraseña. Recibe un email con credenciales necesarias para registrarse en el sistema. |
 | 2️⃣ | 📥 **Carga de Datos**: Activa el scheduler automático, registra mediciones manualmente o ejecuta el pipeline ETL. |
 | 3️⃣ | 🔍 **Consulta y Edición**: Busca el histórico por zona y fecha. Visualiza y edita registros existentes. |
-| 4️⃣ | 🚨 **Alertas**: Revisa el panel de alertas activas con clasificación por nivel de riesgo (RED / ORANGE / GREEN). |
-| 5️⃣ | 📊 **Estadísticas**: Visualizacióny descarga de media por registro de distrito en: Temperatura, Viento y Humedad. |
+| 4️⃣ | 📊 **Estadísticas**: Visualizacióny descarga de media por registro de distrito en: Temperatura, Viento y Humedad. |
+| 5️⃣ | ⏱️ **Scheduler**: Configura y activa la captura automática de datos. |
 
-> 🚧 Demo próximamente.
+> Gestión de cambio de contraseña en el apartado "Mi perfil"
+
+
 
 </details>
 
@@ -91,10 +94,10 @@ La plataforma centraliza la captura, validación, análisis y visualización de 
 |:---:|:---|
 | 1️⃣ | 🔐 **Autenticación**: Inicia sesión con email y contraseña. Recibe un email con credenciales necesarias para registrarse en el sistema.
 | 2️⃣ | 🔍 **Consulta**: Busca el histórico climático por zona y fecha. Visualiza parámetros meteorológicos. |
-| 3️⃣ | 🚨 **Alertas**: Consulta el panel de alertas activas con clasificación por nivel de riesgo (RED / ORANGE / GREEN). |
-| 4️⃣ | 📊 **Estadísticas**: Visualización de media por registro de distrito en: Temperatura, Viento y Humedad. |
+| 3️⃣ | 📊 **Estadísticas**: Visualización de media por registro de distrito en: Temperatura, Viento y Humedad. |
 
-> 🚧 Demo próximamente.
+> Gestión de cambio de contraseña en el apartado "Mi perfil"
+
 
 </details>
 
@@ -432,7 +435,7 @@ Restricciones de integridad: clave única compuesta `(zona_id, fecha)` para evit
 | ⚡ **`main_api.py`** | Servidor FastAPI: endpoints REST, CORS, validación Pydantic y JWT. |
 | 🎮 **`controllers/`** | Reciben las peticiones HTTP, coordinan servicios y devuelven respuestas. |
 | ⚙️ **`services/`** | Lógica de negocio: WeatherAPI, alertas, normalización, email, reintentos. |
-| 🗄️ **`repositories/`** | Abstracción de datos: `SQLiteRepository` y `JSONRepository` intercambiables. |
+| 🗄️ **`repositories/`** | Abstracción de datos: `SQLiteRepository` y `JSONRepository`. |
 | 📦 **`models/` + `schemas/`** | Entidades de datos (Python classes) y validación de entrada/salida (Pydantic). |
 | 🔄 **`etl/`** | Pipeline Extract → Transform → Load con logging de estadísticas. |
 | 🛠️ **`utils/`** | Validadores, seguridad, JWT y generación de IDs de empleado. |
