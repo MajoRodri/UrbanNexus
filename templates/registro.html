@@ -7,6 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/registro_styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cursor.css') }}">
 </head>
 
 <body>
@@ -135,6 +136,8 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
 </body>
 </html>

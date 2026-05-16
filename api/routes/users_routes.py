@@ -6,10 +6,10 @@ from api.security import require_roles
 from db.models import Usuario
 from repositories.sqlite_repository import SQLiteRepository, RecordNotFoundError
 
-router = APIRouter()
+router = APIRouter(tags=["Users"])
 
 
-@router.get("/")
+@router.get("/", summary="Listar todos los usuarios")
 def list_users(
     db: Session = Depends(get_db),
     admin: Usuario = Depends(require_roles("admin"))
@@ -18,7 +18,7 @@ def list_users(
     return repo.list_all_users()
 
 
-@router.put("/{id_empleado}/role")
+@router.put("/{id_empleado}/role", summary="Cambiar el rol de un usuario")
 def update_user_role(
     id_empleado: str,
     rol: str,
@@ -35,7 +35,7 @@ def update_user_role(
         raise HTTPException(status_code=404, detail=str(e))
 
 
-@router.put("/{id_empleado}/state")
+@router.put("/{id_empleado}/state", summary="Activar o desactivar un usuario")
 def update_user_state(
     id_empleado: str,
     activo: bool,
@@ -49,7 +49,7 @@ def update_user_state(
         raise HTTPException(status_code=404, detail=str(e))
 
 
-@router.delete("/{id_empleado}")
+@router.delete("/{id_empleado}", summary="Eliminar un usuario")
 def delete_user(
     id_empleado: str,
     db: Session = Depends(get_db),

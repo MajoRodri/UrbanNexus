@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbanNexus // CLIMATE_INFRASTRUCTURE_OS</title>
+    <title>UrbanNexus</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -100,6 +100,9 @@
 
     <div id="loader" class="fixed inset-0 z-[10000] bg-[#010409] flex items-center justify-center p-8">
         <div class="w-full max-w-3xl">
+            <div class="flex justify-center mb-8">
+                <img src="static/img/Logo.png" alt="UrbanNexus" class="w-64 h-64 object-contain drop-shadow-[0_0_40px_rgba(16,185,129,0.6)]">
+            </div>
             <div class="flex items-center gap-6 mb-10">
                 <div class="w-14 h-14 border-b-2 border-emerald-500 rounded-full animate-spin"></div>
                 <div>
@@ -148,19 +151,24 @@
     <div class="grid-layer"></div>
     <div id="cursor" class="fixed w-7 h-7 border-2 border-emerald-500 rounded-full z-[12000] hidden lg:flex items-center justify-center mix-blend-difference"><div class="w-1 h-1 bg-white rounded-full"></div></div>
 
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="fixed bottom-10 right-10 z-[9000] hidden items-center gap-3 px-6 py-4 glass-card border-emerald-500/30 rounded-2xl mono text-[11px] font-black uppercase text-emerald-500 hover:bg-emerald-500 hover:text-black transition-all shadow-xl">
+        ↑ Volver
+    </button>
+
     <nav class="fixed top-0 w-full z-[9000] p-6 lg:p-10">
         <div class="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-[2.5rem] px-10 h-24 border-white/5">
             <div class="flex items-center gap-14">
                 <div class="flex items-center gap-5 group">
-                    <div class="w-16 h-16 transform group-hover:rotate-12 transition-all overflow-hidden">
+                    <div class="w-20 h-20 transform group-hover:rotate-12 transition-all overflow-hidden">
                         <img src="static/img/Logo.png" alt="Logo" class="w-full h-full object-contain">
                     </div>
                 </div>
-                <div class="hidden xl:flex gap-6 mono text-[11px] uppercase font-bold tracking-widest">
+                <div class="hidden xl:flex gap-6 mono text-[13px] uppercase font-bold tracking-widest">
                     <a href="#hero" class="px-4 py-2 text-emerald-500 hover:text-white transition-all">01_ROOT</a>
-                    <a href="javascript:void(0)" onclick="triggerAuthModal('02_REGISTROS')" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-60">02_REGISTROS</a>
-                    <a href="javascript:void(0)" onclick="triggerAuthModal('03_ZONAS')" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-60">03_ZONAS</a>
-                    <a href="http://127.0.0.1:8000/docs" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-60">04_SWAGGER_DOCS</a>
+                    <a href="javascript:void(0)" onclick="triggerAuthModal('02_REGISTROS')" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-80">02_REGISTROS</a>
+                    <a href="javascript:void(0)" onclick="triggerAuthModal('03_ZONAS')" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-80">03_ZONAS</a>
+                    <a href="http://127.0.0.1:8000/docs" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-80">04_SWAGGER_DOCS</a>
                 </div>
             </div>
             <button id="demo-btn" class="mono text-[11px] bg-emerald-500 text-black px-10 py-4 rounded-2xl font-black uppercase hover:bg-white transition-all shadow-xl shadow-emerald-500/20 active:scale-95">
@@ -177,7 +185,7 @@
                     <div class="space-y-8">
                         <div class="inline-flex items-center gap-4 px-5 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
                             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_#10b981]"></span>
-                            <span class="mono text-emerald-500 text-[11px] font-black uppercase tracking-[0.5em]">System_Infrastructure_Active</span>
+                            <span class="mono text-emerald-500 text-[11px] font-black uppercase tracking-[0.5em]">Activo</span>
                         </div>
                         <h1 class="text-8xl lg:text-[10rem] font-black text-white italic uppercase tracking-tighter leading-[0.8] mb-4">Urban<br><span class="text-emerald-500">Nexus.</span>
                         </h1>
@@ -432,7 +440,7 @@
                     <a href="https://github.com/Isabela-Tellez" target="_blank" class="block">
                         <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
                             <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
-                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Isabela&gender=female&backgroundColor=b6e3f4" alt="Isabela" class="w-24 h-24 rounded-full object-cover">
+                                <img src="https://github.com/Isabela-Tellez.png" alt="Isabela" class="w-full h-full rounded-full object-cover">
                                 <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
                             </div>
                             <h4 class="text-2xl font-black text-white mb-3 italic">Isabela</h4>
@@ -443,7 +451,7 @@
                     <a href="https://github.com/MajoRodri" target="_blank" class="block">
                         <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
                             <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
-                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Majo&gender=female&backgroundColor=c0aede" alt="María José" class="w-24 h-24 rounded-full object-cover">
+                                <img src="https://github.com/MajoRodri.png" alt="María José" class="w-full h-full rounded-full object-cover">
                                 <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
                             </div>
                             <h4 class="text-2xl font-black text-white mb-3 italic">María José</h4>
@@ -454,7 +462,7 @@
                     <a href="https://github.com/jowel2701" target="_blank" class="block">
                         <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
                             <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
-                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Joel&gender=male&backgroundColor=ffdfbf" alt="Joel" class="w-24 h-24 rounded-full object-cover">
+                                <img src="https://github.com/jowel2701.png" alt="Joel" class="w-full h-full rounded-full object-cover">
                                 <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
                             </div>
                             <h4 class="text-2xl font-black text-white mb-3 italic">Joel</h4>
@@ -465,7 +473,7 @@
                     <a href="https://github.com/yohperez" target="_blank" class="block">
                         <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
                             <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
-                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Yohanna&gender=female&backgroundColor=ffd5dc" alt="Yohanna" class="w-24 h-24 rounded-full object-cover">
+                                <img src="https://github.com/yohperez.png" alt="Yohanna" class="w-full h-full rounded-full object-cover">
                                 <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
                             </div>
                             <h4 class="text-2xl font-black text-white mb-3 italic">Yohanna</h4>
@@ -476,7 +484,7 @@
                     <a href="https://github.com/garciaguadalupevanessa-bit" target="_blank" class="block">
                         <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
                             <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
-                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Vanessa&gender=female&backgroundColor=d1d4f9" alt="Vanessa" class="w-24 h-24 rounded-full object-cover">
+                                <img src="https://github.com/garciaguadalupevanessa-bit.png" alt="Vanessa" class="w-full h-full rounded-full object-cover">
                                 <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
                             </div>
                             <h4 class="text-2xl font-black text-white mb-3 italic">Vanessa</h4>
@@ -634,10 +642,10 @@
 
         function triggerAuthModal(module) {
             showModal({
-                title: "TOKEN_REQUERIDO",
+                title: "Acceso no autorizado",
                 iconClass: "border-red-500/50 bg-red-500/10",
                 icon: '<svg class="w-10 h-10 text-red-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>',
-                body: `<p>Debes autenticarte en UrbanNexusApp para acceder al módulo <strong>${module}</strong> protegido por el sistema.</p>`,
+                body: `<p>Debes autenticarte para continuar.</p>`,
                 actions: `
                     <button onclick="closeNexusModal(); document.getElementById('demo-btn').textContent='DEMOAPP';" class="px-6 py-4 border border-white/10 rounded-2xl text-white mono text-[10px] font-black uppercase hover:bg-white/10 transition-all">Cancelar</button>
                     <a href="http://127.0.0.1:5000/login" class="px-6 py-4 bg-emerald-500 rounded-2xl text-black mono text-[10px] font-black uppercase hover:bg-white transition-all text-center">Ir al Login</a>
@@ -716,6 +724,17 @@
                 alert.classList.remove('hidden');
                 gsap.to(alert, {opacity: 1, x: 0, duration: 1, ease: "back.out(1.7)"});}, 1500);
         }
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('back-to-top');
+            if (window.scrollY > 400) {
+                btn.classList.remove('hidden');
+                btn.classList.add('flex');
+            } else {
+                btn.classList.add('hidden');
+                btn.classList.remove('flex');
+            }
+        });
 
         document.addEventListener('mousemove', (e) => {
             gsap.to("#cursor", { x: e.clientX - 14, y: e.clientY - 14, duration: 0.1 });

@@ -42,9 +42,12 @@ def send_invitation_email(
     ])
 
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as servidor:
-        servidor.login(gmail_user, gmail_app_password)
-        servidor.sendmail(gmail_user, [email_destino], raw.encode("ascii"))
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as servidor:
+            servidor.login(gmail_user, gmail_app_password)
+            servidor.sendmail(gmail_user, [email_destino], raw.encode("ascii"))
+    except Exception:
+        pass
 
 
 def send_welcome_email(
@@ -80,6 +83,9 @@ def send_welcome_email(
     ])
 
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as servidor:
-        servidor.login(gmail_user, gmail_app_password)
-        servidor.sendmail(gmail_user, [email_destino], raw.encode("ascii"))
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as servidor:
+            servidor.login(gmail_user, gmail_app_password)
+            servidor.sendmail(gmail_user, [email_destino], raw.encode("ascii"))
+    except Exception:
+        pass

@@ -3,9 +3,8 @@ import sqlite3
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# Definición de rutas
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATABASE_URL = f"sqlite:///{os.path.join(BASE_DIR, 'clima.db')}"
+_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{os.path.join(_BASE_DIR, 'clima.db')}")
 
 # Motor con timeout de 30 segundos para evitar choques entre FastAPI y Flask
 engine = create_engine(

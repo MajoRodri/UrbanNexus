@@ -138,4 +138,4 @@ def get_clima_por_zona():
 if __name__ == "__main__":
     # debug=True: el servidor se reinicia solo al detectar cambios en el código
     # host="0.0.0.0": permite que otros dispositivos en tu red vean la web
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", debug=True, port=5000)

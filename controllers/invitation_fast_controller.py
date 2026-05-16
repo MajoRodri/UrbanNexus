@@ -21,7 +21,8 @@ router = APIRouter(
 
 @router.post(
     "/create",
-    response_model=InvitationResponse
+    response_model=InvitationResponse,
+    summary="Crear y enviar invitación por email"
 )
 def create_invitation_endpoint(
     request: InvitationCreateRequest,

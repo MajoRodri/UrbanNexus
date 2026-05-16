@@ -6,9 +6,10 @@ services:
       - "8000:8000"
     env_file:
       - .env
+    environment:
+      DATABASE_URL: sqlite:////app/data/clima.db
     volumes:
-      - ./data:/app/data
-      - db_data:/app
+      - db_data:/app/data
     restart: unless-stopped
 
 volumes:

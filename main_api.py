@@ -21,7 +21,11 @@ import time
 create_tables()
 create_default_superadmin()
 
-app = FastAPI(title="UrbanNexus_Launcher")
+app = FastAPI(
+    title="UrbanNexus API",
+    description="Plataforma de monitorización climática para la Comunidad de Madrid.",
+    version="1.0.0",
+)
 
 # Configuración de CORS
 app.add_middleware(
@@ -40,18 +44,8 @@ async def favicon():
     favicon_path = os.path.join("static", "img", "Logo.png")
     return FileResponse(favicon_path) if os.path.exists(favicon_path) else None
 
-# --- ENDPOINT RAÍZ CORREGIDO PARA TESTS ---
-@app.get("/")
-def serve_root():
-    """
-    Devuelve un mensaje JSON para que los tests no fallen con JSONDecodeError.
-    Para ver la web, se puede usar el endpoint /showcase o FileResponse aquí.
-    """
-    return {"message": "UrbanNexus API funcionando correctamente"}
-
-@app.get("/showcase", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
 async def serve_showcase():
-    """Endpoint específico para servir la web de presentación"""
     file_path = os.path.join("templates", "showcase.html")
     if os.path.exists(file_path):
         return FileResponse(file_path)
@@ -61,7 +55,7 @@ async def serve_showcase():
 async def login_bridge():
     return RedirectResponse(url="http://127.0.0.1:5000/login")
 
-@app.get("/privacy-policy", response_class=HTMLResponse)
+@app.get("/privacy-policy", response_class=HTMLResponse, include_in_schema=False)
 async def privacy_policy():
     return """
     <html><body style="background:#030712;color:#94a3b8;font-family:monospace;padding:80px;">
@@ -69,7 +63,7 @@ async def privacy_policy():
     </body></html>
     """
 
-@app.get("/terms-of-service", response_class=HTMLResponse)
+@app.get("/terms-of-service", response_class=HTMLResponse, include_in_schema=False)
 async def terms_of_service():
     return """
     <html><body style="background:#030712;color:#94a3b8;font-family:sans-serif;padding:80px;">
@@ -77,7 +71,7 @@ async def terms_of_service():
     </body></html>
     """
 
-@app.post("/launch")
+@app.post("/launch", include_in_schema=False)
 def launch():
     try:
         python_actual = sys.executable
@@ -89,7 +83,7 @@ def launch():
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
-@app.get("/api/v1/root_status")
+@app.get("/api/v1/root_status", include_in_schema=False)
 def root_status():
     return {"message": "UrbanNexus API funcionando"}
 

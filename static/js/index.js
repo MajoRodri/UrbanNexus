@@ -33,25 +33,34 @@ async function triggerLaunch(btnElement) {
 /**
  * ACTUALIZACIÓN DE INTERFAZ (Protección contra NaN)
  */
-function actualizarUI(data, origen) {
+function actualizarUI(data) {
     const temperature = document.getElementById("temperature");
     const heroTemp = document.getElementById("hero-temp");
-    
+
     const tempValue = (data.temperatura != null) ? Math.round(data.temperatura) : 0;
     const humValue = (data.humedad != null) ? data.humedad : 0;
 
     if (temperature) temperature.textContent = `${tempValue}°`;
     if (heroTemp) heroTemp.textContent = `${tempValue}°C`;
-    
+
     const humText = document.getElementById("humidity");
     if (humText) humText.textContent = `${humValue}%`;
-    
+
     const cityText = document.getElementById("cityName");
     if (cityText) cityText.textContent = data.ciudad || "Desconocido";
-    
+
     const mainTitle = document.getElementById("mainTitle");
-    if (mainTitle) mainTitle.textContent = `${data.ciudad || 'Ubicación'} · ${origen}`;
-    
+    if (mainTitle) mainTitle.textContent = data.ciudad || 'Ubicación';
+
+    const stationName = document.getElementById("stationName");
+    if (stationName) stationName.textContent = "";
+
+    const updatedAt = document.getElementById("updatedAt");
+    if (updatedAt) {
+        const now = new Date();
+        updatedAt.textContent = `Actualizado ${now.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })}`;
+    }
+
     const hBar = document.getElementById("humidity-bar");
     if (hBar) hBar.style.width = `${humValue}%`;
 }
@@ -62,13 +71,13 @@ function actualizarUI(data, origen) {
 async function consultarPorZona(zonaNombre) {
     const port = window.location.port;
     const API_BASE = port === "8000" ? "http://127.0.0.1:5000" : "";
-    
+
     try {
-        const response = await fetch(`${API_BASE}/api/clima/zona?zona=${encodeURIComponent(zonaNombre)}`);
+        const response = await fetch(`${API_BASE}/api/clima/municipio?nombre=${encodeURIComponent(zonaNombre)}`);
         if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-        
+
         const data = await response.json();
-        actualizarUI(data, "Zona Seleccionada");
+        actualizarUI(data);
     } catch (e) {
         console.error("Error en consulta de zona:", e);
     }
@@ -78,11 +87,11 @@ async function consultarPorZona(zonaNombre) {
  * ACTUALIZACIÓN POR GPS
  */
 async function actualizarClimaGPS() {
-    const mainTitle = document.getElementById("mainTitle");
-    if (mainTitle) mainTitle.textContent = "Buscando estación...";
+    const updatedAt = document.getElementById("updatedAt");
+    if (updatedAt) updatedAt.textContent = "Buscando distrito...";
 
     if (!navigator.geolocation) {
-        if (mainTitle) mainTitle.textContent = "GPS no soportado";
+        if (updatedAt) updatedAt.textContent = "GPS no soportado";
         return;
     }
 
@@ -98,13 +107,13 @@ async function actualizarClimaGPS() {
 
                 const response = await fetch(`${API_BASE}/api/clima?lat=${latitude}&lon=${longitude}`);
                 const data = await response.json();
-                actualizarUI(data, "Live GPS");
+                actualizarUI(data);
             } catch (e) {
-                if (mainTitle) mainTitle.textContent = "Error de conexión servidor";
+                if (updatedAt) updatedAt.textContent = "Error de conexión con el servidor";
             }
         },
-        (error) => {
-            if (mainTitle) mainTitle.textContent = "GPS bloqueado. Selecciona zona ↑";
+        () => {
+            if (updatedAt) updatedAt.textContent = "GPS bloqueado. Selecciona un distrito.";
         },
         { timeout: 8000, enableHighAccuracy: true }
     );
@@ -127,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(`${API_BASE}/api/distritos`)
             .then(r => r.json())
             .then(distritos => {
-                zonaSelect.innerHTML = '<option value="" selected>📍 Mi Ubicación (GPS)</option>';
+                zonaSelect.innerHTML = '<option value="" disabled selected>Seleccione zona...</option>';
                 distritos.forEach(item => {
                     const opt = document.createElement("option");
                     opt.value = item.municipio;

@@ -2,9 +2,11 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+*.pyo
 *.db
 .env
 .pytest_cache/
+.coverage
 .vscode/
+.idea/
 logs/
-  

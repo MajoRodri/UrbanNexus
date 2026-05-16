@@ -31,7 +31,8 @@ router = APIRouter(
 
 @router.post(
     "/register",
-    response_model=UserResponse
+    response_model=UserResponse,
+    summary="Registrar nuevo usuario con código de invitación"
 )
 def register(
     request: RegisterRequest,
@@ -96,7 +97,7 @@ def register(
     return usuario
 
 
-@router.post("/login")
+@router.post("/login", summary="Autenticar usuario y obtener JWT")
 def login(
     request: LoginRequest,
     db: Session = Depends(get_db)
@@ -149,7 +150,7 @@ def login(
     }
 
 
-@router.put("/change-password")
+@router.put("/change-password", summary="Cambiar contraseña del usuario")
 def change_password(
     request: ChangePasswordRequest,
     db: Session = Depends(get_db)

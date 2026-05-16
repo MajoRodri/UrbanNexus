@@ -85,9 +85,9 @@ def reset_db():
 
 def test_root_endpoint():
     """
-    Verifica que la API responde correctamente en la raíz.
+    Verifica que la API responde correctamente en el endpoint de estado.
     """
-    response = client.get("/")
+    response = client.get("/api/v1/root_status")
     assert response.status_code == 200
     assert "UrbanNexus API funcionando" in response.json()["message"]
 
