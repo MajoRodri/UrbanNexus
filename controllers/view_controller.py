@@ -5,7 +5,7 @@ from db.models import Medicion, Zona
 from services.alert_service import AlertService
 from repositories.sqlite_repository import SQLiteRepository
 from controllers.scheduler_controller import toggle_ingesta, update_times, get_status
-
+from math import ceil
 
 view_bp = Blueprint("view", __name__, template_folder="../templates")
 
@@ -45,7 +45,7 @@ def _medicion_to_dict(medicion, zona):
     }
 
 
-def _buscar_registros_bd(municipio=None, fecha_raw=None):
+def _buscar_registros_bd(municipio=None, fecha_raw=None, page=1, per_page=20):
     db = SessionLocal()
     try:
         query = (
@@ -53,8 +53,10 @@ def _buscar_registros_bd(municipio=None, fecha_raw=None):
             .join(Zona, Medicion.id_zona == Zona.id)
             .order_by(Medicion.fecha.desc())
         )
+
         if municipio:
             query = query.filter(Zona.municipio.ilike(f"%{municipio}%"))
+
         if fecha_raw:
             try:
                 fecha_obj = datetime.strptime(fecha_raw, "%Y-%m-%d").date()
@@ -62,8 +64,34 @@ def _buscar_registros_bd(municipio=None, fecha_raw=None):
                 query = query.filter(Medicion.fecha <= datetime.combine(fecha_obj, datetime.max.time()))
             except ValueError:
                 pass
-        resultados = query.limit(200).all()
-        return [_medicion_to_dict(m, z) for m, z in resultados]
+
+        total = query.count()
+        total_pages = max(ceil(total / per_page), 1)
+
+        if page < 1:
+            page = 1
+        if page > total_pages:
+            page = total_pages
+
+        resultados = (
+            query
+            .offset((page - 1) * per_page)
+            .limit(per_page)
+            .all()
+        )
+
+        start_page = max(page - 2, 1)
+        end_page = min(page + 2, total_pages)
+
+        return {
+            "registros": [_medicion_to_dict(m, z) for m, z in resultados],
+            "page": page,
+            "per_page": per_page,
+            "total": total,
+            "total_pages": total_pages,
+            "page_numbers": list(range(start_page, end_page + 1))
+        }
+
     finally:
         db.close()
 
@@ -93,13 +121,25 @@ def consulta():
         flash("Debes iniciar sesión para acceder.", "error")
         return redirect(url_for("view.login"))
 
-    municipio = None
-    fecha_raw = None
     if request.method == "POST":
-        municipio = request.form.get("municipio", "").strip() or None
-        fecha_raw = request.form.get("fecha", "").strip() or None
+        municipio = request.form.get("municipio", "").strip()
+        fecha_raw = request.form.get("fecha", "").strip()
+        return redirect(url_for("view.consulta", municipio=municipio, fecha=fecha_raw, page=1))
 
-    registros = _buscar_registros_bd(municipio=municipio, fecha_raw=fecha_raw)
+    municipio = request.args.get("municipio", "").strip()
+    fecha_raw = request.args.get("fecha", "").strip()
+
+    try:
+        page = int(request.args.get("page", 1))
+    except ValueError:
+        page = 1
+
+    pagination = _buscar_registros_bd(
+        municipio=municipio or None,
+        fecha_raw=fecha_raw or None,
+        page=page,
+        per_page=20
+    )
 
     db = SessionLocal()
     try:
@@ -109,8 +149,11 @@ def consulta():
 
     return render_template(
         "consulta.html",
-        registros=registros,
-        zonas=zonas
+        registros=pagination["registros"],
+        pagination=pagination,
+        zonas=zonas,
+        municipio=municipio,
+        fecha=fecha_raw
     )
 
 

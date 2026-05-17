@@ -45,6 +45,16 @@ function actualizarUI(data) {
 
     const humText = document.getElementById("humidity");
     if (humText) humText.textContent = `${humValue}%`;
+    
+    const windValue = (data.viento != null) ? data.viento : "--";
+    const rainValue = (data.lluvia != null) ? data.lluvia : "--";
+
+    const windText = document.getElementById("wind");
+    if (windText) windText.textContent = `${windValue} km/h`;
+
+const rainText = document.getElementById("rain");
+if (rainText) rainText.textContent = `${rainValue} mm`;
+
 
     const cityText = document.getElementById("cityName");
     if (cityText) cityText.textContent = data.ciudad || "Desconocido";
