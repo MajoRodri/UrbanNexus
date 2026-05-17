@@ -1,13 +1,13 @@
 :root {
-    --bg: #0f172a;
-    --card-bg: #1e293b;
-    --card-soft: #243247;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --border: rgba(255, 255, 255, 0.08);
-    --accent: #3b82f6;
-    --accent-hover: #1d4ed8;
-    --success: #22c55e;
+    --bg: #071C20;
+    --card-bg: #0C2830;
+    --card-soft: #0F3040;
+    --text-main: #E8F5F2;
+    --text-muted: #7EC8C0;
+    --border: rgba(61, 155, 170, 0.12);
+    --accent: #3D9BAA;
+    --accent-hover: #2D7888;
+    --success: #10b981;
     --error: #ef4444;
 }
 
@@ -20,8 +20,9 @@
 body {
     font-family: "Inter", sans-serif;
     background:
-        radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 25%),
-        linear-gradient(180deg, #1e293b 0%, var(--bg) 100%);
+        radial-gradient(circle at top left, rgba(61, 155, 170, 0.15), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(45, 120, 136, 0.1), transparent 30%),
+        linear-gradient(180deg, #0C2830 0%, var(--bg) 100%);
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
@@ -36,12 +37,12 @@ body {
 }
 
 .auth-card {
-    background: rgba(30, 41, 59, 0.75);
+    background: rgba(15, 42, 42, 0.8);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(61, 155, 170, 0.06);
+    backdrop-filter: blur(12px);
 }
 
 .back-link {
@@ -95,8 +96,8 @@ input {
 input:focus {
     outline: none;
     border-color: var(--accent);
-    background: #2a3b52;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    background: #102838;
+    box-shadow: 0 0 0 3px rgba(61, 155, 170, 0.18);
 }
 
 .primary-btn {
@@ -106,13 +107,16 @@ input:focus {
     padding: 0.75rem;
     font-weight: 700;
     cursor: pointer;
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), #2D6A78);
     color: white;
     margin-top: 0.5rem;
+    transition: opacity 0.2s, transform 0.15s;
+    letter-spacing: 0.02em;
 }
 
 .primary-btn:hover {
-    background: var(--accent-hover);
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 .bottom-text {
@@ -123,7 +127,7 @@ input:focus {
 }
 
 .bottom-text a {
-    color: #93c5fd;
+    color: #7EC8C0;
     text-decoration: none;
     font-weight: 600;
 }
@@ -156,6 +160,17 @@ small {
     display: block;
     margin-top: 0.3rem;
 }
+.notice {
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    color: #fde68a;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 0.83rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
 .logout-btn {
   background: rgba(239, 68, 68, 0.15);
   color: #fca5a5;

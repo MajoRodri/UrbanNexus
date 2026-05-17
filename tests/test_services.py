@@ -1,29 +1,29 @@
 import pytest
 
-from services.normalizer_service import normalizar_datos_aemet
+from services.normalizer_service import normalizar_datos_clima
 from services.alert_service import AlertService
 
 
-def test_normalizer_handles_ip_rain():
-    """Verifica que la lluvia inapreciable 'Ip' se convierta en 0.0."""
-
+def test_normalizer_returns_zero_rain_without_precipitation():
     raw_data = {
-        "fint": "2023-10-27T10:00:00",
-        "prec": "Ip",
-        "ta": "20",
-        "hr": "50",
-        "vv": "10"
+        "location": {"name": "Madrid"},
+        "current": {
+            "last_updated": "2026-05-12 12:00",
+            "temp_c": 20.0,
+            "humidity": 50,
+            "wind_kph": 18.0,
+            "pressure_mb": 1015.0,
+            "precip_mm": 0.0
+        }
     }
 
-    normalized = normalizar_datos_aemet(raw_data)
+    normalized = normalizar_datos_clima(raw_data)
 
     assert normalized["lluvia"] == 0.0
     assert isinstance(normalized["lluvia"], float)
 
 
 def test_alert_service_returns_list():
-    """Verifica que evaluar_alertas devuelve una lista."""
-
     service = AlertService()
 
     data = {
@@ -39,8 +39,6 @@ def test_alert_service_returns_list():
 
 
 def test_alert_service_no_alerts_with_normal_weather():
-    """Verifica que con datos normales no se generan alertas."""
-
     service = AlertService()
 
     data = {

@@ -12,12 +12,11 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Logs
-logs/
-*.log
 
 # Test cache
 .pytest_cache/
+.coverage
+htmlcov/
 
 # IDEs / editores
 .vscode/
@@ -27,4 +26,11 @@ logs/
 .DS_Store
 Thumbs.db
 
-# Añadir lo que sea
+# Base de datos local
+*.db
+
+logs/
+__pycache__/
+*.pyc
+.env
+.vscode/

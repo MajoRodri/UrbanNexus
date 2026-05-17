@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanNexus | Mi perfil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cursor.css') }}">
+</head>
+
+<body>
+
+    <main class="auth-container">
+
+        <section class="auth-card">
+
+            <a href="{{ url_for('view.index') }}" class="back-link">
+                ← Volver al inicio
+            </a>
+
+            <h1>Mi perfil</h1>
+
+            <p class="subtitle">
+                {{ session.get("id_empleado") }} &middot; {{ session.get("rol") }}
+            </p>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flashes">
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <form action="{{ url_for('auth.cambiar_password') }}" method="POST">
+
+                <div class="form-group">
+                    <label for="password_actual">Contrasena actual</label>
+                    <input type="password" id="password_actual" name="password_actual"
+                        placeholder="Tu contrasena actual" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password_nueva">Nueva contrasena</label>
+                    <input type="password" id="password_nueva" name="password_nueva"
+                        placeholder="Minimo 6 caracteres" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password_confirmar">Confirmar nueva contrasena</label>
+                    <input type="password" id="password_confirmar" name="password_confirmar"
+                        placeholder="Repite la nueva contrasena" required>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Cambiar contrasena
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
+</body>
+
+</html>

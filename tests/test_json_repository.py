@@ -9,7 +9,7 @@ import repositories.json_repository as repo
 # =====================================================
 
 @pytest.fixture
-def archivo_json_temporal(tmp_path, monkeypatch):
+def temp_json_file(tmp_path, monkeypatch):
     """
     Crea un archivo JSON temporal y hace que el repository use ese archivo
     en vez del archivo real data/registros_climaticos.json.
@@ -31,7 +31,7 @@ def archivo_json_temporal(tmp_path, monkeypatch):
 # TEST guardar_registro()
 # =====================================================
 
-def test_guardar_registro_correctamente(archivo_json_temporal):
+def test_save_record_correctly(temp_json_file):
     """
     Comprueba que guardar_registro añade un registro al JSON.
     """
@@ -49,14 +49,14 @@ def test_guardar_registro_correctamente(archivo_json_temporal):
     assert resultado is True
 
     datos_guardados = json.loads(
-        archivo_json_temporal.read_text(encoding="utf-8")
+        temp_json_file.read_text(encoding="utf-8")
     )
 
     assert len(datos_guardados) == 1
     assert datos_guardados[0]["municipio"] == "Madrid"
 
 
-def test_guardar_varios_registros(archivo_json_temporal):
+def test_save_multiple_records(temp_json_file):
     """
     Comprueba que se pueden guardar varios registros.
     """
@@ -79,7 +79,7 @@ def test_guardar_varios_registros(archivo_json_temporal):
     repo.guardar_registro(registro_2)
 
     datos_guardados = json.loads(
-        archivo_json_temporal.read_text(encoding="utf-8")
+        temp_json_file.read_text(encoding="utf-8")
     )
 
     assert len(datos_guardados) == 2
@@ -91,7 +91,7 @@ def test_guardar_varios_registros(archivo_json_temporal):
 # TEST filter_records()
 # =====================================================
 
-def test_filtrar_registros_con_archivo_vacio(archivo_json_temporal):
+def test_filter_records_empty_file(temp_json_file):
     """
     Si el JSON está vacío, filter_records debe devolver lista vacía.
     """
@@ -101,7 +101,7 @@ def test_filtrar_registros_con_archivo_vacio(archivo_json_temporal):
     assert resultado == []
 
 
-def test_filtrar_registros_por_municipio(archivo_json_temporal):
+def test_filter_records_by_municipality(temp_json_file):
     """
     Comprueba que filtra correctamente por municipio.
     """
@@ -121,7 +121,7 @@ def test_filtrar_registros_por_municipio(archivo_json_temporal):
         }
     ]
 
-    archivo_json_temporal.write_text(json.dumps(registros), encoding="utf-8")
+    temp_json_file.write_text(json.dumps(registros), encoding="utf-8")
 
     resultado = repo.filter_records(municipio="Madrid")
 
@@ -129,7 +129,7 @@ def test_filtrar_registros_por_municipio(archivo_json_temporal):
     assert resultado[0]["municipio"] == "Madrid"
 
 
-def test_filtrar_registros_por_municipio_sin_importar_mayusculas(archivo_json_temporal):
+def test_filter_records_by_municipality_case_insensitive(temp_json_file):
     """
     Comprueba que el filtro por municipio no falla por mayúsculas/minúsculas.
     """
@@ -143,7 +143,7 @@ def test_filtrar_registros_por_municipio_sin_importar_mayusculas(archivo_json_te
         }
     ]
 
-    archivo_json_temporal.write_text(json.dumps(registros), encoding="utf-8")
+    temp_json_file.write_text(json.dumps(registros), encoding="utf-8")
 
     resultado = repo.filter_records(municipio="madrid")
 
@@ -151,7 +151,7 @@ def test_filtrar_registros_por_municipio_sin_importar_mayusculas(archivo_json_te
     assert resultado[0]["municipio"] == "Madrid"
 
 
-def test_filtrar_registros_por_fecha(archivo_json_temporal):
+def test_filter_records_by_date(temp_json_file):
     """
     Comprueba que filtra correctamente por fecha exacta.
 
@@ -173,7 +173,7 @@ def test_filtrar_registros_por_fecha(archivo_json_temporal):
         }
     ]
 
-    archivo_json_temporal.write_text(json.dumps(registros), encoding="utf-8")
+    temp_json_file.write_text(json.dumps(registros), encoding="utf-8")
 
     resultado = repo.filter_records(fecha="22/04/2026")
 
@@ -181,7 +181,7 @@ def test_filtrar_registros_por_fecha(archivo_json_temporal):
     assert resultado[0]["fecha"] == "22/04/2026"
 
 
-def test_filtrar_registros_por_fuente(archivo_json_temporal):
+def test_filter_records_by_source(temp_json_file):
     """
     Comprueba que filtra correctamente por fuente.
     """
@@ -197,11 +197,11 @@ def test_filtrar_registros_por_fuente(archivo_json_temporal):
             "id": "2",
             "municipio": "Madrid",
             "fecha": "22/04/2026",
-            "fuente": "api_aemet"
+            "fuente": "weatherapi"
         }
     ]
 
-    archivo_json_temporal.write_text(json.dumps(registros), encoding="utf-8")
+    temp_json_file.write_text(json.dumps(registros), encoding="utf-8")
 
     resultado = repo.filter_records(fuente="manual")
 
@@ -209,7 +209,7 @@ def test_filtrar_registros_por_fuente(archivo_json_temporal):
     assert resultado[0]["fuente"] == "manual"
 
 
-def test_filtrar_registros_por_municipio_fecha_y_fuente(archivo_json_temporal):
+def test_filter_records_by_municipality_date_source(temp_json_file):
     """
     Comprueba que se pueden combinar municipio, fecha y fuente.
     """
@@ -225,7 +225,7 @@ def test_filtrar_registros_por_municipio_fecha_y_fuente(archivo_json_temporal):
             "id": "2",
             "municipio": "Madrid",
             "fecha": "22/04/2026",
-            "fuente": "api_aemet"
+            "fuente": "weatherapi"
         },
         {
             "id": "3",
@@ -235,7 +235,7 @@ def test_filtrar_registros_por_municipio_fecha_y_fuente(archivo_json_temporal):
         }
     ]
 
-    archivo_json_temporal.write_text(json.dumps(registros), encoding="utf-8")
+    temp_json_file.write_text(json.dumps(registros), encoding="utf-8")
 
     resultado = repo.filter_records(
         municipio="Madrid",
@@ -251,7 +251,7 @@ def test_filtrar_registros_por_municipio_fecha_y_fuente(archivo_json_temporal):
 # TEST find_latest_by_municipio_and_source()
 # =====================================================
 
-def test_buscar_ultimo_registro_por_municipio(archivo_json_temporal):
+def test_find_latest_record_by_municipality(temp_json_file):
     """
     Comprueba que devuelve el último registro encontrado para un municipio.
 
@@ -271,7 +271,7 @@ def test_buscar_ultimo_registro_por_municipio(archivo_json_temporal):
             "id": "2",
             "municipio": "Madrid",
             "fecha": "23/04/2026",
-            "fuente": "api_aemet"
+            "fuente": "weatherapi"
         },
         {
             "id": "3",
@@ -281,7 +281,7 @@ def test_buscar_ultimo_registro_por_municipio(archivo_json_temporal):
         }
     ]
 
-    archivo_json_temporal.write_text(json.dumps(registros), encoding="utf-8")
+    temp_json_file.write_text(json.dumps(registros), encoding="utf-8")
 
     resultado = repo.find_latest_by_municipio_and_source("Madrid", "manual")
 
@@ -290,7 +290,7 @@ def test_buscar_ultimo_registro_por_municipio(archivo_json_temporal):
     assert resultado["municipio"] == "Madrid"
 
 
-def test_buscar_ultimo_registro_devuelve_none_si_no_existe(archivo_json_temporal):
+def test_find_latest_record_returns_none_if_not_found(temp_json_file):
     """
     Comprueba que devuelve None si no existe el municipio.
     """
@@ -304,7 +304,7 @@ def test_buscar_ultimo_registro_devuelve_none_si_no_existe(archivo_json_temporal
         }
     ]
 
-    archivo_json_temporal.write_text(json.dumps(registros), encoding="utf-8")
+    temp_json_file.write_text(json.dumps(registros), encoding="utf-8")
 
     resultado = repo.find_latest_by_municipio_and_source("Valencia", "manual")
 

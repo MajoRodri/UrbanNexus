@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>ClimApp | Registro de usuario</title>
+    <title>UrbanNexus | Registro de usuario</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cursor.css') }}">
 </head>
 
 <body>
@@ -12,57 +14,64 @@
 
         <section class="auth-card">
 
-            <a href="{{ url_for('view.index') }}" class="back-link">← Volver al inicio</a>
+            <a href="{{ url_for('view.login') }}" class="back-link">← Volver al login</a>
 
             <h1>Registro de usuario</h1>
-            <p class="subtitle">Crea tu cuenta para acceder a ClimApp</p>
+            <p class="subtitle">Crea tu cuenta con tu código de invitación</p>
+
+            <div class="notice">
+                ⚠️ Solo puedes registrarte si has recibido un correo de invitación con tu código de acceso.
+            </div>
 
             {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    <div class="flashes">
-                        {% for category, message in messages %}
-                            <div class="alert alert-{{ category }}">{{ message }}</div>
-                        {% endfor %}
-                    </div>
-                {% endif %}
+            {% if messages %}
+            <div class="flashes">
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
             {% endwith %}
 
-            <form id="registroForm" action="{{ url_for('view.registro_usuario') }}" method="POST">
+            <form id="registroForm" action="{{ url_for('auth.registrar_usuario') }}" method="POST">
+
+                <div class="form-group">
+                    <label for="nombres">Nombre</label>
+                    <input type="text" id="nombres" name="nombres" placeholder="Tu nombre" required>
+                    <small id="nombresError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+                    <small id="apellidosError"></small>
+                </div>
 
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="ejemplo@email.com" 
-                        required
-                    >
+                    <input type="email" id="email" name="email" placeholder="tuemail@urbannexus.com" required>
                     <small id="emailError"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="password">Contraseña</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password" 
-                        placeholder="Mínimo 6 caracteres" 
-                        required
-                    >
+                    <input type="password" id="password" name="password"
+                        placeholder="Mínimo 8 caracteres, 1 mayúscula y 1 número" required>
                     <small id="passwordError"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="confirm_password">Repetir contraseña</label>
-                    <input 
-                        type="password" 
-                        id="confirm_password" 
-                        name="confirm_password" 
-                        placeholder="Repite tu contraseña" 
-                        required
-                    >
+                    <input type="password" id="confirm_password" name="confirm_password"
+                        placeholder="Repite tu contraseña" required>
                     <small id="confirmPasswordError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="codigo_invitacion">Código de invitación</label>
+                    <input type="text" id="codigo_invitacion" name="codigo_invitacion" placeholder="Ej: TEC-8F2K9A"
+                        required>
+                    <small id="codigoInvitacionError"></small>
                 </div>
 
                 <button type="submit" class="primary-btn">Crear cuenta</button>
@@ -79,5 +88,9 @@
     </main>
 
     <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
 </body>
+
 </html>

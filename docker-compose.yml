@@ -1,0 +1,16 @@
+services:
+  urbannexus:
+    build: .
+    ports:
+      - "5000:5000"
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: sqlite:////app/data/clima.db
+    volumes:
+      - db_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  db_data:

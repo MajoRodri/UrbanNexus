@@ -1,0 +1,227 @@
+<!-- Panel de administración del scheduler de ingesta automática.
+     Permite activar/desactivar la ingesta periódica de datos climáticos
+     y configurar los horarios diarios en que se ejecuta (por defecto 07:00, 15:00 y 20:00).
+     Se comunica con /admin/scheduler/toggle y /admin/scheduler/config vía fetch. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanNexus | Scheduler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/historico.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cursor.css') }}">
+    <style>
+        .toggle-row { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.5rem; }
+
+        .status-badge {
+            display: inline-flex; align-items: center; gap: 0.45rem;
+            padding: 0.35rem 0.9rem; border-radius: 999px;
+            font-size: 0.8rem; font-weight: 700; border: 1px solid;
+        }
+        .status-badge.active  { background: rgba(16,185,129,.12); color: #10b981; border-color: rgba(16,185,129,.35); }
+        .status-badge.stopped { background: rgba(239,68,68,.10); color: #ef4444; border-color: rgba(239,68,68,.30); }
+        .status-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+        .toggle-btn {
+            width: auto; padding: 0.55rem 1.4rem; font-size: 0.85rem;
+            background: linear-gradient(135deg, var(--accent), #2D6A78);
+        }
+        .toggle-btn.stop { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+
+        .times-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1rem; }
+        .time-slot { display: flex; flex-direction: column; gap: 0.3rem; }
+        .time-slot label { font-size: 0.72rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
+        .time-slot input[type="time"] { width: 130px; }
+
+        .slot-row { display: flex; align-items: flex-end; gap: 0.5rem; }
+        .remove-slot {
+            width: auto; padding: 0.55rem 0.8rem; font-size: 0.8rem; margin-top: 0;
+            background: rgba(239,68,68,.15); color: #ef4444;
+            border: 1px solid rgba(239,68,68,.3); border-radius: 8px;
+        }
+        .remove-slot:hover { background: #ef4444; color: #fff; opacity: 1; }
+
+        .add-slot {
+            width: auto; padding: 0.5rem 1rem; font-size: 0.82rem; margin-bottom: 1rem;
+            background: rgba(61,155,170,.12); color: var(--accent);
+            border: 1px solid rgba(61,155,170,.35); border-radius: 8px;
+        }
+        .add-slot:hover { background: var(--accent); color: #fff; opacity: 1; }
+
+        .save-btn { width: auto; padding: 0.6rem 1.5rem; }
+
+        .next-runs { margin-top: 1rem; }
+        .next-runs table { font-size: 0.85rem; }
+
+        .feedback { display: none; margin-top: 0.6rem; font-size: 0.82rem; color: #10b981; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <nav aria-label="breadcrumb" class="breadcrumb">
+        <ol>
+            <li><a href="/">Inicio</a></li>
+            <li class="separator">/</li>
+            <li class="active">Scheduler</li>
+        </ol>
+    </nav>
+
+    <h1>Scheduler</h1>
+
+    <!-- Tarjeta de estado: muestra si el scheduler está activo o detenido y las próximas ejecuciones programadas -->
+    <div class="card">
+        <h2>Estado</h2>
+
+        <div class="toggle-row">
+            <span class="status-badge {{ 'active' if status.enabled else 'stopped' }}" id="statusBadge">
+                <span class="dot"></span>
+                <span id="statusLabel">{{ 'Activa' if status.enabled else 'Detenida' }}</span>
+            </span>
+
+            <button class="toggle-btn {{ 'stop' if status.enabled else '' }}" id="toggleBtn" onclick="toggleScheduler()">
+                {{ 'Detener' if status.enabled else 'Activar' }}
+            </button>
+        </div>
+
+        {% if status.next_runs %}
+        <div class="next-runs">
+            <p class="label" style="margin-bottom:.5rem">Próximas ejecuciones</p>
+            <table>
+                <thead>
+                    <tr><th>Horario</th><th>Próxima vez</th></tr>
+                </thead>
+                <tbody id="nextRunsBody">
+                    {% for r in status.next_runs %}
+                    <tr><td>{{ r.time }}</td><td>{{ r.next }}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Tarjeta de configuración: permite agregar, quitar y guardar los horarios de ingesta -->
+    <div class="card">
+        <h2>Configurar horarios</h2>
+        <p class="no-results" style="text-align:left; margin-bottom:1rem;">
+            Define hasta qué horas del día se ejecuta la ingesta. Por defecto: 07:00, 15:00 y 20:00.
+        </p>
+
+        <div class="times-grid" id="timesGrid">
+            {% for t in status.times %}
+            <div class="time-slot slot-row">
+                <div class="time-slot">
+                    <label>Horario {{ loop.index }}</label>
+                    <input type="time" value="{{ t }}" class="time-input">
+                </div>
+                <button class="remove-slot" onclick="removeSlot(this)" title="Eliminar">✕</button>
+            </div>
+            {% endfor %}
+        </div>
+
+        <button class="add-slot" onclick="addSlot()">+ Añadir horario</button>
+
+        <br>
+        <button class="save-btn" onclick="saveConfig()">Guardar horarios</button>
+        <p class="feedback" id="saveFeedback">Horarios guardados correctamente.</p>
+    </div>
+
+</div>
+
+<script>
+  let slotCount = document.querySelectorAll('#timesGrid .slot-row').length;
+
+  /* Activa o detiene el scheduler llamando al endpoint POST /admin/scheduler/toggle y actualiza el badge de estado */
+  async function toggleScheduler() {
+    const btn = document.getElementById('toggleBtn');
+    btn.disabled = true;
+
+    const res = await fetch('/admin/scheduler/toggle', { method: 'POST' });
+    const data = await res.json();
+
+    const badge = document.getElementById('statusBadge');
+    const label = document.getElementById('statusLabel');
+
+    if (data.enabled) {
+      badge.className = 'status-badge active';
+      label.textContent = 'Activa';
+      btn.textContent = 'Detener';
+      btn.classList.add('stop');
+    } else {
+      badge.className = 'status-badge stopped';
+      label.textContent = 'Detenida';
+      btn.textContent = 'Activar';
+      btn.classList.remove('stop');
+    }
+
+    if (data.next_runs) refreshNextRuns(data.next_runs);
+    btn.disabled = false;
+  }
+
+  /* Añade una nueva franja horaria al grid sin recargar la página */
+  function addSlot() {
+    slotCount++;
+    const grid = document.getElementById('timesGrid');
+    const div = document.createElement('div');
+    div.className = 'time-slot slot-row';
+    div.innerHTML = `
+      <div class="time-slot">
+        <label>Horario ${slotCount}</label>
+        <input type="time" value="08:00" class="time-input">
+      </div>
+      <button class="remove-slot" onclick="removeSlot(this)" title="Eliminar">✕</button>
+    `;
+    grid.appendChild(div);
+  }
+
+  /* Elimina una franja horaria del grid; impide borrar la última que quede */
+  function removeSlot(btn) {
+    const slots = document.querySelectorAll('#timesGrid .slot-row');
+    if (slots.length <= 1) return;
+    btn.closest('.slot-row').remove();
+    relabelSlots();
+  }
+
+  /* Renumera las etiquetas "Horario N" después de eliminar una franja */
+  function relabelSlots() {
+    document.querySelectorAll('#timesGrid .slot-row').forEach((row, i) => {
+      const lbl = row.querySelector('label');
+      if (lbl) lbl.textContent = `Horario ${i + 1}`;
+    });
+  }
+
+  /* Envía los horarios actuales al endpoint POST /admin/scheduler/config para persistirlos en scheduler_config.json */
+  async function saveConfig() {
+    const inputs = document.querySelectorAll('.time-input');
+    const times = Array.from(inputs).map(i => i.value).filter(Boolean);
+    if (!times.length) return;
+
+    const res = await fetch('/admin/scheduler/config', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ times })
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      if (data.next_runs) refreshNextRuns(data.next_runs);
+      const fb = document.getElementById('saveFeedback');
+      fb.style.display = 'block';
+      setTimeout(() => fb.style.display = 'none', 3000);
+    }
+  }
+
+  /* Actualiza la tabla de próximas ejecuciones con los datos devueltos por el servidor sin recargar la página */
+  function refreshNextRuns(runs) {
+    const body = document.getElementById('nextRunsBody');
+    if (!body) return;
+    body.innerHTML = runs.map(r => `<tr><td>${r.time}</td><td>${r.next}</td></tr>`).join('');
+  }
+</script>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanNexus</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Plus+Jakarta+Sans:wght@200;400;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.4);
+            --red-alert: #ef4444;
+            --bg-deep: #010409;
+            --glass: rgba(15, 23, 42, 0.7);
+        }
+
+        * { cursor: none !important; }
+
+        body {
+            background-color: var(--bg-deep);
+            color: #94a3b8;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* Background & FX */
+        .grid-layer {
+            position: fixed; inset: 0;
+            background-image: 
+                linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0; pointer-events: none;
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.3), rgba(15, 23, 42, 0.8));
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .glass-card:hover {
+            border-color: var(--emerald);
+            box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
+        }
+
+        /* Radar Animation */
+        .radar-scan {
+            position: absolute; width: 100%; height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent 0deg, rgba(16, 185, 129, 0.4) 360deg);
+            animation: rotate 6s linear infinite;
+            opacity: 0.15;
+        }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* Reveal Core */
+        .reveal-node { opacity: 0; transform: translateY(50px); }
+
+        /* Timeline vertical */
+        .timeline-line {
+            position: absolute; left: 50%; width: 1px; height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--emerald), transparent);
+            transform: translateX(-50%);
+        }
+        .timeline-dot {
+            position: absolute; left: 50%; width: 12px; height: 12px;
+            background: var(--emerald); border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 15px var(--emerald);
+        }
+
+        /* Custom Cursor */
+        #cursor {
+            transition: transform 0.05s ease-out;
+            pointer-events: none;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--bg-deep); }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--emerald); }
+
+        .modal-blur {
+            backdrop-filter: blur(25px);
+            background: rgba(1, 4, 9, 0.85);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader" class="fixed inset-0 z-[10000] bg-[#010409] flex items-center justify-center p-8">
+        <div class="w-full max-w-3xl">
+            <div class="flex justify-center mb-8">
+                <img src="static/img/Logo.png" alt="UrbanNexus" class="w-64 h-64 object-contain drop-shadow-[0_0_40px_rgba(16,185,129,0.6)]">
+            </div>
+            <div class="flex items-center gap-6 mb-10">
+                <div class="w-14 h-14 border-b-2 border-emerald-500 rounded-full animate-spin"></div>
+                <div>
+                    <h2 class="mono text-white text-lg tracking-[0.3em] font-bold uppercase">UrbanNexus_OS</h2>
+                    <p class="mono text-emerald-500/50 text-[10px] tracking-widest uppercase">System_Kernel_Loading...</p>
+                </div>
+            </div>
+            <div id="log-terminal" class="mono text-[10px] text-emerald-500/60 h-56 overflow-hidden space-y-2 mb-10 bg-black/50 p-8 rounded-2xl border border-white/5 italic"></div>
+            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden relative">
+                <div id="loader-bar" class="absolute h-full bg-emerald-500 w-0 shadow-[0_0_25px_#10b981]"></div>
+            </div>
+            <div class="flex justify-between mt-6 mono text-[10px] text-white/20 uppercase tracking-widest font-bold">
+                <span id="load-status">INICIALIZANDO...</span>
+                <span id="load-perc">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="location-alert" class="fixed bottom-10 left-10 z-[8000] max-w-sm glass-card p-8 rounded-[2rem] hidden opacity-0 translate-x-[-50px]">
+        <div class="flex items-start gap-5">
+            <div class="p-4 bg-emerald-500/20 rounded-2xl border border-emerald-500/30">
+                <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+                <h4 class="text-white font-black text-xs mono mb-3 uppercase tracking-widest">PERMISO DE UBICACIÓN REQUERIDO</h4>
+                <p class="text-slate-400 text-[11px] leading-relaxed mb-6">Esta aplicación requiere acceso a la ubicación del usuario para ofrecer datos climáticos en tiempo real para la Comunidad de Madrid.</p>
+                <div class="flex gap-4">
+                    <button onclick="closeLocationAlert()" class="px-5 py-2 bg-emerald-500 text-black text-[10px] font-black uppercase rounded-lg hover:bg-white transition-all shadow-lg shadow-emerald-500/20">Aceptar</button>
+                    <button onclick="closeLocationAlert()" class="px-5 py-2 border border-white/10 text-white text-[10px] font-bold uppercase rounded-lg hover:bg-white/10 transition-all">Configurar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nexus-modal" class="fixed inset-0 z-[11000] modal-blur items-center justify-center hidden opacity-0">
+        <div class="glass-card p-14 rounded-[3rem] max-w-xl w-full text-center border-emerald-500/20 mx-6">
+            <div id="modal-icon-container" class="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-10 border">
+                </div>
+            <h2 id="modal-title" class="text-4xl font-black text-white italic mono mb-6 tracking-tighter uppercase">MODAL_TITLE</h2>
+            <div id="modal-body" class="text-slate-400 mb-12 text-sm leading-relaxed space-y-4"></div>
+            <div id="modal-actions" class="grid grid-cols-2 gap-6">
+                </div>
+        </div>
+    </div>
+
+    <div class="grid-layer"></div>
+    <div id="cursor" class="fixed w-7 h-7 border-2 border-emerald-500 rounded-full z-[12000] hidden lg:flex items-center justify-center mix-blend-difference"><div class="w-1 h-1 bg-white rounded-full"></div></div>
+
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="fixed bottom-10 right-10 z-[9000] hidden items-center gap-3 px-6 py-4 glass-card border-emerald-500/30 rounded-2xl mono text-[11px] font-black uppercase text-emerald-500 hover:bg-emerald-500 hover:text-black transition-all shadow-xl">
+        ↑ Volver
+    </button>
+
+    <nav class="fixed top-0 w-full z-[9000] p-6 lg:p-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-[2.5rem] px-10 h-24 border-white/5">
+            <div class="flex items-center gap-14">
+                <div class="flex items-center gap-5 group">
+                    <div class="w-20 h-20 transform group-hover:rotate-12 transition-all overflow-hidden">
+                        <img src="static/img/Logo.png" alt="Logo" class="w-full h-full object-contain">
+                    </div>
+                </div>
+                <div class="hidden xl:flex gap-6 mono text-[13px] uppercase font-bold tracking-widest">
+                    <a href="#hero" class="px-4 py-2 text-emerald-500 hover:text-white transition-all">01_ROOT</a>
+                    <a href="javascript:void(0)" onclick="triggerAuthModal('02_REGISTROS')" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-80">02_REGISTROS</a>
+                    <a href="javascript:void(0)" onclick="triggerAuthModal('03_ZONAS')" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-80">03_ZONAS</a>
+                    <a href="http://127.0.0.1:8000/docs" class="px-4 py-2 hover:text-emerald-500 transition-all opacity-80">04_SWAGGER_DOCS</a>
+                </div>
+            </div>
+            <button id="demo-btn" class="mono text-[11px] bg-emerald-500 text-black px-10 py-4 rounded-2xl font-black uppercase hover:bg-white transition-all shadow-xl shadow-emerald-500/20 active:scale-95">
+                DEMOAPP
+            </button>
+        </div>
+    </nav>
+
+    <main class="relative z-10">
+        
+        <section id="hero" class="min-h-screen flex items-center pt-48 px-10">
+            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-24 items-center">
+                <div class="reveal-node space-y-12">
+                    <div class="space-y-8">
+                        <div class="inline-flex items-center gap-4 px-5 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_#10b981]"></span>
+                            <span class="mono text-emerald-500 text-[11px] font-black uppercase tracking-[0.5em]">Activo</span>
+                        </div>
+                        <h1 class="text-8xl lg:text-[10rem] font-black text-white italic uppercase tracking-tighter leading-[0.8] mb-4">Urban<br><span class="text-emerald-500">Nexus.</span>
+                        </h1>
+                        <div class="glass-card p-8 rounded-3xl border-emerald-500/20 max-w-2xl">
+                            <div class="mono text-emerald-500 text-[12px] font-bold uppercase tracking-widest leading-loose">
+                                <span class="text-white opacity-40">Tecnologías:</span> Python 3.11 · Flask · FastAPI · SQLAlchemy · APScheduler · WeatherAPI · Pytest<br>
+                                <span class="text-white opacity-40">Estado:</span> <span class="text-emerald-400">Activo</span> · <span class="text-white opacity-40">Versión:</span> 1.0.0 · Madrid
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xl text-slate-300 font-light leading-relaxed text-justify border-l-4 border-emerald-500/40 pl-12 italic max-w-3xl">
+                        UrbanNexus es una plataforma integral de monitorización climática diseñada para la Comunidad de Madrid. Se lanza con <span class="mono text-white px-2 py-1 bg-white/5 rounded">python run.py</span>, que arranca simultáneamente el servidor web Flask (puerto 5000) y la API REST con FastAPI (puerto 8000). La arquitectura sigue el patrón Controllers → Services → Repositories → Models con doble persistencia en SQLite y JSON.
+                    </p>
+                </div>
+                
+                <div class="relative reveal-node flex justify-center items-center h-[700px]">
+                    <div class="radar-scan"></div>
+                    <div class="absolute w-[500px] h-[500px] border border-emerald-500/10 rounded-full"></div>
+                    <div class="glass-card p-14 rounded-[4rem] w-96 text-center relative z-20 border-white/5 shadow-3xl">
+                        <div class="mono text-[10px] text-emerald-500 mb-8 font-black uppercase tracking-widest border-b border-white/10 pb-6">Environmental_Kernel</div>
+                        <div class="text-5xl font-black text-white mono mb-8 tracking-tighter" id="clock">00:00:00</div>
+                        <div class="space-y-5">
+                            <div class="flex justify-between text-[10px] mono uppercase"><span class="opacity-30 tracking-[0.2em]">Rest_API</span><span class="text-emerald-500 font-black">PORT_8000</span></div>
+                            <div class="flex justify-between text-[10px] mono uppercase"><span class="opacity-30 tracking-[0.2em]">Flask_Srv</span><span class="text-emerald-500 font-black">PORT_5000</span></div>
+                            <div class="w-full bg-white/5 h-1.5 rounded-full mt-4"><div class="bg-emerald-500 h-full w-[88%] shadow-[0_0_10px_#10b981]"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-48 px-10 bg-slate-950/20 border-y border-white/5">
+            <div class="max-w-7xl mx-auto space-y-24">
+                <div class="reveal-node">
+                    <h2 class="mono text-emerald-500 text-xs tracking-[0.6em] uppercase mb-4 font-black">02 // Operational_Core</h2>
+                    <h3 class="text-7xl font-black text-white italic tracking-tighter uppercase">Características Principales</h3>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="glass-card p-12 rounded-[3rem] reveal-node">
+                        <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-10 border border-emerald-500/20"><svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+                        <h4 class="text-2xl font-black text-white mb-6 uppercase italic tracking-tighter">Seguridad</h4>
+                        <ul class="space-y-4 mono text-[12px] text-slate-400">
+                            <li><span class="text-emerald-500 font-black">/</span> Tres roles: admin, técnico y consultor</li>
+                            <li><span class="text-emerald-500 font-black">/</span> JWT con expiración</li>
+                            <li><span class="text-emerald-500 font-black">/</span> Encriptación Bcrypt</li>
+                            <li><span class="text-emerald-500 font-black">/</span> Invitaciones por email</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-12 rounded-[3rem] reveal-node border-white/5">
+                        <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-10 border border-emerald-500/20"><svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/></svg></div>
+                        <h4 class="text-2xl font-black text-white mb-6 uppercase italic tracking-tighter">Ingesta de Datos</h4>
+                        <ul class="space-y-4 mono text-[12px] text-slate-400">
+                            <li><span class="text-emerald-500 font-black">/</span> Scheduler APScheduler</li>
+                            <li><span class="text-emerald-500 font-black">/</span> Formulario manual validado</li>
+                            <li><span class="text-emerald-500 font-black">/</span> ETL Pipeline Automation</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-12 rounded-[3rem] reveal-node">
+                        <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-10 border border-emerald-500/20"><svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></div>
+                        <h4 class="text-2xl font-black text-white mb-6 uppercase italic tracking-tighter">Pipeline ETL</h4>
+                        <ul class="space-y-4 mono text-[12px] text-slate-400">
+                            <li><span class="text-emerald-500 font-black">/</span> extract.py | transform.py</li>
+                            <li><span class="text-emerald-500 font-black">/</span> load.py | pipeline.py</li>
+                            <li><span class="text-emerald-500 font-black">/</span> Sincronización WeatherAPI</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-12 rounded-[3rem] reveal-node border-white/5">
+                        <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-10 border border-emerald-500/20"><svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2m0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+                        <h4 class="text-2xl font-black text-white mb-6 uppercase italic tracking-tighter">Analítica</h4>
+                        <ul class="space-y-4 mono text-[12px] text-slate-400">
+                            <li><span class="text-emerald-500 font-black">/</span> Histórico Dinámico</li>
+                            <li><span class="text-emerald-500 font-black">/</span> Filtrado Avanzado</li>
+                            <li><span class="text-emerald-500 font-black">/</span> Swagger Docs Integrados</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-12 rounded-[3rem] reveal-node">
+                        <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-10 border border-red-500/20"><svg class="w-8 h-8 text-red-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                        <h4 class="text-2xl font-black text-white mb-6 uppercase italic tracking-tighter">Alertas</h4>
+                        <ul class="space-y-4 mono text-[12px] text-slate-400">
+                            <li><span class="text-red-500 font-black">/</span> Calor / Heladas</li>
+                            <li><span class="text-red-500 font-black">/</span> Viento / Lluvia / Humedad</li>
+                            <li><span class="text-red-500 font-black">/</span> Monitorización Activa</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-12 rounded-[3rem] reveal-node border-white/5">
+                        <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-10 border border-emerald-500/20"><svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7C5 4 4 5 4 7z"/></svg></div>
+                        <h4 class="text-2xl font-black text-white mb-6 uppercase italic tracking-tighter">Persistencia</h4>
+                        <ul class="space-y-4 mono text-[12px] text-slate-400">
+                            <li><span class="text-emerald-500 font-black">/</span> SQLite SQLAlchemy 2.0</li>
+                            <li><span class="text-emerald-500 font-black">/</span> Interoperabilidad JSON</li>
+                            <li><span class="text-emerald-500 font-black">/</span> Repositorios de Datos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="py-48 px-10">
+            <div class="max-w-7xl mx-auto space-y-24">
+                <div class="reveal-node">
+                    <h2 class="mono text-emerald-500 text-xs tracking-[0.6em] uppercase mb-4 font-black">03 // System_Layers</h2>
+                    <h3 class="text-7xl font-black text-white italic tracking-tighter uppercase leading-none">Arquitectura<br>del Sistema</h3>
+                </div>
+                
+                <div class="glass-card rounded-[3.5rem] overflow-hidden reveal-node border-white/5 shadow-2xl">
+                    <table class="w-full text-left mono text-[13px]">
+                        <thead>
+                            <tr class="bg-emerald-500/10 border-b border-white/10 text-emerald-500 uppercase tracking-widest text-[11px] font-black">
+                                <th class="p-10">Módulo_ID</th>
+                                <th class="p-10">Responsabilidad_Operativa</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-300 divide-y divide-white/5">
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">run.py</td><td class="p-10 italic">Orquestador de procesos: lanza Flask y FastAPI</td></tr>
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">app.py</td><td class="p-10 italic">Core de Servidor Web Flask</td></tr>
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">main_api.py</td><td class="p-10 italic">Engine de API REST con FastAPI</td></tr>
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">controllers/</td><td class="p-10 italic">Gestores de rutas y entradas HTTP</td></tr>
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">services/</td><td class="p-10 italic">Capa de Lógica de Negocio Principal</td></tr>
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">repositories/</td><td class="p-10 italic">Abstracción de Persistencia (SQLite)</td></tr>
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">models/ + schemas/</td><td class="p-10 italic">Entidades DB y Esquemas Pydantic</td></tr>
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">etl/</td><td class="p-10 italic">Pipeline de Extracción, Transformación y Carga</td></tr>
+                            <tr class="hover:bg-white/5 transition-all group"><td class="p-10 font-bold text-white group-hover:text-emerald-400">utils/</td><td class="p-10 italic">Seguridad JWT, Encriptación y Utilidades Core</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="flow" class="py-48 px-10 bg-slate-950/30">
+            <div class="max-w-5xl mx-auto space-y-32 relative">
+                <div class="reveal-node text-center">
+                    <h2 class="mono text-emerald-500 text-xs tracking-[0.6em] uppercase mb-4 font-black">04 // Logic_Path</h2>
+                    <h3 class="text-7xl font-black text-white italic tracking-tighter uppercase">Flujo del Usuario</h3>
+                </div>
+                
+                <div class="relative py-20">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="space-y-48">
+                        <div class="relative reveal-node pl-14 lg:pl-0">
+                            <div class="timeline-dot top-0"></div>
+                            <div class="lg:w-1/2 lg:ml-auto lg:pl-24">
+                                <div class="glass-card p-12 rounded-[3rem]">
+                                    <span class="mono text-emerald-500 text-7xl font-black opacity-10 block mb-6">01</span>
+                                    <h4 class="text-2xl font-black text-white italic uppercase mb-4 tracking-tighter">Login + JWT</h4>
+                                    <p class="text-slate-400 text-sm italic leading-relaxed">Autenticación segura mediante tokens firmados para acceso granular a la API climática.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative reveal-node pl-14 lg:pl-0">
+                            <div class="timeline-dot top-0"></div>
+                            <div class="lg:w-1/2 lg:mr-auto lg:pr-24">
+                                <div class="glass-card p-12 rounded-[3rem]">
+                                    <span class="mono text-emerald-500 text-7xl font-black opacity-10 block mb-6">02</span>
+                                    <h4 class="text-2xl font-black text-white italic uppercase mb-4 tracking-tighter">Ingesta ETL</h4>
+                                    <p class="text-slate-400 text-sm italic leading-relaxed">Sincronización de datos con WeatherAPI o ingesta manual mediante formularios validados.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative reveal-node pl-14 lg:pl-0">
+                            <div class="timeline-dot top-0"></div>
+                            <div class="lg:w-1/2 lg:ml-auto lg:pl-24">
+                                <div class="glass-card p-12 rounded-[3rem]">
+                                    <span class="mono text-emerald-500 text-7xl font-black opacity-10 block mb-6">03</span>
+                                    <h4 class="text-2xl font-black text-white italic uppercase mb-4 tracking-tighter">Consulta Histórica</h4>
+                                    <p class="text-slate-400 text-sm italic leading-relaxed">Visualización avanzada de métricas climáticas persistentes con filtrado de zona y fecha.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative reveal-node pl-14 lg:pl-0">
+                            <div class="timeline-dot top-0"></div>
+                            <div class="lg:w-1/2 lg:mr-auto lg:pr-24">
+                                <div class="glass-card p-12 rounded-[3rem]">
+                                    <span class="mono text-emerald-500 text-7xl font-black opacity-10 block mb-6">04</span>
+                                    <h4 class="text-2xl font-black text-white italic uppercase mb-4 tracking-tighter">Alertas & Administración</h4>
+                                    <p class="text-slate-400 text-sm italic leading-relaxed">Gestión de condiciones críticas y administración de usuarios/roles del sistema.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="auditoria" class="py-60 px-10 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+                <div class="reveal-node z-20 relative">
+                    <div class="flex items-center gap-5 mb-10">
+                        <div class="h-[1px] w-16 bg-red-500"></div>
+                        <span class="mono text-red-500 text-[11px] font-black uppercase tracking-[0.5em]">Audit_Report_2026</span>
+                    </div>
+                    <h2 class="text-7xl lg:text-9xl font-black text-white uppercase italic tracking-tighter leading-[0.8] mb-12 relative z-10 pb-8">
+                        Atómica<br><span class="text-red-600 block"><span style="font-size: 0.85em;">Integridad.</span></span>
+                    </h2>
+                    <p class="text-2xl text-slate-300 italic font-light leading-relaxed border-l-4 border-red-500/50 pl-12 max-w-2xl relative z-10">
+                        La infraestructura de UrbanNexus implementa protocolos de alta disponibilidad diseñados para garantizar la estabilidad frente a la integridad volátil. A través de transacciones ACID, aseguramos que la información climática sea persistente y fiable, protegiendo el núcleo del sistema ante cualquier fallo crítico que comprometa la resiliencia operativa y la soberanía de los datos históricos.
+                    </p>
+                </div>
+                <div class="reveal-node flex justify-center">
+                    <div class="glass-card p-14 rounded-[4rem] border-red-500/30 shadow-3xl w-full max-w-lg z-10">
+                        <div class="flex items-center gap-4 mb-10">
+                            <div class="w-4 h-4 rounded-full bg-red-600 animate-ping"></div>
+                            <span class="mono text-[12px] text-red-500 uppercase font-black tracking-widest">Active_Scan...</span>
+                        </div>
+                        <div class="space-y-5 mono text-[13px] text-emerald-500/70 italic">
+                            <code class="block">> VALIDANDO_NUCLEO_SQLITE... [PASS]</code>
+                            <code class="block">> INTEGRIDAD_ACID_TRANSACCIONAL... [OK]</code>
+                            <code class="block text-red-600 font-bold mt-10">> STATUS: DATA_PERSISTENCE_REINFORCED</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="migration" class="py-48 px-10 bg-emerald-500/5 border-y border-white/5">
+            <div class="max-w-5xl mx-auto text-center space-y-16">
+                <div class="reveal-node inline-block px-8 py-3 border border-emerald-500/30 rounded-full mono text-[11px] text-emerald-500 uppercase tracking-[0.6em] font-black">
+                    Migration_v1.0.4_Build
+                </div>
+                <h3 class="reveal-node text-6xl lg:text-8xl font-black text-white italic uppercase tracking-tighter leading-none">Protocolo de Migración</h3>
+                <div class="reveal-node max-w-4xl mx-auto">
+                    <p class="text-2xl text-slate-300 font-light italic leading-[1.8] tracking-tight text-justify">
+                        Hemos migrado de un sistema de gestión de archivos plano e inestable hacia una infraestructura distribuida basada en microservicios. La integración de Pydantic garantiza la validación de tipos en tiempo real, mientras que la capa de servicios desacopla la lógica climática de la persistencia final. Esta evolución técnica permite un escalado horizontal de la plataforma UrbanNexus.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-60 px-10">
+            <div class="max-w-7xl mx-auto space-y-32">
+                <div class="reveal-node flex flex-col md:flex-row justify-between items-end gap-12">
+                    <div>
+                        <h2 class="mono text-emerald-500 text-xs tracking-[0.6em] uppercase mb-6 font-black">05 // Engineering_Personnel</h2>
+                        <h3 class="text-8xl lg:text-[10rem] font-black text-white italic tracking-tighter uppercase leading-[0.8]">The<br>Squad.</h3>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-slate-500 mono text-[11px] uppercase leading-relaxed tracking-widest max-w-[250px]">Arquitectos del núcleo climático UrbanNexus Madrid.</p>
+                        <div class="h-1 w-24 bg-emerald-500 mt-6 ml-auto"></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <a href="https://github.com/Isabela-Tellez" target="_blank" class="block">
+                        <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
+                            <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
+                                <img src="https://github.com/Isabela-Tellez.png" alt="Isabela" class="w-full h-full rounded-full object-cover">
+                                <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
+                            </div>
+                            <h4 class="text-2xl font-black text-white mb-3 italic">Isabela</h4>
+                            <span class="text-[10px] mono text-emerald-500 uppercase tracking-widest font-black">PRODUCT_OWNER</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/MajoRodri" target="_blank" class="block">
+                        <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
+                            <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
+                                <img src="https://github.com/MajoRodri.png" alt="María José" class="w-full h-full rounded-full object-cover">
+                                <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
+                            </div>
+                            <h4 class="text-2xl font-black text-white mb-3 italic">María José</h4>
+                            <span class="text-[10px] mono text-emerald-500 uppercase tracking-widest font-black">Scrum Master</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/jowel2701" target="_blank" class="block">
+                        <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
+                            <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
+                                <img src="https://github.com/jowel2701.png" alt="Joel" class="w-full h-full rounded-full object-cover">
+                                <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
+                            </div>
+                            <h4 class="text-2xl font-black text-white mb-3 italic">Joel</h4>
+                            <span class="text-[10px] mono text-emerald-500 uppercase tracking-widest font-black">Developer 1</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/yohperez" target="_blank" class="block">
+                        <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
+                            <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
+                                <img src="https://github.com/yohperez.png" alt="Yohanna" class="w-full h-full rounded-full object-cover">
+                                <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
+                            </div>
+                            <h4 class="text-2xl font-black text-white mb-3 italic">Yohanna</h4>
+                            <span class="text-[10px] mono text-emerald-500 uppercase tracking-widest font-black">Developer 2</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/garciaguadalupevanessa-bit" target="_blank" class="block">
+                        <div class="glass-card p-10 rounded-[3.5rem] reveal-node text-center group border-white/5 hover:scale-105 transition-all h-full">
+                            <div class="w-32 h-32 rounded-full mx-auto mb-10 bg-emerald-500/10 border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-all shadow-2xl flex items-center justify-center relative overflow-hidden">
+                                <img src="https://github.com/garciaguadalupevanessa-bit.png" alt="Vanessa" class="w-full h-full rounded-full object-cover">
+                                <div class="absolute inset-0 rounded-full border border-emerald-500 animate-pulse opacity-20 pointer-events-none"></div>
+                            </div>
+                            <h4 class="text-2xl font-black text-white mb-3 italic">Vanessa</h4>
+                            <span class="text-[10px] mono text-emerald-500 uppercase tracking-widest font-black">Developer 3</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-32 px-10 border-t border-white/5 bg-black relative z-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-4 gap-16">
+
+        <!-- Logo + descripción -->
+        <div class="lg:col-span-2 space-y-10">
+            <div class="flex items-center gap-5">
+                <div class="w-16 h-16 overflow-hidden">
+                    <img src="static/img/Logo.png" alt="Logo" class="w-full h-full object-contain">
+                </div>
+                <span class="mono text-emerald-500 text-xs font-black tracking-widest">
+                    UrbanNexus_OS
+                </span>
+            </div>
+
+            <p class="text-slate-500 max-w-md italic mono text-[11px] uppercase leading-relaxed tracking-[0.2em]">
+                Infraestructura climática de alta disponibilidad diseñada en Madrid_Node_Alpha.
+                Sistema de monitorización en tiempo real para la Comunidad de Madrid.
+            </p>
+
+            <div class="glass-card p-4 rounded-2xl border-emerald-500/20 max-w-[300px]">
+                <div class="flex gap-3 text-[10px] mono text-emerald-500 font-black uppercase tracking-widest items-center">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Geolocation_Service: ACTIVE</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recursos -->
+        <div class="space-y-6">
+            <h5 class="mono text-xs text-white font-black uppercase tracking-[0.5em]">
+                Recursos
+            </h5>
+            <ul class="space-y-4 mono text-[11px] text-slate-500 uppercase font-bold tracking-widest">
+                <li>
+                    <a href="https://github.com/MajoRodri/UrbanNexus" target="_blank"
+                        class="hover:text-emerald-500 transition-all">
+                        > GitHub Repository
+                    </a>
+                </li>
+                <li>
+                    <a href="https://trello.com/b/ju29fdgF/urbannexus" target="_blank"
+                        class="hover:text-emerald-500 transition-all">
+                        > Trello Board
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+            <!-- Legal -->
+            <div class="space-y-6">
+                <h5 class="mono text-xs text-white font-black uppercase tracking-[0.5em]">
+                    Legal
+                </h5>
+                <ul class="space-y-4 mono text-[11px] text-slate-500 uppercase font-bold tracking-widest">
+                    <li>
+                        <a href="javascript:void(0)" onclick="triggerLegalModal('PRIVACY_POLICY')"
+                            class="hover:text-white transition-all">
+                            > Privacidad
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="triggerLegalModal('TERMS_OF_SERVICE')"
+                            class="hover:text-white transition-all">
+                            > Términos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 mono text-[10px] opacity-20 uppercase tracking-[0.6em]">
+            <span>© UrbanNexus_OS // Distributed_Engine</span>
+            <span>Madrid Kernel Build 2026</span>
+        </div>
+    </footer>
+
+    <script>
+        // 1. EXTENDED LOADER (7-9s)
+        const logs = [
+            "> INITIALIZING_URBAN_NEXUS_KERNEL_V1.0.0...",
+            "> BOOTING_DISTRIBUTED_ENVIRONMENT...",
+            "> SYNCING_GEOSPATIAL_NODES_MADRID...",
+            "> VALIDATING_SECURITY_TOKENS_JWT...",
+            "> LOADING_WEATHERAPI_PIPELINE...",
+            "> INICIALIZANDO_APSCHEDULER_DAEMON...",
+            "> MONTANDO_REPOSITORIOS_SQLITE_ACID...",
+            "> ESCANEANDO_INTEGRIDAD_ESTRUCTURADA...",
+            "> CARGANDO_CONTROLLERS_LAYER...",
+            "> CARGANDO_SERVICES_CORE_LAYER...",
+            "> ESTABLECIENDO_FASTAPI_BRIDGE_8000...",
+            "> ESTABLECIENDO_FLASK_WEB_SERVER_5000...",
+            "> CORE_SYSTEM_STABLE. READY_TO_LAUNCH."
+        ];
+
+        let logIdx = 0;
+        const terminal = document.getElementById('log-terminal');
+
+        function runLoader() {
+            if (logIdx < logs.length) {
+                const line = document.createElement('p');
+                line.textContent = logs[logIdx];
+                terminal.appendChild(line);
+                terminal.scrollTop = terminal.scrollHeight;
+
+                let progress = Math.floor(((logIdx + 1) / logs.length) * 100);
+                gsap.to("#loader-bar", { width: `${progress}%`, duration: 0.8 });
+                document.getElementById('load-perc').textContent = `${progress}%`;
+                document.getElementById('load-status').textContent = logs[logIdx].substring(2, 35).toUpperCase();
+
+                logIdx++;
+                setTimeout(runLoader, 600 + Math.random() * 400); // Promedio ~7.5s total
+            } else {
+                gsap.to("#loader", { 
+                    opacity: 0, duration: 1.5, delay: 0.5, 
+                    onComplete: () => {
+                        document.getElementById('loader').remove();
+                        startApp();
+                    } 
+                });
+            }
+        }
+
+        // 2. MODAL SYSTEM CONTROLLER
+        const modal = document.getElementById('nexus-modal');
+        const modalIcon = document.getElementById('modal-icon-container');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalActions = document.getElementById('modal-actions');
+
+        function showModal(config) {
+            modalTitle.textContent = config.title;
+            modalBody.innerHTML = config.body;
+            modalIcon.className = `w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-10 border ${config.iconClass}`;
+            modalIcon.innerHTML = config.icon;
+            modalActions.innerHTML = config.actions;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            gsap.fromTo(modal, {opacity: 0}, {opacity: 1, duration: 0.4});
+        }
+
+        function triggerAuthModal(module) {
+            showModal({
+                title: "Acceso no autorizado",
+                iconClass: "border-red-500/50 bg-red-500/10",
+                icon: '<svg class="w-10 h-10 text-red-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>',
+                body: `<p>Debes autenticarte para continuar.</p>`,
+                actions: `
+                    <button onclick="closeNexusModal(); document.getElementById('demo-btn').textContent='DEMOAPP';" class="px-6 py-4 border border-white/10 rounded-2xl text-white mono text-[10px] font-black uppercase hover:bg-white/10 transition-all">Cancelar</button>
+                    <a href="http://127.0.0.1:5000/login" class="px-6 py-4 bg-emerald-500 rounded-2xl text-black mono text-[10px] font-black uppercase hover:bg-white transition-all text-center">Ir al Login</a>
+                `
+            });
+        }
+
+        function triggerLegalModal(type) {
+            if(type === 'TERMS_OF_SERVICE') {
+                showModal({
+                    title: "LEGAL_REQUERIDO",
+                    iconClass: "border-emerald-500/50 bg-emerald-500/10",
+                    icon: '<svg class="w-10 h-10 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>',
+                    body: `
+                        <p class="font-bold text-white uppercase tracking-widest text-xs">
+                        Reglas de Uso del Sistema
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 text-sm text-slate-300 text-left">
+                        <li>El uso del sistema está condicionado a autenticación válida.</li>
+                        <li>El usuario es responsable de cualquier acción realizada dentro de la plataforma.</li>
+                        <li>Queda prohibido el uso indebido o intento de acceso no autorizado.</li>
+                        <li>UrbanNexus puede revocar acceso sin previo aviso en caso de abuso.</li>
+                        </ul>
+                    `,
+                    actions: `
+                        <button onclick="closeNexusModal()" class="px-6 py-4 border border-white/10 rounded-2xl text-white mono text-[10px] font-black uppercase hover:bg-white/10 transition-all">Cancelar</button>
+                        <button onclick="closeNexusModal()" class="px-6 py-4 bg-emerald-500 rounded-2xl text-black mono text-[10px] font-black uppercase hover:bg-white transition-all">Entendido</button>
+                    `
+                });
+            } else {
+                showModal({
+                    title: "LEGAL_REQUERIDO",
+                    iconClass: "border-emerald-500/50 bg-emerald-500/10",
+                    icon: '<svg class="w-10 h-10 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>',
+                    body: `
+                        <p class="font-bold text-white uppercase tracking-widest text-xs">Aviso de Privacidad - ${type}</p>
+                        <p>Para acceder a la información legal, UrbanNexus requiere confirmación del usuario.</p>
+                        <p class="p-4 bg-white/5 rounded-xl border border-white/10 text-[11px] italic">La aplicación utiliza la ubicación del usuario exclusivamente para análisis climático en tiempo real. No se almacena ni se comparte con terceros.</p>
+                    `,
+                    actions: `
+                        <button onclick="closeNexusModal()" class="px-6 py-4 border border-white/10 rounded-2xl text-white mono text-[10px] font-black uppercase hover:bg-white/10 transition-all">Cancelar</button>
+                        <button onclick="closeNexusModal()" class="px-6 py-4 bg-emerald-500 rounded-2xl text-black mono text-[10px] font-black uppercase hover:bg-white transition-all">Entendido</button>
+                    `
+                });
+            }
+        }
+
+        function closeNexusModal() {
+            gsap.to(modal, {opacity: 0, duration: 0.3, onComplete: () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }});
+        }
+
+        function closeLocationAlert() {
+            gsap.to("#location-alert", {opacity: 0, x: -100, duration: 0.6});
+        }
+
+        // 3. CORE APP START
+        function startApp() {
+            gsap.registerPlugin(ScrollTrigger);
+
+            setInterval(() => {
+                document.getElementById('clock').textContent = new Date().toTimeString().split(' ')[0];
+            }, 1000);
+
+            gsap.utils.toArray('.reveal-node').forEach(node => {
+                gsap.to(node, {
+                    scrollTrigger: { trigger: node, start: "top 85%" },
+                    opacity: 1, y: 0, duration: 1.5, ease: "expo.out"
+                });
+            });
+
+            setTimeout(() => {
+                const alert = document.getElementById('location-alert');
+                alert.classList.remove('hidden');
+                gsap.to(alert, {opacity: 1, x: 0, duration: 1, ease: "back.out(1.7)"});}, 1500);
+        }
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('back-to-top');
+            if (window.scrollY > 400) {
+                btn.classList.remove('hidden');
+                btn.classList.add('flex');
+            } else {
+                btn.classList.add('hidden');
+                btn.classList.remove('flex');
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            gsap.to("#cursor", { x: e.clientX - 14, y: e.clientY - 14, duration: 0.1 });
+        });
+
+        document.getElementById('demo-btn').addEventListener('click', function() {
+            this.textContent = "SYNCHRONIZING...";
+            setTimeout(() => triggerAuthModal('DEMO_APP_ENTRY'), 800);
+        });
+
+        window.onload = runLoader;
+    </script>
+</body>
+</html>
