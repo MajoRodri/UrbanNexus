@@ -24,12 +24,12 @@
 
     <h1>Histórico de registros</h1>
 
-    <form method="POST" action="/consulta" class="card">
+    <form method="GET" action="{{ url_for('view.consulta') }}" class="card">
         <label for="municipio">Municipio</label>
-        <input type="text" id="municipio" name="municipio" placeholder="Ej: Madrid" autocomplete="off">
+        <input type="text" id="municipio" name="municipio" placeholder="Ej: Madrid" autocomplete="off" value="{{ municipio }}">
 
         <label for="fecha">Fecha</label>
-        <input type="date" id="fecha" name="fecha">
+        <input type="date" id="fecha" name="fecha" value="{{ fecha }}">
 
         <button type="submit">Filtrar</button>
     </form>
@@ -268,12 +268,44 @@
             </tbody>
         </table>
 
+        <div class="pagination-info">
+            Mostrando {{ registros|length }} de {{ pagination.total }} registros.
+            Página {{ pagination.page }} de {{ pagination.total_pages }}.
+        </div>
+
+        {% if pagination.total_pages > 1 %}
+        <div class="pagination">
+
+            {% if pagination.page > 1 %}
+                <a class="page-btn" href="{{ url_for('view.consulta', page=1, municipio=municipio, fecha=fecha) }}">Primera</a>
+                <a class="page-btn" href="{{ url_for('view.consulta', page=pagination.page - 1, municipio=municipio, fecha=fecha) }}">Anterior</a>
+            {% else %}
+                <span class="page-btn disabled">Primera</span>
+                <span class="page-btn disabled">Anterior</span>
+            {% endif %}
+
+            {% for num in pagination.page_numbers %}
+                {% if num == pagination.page %}
+                    <span class="page-btn active">{{ num }}</span>
+                {% else %}
+                    <a class="page-btn" href="{{ url_for('view.consulta', page=num, municipio=municipio, fecha=fecha) }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if pagination.page < pagination.total_pages %}
+                <a class="page-btn" href="{{ url_for('view.consulta', page=pagination.page + 1, municipio=municipio, fecha=fecha) }}">Siguiente</a>
+                <a class="page-btn" href="{{ url_for('view.consulta', page=pagination.total_pages, municipio=municipio, fecha=fecha) }}">Última</a>
+            {% else %}
+                <span class="page-btn disabled">Siguiente</span>
+                <span class="page-btn disabled">Última</span>
+            {% endif %}
+        </div>
+        {% endif %}
+
         {% else %}
-
-        <p class="no-results">
-            No se han encontrado registros con esos filtros.
-        </p>
-
+            <p class="no-results">
+                No se han encontrado registros con esos filtros.
+            </p>
         {% endif %}
     </div>
 

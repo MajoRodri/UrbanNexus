@@ -2149,3 +2149,167 @@
 2026-05-16 00:37:44 [INFO] Nominatim: display='Villaverde', municipio='Madrid'
 2026-05-16 00:37:44 [INFO] Datos obtenidos para lat=40.35210704123938, lon=-3.6865605892963265
 2026-05-16 00:37:44 [INFO] Clima por coordenadas devuelto: Villaverde 13.2°C
+2026-05-16 12:36:46 [INFO] Petición /api/clima recibida: lat=40.22929408532503, lon=-3.7669022115216184
+2026-05-16 12:36:47 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:36:47 [INFO] Datos obtenidos para lat=40.22929408532503, lon=-3.7669022115216184
+2026-05-16 12:36:47 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:36:47 [INFO] Petición /api/clima recibida: lat=40.22929408532503, lon=-3.7669022115216184
+2026-05-16 12:36:47 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:36:48 [INFO] Datos obtenidos para lat=40.22929408532503, lon=-3.7669022115216184
+2026-05-16 12:36:48 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:37:08 [INFO] Petición /api/clima recibida: lat=40.22921755866252, lon=-3.7667277216258066
+2026-05-16 12:37:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:37:08 [INFO] Datos obtenidos para lat=40.22921755866252, lon=-3.7667277216258066
+2026-05-16 12:37:08 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:37:08 [INFO] Petición /api/clima recibida: lat=40.22921755866252, lon=-3.7667277216258066
+2026-05-16 12:37:08 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:37:08 [INFO] Datos obtenidos para lat=40.22921755866252, lon=-3.7667277216258066
+2026-05-16 12:37:08 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:37:15 [INFO] Petición /api/clima recibida: lat=40.229217562557984, lon=-3.7667277347649253
+2026-05-16 12:37:16 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:37:16 [INFO] Datos obtenidos para lat=40.229217562557984, lon=-3.7667277347649253
+2026-05-16 12:37:16 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:37:16 [INFO] Petición /api/clima recibida: lat=40.229217562557984, lon=-3.7667277347649253
+2026-05-16 12:37:16 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:37:16 [INFO] Datos obtenidos para lat=40.229217562557984, lon=-3.7667277347649253
+2026-05-16 12:37:16 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:39:25 [INFO] Petición /api/clima recibida: lat=40.2292175622078, lon=-3.766727733568389
+2026-05-16 12:39:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:39:25 [INFO] Datos obtenidos para lat=40.2292175622078, lon=-3.766727733568389
+2026-05-16 12:39:25 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:39:25 [INFO] Petición /api/clima recibida: lat=40.2292175622078, lon=-3.766727733568389
+2026-05-16 12:39:25 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:39:26 [INFO] Datos obtenidos para lat=40.2292175622078, lon=-3.766727733568389
+2026-05-16 12:39:26 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:39:44 [INFO] Petición /api/clima recibida: lat=40.22915261318018, lon=-3.766661589559949
+2026-05-16 12:39:45 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:39:45 [INFO] Datos obtenidos para lat=40.22915261318018, lon=-3.766661589559949
+2026-05-16 12:39:45 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:39:45 [INFO] Petición /api/clima recibida: lat=40.22915261318018, lon=-3.766661589559949
+2026-05-16 12:39:45 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:39:45 [INFO] Datos obtenidos para lat=40.22915261318018, lon=-3.766661589559949
+2026-05-16 12:39:45 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:39:56 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-16 12:39:56 [INFO] Consulta clima por municipio: Villaverde 14.1°C
+2026-05-16 12:40:03 [INFO] Datos obtenidos para lat=40.348, lon=-3.703
+2026-05-16 12:40:03 [INFO] Consulta clima por municipio: Leganes 12.8°C
+2026-05-16 12:40:06 [INFO] Petición /api/clima recibida: lat=40.22915260400813, lon=-3.766661580184079
+2026-05-16 12:40:06 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:40:07 [INFO] Datos obtenidos para lat=40.22915260400813, lon=-3.766661580184079
+2026-05-16 12:40:07 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:40:07 [INFO] Petición /api/clima recibida: lat=40.22915260400813, lon=-3.766661580184079
+2026-05-16 12:40:07 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:40:07 [INFO] Datos obtenidos para lat=40.22915260400813, lon=-3.766661580184079
+2026-05-16 12:40:07 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:40:38 [INFO] Petición /api/clima recibida: lat=40.22915260643916, lon=-3.7666615826636094
+2026-05-16 12:40:38 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:40:38 [INFO] Datos obtenidos para lat=40.22915260643916, lon=-3.7666615826636094
+2026-05-16 12:40:38 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:40:38 [INFO] Petición /api/clima recibida: lat=40.22915260643916, lon=-3.7666615826636094
+2026-05-16 12:40:38 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:40:39 [INFO] Datos obtenidos para lat=40.22915260643916, lon=-3.7666615826636094
+2026-05-16 12:40:39 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:47:37 [INFO] Petición /api/clima recibida: lat=40.229172907488945, lon=-3.7666956853399722
+2026-05-16 12:47:37 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:47:38 [INFO] Datos obtenidos para lat=40.229172907488945, lon=-3.7666956853399722
+2026-05-16 12:47:38 [INFO] Clima por coordenadas devuelto: Las Américas 15.3°C
+2026-05-16 12:47:38 [INFO] Petición /api/clima recibida: lat=40.229172907488945, lon=-3.7666956853399722
+2026-05-16 12:47:39 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:47:39 [INFO] Datos obtenidos para lat=40.229172907488945, lon=-3.7666956853399722
+2026-05-16 12:47:39 [INFO] Clima por coordenadas devuelto: Las Américas 15.3°C
+2026-05-16 12:48:36 [INFO] Petición /api/clima recibida: lat=40.22926252256235, lon=-3.766817291922276
+2026-05-16 12:48:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:48:36 [INFO] Datos obtenidos para lat=40.22926252256235, lon=-3.766817291922276
+2026-05-16 12:48:36 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:48:36 [INFO] Petición /api/clima recibida: lat=40.22926252256235, lon=-3.766817291922276
+2026-05-16 12:48:36 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:48:36 [INFO] Datos obtenidos para lat=40.22926252256235, lon=-3.766817291922276
+2026-05-16 12:48:36 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:49:02 [INFO] Petición /api/clima recibida: lat=40.22926252534024, lon=-3.766817296049833
+2026-05-16 12:49:03 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:49:03 [INFO] Datos obtenidos para lat=40.22926252534024, lon=-3.766817296049833
+2026-05-16 12:49:03 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:49:29 [INFO] Petición /api/clima recibida: lat=40.22921505295917, lon=-3.7668520009135817
+2026-05-16 12:49:30 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:49:30 [INFO] Datos obtenidos para lat=40.22921505295917, lon=-3.7668520009135817
+2026-05-16 12:49:30 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-16 12:49:30 [INFO] Petición /api/clima recibida: lat=40.22921505295917, lon=-3.7668520009135817
+2026-05-16 12:49:30 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-16 12:49:30 [INFO] Datos obtenidos para lat=40.22921505295917, lon=-3.7668520009135817
+2026-05-16 12:49:30 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-17 00:29:25 [INFO] Petición /api/clima recibida: lat=40.229191659127856, lon=-3.7667992150244887
+2026-05-17 00:29:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 00:29:26 [INFO] Datos obtenidos para lat=40.229191659127856, lon=-3.7667992150244887
+2026-05-17 00:29:26 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-17 00:29:26 [INFO] Petición /api/clima recibida: lat=40.229191659127856, lon=-3.7667992150244887
+2026-05-17 00:29:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 00:29:26 [INFO] Datos obtenidos para lat=40.229191659127856, lon=-3.7667992150244887
+2026-05-17 00:29:26 [INFO] Clima por coordenadas devuelto: Las Américas 17.0°C
+2026-05-17 00:52:14 [INFO] Petición /api/clima recibida: lat=40.22915756088858, lon=-3.766740826244147
+2026-05-17 00:52:14 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 00:52:14 [INFO] Datos obtenidos para lat=40.22915756088858, lon=-3.766740826244147
+2026-05-17 00:52:14 [INFO] Clima por coordenadas devuelto: Las Américas 16.4°C
+2026-05-17 00:52:14 [INFO] Petición /api/clima recibida: lat=40.22915756088858, lon=-3.766740826244147
+2026-05-17 00:52:14 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 00:52:14 [INFO] Datos obtenidos para lat=40.22915756088858, lon=-3.766740826244147
+2026-05-17 00:52:14 [INFO] Clima por coordenadas devuelto: Las Américas 16.4°C
+2026-05-17 00:52:24 [INFO] Datos obtenidos para lat=40.405, lon=-3.607
+2026-05-17 00:52:24 [INFO] Consulta clima por municipio: Vicalvaro 13.3°C
+2026-05-17 00:52:31 [INFO] Datos obtenidos para lat=40.405, lon=-3.607
+2026-05-17 00:52:31 [INFO] Consulta clima por municipio: Vicalvaro 12.7°C
+2026-05-17 00:52:41 [INFO] Petición /api/clima recibida: lat=40.229192224539574, lon=-3.766724265374261
+2026-05-17 00:52:42 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 00:52:42 [INFO] Datos obtenidos para lat=40.229192224539574, lon=-3.766724265374261
+2026-05-17 00:52:42 [INFO] Clima por coordenadas devuelto: Las Américas 16.4°C
+2026-05-17 00:52:42 [INFO] Petición /api/clima recibida: lat=40.229192224539574, lon=-3.766724265374261
+2026-05-17 00:52:42 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 00:52:42 [INFO] Datos obtenidos para lat=40.229192224539574, lon=-3.766724265374261
+2026-05-17 00:52:42 [INFO] Clima por coordenadas devuelto: Las Américas 16.4°C
+2026-05-17 01:03:38 [INFO] Petición /api/clima recibida: lat=40.22924005515663, lon=-3.766851102505261
+2026-05-17 01:03:38 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:03:38 [INFO] Datos obtenidos para lat=40.22924005515663, lon=-3.766851102505261
+2026-05-17 01:03:38 [INFO] Clima por coordenadas devuelto: Las Américas 16.4°C
+2026-05-17 01:03:38 [INFO] Petición /api/clima recibida: lat=40.22924005515663, lon=-3.766851102505261
+2026-05-17 01:03:38 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:03:38 [INFO] Datos obtenidos para lat=40.22924005515663, lon=-3.766851102505261
+2026-05-17 01:03:38 [INFO] Clima por coordenadas devuelto: Las Américas 16.4°C
+2026-05-17 01:04:51 [INFO] Petición /api/clima recibida: lat=40.229240054953294, lon=-3.766851102324841
+2026-05-17 01:04:51 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:04:51 [INFO] Datos obtenidos para lat=40.229240054953294, lon=-3.766851102324841
+2026-05-17 01:04:51 [INFO] Clima por coordenadas devuelto: Las Américas 16.2°C
+2026-05-17 01:04:51 [INFO] Petición /api/clima recibida: lat=40.229240054953294, lon=-3.766851102324841
+2026-05-17 01:04:51 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:04:51 [INFO] Datos obtenidos para lat=40.229240054953294, lon=-3.766851102324841
+2026-05-17 01:04:51 [INFO] Clima por coordenadas devuelto: Las Américas 16.2°C
+2026-05-17 01:26:22 [INFO] Petición /api/clima recibida: lat=40.22911734565257, lon=-3.766686183785411
+2026-05-17 01:26:23 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:26:23 [INFO] Datos obtenidos para lat=40.22911734565257, lon=-3.766686183785411
+2026-05-17 01:26:23 [INFO] Clima por coordenadas devuelto: Las Américas 16.0°C
+2026-05-17 01:26:23 [INFO] Petición /api/clima recibida: lat=40.22911734565257, lon=-3.766686183785411
+2026-05-17 01:26:23 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:26:23 [INFO] Datos obtenidos para lat=40.22911734565257, lon=-3.766686183785411
+2026-05-17 01:26:23 [INFO] Clima por coordenadas devuelto: Las Américas 16.0°C
+2026-05-17 01:46:05 [INFO] Petición /api/clima recibida: lat=40.229197154886016, lon=-3.766797620045331
+2026-05-17 01:46:06 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:46:06 [INFO] Datos obtenidos para lat=40.229197154886016, lon=-3.766797620045331
+2026-05-17 01:46:06 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-17 01:46:06 [INFO] Petición /api/clima recibida: lat=40.229197154886016, lon=-3.766797620045331
+2026-05-17 01:46:06 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:46:06 [INFO] Datos obtenidos para lat=40.229197154886016, lon=-3.766797620045331
+2026-05-17 01:46:06 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-17 01:46:26 [INFO] Petición /api/clima recibida: lat=40.22919715262692, lon=-3.766797617173561
+2026-05-17 01:46:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:46:26 [INFO] Datos obtenidos para lat=40.22919715262692, lon=-3.766797617173561
+2026-05-17 01:46:26 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-17 01:46:26 [INFO] Petición /api/clima recibida: lat=40.22919715262692, lon=-3.766797617173561
+2026-05-17 01:46:26 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:46:26 [INFO] Datos obtenidos para lat=40.22919715262692, lon=-3.766797617173561
+2026-05-17 01:46:26 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-17 01:46:40 [INFO] Petición /api/clima recibida: lat=40.22919715255577, lon=-3.7667976170815693
+2026-05-17 01:46:40 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:46:40 [INFO] Datos obtenidos para lat=40.22919715255577, lon=-3.7667976170815693
+2026-05-17 01:46:40 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
+2026-05-17 01:46:40 [INFO] Petición /api/clima recibida: lat=40.22919715255577, lon=-3.7667976170815693
+2026-05-17 01:46:40 [INFO] Nominatim: display='Las Américas', municipio='Parla'
+2026-05-17 01:46:40 [INFO] Datos obtenidos para lat=40.22919715255577, lon=-3.7667976170815693
+2026-05-17 01:46:40 [INFO] Clima por coordenadas devuelto: Las Américas 14.1°C
